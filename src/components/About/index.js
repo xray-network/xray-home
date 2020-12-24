@@ -37,9 +37,9 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className="text-center">
+        <div className="text-center mb-5 pb-2">
           <h1 className={style.title}>
-            More details coming up!
+            More information coming up!
             {' '}
             <span role="img" aria-label="">🚀</span>
           </h1>

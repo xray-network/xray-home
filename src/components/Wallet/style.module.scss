@@ -13,7 +13,6 @@
   padding: rem(60);
   @include transition-slow();
   position: relative;
-  min-height: rem(800);
   overflow: hidden;
 
   @media (max-width: $sm-max-width) {
@@ -32,7 +31,7 @@
     transform: scale(1.01);
   }
 
-  h2 {
+  h1, h2, h3, h4, h5, h6 {
     color: $white;
   }
 }
@@ -49,12 +48,18 @@
 }
 
 .soon {
-  font-size: 70%;
-  padding: 0 rem(10);
+  font-size: rem(28);
+  line-height: 1;
+  display: block;
+  padding: rem(10) rem(20);
   border-radius: 5px;
   background: $dark-gray-3;
-  position: relative;
-  top: -2px;
+  position: absolute;
+  top: rem(60);
+  right: rem(70);
+
+  @media (max-width: $sm-max-width) {
+  }
 }
 
 .input {

@@ -8,7 +8,7 @@ export default () => {
         <div className="row">
           <div className="col-md-6">
             <img class={style.logo} src="/resources/img/logo.svg" alt="RAY Network" />
-            <p className="text-muted">Deploy Data Clusters built with Atala PRISM</p>
+            <p className="text-muted">Data Containers Management built with Atala PRISM</p>
           </div>
           <div className="col-md-6 text-left text-md-right">
             Powered with Cardano

@@ -18,18 +18,21 @@ export default () => {
       <div className="container-fluid">
         <div className={style.outer}>
           <div className={`${style.unlock} d-flex align-items-start flex-column`}>
+            <span className={style.soon}>SOON</span>
             <div className="mb-auto">
               <img className={style.wallet} src="/resources/img/wallet.png" alt="" />
-              <h2 className="mb-4">
-                <span className="mr-3">RAY Coins distribution</span>
-                <span className={style.soon}>SOON</span>
-              </h2>
+              <h1 className="mb-2">
+                <strong className="mr-3">RAY Network Funding Program</strong>
+              </h1>
+              <h3 className="mb-3">
+                <span>Distribution instructons</span>
+              </h3>
               <div className={style.descr}>
                 <ul className="text-muted">
                   <li>Delegate your ADA to any RAY pool</li>
                   <li>Download RAY wallet and generate RAY address</li>
-                  <li>Enter RAY address to form below and press "Register Payout" button</li>
-                  <li>Send 1ADA to address from form below to assign your RAY address to your staking address</li>
+                  <li>Enter RAY address to form below and press "Register Wallet" button</li>
+                  <li>Send 1ADA from delegated address to generated address from form below </li>
                   <li>Receive RAYs for <Tooltip title="Staking of 1ADA will generate 0.01RAY"><span className="cui__link cui__link__underlined">live</span></Tooltip> and <Tooltip title="Staking of 1ADA will generate 1RAY"><span className="cui__link cui__link__underlined">active</span></Tooltip> stake to registered wallet every 24 hours</li>
                 </ul>
               </div>
