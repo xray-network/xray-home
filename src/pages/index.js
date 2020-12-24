@@ -6,7 +6,7 @@ import WhyUs from "@/components/WhyUs"
 import Wallet from "@/components/Wallet"
 import About from "@/components/About"
 import Roadmap from "@/components/Roadmap"
-import Map from "@/components/Map"
+// import Map from "@/components/Map"
 
 export default () => {
   return (
@@ -18,7 +18,7 @@ export default () => {
         />
       </Helmet>
       <Roadmap />
-      <Map />
+      {/* <Map /> */}
       <WhyUs />
       <Features />
       <Wallet />

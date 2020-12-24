@@ -3,9 +3,9 @@ import style from "./style.module.scss"
 
 export default () => {
   return (
-    <div className="cui__block mb-5">
+    <div className="cui__block mb-5 pb-5">
       <div className="container-fluid">
-        <div className={style.roadmap}>
+        <div className={`${style.roadmap} clearfix`}>
           <div className={`${style.line} ${style.l1}`}>
             <div className={style.active} />
             <span className={`${style.label} ${style.current}`}>LIVE</span>
