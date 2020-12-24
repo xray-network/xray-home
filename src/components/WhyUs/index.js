@@ -8,7 +8,7 @@ export default () => {
         <div className={style.header}>
           <h1 className={`${style.title} mb-3`}>Why RAY Network Pool</h1>
           <h4 className="mb-5">
-            Find nodes with the ticker <strong>[RAY]</strong> and delegate your ADA for high returns.
+            Find nodes with the ticker <span className={style.badge}>RAY</span> and delegate your ADA for high returns.
             <br />
             RAY Coins distribution will be available soon
           </h4>

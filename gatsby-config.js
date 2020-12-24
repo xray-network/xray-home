@@ -52,5 +52,13 @@ module.exports = {
         trackHash: true,
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    }
   ],
 }

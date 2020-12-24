@@ -6,7 +6,7 @@ export default () => {
     <div className="cui__block">
       <div className="container-fluid">
         <div className={style.map}>
-          map
+          [ray_pools_map]
         </div>
       </div>
     </div>

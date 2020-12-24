@@ -6,7 +6,8 @@ import WhyUs from "@/components/WhyUs"
 import Wallet from "@/components/Wallet"
 import About from "@/components/About"
 import Roadmap from "@/components/Roadmap"
-// import Map from "@/components/Map"
+import Map from "@/components/Map"
+import Promo from "@/components/Promo"
 
 export default () => {
   return (
@@ -17,8 +18,9 @@ export default () => {
           content="RAY Netwrok Cardano poooooooools. Advanced staking."
         />
       </Helmet>
+      <Promo />
       <Roadmap />
-      {/* <Map /> */}
+      <Map />
       <WhyUs />
       <Features />
       <Wallet />
