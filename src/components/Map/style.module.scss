@@ -1,0 +1,9 @@
+@import "@/styles/mixins";
+
+.map {
+  background: $gray-1;
+  border-radius: 15px;
+  min-height: rem(400);
+  padding: rem(20);
+  text-align: center;
+}

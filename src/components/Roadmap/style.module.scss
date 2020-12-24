@@ -1,0 +1,29 @@
+@import "@/styles/mixins";
+
+.roadmap {
+  background: $gray-1;
+  border-radius: 15px;
+  position: relative;
+}
+
+.label {
+  font-size: rem(12);
+  text-transform: uppercase;
+  color: $gray-6;
+  margin-bottom: rem(5);
+}
+
+.line {
+  background: $gray-2;
+  border-radius: 15px;
+  padding: rem(20) rem(25);
+  line-height: 1.4;
+
+  span {
+    display: block;
+  }
+}
+
+.l1 {
+  width: 30%;
+}

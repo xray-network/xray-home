@@ -1,0 +1,16 @@
+@import "@/styles/mixins";
+
+.footer {
+  padding: 0 0 rem(50) 0;
+}
+
+.logo {
+  height: rem(21);
+}
+
+.cardano {
+  margin-left: rem(5);
+  height: rem(24);
+  position: relative;
+  top: -2px;
+}

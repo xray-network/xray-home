@@ -1,0 +1,101 @@
+@import "@/styles/mixins";
+
+.outer {
+  border-radius: 15px;
+  padding-top: rem(15);
+  background: $primary;
+}
+
+.unlock {
+  background: $black;
+  color: $white;
+  border-radius: 15px;
+  padding: rem(60);
+  @include transition-slow();
+  position: relative;
+  min-height: rem(800);
+  overflow: hidden;
+
+  @media (max-width: $sm-max-width) {
+    padding: rem(40) rem(35);
+
+    small {
+      font-size: 100%;
+    }
+
+    ul {
+      padding-left: rem(25);
+    }
+  }
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  h2 {
+    color: $white;
+  }
+}
+
+.wallet {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  right: -250px;
+
+  @media (max-width: $sm-max-width) {
+    display: none;
+  }
+}
+
+.soon {
+  font-size: 70%;
+  padding: 0 rem(10);
+  border-radius: 5px;
+  background: $dark-gray-3;
+  position: relative;
+  top: -2px;
+}
+
+.input {
+  max-width: rem(500);
+  width: 100%;
+  border-radius: 8px !important;
+  background: $dark-gray-4 !important;
+  border-color: $dark-gray-3 !important;
+  color: $white;
+
+  &:hover, &:focus {
+    border-color: $primary !important;
+  }
+}
+
+.params {
+  max-width: rem(400);
+}
+
+.download {
+  display: inline-block;
+  margin-right: rem(20);
+
+  &Icon {
+    display: block;
+    width: rem(70);
+    height: rem(50);
+    background: $dark-gray-3;
+    border-radius: rem(5);
+    margin-bottom: rem(5);
+    text-align: center;
+    padding-top: rem(8);
+    cursor: pointer;
+
+    img {
+      height: rem(25);
+    }
+  }
+
+  &Title {
+    display: block;
+    text-align: center;
+  }
+}

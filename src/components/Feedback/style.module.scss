@@ -1,0 +1,42 @@
+@import "@/styles/mixins";
+
+.item {
+  padding: rem(30) rem(40);
+  background: $pastel-1;
+  border-radius: 15px;
+  @include transition-middle();
+
+  @media (max-width: $md-max-width) {
+    margin-bottom: rem(50);
+  }
+
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+}
+
+.rating {
+  font-size: rem(72);
+  font-weight: bold;
+  line-height: rem(74);
+  margin-bottom: rem(20);
+
+  img {
+    position: relative;
+    top: -10px;
+  }
+}
+
+.description {
+  margin-bottom: rem(20);
+}
+
+.conclusion {
+  margin-bottom: rem(20);
+}
+
+.name {
+  font-weight: bold;
+  font-size: rem(21);
+}

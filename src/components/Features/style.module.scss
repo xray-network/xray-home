@@ -1,0 +1,32 @@
+@import "@/styles/mixins";
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(40);
+
+  &:hover {
+    .icon {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.icon {
+  flex: 0 0 85px;
+  width: 85px;
+  height: 85px;
+  margin-right: rem(30);
+  background: $pastel-2;
+  border-radius: 20px;
+  line-height: 94px;
+  font-size: rem(38);
+  text-align: center;
+  @include transition-middle();
+}
+
+.title {
+  font-size: rem(21);
+  padding-right: rem(30);
+  line-height: 1.4;
+}

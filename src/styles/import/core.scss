@@ -1,0 +1,47 @@
+@import "@/styles/mixins";
+
+html {
+  font-size: 16px;
+  @media (max-width: $lg-max-width) {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.66;
+  font-family: $base-font-family;
+  color: $black;
+  overflow-x: hidden;
+  position: relative;
+  font-variant: normal;
+  font-feature-settings: normal;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  @include transition-color();
+  &:hover,
+  &:active,
+  &:focus {
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+input {
+  outline: none !important;
+  font-family: $base-font-family;
+  color: $text;
+}
+
+.ps__thumb-y {
+  background: $dark-gray-4;
+}
+
+button,
+input {
+  box-shadow: none !important;
+  outline: none !important;
+}

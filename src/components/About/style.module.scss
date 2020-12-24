@@ -1,0 +1,80 @@
+@import "@/styles/mixins";
+
+.licenses {
+  td {
+    vertical-align: middle;
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: rem(60);
+}
+
+.title {
+  font-size: rem(48);
+  margin-bottom: rem(40);
+  font-weight: bold;
+}
+
+.description {
+  max-width: rem(980);
+  margin: 0 auto;
+}
+
+.linkTitle {
+  font-weight: bold;
+  font-size: rem(21);
+}
+
+.scheme {
+  overflow: hidden;
+  border-radius: 0 0 15px 15px;
+  box-shadow: $shadow-4;
+  img {
+    max-width: 100%;
+  }
+}
+
+.apps {
+  margin-bottom: rem(-10);
+  background: $white;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: $shadow;
+  position: relative;
+  z-index: 2;
+  padding: rem(10);
+  @include transition-slow();
+
+  img {
+    max-width: 100%;
+    width: rem(760);
+  }
+}
+
+.container {
+  background: $gray-1;
+  border-radius: 15px;
+  min-height: rem(80);
+  padding: rem(20) rem(20) rem(20);
+  text-align: center;
+  margin-bottom: rem(80);
+
+  &:hover {
+    .apps {
+      transform: scale(1.035);
+    }
+  }
+}
+
+.outer {
+  border-radius: 15px;
+  background: $success;
+  padding-top: rem(15);
+}
