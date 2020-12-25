@@ -40,7 +40,6 @@ export default () => {
     fetch(`https://js.adapools.org/pools/${id}/summary.json`)
       .then(res => res.json())
       .then((result => {
-        console.log(result)
         setPoolData({
           ...result.data,
           updated: result.updated,
