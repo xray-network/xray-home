@@ -59,6 +59,8 @@
   right: rem(70);
 
   @media (max-width: $sm-max-width) {
+    position: static;
+    margin-bottom: rem(20);
   }
 }
 

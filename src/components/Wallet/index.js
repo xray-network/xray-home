@@ -29,7 +29,7 @@ export default () => {
               </h3>
               <div className={style.descr}>
                 <ul className="text-muted">
-                  <li>Delegate your ADA to any RAY pool</li>
+                  <li>Delegate your ADA to any RAY pool through <a href="https://daedaluswallet.io/" className="cui__link" target="_blank" rel="noopener noreferrer">Daedalus Wallet</a></li>
                   <li>Download RAY wallet and generate RAY address</li>
                   <li>Enter RAY address to form below and press "Register Wallet" button</li>
                   <li>Send 1ADA from delegated address to generated address from form below </li>

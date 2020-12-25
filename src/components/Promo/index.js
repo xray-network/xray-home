@@ -13,7 +13,7 @@ export default () => {
           </div>
           <div className={style.content}>
             <h1 className={`${style.title} mb-3`}>
-              RAY pools are looking<br /> for delegators
+              <strong>RAY pools are looking for delegators</strong>
             </h1>
             <div className={style.description}>
               <h5 className="mb-2">

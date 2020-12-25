@@ -35,14 +35,14 @@
 .scheme {
   overflow: hidden;
   border-radius: 0 0 15px 15px;
-  box-shadow: $shadow-4;
+  box-shadow: $shadow-3;
   img {
     max-width: 100%;
   }
 }
 
 .apps {
-  margin-bottom: rem(-10);
+  margin-bottom: rem(-15);
   background: $white;
   overflow: hidden;
   border-radius: 15px;
@@ -59,16 +59,12 @@
 }
 
 .container {
-  background: $gray-1;
   border-radius: 15px;
-  min-height: rem(80);
-  padding: rem(20) rem(20) rem(20);
   text-align: center;
-  margin-bottom: rem(80);
 
   &:hover {
     .apps {
-      transform: scale(1.035);
+      transform: scale(1.02);
     }
   }
 }
@@ -77,4 +73,5 @@
   border-radius: 15px;
   background: $success;
   padding-top: rem(15);
+  margin-bottom: rem(80);
 }
