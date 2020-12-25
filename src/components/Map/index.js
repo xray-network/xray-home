@@ -198,7 +198,7 @@ export default () => {
                     <div className={style.item}>
                       <span className={style.itemLabel}>ROA Lifetime</span>
                       <strong className={style.itemData}>
-                        {formatValue(poolData.roa_lifetime)}
+                        {formatValue(poolData.roa_lifetime, '%')}
                       </strong>
                     </div>
                   </div>
@@ -206,7 +206,7 @@ export default () => {
                     <div className={style.item}>
                       <span className={style.itemLabel}>ROA</span>
                       <strong className={style.itemData}>
-                        {formatValue(poolData.roa)}
+                        {formatValue(poolData.roa, '%')}
                       </strong>
                     </div>
                   </div>
