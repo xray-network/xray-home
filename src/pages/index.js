@@ -13,9 +13,10 @@ export default () => {
   return (
     <Layout>
       <Helmet title="Homepage">
+        <meta property="og:url" content="https://rraayy.com" />
         <meta
           name="description"
-          content="RAY Netwrok Cardano poooooooools. Advanced staking."
+          content="RAY Network Cardano pools. Advanced ADA staking."
         />
       </Helmet>
       <Promo />
