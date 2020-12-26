@@ -12,7 +12,7 @@ import Promo from "@/components/Promo"
 export default () => {
   return (
     <Layout>
-      <Helmet title="Homepage">
+      <Helmet title="Cardano pools. Advanced ADA staking.">
         <meta property="og:url" content="https://rraayy.com" />
         <meta
           name="description"
