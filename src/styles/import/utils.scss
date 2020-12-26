@@ -3,6 +3,7 @@
 .cui {
   &__link {
     color: $primary;
+    cursor: pointer;
 
     &:hover {
       color: lighten($primary, 10%);

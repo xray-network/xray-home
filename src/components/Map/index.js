@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { Button, Popover, Alert, Spin } from "antd"
+import { Button, Popover, Alert, Spin, Tooltip, message } from "antd"
+import { CopyToClipboard } from "react-copy-to-clipboard"
 import { LoadingOutlined } from "@ant-design/icons"
 import classnames from "classnames"
 import style from "./style.module.scss"
@@ -137,14 +138,21 @@ export default () => {
                       <span className={style.itemData}>
                         {!poolData.pool_id && <strong>—</strong>}
                         {poolData.pool_id && (
-                          <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="cui__link"
-                            href={`https://adapools.org/pool/${poolData.pool_id}`}
-                          >
-                            {formatValue(`${(poolData.pool_id).substring(0, 4)}...${(poolData.pool_id).slice(-8)}`)}
-                          </a>
+                          <span>
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="cui__link mr-2"
+                              href={`https://adapools.org/pool/${poolData.pool_id}`}
+                            >
+                              {formatValue(`${(poolData.pool_id).substring(0, 4)}...${(poolData.pool_id).slice(-8)}`)}
+                            </a>
+                            <CopyToClipboard text={poolData.pool_id} onCopy={() => message.success('Pool ID successful copied!')}>
+                              <Tooltip title="Copy Pool ID">
+                                <i className="cui__link fe fe-copy" />
+                              </Tooltip>
+                            </CopyToClipboard>
+                          </span>
                         )}
                       </span>
                     </div>
