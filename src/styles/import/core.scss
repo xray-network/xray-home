@@ -2,8 +2,9 @@
 
 html {
   font-size: 16px;
+  overflow-x: hidden;
   @media (max-width: $lg-max-width) {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -16,7 +17,6 @@ body {
   position: relative;
   font-variant: normal;
   font-feature-settings: normal;
-  overflow-x: hidden;
 }
 
 a {
