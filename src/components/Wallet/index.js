@@ -22,10 +22,10 @@ export default () => {
             <div className="mb-auto">
               <img className={style.wallet} src="/resources/img/wallet.png" alt="" />
               <h1 className="mb-2">
-                <strong className="mr-3">RAY Network Funding Program</strong>
+                <strong className="mr-3">RAY Network Distribution Program</strong>
               </h1>
               <h3 className="mb-3">
-                <span>Distribution instructons</span>
+                <span>How to get RAY coins:</span>
               </h3>
               <div className={style.descr}>
                 <ul className="text-muted">
