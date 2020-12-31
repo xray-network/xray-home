@@ -76,7 +76,7 @@ export default () => {
                 <td>Relays per producer node</td>
                 <td>
                   <span className={style.badge}>
-                    4
+                    5
                   </span>
                 </td>
                 <td>

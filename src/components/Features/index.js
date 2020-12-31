@@ -11,7 +11,7 @@ const defaultShared = [
     icon: "fe fe-star",
   },
   {
-    title: "At least 4 relays for each producer node",
+    title: "At least 5 relays for each producer node",
     icon: "fe fe-compass",
   },
   {

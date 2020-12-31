@@ -282,8 +282,17 @@ export default () => {
                         <div>
                           <strong>{relay.name}</strong>
                           {' '}
-                          {relay.producer && <span className="badge badge-success">producer</span>}
-                          {!relay.producer && <span className="badge badge-primary">relay</span>}
+                          {relay.tags.map((tag, index) => {
+                            return (
+                              <span key={index} className={classnames('badge mr-1', {
+                                'badge-success': tag === 'producer',
+                                'badge-primary': tag === 'relay',
+                                'badge-danger': tag === 'api',
+                              })}>
+                                {tag}
+                              </span>
+                            )
+                          })}
                         </div>
                       )}
                       content={(
@@ -294,14 +303,19 @@ export default () => {
                       )}
                     >
                       <span
-                        className={classnames(style.relay, {
-                          [style.isProducer]: relay.producer,
-                        })}
+                        className={style.relay}
                         style={{
                           top: `${relay.coords[0]}%`,
                           left: `${relay.coords[1]}%`,
                         }}
-                      />
+                      >
+                        <span
+                          className={classnames({
+                            'bg-success': relay.type === 'producer',
+                            'bg-danger': relay.type === 'api',
+                          })}
+                        />
+                      </span>
                     </Popover>
                   )
                 })}

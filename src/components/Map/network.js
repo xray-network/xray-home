@@ -1,6 +1,7 @@
 export default [
   {
-    producer: true,
+    type: 'producer',
+    tags: ['producer'],
     name: 'RAY',
     coords: [46.3, 11.5],
     data: {
@@ -11,6 +12,7 @@ export default [
     }
   },
   {
+    tags: ['relay'],
     name: 'ray-relay-1',
     coords: [46.3, 13.3],
     data: {
@@ -21,6 +23,7 @@ export default [
     }
   },
   {
+    tags: ['relay'],
     name: 'ray-relay-3',
     coords: [41.2, 26],
     data: {
@@ -31,6 +34,7 @@ export default [
     }
   },
   {
+    tags: ['relay'],
     name: 'ray-relay-2',
     coords: [28.5, 42.3],
     data: {
@@ -41,6 +45,7 @@ export default [
     }
   },
   {
+    tags: ['relay'],
     name: 'ray-relay-4',
     coords: [59.2, 78.2],
     data: {
@@ -48,6 +53,18 @@ export default [
       country: 'SG',
       region: 'Singapore',
       location: 'Singapore',
+    }
+  },
+  {
+    type: 'api',
+    tags: ['api', 'relay'],
+    name: 'ray-relay-5',
+    coords: [36.1, 49.3],
+    data: {
+      ip: '167.71.37.100:3001',
+      country: 'DE',
+      region: 'Hessen',
+      location: 'Frankfurt am Main',
     }
   },
 ]
