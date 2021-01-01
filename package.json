@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "build-deploy": "yarn build && cd .cloudflare/ && wrangler publish --env production"
+    "build-deploy": "yarn build && cd .cloudflare/ && wrangler publish"
   },
   "dependencies": {
     "aos": "^2.3.4",
