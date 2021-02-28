@@ -5,10 +5,10 @@ import Layout from "@/layouts/Main"
 export default () => {
   return (
     <Layout>
-      <Helmet title="Cardano Advanced Light Wallet" />
+      <Helmet title="Stake Pools" />
       <div className="ray__block">
         <div className="container-fluid">
-          [wallet]
+          [stake]
         </div>
       </div>
     </Layout>

@@ -4,12 +4,12 @@ import { Link } from "gatsby"
 
 export default () => {
   return (
-    <div className="cui__block">
+    <div className="ray__block">
       <div className={style.error}>
         <div className="row">
           <div className="col-lg-6">
             <div className={style.pig}>
-              <img src="/resources/img/pig.svg" title="Ray Network Piglet" alt="Ray Network Piglet" />
+              <img src="/resources/images/pig.svg" title="Ray Network Piglet" alt="Ray Network Piglet" />
             </div>
           </div>
           <div className="col-lg-6">
@@ -19,7 +19,7 @@ export default () => {
                 This page is broken or the page has been moved. Try these pages instead:
               </p>
               <div className={style.links}>
-                <Link className="mr-4 cui__link" to="/">
+                <Link className="mr-4 ray__link" to="/">
                   Homepage
                 </Link>
               </div>

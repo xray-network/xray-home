@@ -34,10 +34,13 @@ const items = {
 
 export default ({ version = "main" }) => {
   return (
-    <div className="cui__block">
+    <div className="ray__block">
       <div className="container-fluid">
         <div className={style.features}>
-          <h6 className="cui__block__heading mb-5">RAY Pools Overview</h6>
+          <h2 className="ray__heading mb-4">About Ray Network</h2>
+          <p className="mb-5">
+            Ray Network increase blockcahin use adoption: empowers regular users, developers, liquidity providers and traders to participate in a financial marketplace that is open and accessible to all.
+          </p>
           <div className="row">
             {items[version].map((item, index) => (
               <div key={index} className="col-lg-4 col-sm-6 col-12">

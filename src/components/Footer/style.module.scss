@@ -1,11 +1,49 @@
 @import "@/styles/mixins";
 
 .footer {
-  padding: 0 0 rem(50) 0;
+  border-top: 1px solid $border;
+  padding-top: rem(60);
+  padding-bottom: rem(50);
+  font-size: rem(16);
 }
 
-.logo {
-  height: rem(21);
+.logoContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 rem(28) 0 0;
+  margin-bottom: rem(5);
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    font-weight: bold;
+    color: $dark;
+
+    img {
+      height: rem(21);
+      margin-right: rem(12);
+    }
+  }
+  .name {
+    font-size: rem(16);
+    font-weight: 900;
+    color: $black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 90%;
+    display: block;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: $lg-max-width) {
+    .name {
+      display: none;
+    }
+  }
 }
 
 .cardano {

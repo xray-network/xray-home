@@ -1,16 +1,16 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Layout from "@/layouts/Main"
+import LayoutEmpty from "@/layouts/Empty"
 
 export default () => {
   return (
-    <Layout>
-      <Helmet title="Cardano Advanced Light Wallet" />
+    <LayoutEmpty>
+      <Helmet title="Updates" />
       <div className="ray__block">
         <div className="container-fluid">
-          [wallet]
+          [updates]
         </div>
       </div>
-    </Layout>
+    </LayoutEmpty>
   )
 }

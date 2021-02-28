@@ -1,18 +1,15 @@
 @import "@/styles/mixins";
 
 html {
-  font-size: 16px;
-  overflow-x: hidden;
+  font-size: 18px;
   @media (max-width: $lg-max-width) {
     font-size: 15px;
   }
 }
 
 body {
-  font-size: 1rem;
-  line-height: 1.66;
   font-family: $base-font-family;
-  color: $black;
+  color: $text;
   overflow-x: hidden;
   position: relative;
   font-variant: normal;
@@ -41,12 +38,44 @@ input {
   background: $dark-gray-4;
 }
 
+.container-fluid {
+  max-width: rem(1000);
+  margin: 0 auto;
+}
+
 button,
 input {
   box-shadow: none !important;
   outline: none !important;
 }
 
+strong {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: rem(42);
+}
+
+h2 {
+  font-size: rem(36);
+}
+
 svg {
   vertical-align: baseline;
+}
+
+[role="button"] {
+  outline: none;
+}
+
+// dark theme
+[data-theme='dark'] {
+  body {
+    background: $dark;
+  }
 }

@@ -1,54 +1,74 @@
-/* eslint-disable no-alert */
-
 import React from "react"
 import { Link } from "gatsby"
-import { Location } from "@reach/router"
+import { Button } from "antd"
 import style from "./style.module.scss"
 
-const Header = () => {
+export default () => {
   return (
-    <div className="cui__block mb-0">
-      <div className={`${style.header}`}>
-        <Link to="/" className={style.logo}>
-          <img src="/resources/img/logo.svg" alt="RAY Newtork" />
+    <div>
+      <div className={style.header}>
+        <Link to="/" className={style.logoContainer}>
+          <div className={style.logo}>
+            <img src="/resources/logo.svg" alt="" />
+            <div className={style.name}>NETWORK</div>
+          </div>
         </Link>
-        <p className="text-muted">
-          Data Containers Management built with Atala PRISM
-        </p>
-        {/* <div className={style.menu}>
+        <div className={style.menu}>
+          <a
+            className={style.link}
+            href="https://wallet.rraayy.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Ray Wallet
+          </a>
           <Link
             className={style.link}
             activeClassName={style.active}
-            to="/"
+            to="/updates/"
           >
-            Home
+            Updates
           </Link>
-          <Link
+          <a
             className={style.link}
-            activeClassName={style.active}
-            to="/info"
+            href="https://github.com/ray-network"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            Ray Network
-          </Link>
-        </div> */}
+            <img className={style.linkIcon} src="/resources/images/github.svg" alt="" />
+            Github
+          </a>
+          <a
+            className={style.link}
+            href="https://telegram.org"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img className={style.linkIconTg} src="/resources/images/telegram.svg" alt="" />
+            Telegram
+          </a>
+          <a
+            className={style.link}
+            href="https://twittet.com/RayWallet"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img className={style.linkIconTwi} src="/resources/images/twitter.svg" alt="" />
+            Twitter
+          </a>
+        </div>
+        <Button
+          className={`${style.fixed} ant-button ray__btn`}
+          href="https://wallet.rraayy.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span>
+            Open Ray Wallet
+          </span>
+          <i className="fe fe-arrow-up-right ray__btn__icon" />
+        </Button>
       </div>
-      <a
-        href="https://github.com/ray-network"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${style.fixed} ant-button cui__btn`}
-      >
-        <span>
-          Visit GitHub
-          <img src="/resources/img/github.png" alt="" />
-        </span>
-      </a>
     </div>
   )
 }
-
-export default props => (
-  <Location>
-    {locationProps => <Header {...locationProps} {...props} />}
-  </Location>
-)

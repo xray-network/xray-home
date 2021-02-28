@@ -1,18 +1,33 @@
 import React from "react"
+import { Link } from "gatsby"
 import style from "./style.module.scss"
 
 export default () => {
   return (
-    <div className="cui__block mb-4">
+    <div className="ray__block mb-4">
       <div className={`container-fluid ${style.footer}`}>
         <div className="row">
           <div className="col-md-6">
-            <img className={style.logo} src="/resources/img/logo.svg" alt="RAY Network" />
-            <p className="text-muted">Data Containers Management built with Atala PRISM</p>
+            <Link to="/" className={style.logoContainer}>
+              <div className={style.logo}>
+                <img src="/resources/logo.svg" alt="" />
+                <div className={style.name}>NETWORK</div>
+              </div>
+            </Link>
+            <p>
+              <strong>Extended Ecosystem</strong> for Cardano Blockchain Platform
+            </p>
           </div>
           <div className="col-md-6 text-left text-md-right">
-            Powered with Cardano
-            <img className={style.cardano} src="/resources/img/cardano.png" alt="Cardano" />
+            Powered with{' '}
+            <a
+              href="https://cardano.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <strong>Cardano</strong>
+              <img className={style.cardano} src="/resources/images/cardano.png" alt="Cardano" />
+            </a>
           </div>
         </div>
       </div>

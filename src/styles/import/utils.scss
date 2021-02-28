@@ -1,12 +1,18 @@
 @import "@/styles/mixins";
 
-.cui {
+.ray {
   &__link {
     color: $primary;
     cursor: pointer;
 
     &:hover {
       color: lighten($primary, 10%);
+    }
+
+    &__icon {
+      font-size: 120%;
+      vertical-align: sub;
+      margin-left: rem(5);
     }
   }
 
@@ -22,30 +28,51 @@
   }
 
   &__block {
-    max-width: rem(1280);
+    position: relative;
+    z-index: 2;
     margin: 0 auto;
-    margin-bottom: rem(100);
+    margin-bottom: rem(60);
+  }
 
-    &__heading {
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: rem(16);
-      font-weight: bold;
-      margin-bottom: rem(50);
+  &__heading {
+    display: block;
+    position: relative;
+    
+    &:before {
+      display: block;
+      content: "";
+      width: 7px;
+      position: absolute;
+      top: rem(8);
+      bottom: rem(4);
+      left: rem(-50);
+      background: $black;
+      border-radius: 20px;
+    }
+
+    @media (max-width: $md-max-width) {
+      padding-top: rem(30);
+
+      &:before {
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 7px;
+      }
     }
   }
-  
+
   &__btn {
     display: inline-block;
     padding: 0 rem(30);
-    font-size: rem(21);
+    font-size: rem(16);
     color: $white;
     background: linear-gradient(-155deg, $success, darken($success, 5%));
-    height: rem(47);
-    line-height: rem(48) !important;
+    height: rem(40);
+    line-height: rem(42) !important;
     border: none;
-    border-radius: 10px;
-    font-weight: normal;
+    border-radius: 100px;
+    font-weight: 600;
     box-shadow: 0 5px 10px -4px rgba(0,0,0,.2), 0 0 30px -4px rgba(0,0,0,.2);
     @include transition-middle();
     position: relative;
@@ -71,6 +98,13 @@
       &::after {
         opacity: .2 !important;
       }
+    }
+
+    &__icon {
+      margin-left: rem(5);
+      margin-right: rem(-10);
+      font-size: rem(24);
+      vertical-align: sub;
     }
 
     &--light {

@@ -4,7 +4,7 @@ $color1: lighten($gray-1, 5%);
 $color2: darken($gray-1, 0%);
 
 .header {
-  margin-bottom: rem(80);
+  margin-bottom: rem(40);
   position: relative;
 
   h4 {
@@ -12,10 +12,35 @@ $color2: darken($gray-1, 0%);
   }
 }
 
+.welcome {
+  display: flex;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
+  position: absolute;
+  top: 0;
+  width: 600px;
+  left: calc(100% + 100px);
+
+  @media (max-width: 830px) {
+    display: none;
+  }
+
+  &Icon {
+    width: rem(65);
+    margin-right: rem(20);
+  }
+
+  h2 {
+    font-size: rem(32);
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
 .title {
-  font-size: rem(48);
+  font-size: rem(42);
   margin-bottom: rem(40);
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .description {
@@ -31,39 +56,3 @@ $color2: darken($gray-1, 0%);
   z-index: 2;
 }
 
-.rays {
-  position: absolute;
-  z-index: 1;
-  bottom: -30px;
-  left: 50%;
-
-  svg {
-    path:nth-child(1) {
-      fill: $color1;
-      animation: rayAnimation 2s ease-in-out infinite;
-      animation-delay: 0s;
-    }
-    path:nth-child(2) {
-      fill: $color1;
-      animation: rayAnimation 2s ease-in-out infinite;
-      animation-delay: 1.32s;
-    }
-    path:nth-child(3) {
-      fill: $color1;
-      animation: rayAnimation 2s ease-in-out infinite;
-      animation-delay: 0.66s;
-    }
-  }
-}
-
-@keyframes rayAnimation {
-  0% {
-    fill: $color1;
-  }
-  50% {
-    fill: $color2;
-  }
-  100% {
-    fill: $color1;
-  }
-}

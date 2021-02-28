@@ -44,7 +44,7 @@ export default () => {
             e.preventDefault()
             setCookiesHidden(true)
           }}
-          className="cui__btn cui__btn--small"
+          className="ray__btn ray__btn--small"
         >
           Got it
         </a>

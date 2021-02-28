@@ -1,8 +1,14 @@
 @import "@/styles/mixins";
 
 .header {
-  padding: rem(30) rem(20);
+  display: flex;
+  padding: rem(40) rem(20);
   margin-bottom: rem(20);
+
+  @media (max-width: $md-max-width) {
+    flex-direction: column;
+    display: block;
+  }
 }
 
 .menu {
@@ -16,25 +22,47 @@
 }
 
 .fixed {
-  position: fixed !important;
+  position: fixed;
   z-index: 100;
-  top: rem(20);
+  top: rem(40);
   right: rem(20);
 
-  img {
-    height: rem(21);
+  @media (max-width: $md-max-width) {
     position: relative;
-    top: -2px;
-    margin-left: rem(10);
+    top: 0;
+    right: 0;
   }
 }
 
 .link {
   display: block;
-  padding: rem(10) rem(20) rem(8);
+  font-weight: 700;
+  font-size: rem(16);
+  padding: rem(10) rem(18) rem(8);
   border-radius: 50px;
   @include transition-middle;
   color: $dark;
+
+  &Icon {
+    height: rem(18);
+    margin-right: rem(8);
+    position: relative;
+    top: -2px;
+  }
+
+  &IconTg {
+    height: rem(21);
+    margin-right: rem(8);
+    position: relative;
+    top: -2px;
+  }
+
+  &IconTwi {
+    height: rem(16);
+    margin-right: rem(8);
+    position: relative;
+    top: -2px;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -52,22 +80,189 @@
   }
 
   &.active {
-    background: $pastel-2 !important;
+    background: $white !important;
   }
 
   &:hover,
   &:active,
   &:focus {
-    background: $pastel-1;
-    color: $dark;
+    background: $white;
+    color: $blue;
   }
 }
 
-.logo {
-  img {
-    height: rem(21);
-    position: relative;
-    top: -1px;
-    margin-right: rem(10);
+.logoContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 rem(28) 0 0;
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    font-weight: bold;
+    color: $dark;
+
+    img {
+      height: rem(21);
+      margin-right: rem(12);
+    }
   }
+  .name {
+    font-size: rem(16);
+    font-weight: 900;
+    color: $black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 90%;
+    display: block;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: $lg-max-width) {
+    .name {
+      display: none;
+    }
+  }
+
+  @media (max-width: $md-max-width) {
+    margin-bottom: rem(20);
+
+    .name,
+    .descr {
+      display: block;
+    }
+  }
+}
+
+.products {
+  position: relative;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    .mContainer {
+      transform: none;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.mContainer {
+  position: absolute;
+  font-weight: normal;
+  color: $dark;
+  z-index: 20;
+  top: calc(100% - 5px);
+  left: 0;
+  padding-top: rem(20);
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 0.25s;
+  transform: perspective(50em) rotateX(-15deg);
+  transform-origin: 50% -50px;
+}
+
+.mInner {
+  box-shadow: 0 30px 100px -20px rgba(50, 50, 93, 0.25),
+    0 30px 60px -30px rgba(0, 0, 0, 0.3),
+    0 -18px 60px -10px rgba(0, 0, 0, 0.025);
+  background: $white;
+  padding: rem(30) rem(30) rem(20);
+  border-radius: 15px;
+  width: rem(590);
+  position: relative;
+
+  @media (max-width: $md-max-width) {
+    width: rem(350);
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50px;
+    border-radius: 4px 0 0 0;
+    top: -6px;
+    margin: 0 0 0 -6px;
+    width: 12px;
+    height: 12px;
+    background: $white;
+    box-shadow: -3px -3px 5px rgba(82, 95, 127, 0.02);
+    transform: rotate(45deg);
+  }
+}
+
+.mCategory {
+  font-size: rem(12);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $gray-5;
+  margin-bottom: rem(10);
+  padding-left: rem(30);
+}
+
+.mBlock {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mItem {
+  flex: 0 0 50%;
+  margin-bottom: rem(15);
+  padding-left: rem(30);
+  padding-right: rem(20);
+  position: relative;
+  opacity: .4;
+  @include transition-middle();
+
+  @media (max-width: $md-max-width) {
+    flex: 0 0 100%;
+  }
+
+  :global(.badge) {
+    margin-left: -5px;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 3px;
+    border-radius: 3px;
+    width: 10px;
+    height: 10px;
+    background: $pastel-2;
+    @include transition-fast();
+  }
+}
+
+a.mItem {
+  opacity: 1;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.mItemActive {
+    .mTitle {
+      color: $primary;
+    }
+    &:before {
+      background: $gray-4;
+    }
+  }
+}
+
+.mTitle {
+  font-weight: bold;
+}
+
+.mDescription {
+  font-size: rem(16);
+  color: $gray-6;
 }

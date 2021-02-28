@@ -37,9 +37,10 @@
 
 .pig {
   padding-top: rem(70);
-  text-align: center;
+  text-align: right;
 
   @media (max-width: $lg-max-width) {
+    text-align: center;
     padding-top: 0;
   }
 

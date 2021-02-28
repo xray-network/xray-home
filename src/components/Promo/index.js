@@ -1,38 +1,41 @@
 import React from "react"
-import { Tooltip } from "antd"
 import style from "./style.module.scss"
-import Rays from "../../../static/resources/img/rays.inline.svg"
 
 export default () => {
   return (
-    <div className="cui__block">
+    <div className="ray__block">
       <div className="container-fluid">
         <div className={style.header}>
-          <div className={style.rays}>
-            <Rays />
+          <div className={style.welcome}>
+            <div className={style.welcomeIcon}>
+              <img src="/resources/images/logo-outline.svg" alt="" />
+            </div>
+            <h2>
+              <strong>Advanced Ecosystem</strong> for
+              <br />
+              Cardano Blockchain Platform
+            </h2>
           </div>
           <div className={style.content}>
-            <h1 className={`${style.title} mb-3`}>
-              <strong>RAY pools are looking for delegators</strong>
+            <h1 className={`${style.title} ray__heading mb-4`}>
+              Our pools are looking for delegators.
+              <br />
+              RayToken airdrop starts soon — hurry up!
             </h1>
-            <div className={style.description}>
-              <h5 className="mb-2">
-                Join indirect funding by delegating your ADA to RAY pools. This will fund the development of a service that will provide a new approach to sharing data between members of various businesses. Data-models WYSIWYG editor, UI builder for admin panels, and universal client apps (desktop and mobile).
-              </h5>
-              <h5 className="mb-4 pb-3">
-                Also, delegation is currently the only way to get RAYs.
-              </h5>
-            </div>
-            <a href="#about" className="cui__btn mr-3">Read More</a>
-            <Tooltip title="Soon">
-              <a
-                href="/"
-                className="cui__btn cui__btn--light"
-                onClick={e => e.preventDefault()}
-              >
-                Demo
+            <div className="mb-4">
+              <a href="/i" className="ray__link mr-4">Staking Calculator</a>
+              <a href="https://wallet.rraayy.com/#/stake" target="_blank" rel="noopener noreferrer" className="ray__link">
+                Visit Staking Center
+                <i className="fe fe-arrow-up-right ray__link__icon" />
               </a>
-            </Tooltip>
+            </div>
+            <div className={style.description}>
+              <p>
+                Get <strong>5.5% ROI</strong> in ADA by delegation your funds to a <strong>Ray Pools</strong> and receive additional rewards:
+                <br />
+                <strong>100 RAY</strong> per each 100 ADA for every delegation day.
+              </p>
+            </div>
           </div>
         </div>
       </div>

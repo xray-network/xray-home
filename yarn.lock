@@ -5476,6 +5476,13 @@ gatsby-plugin-google-analytics@^2.2.2:
     "@babel/runtime" "^7.12.5"
     minimatch "3.0.4"
 
+gatsby-plugin-html-attributes@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-html-attributes/-/gatsby-plugin-html-attributes-1.0.5.tgz#811613bdeff119aa4fa61ed33b5147d52d5a7017"
+  integrity sha512-5u9AHfwxYuhl/QT+cI/r0+1oCKba/LPB6PHUaJN65swPOPrsAiNAj++hTSCs3CG3fITcR8Oorcn6hm6rN+uVAg==
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-manifest@^2.3.3:
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.9.1.tgz#963bd237541397738ad8d66fcd15e7c46d1b1d95"
@@ -11592,6 +11599,11 @@ stdout-stream@^1.4.0:
   integrity sha512-j4emi03KXqJWcIeF8eIXkjMFN1Cmb8gUlDYGeBALLPo5qdyTfA9bOtl8m33lRoC+vFMkP3gl0WsDr6+gzxbbTA==
   dependencies:
     readable-stream "^2.0.1"
+
+store@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/store/-/store-2.0.12.tgz#8c534e2a0b831f72b75fc5f1119857c44ef5d593"
+  integrity sha1-jFNOKguDH3K3X8XxEZhXxE711ZM=
 
 stream-browserify@^2.0.1:
   version "2.0.2"

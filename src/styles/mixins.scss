@@ -1,7 +1,7 @@
 // Colors
 $white: #fff;
-$black: #141322;
-$blue: #4b7cf3;
+$black: #17202A;
+$blue: #017AFF;
 $blue-light: #42baf9;
 $blue-dark: #2c60e4;
 $gray-1: #f2f4f8;
@@ -15,9 +15,9 @@ $orange: #faad15;
 $red: #f5222e;
 $pink: #fd3995;
 $purple: #652eff;
-$green: #1ad697;
+$green: #19D195;
 
-$text: $gray-6;
+$text: $black;
 $border: $gray-2;
 
 $pastel-1: #f6f6f6;
@@ -43,7 +43,9 @@ $dark-gray-5: #141322;
 $dark-gray-6: #0c0c1b;
 
 // Font Family
-$base-font-family: "Mukta", sans-serif;
+$base-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+'Noto Color Emoji';
 
 // Font Size
 $base-font-size: 18 !default;

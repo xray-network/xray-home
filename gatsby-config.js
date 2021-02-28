@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ray Network| Cardano Pools`,
+        name: `Ray Wallet - Cardano Advanced Light Wallet`,
         icon: `static/favicon.png`,
       },
     },
@@ -29,9 +29,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
-        google: {
-          families: ["Mukta:400,700,800"],
-        },
         custom: {
           families: ["Feather"],
           urls: ["/resources/fonts/font-feathericons/dist/feather.css"],
@@ -59,6 +56,12 @@ module.exports = {
           include: /\.inline\.svg$/
         }
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        'data-theme': 'dark'
+      }
+    },
   ],
 }
