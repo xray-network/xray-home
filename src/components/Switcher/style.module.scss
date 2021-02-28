@@ -26,7 +26,6 @@
   text-transform: uppercase;
   padding: 10px;
   display: block;
-  background: #EBE5E5;
   border-radius: 40px;
   display: flex;
   img {
@@ -38,7 +37,6 @@
 .mode {
   height: 40px;
   width: 40px;
-  background: #EBE5E5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,11 +44,36 @@
   margin-left: rem(15);
   font-size: rem(20);
   cursor: pointer;
+
+  @include transition-fast()
+}
+
+.flag, .mode {
+  background: #EBE5E5;
+
+  &:hover {
+    background: darken(#EBE5E5, 2%);
+  }
 }
 
 .menuIcon {
   img {
     height: rem(21);
     margin-right: rem(10);
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .flag, .mode {
+    background: rgba($white, .05);
+
+    &:hover {
+      background: rgba($white, .09);
+    }
+  }
+
+  .mode {
+    color: darken($white, 20%);
   }
 }

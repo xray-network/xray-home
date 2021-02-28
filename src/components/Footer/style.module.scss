@@ -52,3 +52,16 @@
   position: relative;
   top: -2px;
 }
+
+// dark theme
+[data-theme='dark'] {
+  .footer {
+    border-color: darken($dark-gray-3, 15%);
+  }
+
+  .logo {
+    .name {
+      color: $white;
+    }
+  }
+}

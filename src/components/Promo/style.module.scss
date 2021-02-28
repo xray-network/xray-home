@@ -17,6 +17,7 @@ $color2: darken($gray-1, 0%);
   transform: rotate(90deg);
   transform-origin: 0 0;
   position: absolute;
+  z-index: 0;
   top: 0;
   width: 600px;
   left: calc(100% + 100px);
@@ -40,7 +41,7 @@ $color2: darken($gray-1, 0%);
 .title {
   font-size: rem(42);
   margin-bottom: rem(40);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .description {
@@ -56,3 +57,20 @@ $color2: darken($gray-1, 0%);
   z-index: 2;
 }
 
+
+
+// dark theme
+[data-theme='dark'] {
+  .welcome {
+    &Icon {
+      svg {
+        rect, g g g {
+          fill: $white;
+        }
+        path {
+          stroke: $white;
+        }
+      }
+    }
+  }
+}

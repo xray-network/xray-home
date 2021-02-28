@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import Bg from "@/components/Bg"
 import Menu from "@/components/Menu"
 import Footer from "@/components/Footer"
 import Cookies from "@/components/Cookies"
@@ -14,6 +15,7 @@ export default ({ children }) => (
         content="Advanced Ecosystem for Cardano Blockchain Platform. All about ADA finances in one place."
       />
     </Helmet>
+    <Bg />
     <Menu />
     <Switcher />
     {children}

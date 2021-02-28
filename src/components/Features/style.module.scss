@@ -29,4 +29,15 @@
   font-size: rem(16);
   padding-right: rem(30);
   line-height: 1.4;
+
+  @media (max-width: $lg-max-width) {
+    font-size: rem(18);
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .icon {
+    background: $dark-gray-4;
+  }
 }

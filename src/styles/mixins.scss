@@ -69,7 +69,7 @@ $shadow-ant: 0 10px 35px -5px rgba(0, 0, 0, 0.15);
   transition: background 0.2s ease-in-out;
 }
 @mixin transition-color() {
-  transition: color 0.2s ease-in-out;
+  transition: color 0.05s ease-in-out;
 }
 @mixin transition-fast() {
   transition: all 0.05s ease-in-out;

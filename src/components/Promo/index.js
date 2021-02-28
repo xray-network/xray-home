@@ -1,5 +1,6 @@
 import React from "react"
 import style from "./style.module.scss"
+import LogoOutline from "../../../static/resources/images/logo-outline.inline.svg"
 
 export default () => {
   return (
@@ -8,7 +9,7 @@ export default () => {
         <div className={style.header}>
           <div className={style.welcome}>
             <div className={style.welcomeIcon}>
-              <img src="/resources/images/logo-outline.svg" alt="" />
+              <LogoOutline />
             </div>
             <h2>
               <strong>Advanced Ecosystem</strong> for

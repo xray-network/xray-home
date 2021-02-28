@@ -15,7 +15,7 @@ export default () => {
               </div>
             </Link>
             <p>
-              <strong>Extended Ecosystem</strong> for Cardano Blockchain Platform
+              <strong>Advanced Ecosystem</strong> for Cardano Blockchain Platform
             </p>
           </div>
           <div className="col-md-6 text-left text-md-right">

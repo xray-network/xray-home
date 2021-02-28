@@ -89,3 +89,26 @@
     margin-bottom: rem(10);
   }
 }
+
+// dark theme
+[data-theme='dark'] {
+  .submenu {
+    background: darken($dark-gray-3, 15%);
+
+    a {
+      &.active {
+        color: $white;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+
+  .title {
+    color: $white;
+  }
+}

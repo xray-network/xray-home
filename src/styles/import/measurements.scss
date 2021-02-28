@@ -1,5 +1,11 @@
 @import "@/styles/mixins";
 
+.z-index {
+  &-5 {
+    z-index: 5 !important;
+  }
+}
+
 .text-small {
   font-size: 80%;
 }

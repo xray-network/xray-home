@@ -1,16 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import LayoutEmpty from "@/layouts/Empty"
+import Updates from "@/components/Updates"
 
 export default () => {
   return (
     <LayoutEmpty>
       <Helmet title="Updates" />
-      <div className="ray__block">
-        <div className="container-fluid">
-          [updates]
-        </div>
-      </div>
+      <Updates />
     </LayoutEmpty>
   )
 }

@@ -3,9 +3,13 @@ import { Link } from "gatsby"
 import { Button } from "antd"
 import style from "./style.module.scss"
 
+import SvgGithub from "../../../static/resources/images/github.inline.svg"
+import SvgTelegram from "../../../static/resources/images/telegram.inline.svg"
+import SvgTwitter from "../../../static/resources/images/twitter.inline.svg"
+
 export default () => {
   return (
-    <div>
+    <div className="ray__block mb-0 z-index-5">
       <div className={style.header}>
         <Link to="/" className={style.logoContainer}>
           <div className={style.logo}>
@@ -14,14 +18,13 @@ export default () => {
           </div>
         </Link>
         <div className={style.menu}>
-          <a
+          <Link
             className={style.link}
-            href="https://wallet.rraayy.com"
-            rel="noopener noreferrer"
-            target="_blank"
+            activeClassName={style.active}
+            to="/"
           >
-            Ray Wallet
-          </a>
+            Home
+          </Link>
           <Link
             className={style.link}
             activeClassName={style.active}
@@ -35,7 +38,9 @@ export default () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img className={style.linkIcon} src="/resources/images/github.svg" alt="" />
+            <span>
+              <SvgGithub className={style.linkIcon} />
+            </span>
             Github
           </a>
           <a
@@ -44,7 +49,7 @@ export default () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img className={style.linkIconTg} src="/resources/images/telegram.svg" alt="" />
+            <SvgTelegram className={style.linkIconTg} />
             Telegram
           </a>
           <a
@@ -53,7 +58,7 @@ export default () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img className={style.linkIconTwi} src="/resources/images/twitter.svg" alt="" />
+            <SvgTwitter className={style.linkIconTwi} />
             Twitter
           </a>
         </div>

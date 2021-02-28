@@ -21,12 +21,8 @@ export default () => {
     zh: FlagZh,
   }
 
-  const changeLanguage = ({ key }) => {
-    console.log(key)
-  }
-
   const menu = (
-    <Menu selectedKeys={[locale]} onClick={changeLanguage}>
+    <Menu>
       <Menu.Item key="en-US">
         <span className={style.menuIcon}>
           <img src={mapFlags.en} alt="English" />
@@ -54,6 +50,8 @@ export default () => {
     </Menu>
   )
 
+  console.log(context)
+
   return (
     <div className="ray__block mb-5">
       <div className="container-fluid">
@@ -72,7 +70,8 @@ export default () => {
             onKeyPress={context.changeTheme}
             className={style.mode}
           >
-            <i className="fe fe-sun" />
+            {context.isLight && <i className="fe fe-sun" />}
+            {!context.isLight && <i className="fe fe-moon" />}
           </div>
         </div>
       </div>

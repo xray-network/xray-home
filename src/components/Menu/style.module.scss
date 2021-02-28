@@ -40,28 +40,35 @@
   font-size: rem(16);
   padding: rem(10) rem(18) rem(8);
   border-radius: 50px;
-  @include transition-middle;
   color: $dark;
+  display: flex;
+  margin-right: rem(5);
+
+  @include transition-middle;
+
+  &Icon, &IconTg, &IconTwi {
+    position: relative;
+    top: 1px;
+    margin-right: rem(8);
+
+    path {
+      @include transition-slow();
+    }
+  }
 
   &Icon {
     height: rem(18);
-    margin-right: rem(8);
-    position: relative;
-    top: -2px;
+    width: rem(18);
   }
 
   &IconTg {
     height: rem(21);
-    margin-right: rem(8);
-    position: relative;
-    top: -2px;
+    width: rem(21);
   }
 
   &IconTwi {
-    height: rem(16);
-    margin-right: rem(8);
-    position: relative;
-    top: -2px;
+    height: rem(19);
+    width: rem(19);
   }
 
   &:last-child {
@@ -87,7 +94,7 @@
   &:active,
   &:focus {
     background: $white;
-    color: $blue;
+    color: $dark;
   }
 }
 
@@ -120,6 +127,8 @@
     max-width: 90%;
     display: block;
     letter-spacing: 2px;
+    position: relative;
+    top: 1px;
   }
 
   @media (max-width: $lg-max-width) {
@@ -265,4 +274,34 @@ a.mItem {
 .mDescription {
   font-size: rem(16);
   color: $gray-6;
+}
+
+// dark theme
+[data-theme='dark'] {
+  .logo {
+    .name {
+      color: $white;
+    }
+  }
+
+  .link {
+    color: $white;
+
+    &.active {
+      background: rgba($white, 0.05) !important;
+    }
+  
+    &:hover,
+    &:active,
+    &:focus {
+      background: rgba($white, 0.05);
+      color: $white;
+    }
+
+    &Icon, &IconTg, &IconTwi {
+      path {
+        fill: $white !important;
+      }
+    }
+  }
 }
