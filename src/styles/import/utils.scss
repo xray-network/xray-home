@@ -10,10 +10,9 @@
     }
 
     &__icon {
-      font-size: 120%;
-      vertical-align: sub;
       margin-left: rem(5);
-      margin-bottom: -10px;
+      position: relative;
+      top: rem(2);
     }
   }
 

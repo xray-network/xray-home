@@ -20,16 +20,16 @@ export default () => {
       {
         data: [ico, rewards, development, founders],
         backgroundColor: [
+          'rgba(54, 162, 235, 0.6)',
           'rgba(54, 162, 235, 0.4)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(255, 99, 132, 0.2)',
+          'rgba(255, 206, 86, 0.4)',
+          'rgba(255, 99, 132, 0.4)',
         ],
         hoverBackgroundColor: [
+          'rgba(54, 162, 235, 0.7)',
           'rgba(54, 162, 235, 0.5)',
-          'rgba(54, 162, 235, 0.3)',
-          'rgba(255, 206, 86, 0.3)',
-          'rgba(255, 99, 132, 0.3)',
+          'rgba(255, 206, 86, 0.5)',
+          'rgba(255, 99, 132, 0.5)',
         ],
         borderColor: [
           'rgba(54, 162, 235, 1)',
@@ -46,12 +46,12 @@ export default () => {
     maintainAspectRatio: false,
     legend: {
       labels: {
-        fontColor: context.isLight ? '#232135' : '#7575a3',
+        fontColor: context.isLight ? '#232135' : '#fff',
       }
     },
     plugins: {
       datalabels: {
-        color: context.isLight ? '#232135' : '#7575a3',
+        color: context.isLight ? '#232135' : '#fff',
         formatter: (value) => {
           return parseInt(value / total * 100) + '%'
         }
@@ -92,10 +92,12 @@ export default () => {
         </div>
         <h5 className="mb-3">Distribution</h5>
         <div className={`${style.distibution} mb-4`}>
+          <ul>
+            <li>Circulating Supply: <strong>{format(total)} RAY</strong></li>
+          </ul>
           <div className="row">
             <div className="col-md-6">
               <ul>
-                <li>Circulating Supply: <strong>{format(total)} RAY</strong></li>
                 <li>Rewards Program (14%): <strong>{format(rewards)} RAY</strong></li>
                 <li>2022 ICO (64%): <strong>{format(ico)} RAY</strong></li>
               </ul>

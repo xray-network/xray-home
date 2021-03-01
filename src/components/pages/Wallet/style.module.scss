@@ -70,7 +70,12 @@
 // dark theme
 [data-theme='dark'] {
   .item {
+    span {
+      color: $white;
+    }
+
     &Icon {
+      color: $white;
       background: darken($dark-gray-3, 15%);
     }
   }
