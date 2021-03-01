@@ -1,16 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import Layout from "@/layouts/Main"
+import Swap from "@/components/pages/Swap"
 
 export default () => {
   return (
     <Layout>
       <Helmet title="DeFi Swap" />
-      <div className="ray__block">
-        <div className="container-fluid">
-          [swap]
-        </div>
-      </div>
+      <Swap />
     </Layout>
   )
 }

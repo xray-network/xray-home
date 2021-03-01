@@ -1,6 +1,6 @@
 import React from "react"
 import style from "./style.module.scss"
-import LogoOutline from "../../../static/resources/images/logo-outline.inline.svg"
+import LogoOutline from "../../../../static/resources/images/logo-outline.inline.svg"
 
 export default () => {
   return (

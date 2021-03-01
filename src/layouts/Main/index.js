@@ -1,13 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Bg from "@/components/Bg"
-import Menu from "@/components/Menu"
-import Footer from "@/components/Footer"
-import Cookies from "@/components/Cookies"
-import Promo from "@/components/Promo"
-import Features from "@/components/Features"
-import Switcher from "@/components/Switcher"
-import Submenu from "@/components/Submenu"
+import Bg from "@/components/layout/Bg"
+import Menu from "@/components/layout/Menu"
+import Footer from "@/components/layout/Footer"
+import Cookies from "@/components/layout/Cookies"
+import Promo from "@/components/layout/Promo"
+import Features from "@/components/layout/Features"
+import Switcher from "@/components/layout/Switcher"
+import Submenu from "@/components/layout/Submenu"
 
 export default ({ children }) => (
   <div>

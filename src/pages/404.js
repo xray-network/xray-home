@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import Layout from "@/layouts/Main"
-import Error404 from "@/components/404"
+import Error404 from "@/components/pages/404"
 
 export default () => {
   return (

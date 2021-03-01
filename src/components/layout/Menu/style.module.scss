@@ -50,10 +50,6 @@
     position: relative;
     top: 1px;
     margin-right: rem(8);
-
-    path {
-      @include transition-slow();
-    }
   }
 
   &Icon {

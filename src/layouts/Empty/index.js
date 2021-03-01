@@ -1,10 +1,10 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Bg from "@/components/Bg"
-import Menu from "@/components/Menu"
-import Footer from "@/components/Footer"
-import Cookies from "@/components/Cookies"
-import Switcher from "@/components/Switcher"
+import Bg from "@/components/layout/Bg"
+import Menu from "@/components/layout/Menu"
+import Footer from "@/components/layout/Footer"
+import Cookies from "@/components/layout/Cookies"
+import Switcher from "@/components/layout/Switcher"
 
 export default ({ children }) => (
   <div>

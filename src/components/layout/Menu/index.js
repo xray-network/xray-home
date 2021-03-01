@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 import { Button } from "antd"
 import style from "./style.module.scss"
 
-import SvgGithub from "../../../static/resources/images/github.inline.svg"
-import SvgTelegram from "../../../static/resources/images/telegram.inline.svg"
-import SvgTwitter from "../../../static/resources/images/twitter.inline.svg"
+import SvgGithub from "../../../../static/resources/images/github.inline.svg"
+import SvgTelegram from "../../../../static/resources/images/telegram.inline.svg"
+import SvgTwitter from "../../../../static/resources/images/twitter.inline.svg"
 
 export default () => {
   return (
@@ -54,7 +54,7 @@ export default () => {
           </a>
           <a
             className={style.link}
-            href="https://twittet.com/RayWallet"
+            href="https://twitter.com/RayWallet"
             rel="noopener noreferrer"
             target="_blank"
           >
