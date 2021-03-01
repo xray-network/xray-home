@@ -4,7 +4,7 @@ import style from "./style.module.scss"
 
 export default () => {
   return (
-    <div className="ray__block mb-5">
+    <div className="ray__block mb-5" id="submenu">
       <div className="container-fluid">
         <div className={style.submenu}>
           <div className={style.title}>Ray Network Services</div>
@@ -13,8 +13,8 @@ export default () => {
             <span>Wallet</span>
           </Link>
           <Link to="/ray-token/" activeClassName={style.active}>
-            <span>RayToken</span>
-            <span>RayToken</span>
+            <span>Ray Token</span>
+            <span>Ray Token</span>
           </Link>
           <Link to="/stake/" activeClassName={style.active}>
             <span>Stake</span>

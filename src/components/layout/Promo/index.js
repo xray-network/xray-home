@@ -1,4 +1,5 @@
 import React from "react"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import style from "./style.module.scss"
 import LogoOutline from "../../../../static/resources/images/logo-outline.inline.svg"
 
@@ -21,10 +22,12 @@ export default () => {
             <h1 className={`${style.title} ray__heading mb-4`}>
               Our pools are looking for delegators.
               <br />
-              RayToken airdrop starts soon — hurry up!
+              Ray Token airdrop starts soon — hurry up!
             </h1>
             <div className="mb-4">
-              <a href="/i" className="ray__link mr-4">Staking Calculator</a>
+              <AnchorLink to="/stake/#submenu" stripHash className="ray__link mr-4">
+                Staking Calculator
+              </AnchorLink>
               <a href="https://wallet.rraayy.com/#/stake" target="_blank" rel="noopener noreferrer" className="ray__link">
                 Visit Staking Center
                 <i className="fe fe-arrow-up-right ray__link__icon" />

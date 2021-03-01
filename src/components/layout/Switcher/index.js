@@ -50,8 +50,6 @@ export default () => {
     </Menu>
   )
 
-  console.log(context)
-
   return (
     <div className="ray__block mb-5">
       <div className="container-fluid">

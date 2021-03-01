@@ -13,6 +13,7 @@
       font-size: 120%;
       vertical-align: sub;
       margin-left: rem(5);
+      margin-bottom: -10px;
     }
   }
 
@@ -77,6 +78,7 @@
     @include transition-middle();
     position: relative;
     overflow: hidden;
+    
     &::after {
       content: '';
       display: block;
@@ -128,6 +130,13 @@
       height: rem(34);
       line-height: rem(35) !important;
     }
+
+    &[disabled] {
+      transition: none !important;
+      border: 1px solid $pastel-2;
+      background: none !important;
+      color: $gray-4 !important;
+    }
   }
 }
 
@@ -137,6 +146,13 @@
     &__heading {
       &:before {
         background: $white;
+      }
+    }
+
+    &__btn {
+      &[disabled] {
+        border-color: darken($dark-gray-3, 15%) !important;
+        color: darken($dark-gray-3, 15%) !important;
       }
     }
   }

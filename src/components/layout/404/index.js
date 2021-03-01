@@ -16,7 +16,9 @@ export default () => {
             <div className={style.description}>
               <h1 className={style.title}>Page not found</h1>
               <p className="mb-4">
-                This page is broken or the page has been moved. Try these pages instead:
+                This page is broken or the page has been moved.
+                <br />
+                Try these pages instead:
               </p>
               <div className={style.links}>
                 <Link className="mr-4 ray__link" to="/">

@@ -1,7 +1,6 @@
 @import "@/styles/mixins";
 
 .error {
-  padding-top: rem(100);
   padding-bottom: rem(70);
 
   @media (max-width: $lg-max-width) {

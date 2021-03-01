@@ -32,6 +32,13 @@ export default () => {
           >
             Updates
           </Link>
+          <Link
+            className={style.link}
+            activeClassName={style.active}
+            to="/wiki/"
+          >
+            Wiki
+          </Link>
           <a
             className={style.link}
             href="https://github.com/ray-network"
@@ -63,7 +70,7 @@ export default () => {
           </a>
         </div>
         <Button
-          className={`${style.fixed} ant-button ray__btn`}
+          className={`${style.fixed} ray__btn`}
           href="https://wallet.rraayy.com"
           rel="noopener noreferrer"
           target="_blank"

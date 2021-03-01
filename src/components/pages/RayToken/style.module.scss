@@ -1,1 +1,50 @@
 @import "@/styles/mixins";
+
+.container {
+  display: flex;
+}
+
+.sign {
+  margin-left: rem(40);
+
+  svg {
+    width: rem(100);
+    height: rem(100);
+  }
+
+  @media (max-width: $md-max-width) {
+    margin-left: rem(20);
+
+    svg {
+      width: rem(80);
+      height: rem(80);
+    }
+  }
+}
+
+.distibution {
+  color: $gray-5;
+
+  strong {
+    color: $dark;
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .sign {
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  .distibution {
+    color: lighten($dark-gray-2, 5%);
+  
+    strong {
+      color: $white;
+    }
+  }
+}

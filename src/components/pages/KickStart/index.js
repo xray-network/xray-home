@@ -5,7 +5,7 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-4">KickStart</h2>
+        <h2 className="ray__heading mb-4">KickStart Crowdfunding</h2>
       </div>
     </div>
   )
