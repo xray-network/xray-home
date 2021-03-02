@@ -73,6 +73,10 @@ svg {
   outline: none;
 }
 
+::placeholder {
+  color: $gray-3 !important;
+}
+
 // dark theme
 [data-theme='dark'] {
   body {
@@ -93,5 +97,9 @@ svg {
       color: $white;
       text-decoration: none;
     }
+  }
+
+  ::placeholder {
+    color: $dark-gray-3 !important;
   }
 }

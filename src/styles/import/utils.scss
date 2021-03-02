@@ -126,8 +126,10 @@
 
     &--small {
       padding: 0 rem(20);
-      height: rem(34);
-      line-height: rem(35) !important;
+      height: rem(32);
+      line-height: rem(32) !important;
+      font-weight: normal;
+      font-size: rem(14);
     }
 
     &[disabled] {
@@ -150,8 +152,8 @@
 
     &__btn {
       &[disabled] {
-        border-color: darken($dark-gray-3, 15%) !important;
-        color: darken($dark-gray-3, 15%) !important;
+        border-color: $dark-gray-3 !important;
+        color: $dark-gray-3 !important;
       }
     }
   }

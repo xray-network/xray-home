@@ -1,0 +1,23 @@
+@import "@/styles/mixins";
+
+.badge {
+  &-primary {
+    background: $primary;
+  }
+  &-success {
+    background: $success;
+  }
+  &-white {
+    background: $white;
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .badge {
+    &-white {
+      background: $dark-gray-4;
+      color: lighten($dark-gray-2, 5%);
+    }
+  }
+}

@@ -10,7 +10,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-anchor-links`,
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -25,
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -1,0 +1,45 @@
+@import "@/styles/mixins";
+
+.ant {
+  &-input {
+    border-radius: 8px;
+  }
+
+  &-btn {
+    border-radius: 8px;
+  }
+
+  &-message {
+    &-notice {
+      &-content {
+        border-radius: 8px;
+      }
+    }
+  }
+
+  &-popover {
+    &-inner {
+      border-radius: 8px;
+    }
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .ant {
+    &-input {
+      background: $dark-gray-4;
+      border-color: darken($dark-gray-3, 15%);
+      color: $white;
+    }
+
+    &-message {
+      &-notice {
+        &-content {
+          color: $white;
+          background: darken($dark-gray-3, 15%);
+        }
+      }
+    }
+  }
+}

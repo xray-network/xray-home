@@ -5,8 +5,8 @@ import style from "./style.module.scss"
 
 import FlagEn from './flags/en.svg'
 import FlagRu from './flags/ru.svg'
-import FlagFr from './flags/fr.svg'
 import FlagZh from './flags/zh.svg'
+import FlagJp from './flags/jp.svg'
 
 export default () => {
   const context = useContext(globalContext)
@@ -16,9 +16,9 @@ export default () => {
 
   const mapFlags = {
     en: FlagEn,
-    ru: FlagRu,
-    fr: FlagFr,
+    jp: FlagJp,
     zh: FlagZh,
+    ru: FlagRu,
   }
 
   const menu = (
@@ -29,23 +29,23 @@ export default () => {
         </span>
         English
       </Menu.Item>
-      <Menu.Item key="fr-FR">
+      <Menu.Item key="jp-JP" disabled>
         <span className={style.menuIcon}>
-          <img src={mapFlags.fr} alt="French" />
+          <img src={mapFlags.jp} alt="French" />
         </span>
-        French
+        日本語
       </Menu.Item>
-      <Menu.Item key="ru-RU">
-        <span className={style.menuIcon}>
-          <img src={mapFlags.ru} alt="Русский" />
-        </span>
-        Русский
-      </Menu.Item>
-      <Menu.Item key="zh-CN">
+      <Menu.Item key="zh-CN" disabled>
         <span className={style.menuIcon}>
           <img src={mapFlags.zh} alt="简体中文" />
         </span>
         简体中文
+      </Menu.Item>
+      <Menu.Item key="ru-RU" disabled>
+        <span className={style.menuIcon}>
+          <img src={mapFlags.ru} alt="Русский" />
+        </span>
+        Русский
       </Menu.Item>
     </Menu>
   )
