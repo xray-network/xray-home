@@ -45,6 +45,7 @@ export default () => {
             rel="noopener noreferrer"
             target="_blank"
           >
+            <span className={style.status} />
             Status
           </a>
           <a
