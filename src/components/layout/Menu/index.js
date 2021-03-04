@@ -41,6 +41,14 @@ export default () => {
           </Link>
           <a
             className={style.link}
+            href="https://status.rraayy.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Status
+          </a>
+          <a
+            className={style.link}
             href="https://github.com/ray-network"
             rel="noopener noreferrer"
             target="_blank"
@@ -48,7 +56,6 @@ export default () => {
             <span>
               <SvgGithub className={style.linkIcon} />
             </span>
-            Github
           </a>
           <a
             className={style.link}
@@ -56,8 +63,9 @@ export default () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <SvgTelegram className={style.linkIconTg} />
-            Telegram
+            <span>
+              <SvgTelegram className={style.linkIconTg} />
+            </span>
           </a>
           <a
             className={style.link}
@@ -65,8 +73,9 @@ export default () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <SvgTwitter className={style.linkIconTwi} />
-            Twitter
+            <span>
+              <SvgTwitter className={style.linkIconTwi} />
+            </span>
           </a>
         </div>
         <Button

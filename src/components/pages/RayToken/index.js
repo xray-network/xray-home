@@ -111,8 +111,8 @@ export default () => {
                 <li>Circulating Supply: <strong>{format(total)} RAY</strong></li>
               </ul>
               <ul>
-                <li>Rewards Program (28%): <strong>{format(rewards)} RAY</strong></li>
-                <li>2022 ICO (64%): <strong>{format(ico)} RAY</strong></li>
+                <li>Rewards Program: <strong>{format(rewards)} RAY</strong> <sup>28%</sup></li>
+                <li>2022 ICO: <strong>{format(ico)} RAY</strong> <sup>64%</sup></li>
               </ul>
             </div>
             <div className="col-md-6">
@@ -120,13 +120,13 @@ export default () => {
                 <li>Target RAY Price: <strong>{format(1, 2)} $</strong> <sup>{format(1 / context.prices.btc, 8)} BTC</sup></li>
               </ul>
               <ul>
-                <li>Development Fund (14%): <strong>{format(development)} RAY</strong></li>
-                <li>Founders (4+4%): <strong>{format(founders)} RAY</strong></li>
+                <li>Development Fund: <strong>{format(development)} RAY</strong> <sup>14%</sup></li>
+                <li>Founders: <strong>{format(founders)} RAY</strong> <sup>4+4%</sup></li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="row pt-3 pb-5">
+        <div className="row pt-3 pb-4">
           <div className="col-lg-6">
             <h5 className="mb-3 text-center">Genesis</h5>
             <div>

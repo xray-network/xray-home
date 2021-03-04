@@ -48,7 +48,6 @@
   &Icon, &IconTg, &IconTwi {
     position: relative;
     top: 1px;
-    margin-right: rem(8);
   }
 
   &Icon {
@@ -59,13 +58,11 @@
   &IconTg {
     height: rem(15);
     width: rem(15);
-    top: 4px;
   }
 
   &IconTwi {
     height: rem(14);
     width: rem(14);
-    top: 4px;
   }
 
   &:last-child {

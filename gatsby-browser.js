@@ -32,6 +32,7 @@ const shouldUpdateScroll = ({
   // list of routes for the scroll-to-top-hook
   const scrollToTopRoutes = [
     `/updates/`,
+    `/wiki/`,
   ]
   // if the new route is part of the list above, scroll to top (0, 0)
   if (scrollToTopRoutes.indexOf(pathname) !== -1) {

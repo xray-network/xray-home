@@ -15,7 +15,7 @@ export default () => {
 
         <h2 className="ray__heading mb-4">Ray NFT Marketplace</h2>
         <p>
-          Ray NFT is a decentralized marketplace for digital goods, including collectibles, gaming items, digital art, and other digital assets that are backed by a blockchain like Ethereum. On Ray NFT, you can buy, sell, and trade any of these items with anyone in the world.
+          Ray NFT is a decentralized marketplace for digital goods, including collectibles, gaming items, digital art, and other digital assets that are backed by a blockchain. On Ray NFT, you can buy, sell, and trade any of these items with anyone in the world.
           </p>
         <p>
           Trading on on Ray NFT happens through a smart contract, meaning that no central authority ever holds custody of your items.
