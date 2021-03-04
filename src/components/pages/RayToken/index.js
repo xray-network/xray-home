@@ -91,9 +91,9 @@ export default () => {
     <div className="ray__block">
       <div className="container-fluid">
         <h2 className="ray__heading mb-4">Ray Token</h2>
-        <div className={`${style.container} mb-3`}>
+        <div className={`${style.container} mb-5`}>
           <div className={style.info}>
-            <p>Ray Token is Cardano based cryptocurrency token for a fueling Ray Network platform. Ray Network is a highly functional open source project that banks on blockchain technology’s permissionless nature to provide decentralized finance (DeFi) solutions and other services.</p>
+            <p>Ray Token - <strong>RAY</strong> - is Cardano based cryptocurrency token for a fueling Ray Network platform. Ray Network is a highly functional open source project that banks on blockchain technology’s permissionless nature to provide decentralized finance (DeFi) solutions and other services.</p>
             <p>In the near future Ray Token will provide holders with discounted fees on the platform, and it also serves as a governance token — giving owners a say in the future development of the platform.</p>
             <p>
               You can receive Ray Tokens via{' '}
@@ -128,7 +128,7 @@ export default () => {
         </div>
         <div className="row pt-3 pb-5">
           <div className="col-lg-6">
-            <h5 className="mb-3 text-center">Overall</h5>
+            <h5 className="mb-3 text-center">Genesis</h5>
             <div>
               <Doughnut data={distributionData} options={chartOptions(total)} width={300} height={300} />
             </div>

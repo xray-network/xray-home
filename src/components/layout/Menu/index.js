@@ -52,7 +52,7 @@ export default () => {
           </a>
           <a
             className={style.link}
-            href="https://telegram.org"
+            href="https://t.me/RayNetwork"
             rel="noopener noreferrer"
             target="_blank"
           >

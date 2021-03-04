@@ -7,7 +7,7 @@ export default () => {
     <div className="ray__block mb-5" id="submenu">
       <div className="container-fluid">
         <div className={style.submenu}>
-          <div className={style.title}>Ray Network Services</div>
+          <div className={style.title}>Ray Network Solutions</div>
           <Link to="/" activeClassName={style.active}>
             <span>Wallet</span>
             <span>Wallet</span>
@@ -32,9 +32,13 @@ export default () => {
             <span>KickStart</span>
             <span>KickStart</span>
           </Link>
+          <Link to="/nft/" activeClassName={style.active}>
+            <span>NFT Marketplace</span>
+            <span>NFT Marketplace</span>
+          </Link>
           <Link to="/data-containers/" activeClassName={style.active}>
-            <span>Data Containers</span>
-            <span>Data Containers</span>
+            <span>Data</span>
+            <span>Data</span>
           </Link>
           <Link to="/tokens-list/" activeClassName={style.active}>
             <span>Tokens List</span>

@@ -4,7 +4,7 @@ $color1: lighten($gray-1, 5%);
 $color2: darken($gray-1, 0%);
 
 .header {
-  margin-bottom: rem(40);
+  margin-bottom: rem(80);
   position: relative;
 
   h4 {
@@ -27,12 +27,17 @@ $color2: darken($gray-1, 0%);
   }
 
   &Icon {
-    width: rem(65);
+    width: rem(55);
     margin-right: rem(20);
+
+    svg {
+      width: rem(55);
+      height: rem(55);
+    }
   }
 
   h2 {
-    font-size: rem(32);
+    font-size: rem(28);
     font-weight: normal;
     line-height: 1;
   }

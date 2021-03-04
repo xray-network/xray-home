@@ -4,7 +4,7 @@ import store from "store"
 export const globalContext = React.createContext()
 
 const Provider = (props) => {
-  const [isLight, setTheme] = useState(store.get('settings.isLight'))
+  const [isLight, setTheme] = useState(typeof store.get('settings.isLight') === 'undefined' ? true : store.get('settings.isLight'))
   const [prices, setPrices] = useState({
     btc: 0,
     ada: 0,

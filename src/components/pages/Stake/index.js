@@ -36,16 +36,16 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-4">Staking Calculator</h2>
-        <div className="mb-4">
-          <div>
+        <h2 className="ray__heading mb-4">Ray Stake Calculator</h2>
+        <div className="mb-5">
+          <div className={style.pool}>
             <div className="mb-4">
               <Input value={amount} onChange={({ target: { value } }) => setAmount(value)} placeholder="Enter ADA amount..." size="large" />
             </div>
             <div className={style.performance}>
-              <div className="row mb-4">
+              <div className="row">
                 <div className="col-md-6">
-                  <ul>
+                  <ul className="mb-0">
                     <li>ADA Return of Investment (ROI): <strong>~ 5.6% / Year</strong></li>
                     <li>
                       Year Returns: <strong>{format(totalAda, 2)} ADA</strong>{' '}
@@ -62,26 +62,26 @@ export default () => {
                   </ul>
                 </div>
                 <div className="col-md-6">
-                  <ul>
+                  <ul className="mb-0">
                     <li>RAY Rewards Rate: <strong>100 ADA = 1 RAY / Epoch</strong></li>
                     <li>
                       Year Returns: <strong>{format(totalRay)} RAY</strong>{' '}
                       <sup>{format(totalRay, 2)}$</sup>{' '}
-                      <Tooltip title="If token reaches 1$ per RAY">
+                      <Tooltip title="If price reaches 1$ per RAY">
                         <i className="fe fe-info" />
                       </Tooltip>
                     </li>
                     <li>
                       Month Returns: <strong>{format(totalRay / 12)} RAY</strong>{' '}
                       <sup>{format(totalRay / 12, 2)}$</sup>{' '}
-                      <Tooltip title="If token reaches 1$ per RAY">
+                      <Tooltip title="If price reaches 1$ per RAY">
                         <i className="fe fe-info" />
                       </Tooltip>
                     </li>
                     <li>
                       Epoch Returns: <strong>{format(totalRay / 73)} RAY</strong>{' '}
                       <sup>{format(totalRay / 73, 2)}$</sup>{' '}
-                      <Tooltip title="If token reaches 1$ per RAY">
+                      <Tooltip title="If price reaches 1$ per RAY">
                         <i className="fe fe-info" />
                       </Tooltip>
                     </li>

@@ -37,6 +37,7 @@
 // dark theme
 [data-theme='dark'] {
   .icon {
-    background: $dark-gray-4;
+    background: darken($dark-gray-3, 15%);
+    color: $white;
   }
 }

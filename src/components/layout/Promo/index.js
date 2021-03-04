@@ -35,9 +35,9 @@ export default () => {
             </div>
             <div className={style.description}>
               <p>
-                Get <strong>5.5% ROI</strong> in ADA by delegation your funds to a <strong>Ray Pools</strong> and receive additional rewards:
+                Get <strong>5.5% ROI</strong> in ADA by delegating your funds to a <strong>Ray Pools</strong> and receive additional rewards:
                 <br />
-                <strong>100 RAY</strong> per each 100 ADA for every delegation day.
+                <strong>1 RAY</strong> per each 100 ADA / Epoch.
               </p>
             </div>
           </div>

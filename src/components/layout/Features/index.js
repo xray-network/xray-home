@@ -3,28 +3,28 @@ import style from "./style.module.scss"
 
 const defaultShared = [
   {
-    title: "RAY Coins distribution for pool delegators",
-    icon: "fe fe-dollar-sign",
-  },
-  {
-    title: "DigitalOcean Tier 4 datacenters",
-    icon: "fe fe-star",
-  },
-  {
-    title: "At least 5 relays for each producer node",
+    title: "Future-Proof Blockchain Solutions",
     icon: "fe fe-compass",
   },
   {
-    title: "High-performance, low latency infrastructure",
+    title: "Multi-Featured Light Wallet",
+    icon: "fe fe-star",
+  },
+  {
+    title: "Activity Rewarding Programs",
+    icon: "fe fe-dollar-sign",
+  },
+  {
+    title: "Secure and Sustainable Apps",
+    icon: "fe fe-shield",
+  },
+  {
+    title: "High-Performance Servers",
     icon: "fe fe-server",
   },
   {
-    title: "Node/relays auto update & smart deployments",
+    title: "Low Latency Infrastructure",
     icon: "fe fe-repeat",
-  },
-  {
-    title: "24/7 monitoring with shutdown notifications",
-    icon: "fe fe-users",
   },
 ]
 
@@ -38,8 +38,14 @@ export default ({ version = "main" }) => {
       <div className="container-fluid">
         <div className={style.features}>
           <h2 className="ray__heading mb-4">About Ray Network</h2>
+          <p>Ray Nework is an advanced <a href="https://github.com/ray-network" target="_blank" rel="noopener noreferrer" className="ray__link">open source</a> ecosystem for the Cardano blockchain platform. It includes Light Wallet with many features such as: sending and receiving funds, defi swap, NFT marketplace, staking center and others.</p>
+          <p>
+            Our services increase blockchain use adoption: empowers regular users, developers, creators, liquidity providers and traders to participate in a financial marketplace that is open and accessible to all.
+          </p>
           <p className="mb-5">
-            Ray Network increase blockcahin use adoption: empowers regular users, developers, liquidity providers and traders to participate in a financial marketplace that is open and accessible to all.
+            Ray Network was founded by Sellpixels.com, owner of{' '}
+            <a href="https://visualbuilder.cloud/" target="_blank" rel="noopener noreferrer" className="ray__link">Visual Builder</a>{' '}
+            SAAS platform that helps hundreds of technology companies around the world build web applications. Sellpixels.com provides full circle software development services such as frontend, backend, microservices, ci/cd, ui/ux, and more.
           </p>
           <div className="row">
             {items[version].map((item, index) => (

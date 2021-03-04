@@ -42,7 +42,6 @@
   border-radius: 50px;
   color: $dark;
   display: flex;
-  margin-right: rem(5);
 
   @include transition-middle;
 
@@ -53,18 +52,20 @@
   }
 
   &Icon {
-    height: rem(18);
-    width: rem(18);
+    height: rem(14);
+    width: rem(14);
   }
 
   &IconTg {
-    height: rem(21);
-    width: rem(21);
+    height: rem(15);
+    width: rem(15);
+    top: 4px;
   }
 
   &IconTwi {
-    height: rem(19);
-    width: rem(19);
+    height: rem(14);
+    width: rem(14);
+    top: 4px;
   }
 
   &:last-child {
