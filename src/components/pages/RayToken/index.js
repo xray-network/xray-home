@@ -104,7 +104,7 @@ export default () => {
           </div>
         </div>
         <h2 className="ray__heading mb-4">Distribution</h2>
-        <div className={`${style.distibution} mb-4`}>
+        <div className={`${style.distibution} mb-2`}>
           <div className="row">
             <div className="col-md-6">
               <ul>
@@ -126,17 +126,21 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className="row pt-3 pb-4">
+        <div className="row pt-3">
           <div className="col-lg-6">
-            <h5 className="mb-3 text-center">Genesis</h5>
-            <div>
-              <Doughnut data={distributionData} options={chartOptions(total)} width={300} height={300} />
+            <div className={style.chart}>
+              <h5 className="mb-3 text-center">Genesis</h5>
+              <div>
+                <Doughnut data={distributionData} options={chartOptions(total)} width={300} height={300} />
+              </div>
             </div>
           </div>
           <div className="col-lg-6">
-            <h5 className="mb-3 text-center">Rewards</h5>
-            <div>
-              <Doughnut data={rewardsData} options={chartOptions(rewards)} width={300} height={300} />
+            <div className={style.chart}>
+              <h5 className="mb-3 text-center">Rewards</h5>
+              <div>
+                <Doughnut data={rewardsData} options={chartOptions(rewards)} width={300} height={300} />
+              </div>
             </div>
           </div>
         </div>

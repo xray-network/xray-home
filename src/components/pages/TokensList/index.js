@@ -88,9 +88,7 @@ export default () => {
         <div className="mb-5">
           <p>
             Cardano native token list curated by Ray Network. Used as defaults in Ray Wallet and other services.
-          </p>
-          <p>
-            Feel free to make a{' '}
+            Feel free to create a{' '}
             <a
               href="https://github.com/ray-network/cardano-verified-tokens-list/pulls"
               target="_blank"

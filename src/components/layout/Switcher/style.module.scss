@@ -47,11 +47,11 @@
 }
 
 .flag, .mode {
-  background: rgba(#EBE5E5, .6);
+  background: rgba($white, .3);
   border-radius: 8px;
 
   &:hover {
-    background: rgba(#EBE5E5, .9);
+    background: rgba($white, .5);
   }
 }
 

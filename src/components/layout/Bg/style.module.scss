@@ -28,22 +28,42 @@
     top: -500px;
   }
 
-  img {
+  div {
     width: 1805px;
+    height: 1015px;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .03;
+    opacity: .05;
     border-radius: 20px;
+    // background: linear-gradient(269deg, #dbe77e, #6a88ce);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+
+	  background-size: 400% 400%;
+	  animation: gradient 5s ease infinite;
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
     &:nth-child(2) {
       top: 50px;
       left: -50px;
+      animation-delay: 2.5s;
     }
 
     &:nth-child(3) {
       top: 100px;
       left: -100px;
+      animation-delay: 2.5s;
     }
   }
 }
@@ -51,8 +71,8 @@
 // dark theme
 [data-theme='dark'] {
   .bg {
-    img {
-      opacity: .07;
+    div {
+      opacity: .05;
     }
   }
 }
