@@ -85,10 +85,10 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-4">Ray Tokens List</h2>
+        <h2 className="ray__heading mb-4">RAY Tokens List</h2>
         <div className="mb-5">
           <p>
-            Cardano native token list curated by Ray Network. Used as defaults in Ray Wallet and other services.
+            Cardano native token list curated by RAY. Used as defaults in RAY Wallet and other services.
             Feel free to create a{' '}
             <a
               href="https://github.com/ray-network/cardano-verified-tokens-list/pulls"

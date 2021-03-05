@@ -36,62 +36,64 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-4">Ray Stake Calculator</h2>
+        <h2 className="ray__heading mb-4">RAY Stake Calculator</h2>
         <div className="mb-5">
-          <div className="mb-4">
-            <Input value={amount} onChange={({ target: { value } }) => setAmount(value)} placeholder="Enter ADA amount..." size="large" />
-          </div>
-          <div className={style.performance}>
-            <div className="row">
-              <div className="col-md-6">
-                <ul className="mb-0">
-                  <li>ADA Return of Investment (ROI): <strong>~ 5.6% / Year</strong></li>
-                  <li>
-                    Year Returns: <strong>{format(totalAda, 2)} ADA</strong>{' '}
-                    <sup>{format(totalAda * context.prices.ada, 2)}$</sup>
-                  </li>
-                  <li>
-                    Month Returns: <strong>{format(totalAda / 12, 2)} ADA</strong>{' '}
-                    <sup>{format(totalAda / 12 * context.prices.ada, 2)}$</sup>
-                  </li>
-                  <li>
-                    Epoch Returns: <strong>{format(totalAda / 73, 2)} ADA</strong>{' '}
-                    <sup>{format(totalAda / 73 * context.prices.ada, 2)}$</sup>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-md-6">
-                <ul className="mb-0">
-                  <li>RAY Rewards Rate: <strong>100 ADA = 1 RAY / Epoch</strong></li>
-                  <li>
-                    Year Returns: <strong>{format(totalRay)} RAY</strong>{' '}
-                    <sup>{format(totalRay, 2)}$</sup>{' '}
-                    <Tooltip title="If price reaches 1$ per RAY">
-                      <i className="fe fe-info" />
-                    </Tooltip>
-                  </li>
-                  <li>
-                    Month Returns: <strong>{format(totalRay / 12)} RAY</strong>{' '}
-                    <sup>{format(totalRay / 12, 2)}$</sup>{' '}
-                    <Tooltip title="If price reaches 1$ per RAY">
-                      <i className="fe fe-info" />
-                    </Tooltip>
-                  </li>
-                  <li>
-                    Epoch Returns: <strong>{format(totalRay / 73)} RAY</strong>{' '}
-                    <sup>{format(totalRay / 73, 2)}$</sup>{' '}
-                    <Tooltip title="If price reaches 1$ per RAY">
-                      <i className="fe fe-info" />
-                    </Tooltip>
-                  </li>
-                </ul>
+          <div className={style.outer}>
+            <div className="mb-4">
+              <Input value={amount} onChange={({ target: { value } }) => setAmount(value)} placeholder="Enter ADA amount..." size="large" />
+            </div>
+            <div className={style.performance}>
+              <div className="row">
+                <div className="col-md-6">
+                  <ul className="mb-0">
+                    <li>ADA Return of Investment (ROI): <strong>~ 5.6% / Year</strong></li>
+                    <li>
+                      Year Returns: <strong>{format(totalAda, 2)} ADA</strong>{' '}
+                      <sup>{format(totalAda * context.prices.ada, 2)}$</sup>
+                    </li>
+                    <li>
+                      Month Returns: <strong>{format(totalAda / 12, 2)} ADA</strong>{' '}
+                      <sup>{format(totalAda / 12 * context.prices.ada, 2)}$</sup>
+                    </li>
+                    <li>
+                      Epoch Returns: <strong>{format(totalAda / 73, 2)} ADA</strong>{' '}
+                      <sup>{format(totalAda / 73 * context.prices.ada, 2)}$</sup>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-6">
+                  <ul className="mb-0">
+                    <li>RAY Rewards Rate: <strong>100 ADA = 1 RAY / Epoch</strong></li>
+                    <li>
+                      Year Returns: <strong>{format(totalRay)} RAY</strong>{' '}
+                      <sup>{format(totalRay, 2)}$</sup>{' '}
+                      <Tooltip title="If price reaches 1$ per RAY">
+                        <i className="fe fe-info" />
+                      </Tooltip>
+                    </li>
+                    <li>
+                      Month Returns: <strong>{format(totalRay / 12)} RAY</strong>{' '}
+                      <sup>{format(totalRay / 12, 2)}$</sup>{' '}
+                      <Tooltip title="If price reaches 1$ per RAY">
+                        <i className="fe fe-info" />
+                      </Tooltip>
+                    </li>
+                    <li>
+                      Epoch Returns: <strong>{format(totalRay / 73)} RAY</strong>{' '}
+                      <sup>{format(totalRay / 73, 2)}$</sup>{' '}
+                      <Tooltip title="If price reaches 1$ per RAY">
+                        <i className="fe fe-info" />
+                      </Tooltip>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <h2 className="ray__heading mb-4" id="pools">Ray Pools</h2>
+        <h2 className="ray__heading mb-4" id="pools">RAY Pools</h2>
         <p className="mb-5">
-          Use any Cardano wallet (Ray Wallet, Daedalus, Yoroi, Adalite, or any another) to delegate to Ray pools. Ray Token rewards will be transferred automatically to your delegation address after the end of the Epoch.
+          Use any Cardano wallet (RAY Wallet, Daedalus, Yoroi, Adalite, or any another) to delegate to RAY pools. RAY Token rewards will be transferred automatically to your delegation address after the end of the Epoch.
         </p>
         <div className="row">
           <div className="col-md-4">

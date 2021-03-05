@@ -11,7 +11,7 @@ import Submenu from "@/components/layout/Submenu"
 
 export default ({ children }) => (
   <div>
-    <Helmet titleTemplate="Ray Wallet - %s" title="Cardano Advanced Light Wallet">
+    <Helmet titleTemplate="RAY Wallet - %s" title="Cardano Advanced Light Wallet">
       <meta property="og:url" content="https://rraayy.com" />
       <meta
         name="description"

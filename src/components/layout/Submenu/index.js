@@ -7,14 +7,14 @@ export default () => {
     <div className="ray__block mb-5" id="submenu">
       <div className="container-fluid">
         <div className={style.submenu}>
-          <div className={style.title}>Ray Network Solutions</div>
+          <div className={style.title}>RAY Solutions</div>
           <Link to="/" activeClassName={style.active}>
             <span>Wallet</span>
             <span>Wallet</span>
           </Link>
           <Link to="/ray-token/" activeClassName={style.active}>
-            <span>Ray Token</span>
-            <span>Ray Token</span>
+            <span>Token</span>
+            <span>Token</span>
           </Link>
           <Link to="/stake/" activeClassName={style.active}>
             <span>Stake</span>

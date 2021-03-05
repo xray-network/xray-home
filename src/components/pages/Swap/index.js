@@ -6,16 +6,16 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-4">Ray Swap <sup>DeFi</sup></h2>
+        <h2 className="ray__heading mb-4">RAY Swap <sup>DeFi</sup></h2>
         <p>
-          Ray Swap is a automated liquidity protocol for creating liquidity and trading Native tokens
+          RAY Swap is a automated liquidity protocol for creating liquidity and trading Native tokens
           on Cardano. It eliminates trusted intermediaries and unnecessary forms
           of rent extraction, allowing for fast, efficient trading.
           Where it makes tradeoffs decentralization, censorship resistance,
           and security are prioritized.
         </p>
         <p>
-          Ray Network is open-source software licensed
+          RAY is open-source software licensed
           under MIT License.
         </p>
         <div className="mt-4 pt-3 mb-5">

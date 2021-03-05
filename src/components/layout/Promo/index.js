@@ -29,7 +29,7 @@ export default () => {
                 Staking Calculator
               </AnchorLink>
               <AnchorLink to="/stake/#pools" stripHash className="ray__link mr-4">
-                Ray Pools
+                RAY Pools
               </AnchorLink>
               <a href="https://wallet.rraayy.com/#/stake" target="_blank" rel="noopener noreferrer" className="ray__link">
                 Visit Staking Center
@@ -38,7 +38,7 @@ export default () => {
             </div>
             <div className={style.description}>
               <p>
-                Get <strong>5.5% ROI</strong> in ADA by delegating your funds to a <strong>Ray Pools</strong> and receive additional rewards:
+                Get <strong>5.5% ROI</strong> in ADA by delegating your funds to a <strong>RAY Pools</strong> and receive additional rewards:
                 <br />
                 <strong>1 RAY</strong> per each 100 ADA / Epoch.
               </p>

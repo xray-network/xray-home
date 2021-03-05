@@ -9,10 +9,10 @@ export default () => {
       <Helmet title="Wiki & Cardano Tutorials" />
       <div className="ray__block">
         <div className="container-fluid">
-          <h2 className="ray__heading mb-5">Ray Network Wiki & Cardano Tutorials </h2>
+          <h2 className="ray__heading mb-5">RAY Wiki & Cardano Tutorials </h2>
           <div className="row">
             <div className="col-sm-3">
-              <h5>Ray Network</h5>
+              <h5>RAY</h5>
               <div className="mb-5">
                 No articles
               </div>

@@ -14,7 +14,7 @@ const columns = [
     title: 'Commit',
     dataIndex: 'sha',
     key: 'sha',
-    render: (record, records) => <a href={records.url} className="ray__link">{record.substring(0, 4)}...{record.slice(-8)}</a>,
+    render: (record, records) => <a href={records.url} className="ray__link">{record.substring(0, 7)}</a>,
   },
   {
     title: 'Message',
@@ -102,7 +102,7 @@ export default () => {
         <h2 className="ray__heading mb-4">Development Updates</h2>
         <div className="mb-5">
           <p>
-            Tracking development activity of the Ray Network Github repositories —{' '}
+            Tracking development activity of the RAY Github repositories —{' '}
             <a
               href="https://github.com/ray-network/"
               rel="noopener noreferrer"

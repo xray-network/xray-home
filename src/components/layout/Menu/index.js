@@ -86,7 +86,7 @@ export default () => {
           target="_blank"
         >
           <span>
-            Open Ray Wallet
+            Open RAY Wallet
           </span>
           <i className="fe fe-arrow-up-right ray__btn__icon" />
         </Button>

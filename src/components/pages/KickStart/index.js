@@ -6,9 +6,9 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-4">Ray KickStart Crowdfunding</h2>
+        <h2 className="ray__heading mb-4">RAY KickStart Crowdfunding</h2>
         <p>
-          Ray KickStart exists to help bring creative projects to life through tokenization.
+          RAY KickStart exists to help bring creative projects to life through tokenization.
           It allows you to create and fund your projects in minutes.
           A crypto-home for services, products, film, music, art, theater, games, comics, design, photography, and more.
         </p>

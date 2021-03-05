@@ -8,6 +8,12 @@
   }
 }
 
+.outer {
+  padding: rem(20) rem(30);
+  border: 1px solid $border;
+  border-radius: 12px;
+}
+
 .pool {
   padding: rem(20) rem(20);
   margin-bottom: rem(30);

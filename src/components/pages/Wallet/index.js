@@ -41,8 +41,8 @@ export default () => {
   return (
     <div className="ray__block pb-4">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-5">Ray Wallet</h2>
-        <p className="mb-4">Ray Wallet is a web light wallet for Cardano. Light wallets don't need to download or synchronize the blockchain. This means that once you open the wallet, you can send or verify the reception of transactions right away.</p>
+        <h2 className="ray__heading mb-5">RAY Wallet</h2>
+        <p className="mb-4">RAY Wallet is a web light wallet for Cardano. Light wallets don't need to download or synchronize the blockchain. This means that once you open the wallet, you can send or verify the reception of transactions right away.</p>
         <div className={style.items}>
           {items.map((item, index) => {
             return (
@@ -63,7 +63,7 @@ export default () => {
             target="_blank"
           >
             <span>
-              Ray Wallet Web
+              RAY Wallet Web
             </span>
             <i className="fe fe-arrow-up-right ray__btn__icon" />
           </Button>

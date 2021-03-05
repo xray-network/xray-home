@@ -9,7 +9,7 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-4">Ray Data Containers</h2>
+        <h2 className="ray__heading mb-4">RAY Data Containers</h2>
         <div className="mb-4">
           <Alert
             message="Experimental Feature"

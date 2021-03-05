@@ -6,7 +6,7 @@ import RayToken from "@/components/pages/RayToken"
 export default () => {
   return (
     <Layout>
-      <Helmet title="Ray Token" />
+      <Helmet title="RAY Token" />
       <RayToken />
     </Layout>
   )

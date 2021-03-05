@@ -90,13 +90,13 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-4">Ray Token</h2>
+        <h2 className="ray__heading mb-4">RAY Token</h2>
         <div className={`${style.container} mb-5`}>
           <div className={style.info}>
-            <p>Ray Token - <strong>RAY</strong> - is Cardano based cryptocurrency token for a fueling Ray Network platform. Ray Network is a highly functional open source project that banks on blockchain technology’s permissionless nature to provide decentralized finance (DeFi) solutions and other services.</p>
-            <p>In the near future Ray Token will provide holders with discounted fees on the platform, and it also serves as a governance token — giving owners a say in the future development of the platform.</p>
+            <p>RAY Token - <strong>RAY</strong> - is Cardano based cryptocurrency token for a fueling RAY platform. RAY is a highly functional open source project that banks on blockchain technology’s permissionless nature to provide decentralized finance (DeFi) solutions and other services.</p>
+            <p>In the near future RAY Token will provide holders with discounted fees on the platform, and it also serves as a governance token — giving owners a say in the future development of the platform.</p>
             <p>
-              You can receive Ray Tokens via{' '}
+              You can receive RaRAYy Tokens via{' '}
               <a href="https://wallet.rraayy.com/#/rewards" target="_blank" rel="noopener noreferrer" className="ray__link">Rewards Program</a>
               , or{' '}
               <Tooltip title="Planned to 2022"><span className="ray__link">ICO</span></Tooltip>.

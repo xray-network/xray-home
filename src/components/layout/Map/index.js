@@ -8,7 +8,7 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-4">Ray Relays Map</h2>
+        <h2 className="ray__heading mb-4">RAY Relays Map</h2>
         <div className={style.map}>
           <div className={style.img}>
             <div className={style.relays}>

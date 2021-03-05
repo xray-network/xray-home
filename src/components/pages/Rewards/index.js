@@ -6,11 +6,11 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-        <h2 className="ray__heading mb-4">Ray Rewards</h2>
-        <p>Earn rewards by participating in the use of Ray Network services.</p>
-        <p>Ray Network is currently running several activities that allow you to earn rewards:</p>
+        <h2 className="ray__heading mb-4">RAY Rewards</h2>
+        <p>Earn rewards by participating in the use of RAY services.</p>
+        <p>RAY is currently running several activities that allow you to earn rewards:</p>
         <ul>
-          <li>Additional staking rewards in Ray Tokens</li>
+          <li>Additional staking rewards in RAY Tokens</li>
           <li>Early users airdrop</li>
           <li>Twitter activities</li>
         </ul>
