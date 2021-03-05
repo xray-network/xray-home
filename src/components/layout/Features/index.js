@@ -34,7 +34,7 @@ const items = {
 
 export default ({ version = "main" }) => {
   return (
-    <div className="ray__block">
+    <div className="ray__block mb-4">
       <div className="container-fluid">
         <div className={style.features}>
           <h2 className="ray__heading mb-4">About Ray Network</h2>
