@@ -91,7 +91,7 @@ export default () => {
             </div>
           </div>
         </div>
-        <h2 className="ray__heading mb-4">Ray Pools</h2>
+        <h2 className="ray__heading mb-4" id="pools">Ray Pools</h2>
         <p className="mb-5">
           Use any Cardano wallet (Ray Wallet, Daedalus, Yoroi, Adalite, or any another) to delegate to Ray pools. Ray Token rewards will be transferred automatically to your delegation address after the end of the Epoch.
         </p>

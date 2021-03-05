@@ -22,11 +22,14 @@ export default () => {
             <h1 className={`${style.title} ray__heading mb-4`}>
               Our pools are looking for delegators.
               <br />
-              Ray Token airdrop starts soon — hurry up!
+              Ray Token airdrop is coming soon — hurry up!
             </h1>
             <div className="mb-4">
               <AnchorLink to="/stake/#submenu" stripHash className="ray__link mr-4">
                 Staking Calculator
+              </AnchorLink>
+              <AnchorLink to="/stake/#pools" stripHash className="ray__link mr-4">
+                Ray Pools
               </AnchorLink>
               <a href="https://wallet.rraayy.com/#/stake" target="_blank" rel="noopener noreferrer" className="ray__link">
                 Visit Staking Center
