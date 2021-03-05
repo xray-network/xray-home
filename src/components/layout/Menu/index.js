@@ -48,36 +48,38 @@ export default () => {
             <span className={style.status} />
             Status
           </a>
-          <a
-            className={style.link}
-            href="https://github.com/ray-network"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span>
-              <SvgGithub className={style.linkIcon} />
-            </span>
-          </a>
-          <a
-            className={style.link}
-            href="https://t.me/RayNetwork"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span>
-              <SvgTelegram className={style.linkIconTg} />
-            </span>
-          </a>
-          <a
-            className={style.link}
-            href="https://twitter.com/RayWallet"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span>
-              <SvgTwitter className={style.linkIconTwi} />
-            </span>
-          </a>
+          <div className={style.social}>
+            <a
+              className={style.link}
+              href="https://github.com/ray-network"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>
+                <SvgGithub className={style.linkIcon} />
+              </span>
+            </a>
+            <a
+              className={style.link}
+              href="https://t.me/RayNetwork"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>
+                <SvgTelegram className={style.linkIconTg} />
+              </span>
+            </a>
+            <a
+              className={style.link}
+              href="https://twitter.com/RayWallet"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>
+                <SvgTwitter className={style.linkIconTwi} />
+              </span>
+            </a>
+          </div>
         </div>
         <Button
           className={`${style.fixed} ray__btn`}

@@ -40,9 +40,9 @@
   height: 10px;
   border-radius: 10px;
   background: $success;
-  position: relative;
-  top: 6px;
   margin-right: rem(9);
+  position: relative;
+  top: -1px;
   animation: pulse 2s infinite;
 
   @keyframes pulse {
@@ -65,8 +65,6 @@
   padding: rem(10) rem(18) rem(8);
   border-radius: 50px;
   color: $dark;
-  display: flex;
-
   @include transition-middle;
 
   &Icon, &IconTg, &IconTwi {
@@ -91,14 +89,20 @@
   }
 
   @media (max-width: $md-max-width) {
-    padding-left: rem(10);
-    padding-right: rem(10);
-  }
-
-  @media (max-width: $md-max-width) {
-    padding: rem(7) rem(14) rem(6);
+    font-size: rem(18);
+    padding: rem(7) rem(15) rem(6);
     display: inline-block;
     margin-right: 0;
+
+    &Icon, &IconTwi {
+      height: rem(16);
+      width: rem(16);
+    }
+  
+    &IconTg {
+      height: rem(18);
+      width: rem(18);
+    }
   }
 
   &.active {
@@ -111,6 +115,10 @@
     background: $white;
     color: $dark;
   }
+}
+
+.social {
+  display: flex;
 }
 
 .logoContainer {
