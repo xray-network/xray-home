@@ -7,6 +7,7 @@ const columns = [
     title: 'Repository',
     dataIndex: 'repo',
     key: 'repo',
+    sorter: (a, b) => ('' + a.repo).localeCompare(b.repo),
     render: record => <a href={`https://github.com/ray-network/${record}`} className="ray__link">{record}</a>
   },
   {
@@ -25,11 +26,13 @@ const columns = [
     title: 'Author',
     dataIndex: 'author',
     key: 'author',
+    sorter: (a, b) => ('' + a.author).localeCompare(b.author),
   },
   {
     title: 'Date',
     dataIndex: 'date',
     key: 'date',
+    sorter: (a, b) => new Date(a.date) - new Date(b.date),
     render: record => new Date(record).toLocaleDateString(),
   },
 ]
