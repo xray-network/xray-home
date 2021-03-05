@@ -16,6 +16,11 @@
     }
   }
 
+  &__table {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
   &__underlined {
     border-bottom: 1px dashed $primary;
     display: inline-block;

@@ -1,5 +1,4 @@
 import Provider from './src/provider'
-import AOS from "aos"
 
 import "antd/es/style/index.css"
 import "antd/es/button/style/index.css"
@@ -12,6 +11,7 @@ import "antd/es/alert/style/index.css"
 import "antd/es/spin/style/index.css"
 import "antd/es/dropdown/style/index.css"
 import "antd/es/menu/style/index.css"
+import "antd/es/table/style/index.css"
 
 import "aos/dist/aos.css"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -19,10 +19,6 @@ import "react-alice-carousel/lib/alice-carousel.css"
 import "react-perfect-scrollbar/dist/css/styles.css"
 import "@/styles/style.scss"
 
-
-AOS.init({
-  duration: 1000,
-})
 
 const shouldUpdateScroll = ({
   routerProps: { location },

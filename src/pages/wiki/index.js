@@ -1,17 +1,35 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import { Alert } from "antd"
 import LayoutEmpty from "@/layouts/Empty"
 
 export default () => {
   return (
     <LayoutEmpty>
-      <Helmet title="Wiki & Cardani Tutorials" />
+      <Helmet title="Wiki & Cardano Tutorials" />
       <div className="ray__block">
         <div className="container-fluid">
-          <h2 className="ray__heading mb-4">Ray Wiki & Cardano Tutorials </h2>
-          <p className="mb-5">
-            Articles will be added soon. Stay tuned!
-          </p>
+          <h2 className="ray__heading mb-5">Ray Network Wiki & Cardano Tutorials </h2>
+          <div className="row">
+            <div className="col-sm-3">
+              <h5>Ray Network</h5>
+              <div className="mb-5">
+                No articles
+              </div>
+              <h5>Cardano</h5>
+              <div className="mb-5">
+                No articles
+              </div>
+            </div>
+            <div className="col-sm-9">
+              <Alert
+                message="No articles yet"
+                description="Articles will be added soon. Stay tuned!"
+                type="info"
+                showIcon
+              />
+            </div>
+          </div>
         </div>
       </div>
     </LayoutEmpty>

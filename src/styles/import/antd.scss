@@ -30,6 +30,10 @@
       font-weight: 700;
     }
   }
+
+  &-table {
+    background: none;
+  }
 }
 
 // dark theme
@@ -77,6 +81,27 @@
 
       &-message {
         color: $white;
+      }
+    }
+
+    &-table {
+      color: $white;
+
+      td, th {
+        border-bottom-color: darken($dark-gray-3, 15%);
+      }
+
+      &-thead > tr > th {
+        background: darken($dark-gray-3, 15%);
+        color: lighten($dark-gray-2, 5%);
+      }
+
+      &-row {
+        &:hover {
+          > td {
+            background: $dark-gray-4 !important;
+          }
+        }
       }
     }
   }

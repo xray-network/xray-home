@@ -12,6 +12,7 @@ export default () => {
             href="https://github.com/ray-network/"
             rel="noopener noreferrer"
             target="_blank"
+            className="ray__link"
           >
             https://github.com/ray-network/
           </a>
