@@ -22,7 +22,7 @@ export default () => {
             <h1 className={`${style.title} ray__heading mb-4`}>
               Our pools are looking for delegators.
               <br />
-              Ray Token airdrop is coming soon — hurry up!
+              RAY Token airdrop is coming soon — hurry up!
             </h1>
             <div className="mb-4">
               <AnchorLink to="/stake/#submenu" stripHash className="ray__link mr-4">

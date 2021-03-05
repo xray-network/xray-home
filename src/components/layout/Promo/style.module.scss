@@ -67,11 +67,12 @@ $color2: darken($gray-1, 0%);
   .welcome {
     &Icon {
       svg {
-        rect, g g g {
-          fill: $white;
-        }
-        path {
-          stroke: $white;
+        g g g {
+          &:first-child {
+            use {
+              fill: $dark-2;
+            }
+          }
         }
       }
     }

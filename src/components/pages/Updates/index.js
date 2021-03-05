@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Table } from "antd"
-// import style from "./style.module.scss"
+import style from "./style.module.scss"
 
 const columns = [
   {
@@ -113,8 +113,10 @@ export default () => {
             </a>
           </p>
         </div>
-        <div className="ray__table">
-          <Table loading={loading} size="small" dataSource={dataSource} columns={columns} pagination={false} />
+        <div className={style.updates}>
+          <div className="ray__table">
+            <Table loading={loading} size="small" dataSource={dataSource} columns={columns} pagination={false} />
+          </div>
         </div>
       </div>
     </div>

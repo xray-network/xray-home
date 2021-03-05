@@ -74,7 +74,7 @@
     top: 1px;
   }
 
-  &Icon {
+  &Icon, &IconTwi {
     height: rem(14);
     width: rem(14);
   }
@@ -82,12 +82,7 @@
   &IconTg {
     height: rem(15);
     width: rem(15);
-    left: -1px;
-  }
-
-  &IconTwi {
-    height: rem(14);
-    width: rem(14);
+    left: -2px;
   }
 
   &:last-child {

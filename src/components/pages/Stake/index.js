@@ -38,55 +38,53 @@ export default () => {
       <div className="container-fluid">
         <h2 className="ray__heading mb-4">Ray Stake Calculator</h2>
         <div className="mb-5">
-          <div className={style.pool}>
-            <div className="mb-4">
-              <Input value={amount} onChange={({ target: { value } }) => setAmount(value)} placeholder="Enter ADA amount..." size="large" />
-            </div>
-            <div className={style.performance}>
-              <div className="row">
-                <div className="col-md-6">
-                  <ul className="mb-0">
-                    <li>ADA Return of Investment (ROI): <strong>~ 5.6% / Year</strong></li>
-                    <li>
-                      Year Returns: <strong>{format(totalAda, 2)} ADA</strong>{' '}
-                      <sup>{format(totalAda * context.prices.ada, 2)}$</sup>
-                    </li>
-                    <li>
-                      Month Returns: <strong>{format(totalAda / 12, 2)} ADA</strong>{' '}
-                      <sup>{format(totalAda / 12 * context.prices.ada, 2)}$</sup>
-                    </li>
-                    <li>
-                      Epoch Returns: <strong>{format(totalAda / 73, 2)} ADA</strong>{' '}
-                      <sup>{format(totalAda / 73 * context.prices.ada, 2)}$</sup>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-md-6">
-                  <ul className="mb-0">
-                    <li>RAY Rewards Rate: <strong>100 ADA = 1 RAY / Epoch</strong></li>
-                    <li>
-                      Year Returns: <strong>{format(totalRay)} RAY</strong>{' '}
-                      <sup>{format(totalRay, 2)}$</sup>{' '}
-                      <Tooltip title="If price reaches 1$ per RAY">
-                        <i className="fe fe-info" />
-                      </Tooltip>
-                    </li>
-                    <li>
-                      Month Returns: <strong>{format(totalRay / 12)} RAY</strong>{' '}
-                      <sup>{format(totalRay / 12, 2)}$</sup>{' '}
-                      <Tooltip title="If price reaches 1$ per RAY">
-                        <i className="fe fe-info" />
-                      </Tooltip>
-                    </li>
-                    <li>
-                      Epoch Returns: <strong>{format(totalRay / 73)} RAY</strong>{' '}
-                      <sup>{format(totalRay / 73, 2)}$</sup>{' '}
-                      <Tooltip title="If price reaches 1$ per RAY">
-                        <i className="fe fe-info" />
-                      </Tooltip>
-                    </li>
-                  </ul>
-                </div>
+          <div className="mb-4">
+            <Input value={amount} onChange={({ target: { value } }) => setAmount(value)} placeholder="Enter ADA amount..." size="large" />
+          </div>
+          <div className={style.performance}>
+            <div className="row">
+              <div className="col-md-6">
+                <ul className="mb-0">
+                  <li>ADA Return of Investment (ROI): <strong>~ 5.6% / Year</strong></li>
+                  <li>
+                    Year Returns: <strong>{format(totalAda, 2)} ADA</strong>{' '}
+                    <sup>{format(totalAda * context.prices.ada, 2)}$</sup>
+                  </li>
+                  <li>
+                    Month Returns: <strong>{format(totalAda / 12, 2)} ADA</strong>{' '}
+                    <sup>{format(totalAda / 12 * context.prices.ada, 2)}$</sup>
+                  </li>
+                  <li>
+                    Epoch Returns: <strong>{format(totalAda / 73, 2)} ADA</strong>{' '}
+                    <sup>{format(totalAda / 73 * context.prices.ada, 2)}$</sup>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-md-6">
+                <ul className="mb-0">
+                  <li>RAY Rewards Rate: <strong>100 ADA = 1 RAY / Epoch</strong></li>
+                  <li>
+                    Year Returns: <strong>{format(totalRay)} RAY</strong>{' '}
+                    <sup>{format(totalRay, 2)}$</sup>{' '}
+                    <Tooltip title="If price reaches 1$ per RAY">
+                      <i className="fe fe-info" />
+                    </Tooltip>
+                  </li>
+                  <li>
+                    Month Returns: <strong>{format(totalRay / 12)} RAY</strong>{' '}
+                    <sup>{format(totalRay / 12, 2)}$</sup>{' '}
+                    <Tooltip title="If price reaches 1$ per RAY">
+                      <i className="fe fe-info" />
+                    </Tooltip>
+                  </li>
+                  <li>
+                    Epoch Returns: <strong>{format(totalRay / 73)} RAY</strong>{' '}
+                    <sup>{format(totalRay / 73, 2)}$</sup>{' '}
+                    <Tooltip title="If price reaches 1$ per RAY">
+                      <i className="fe fe-info" />
+                    </Tooltip>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -122,7 +120,7 @@ export default () => {
                       Ticker
                     </div>
                     <div className={style.poolValue}>
-                      <strong>{formatValue(poolData.ticker_orig)}</strong>
+                      <strong className="font-size-24">{formatValue(poolData.ticker_orig)}</strong>
                     </div>
                   </div>
                 </div>
@@ -241,7 +239,7 @@ export default () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   type="primary"
-                  className="ray__btn ray__btn--blue ray__btn--small"
+                  className="ray__btn ray__btn--white ray__btn--small"
                 >
                   <i className="fe fe-arrow-up-circle mr-1" />
                   Delegate
@@ -267,7 +265,7 @@ export default () => {
                       Ticker
                     </div>
                     <div className={style.poolValue}>
-                      <strong>RAY2</strong>
+                      <strong className="font-size-24">RAY2</strong>
                     </div>
                   </div>
                 </div>
@@ -287,7 +285,7 @@ export default () => {
                       Fee Margin
                     </div>
                     <div className={style.poolValue}>
-                      <strong>1%</strong>
+                      <strong>0%</strong>
                     </div>
                   </div>
                 </div>
@@ -395,7 +393,7 @@ export default () => {
                       Ticker
                     </div>
                     <div className={style.poolValue}>
-                      <strong>RAY3</strong>
+                      <strong className="font-size-24">RAY3</strong>
                     </div>
                   </div>
                 </div>
@@ -415,7 +413,7 @@ export default () => {
                       Fee Margin
                     </div>
                     <div className={style.poolValue}>
-                      <strong>1%</strong>
+                      <strong>0%</strong>
                     </div>
                   </div>
                 </div>
