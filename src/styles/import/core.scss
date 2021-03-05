@@ -89,7 +89,7 @@ code {
 // dark theme
 [data-theme='dark'] {
   body {
-    background: #17202A;
+    background: $dark-2;
     color: lighten($dark-gray-2, 5%);
   }
 

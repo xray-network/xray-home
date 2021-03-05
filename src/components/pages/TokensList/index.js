@@ -9,8 +9,8 @@ const columns = [
     width: 40,
     render: (record, records) => {
       return records.name === 'RAY'
-        ? <img className={style.image} src={`/resources/tokens/RAY.jpg`} alt={records.name} />
-        : <img className={style.image} src={`https://raw.githubusercontent.com/ray-network/cardano-verified-tokens-list/main/logo/${records.policyId}.${records.name}.jpg`} alt={records.name} />
+        ? <div className={style.image}><img src={`/resources/tokens/RAY.jpg`} alt={records.name} /></div>
+        : <div className={style.image}><img src={`https://raw.githubusercontent.com/ray-network/cardano-verified-tokens-list/main/logo/${records.policyId}.${records.name}.jpg`} alt={records.name} /></div>
     }
   },
   {
@@ -79,6 +79,7 @@ export default () => {
         ])
         setLoading(false)
       }))
+    // eslint-disable-next-line
   }, [])
 
   return (

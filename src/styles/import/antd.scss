@@ -32,7 +32,11 @@
   }
 
   &-table {
-    background: none;
+    background: $white;
+
+    th {
+      transition: none !important;
+    }
   }
 }
 
@@ -86,6 +90,7 @@
 
     &-table {
       color: $white;
+      background: $dark-2;
 
       td, th {
         border-bottom-color: darken($dark-gray-3, 15%);
@@ -101,6 +106,14 @@
           > td {
             background: $dark-gray-4 !important;
           }
+        }
+      }
+    }
+
+    &-spin {
+      &-container {
+        &:after {
+          background: $dark-gray-4;
         }
       }
     }

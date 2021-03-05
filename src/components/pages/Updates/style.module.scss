@@ -1,14 +1,4 @@
 @import "@/styles/mixins";
 
-.updates {
-  padding: rem(40) rem(20);
-  border-radius: 12px;
-  background: $white;
-}
-
 // dark theme
-[data-theme='dark'] {
-  .updates {
-    background: $dark;
-  }
-}
+[data-theme='dark'] {}
