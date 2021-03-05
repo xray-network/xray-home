@@ -12,7 +12,6 @@ export default () => {
   return (
     <div className="ray__block">
       <div className="container-fluid">
-
         <h2 className="ray__heading mb-4">RAY NFT Marketplace</h2>
         <p>
           RAY NFT is a decentralized marketplace for digital goods, including collectibles, gaming items, digital art, and other digital assets that are backed by a blockchain. On RAY NFT, you can buy, sell, and trade any of these items with anyone in the world.

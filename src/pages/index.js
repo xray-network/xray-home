@@ -6,7 +6,7 @@ import Wallet from "@/components/pages/Wallet"
 export default () => {
   return (
     <Layout>
-      <Helmet title="Cardano Advanced Light Wallet" />
+      <Helmet title="Cardano Light Wallet" />
       <Wallet />
     </Layout>
   )

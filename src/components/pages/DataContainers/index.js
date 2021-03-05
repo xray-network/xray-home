@@ -12,7 +12,7 @@ export default () => {
         <h2 className="ray__heading mb-4">RAY Data Containers</h2>
         <div className="mb-4">
           <Alert
-            message="Experimental Feature"
+            message="Experimental Solution"
             description="This is an experimental feature that requires further research into the use of Cardano sidechains."
             type="info"
             showIcon

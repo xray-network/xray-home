@@ -38,7 +38,7 @@ export default ({ version = "main" }) => {
       <div className="container-fluid">
         <div className={style.features}>
           <h2 className="ray__heading mb-4">About RAY</h2>
-          <p>RAY Nework is an advanced <a href="https://github.com/ray-network" target="_blank" rel="noopener noreferrer" className="ray__link">open source</a> ecosystem for the Cardano blockchain platform. It includes Light Wallet with many features such as: sending and receiving funds, defi swap, NFT marketplace, staking center and others.</p>
+          <p>RAY is an advanced <a href="https://github.com/ray-network" target="_blank" rel="noopener noreferrer" className="ray__link">open source</a> ecosystem for the Cardano blockchain platform. It includes Light Wallet with many features such as: sending and receiving funds, defi swap, NFT marketplace, staking center and others.</p>
           <p>
             Our services increase blockchain use adoption: empowers regular users, developers, creators, liquidity providers and traders to participate in a financial marketplace that is open and accessible to all.
           </p>

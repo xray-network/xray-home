@@ -83,4 +83,8 @@
       color: $white;
     }
   }
+
+  .outer {
+    border-color: darken($dark-gray-3, 15%);
+  }
 }
