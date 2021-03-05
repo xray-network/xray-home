@@ -7,6 +7,7 @@ import FlagEn from './flags/en.svg'
 import FlagRu from './flags/ru.svg'
 import FlagZh from './flags/zh.svg'
 import FlagJp from './flags/jp.svg'
+import FlagKr from './flags/kr.svg'
 
 export default () => {
   const context = useContext(globalContext)
@@ -19,6 +20,7 @@ export default () => {
     jp: FlagJp,
     zh: FlagZh,
     ru: FlagRu,
+    kr: FlagKr,
   }
 
   const menu = (
@@ -40,6 +42,12 @@ export default () => {
           <img src={mapFlags.zh} alt="简体中文" />
         </span>
         简体中文
+      </Menu.Item>
+      <Menu.Item key="kr-KR" disabled>
+        <span className={style.menuIcon}>
+          <img src={mapFlags.kr} alt="한국어" />
+        </span>
+        한국어
       </Menu.Item>
       <Menu.Item key="ru-RU" disabled>
         <span className={style.menuIcon}>
