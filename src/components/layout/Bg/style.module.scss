@@ -36,7 +36,8 @@
     left: 0;
     opacity: .07;
     border-radius: 20px;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #A79F9F, #23d5ab);
+    // background: linear-gradient(-45deg, #ee7752, #8a84c5, #A79F9F, #23d5ab);
+    background: #a2a8b3;
 
 	  // background-size: 400% 400%;
 	  // animation: gradient 5s ease infinite;
@@ -71,8 +72,8 @@
 [data-theme='dark'] {
   .bg {
     div {
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-      opacity: .06;
+      background: linear-gradient(-45deg, #ee7752, #7581ec, #23a6d5, #23d5ab);
+      opacity: .05;
     }
   }
 }
