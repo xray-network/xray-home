@@ -70,11 +70,10 @@
   &__btn {
     display: inline-block;
     padding: 0 rem(30);
-    font-size: rem(16);
     color: $white !important;
     background: linear-gradient(-155deg, $success, darken($success, 5%));
     height: rem(40);
-    line-height: rem(42) !important;
+    line-height: 2.5 !important;
     border: none;
     border-radius: 100px;
     font-weight: 600;
@@ -82,6 +81,7 @@
     @include transition-middle();
     position: relative;
     overflow: hidden;
+    font-size: rem(16);
     
     &::after {
       content: '';
@@ -130,11 +130,11 @@
     }
 
     &--small {
-      padding: 0 rem(20);
-      height: rem(32);
-      line-height: rem(32) !important;
-      font-weight: normal;
-      font-size: rem(14);
+      @media (min-width: $md-min-width) {
+        padding: rem(5) rem(20);
+        height: rem(34);
+        line-height: rem(34) !important;
+      }
     }
 
     &[disabled] {

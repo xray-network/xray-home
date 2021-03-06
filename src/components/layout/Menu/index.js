@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { Button } from "antd"
 import style from "./style.module.scss"
@@ -8,6 +8,8 @@ import SvgTelegram from "../../../../static/resources/images/telegram.inline.svg
 import SvgTwitter from "../../../../static/resources/images/twitter.inline.svg"
 
 export default () => {
+  const [opened, isOpened] = useState(false)
+
   return (
     <div className="ray__block mb-0 z-index-5">
       <div className={style.header}>
@@ -17,7 +19,25 @@ export default () => {
             <div className={style.name}>NETWORK</div>
           </div>
         </Link>
-        <div className={style.menu}>
+        <span
+          className={style.burger}
+          onClick={() => isOpened(!opened)}
+          onKeyPress={() => isOpened(!opened)}
+          role="button"
+          tabIndex="-1"
+        >
+          <i className="fe fe-menu" />
+        </span>
+        <div className={`${style.menu} ${opened ? style.opened : ''}`}>
+          <span
+            className={style.close}
+            onClick={() => isOpened(!opened)}
+            onKeyPress={() => isOpened(!opened)}
+            role="button"
+            tabIndex="-1"
+          >
+            <i className="fe fe-x" />
+          </span>
           <Link
             className={style.link}
             activeClassName={style.active}

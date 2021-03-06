@@ -31,6 +31,14 @@
   strong {
     color: $dark;
   }
+
+  @media (max-width: $sm-max-width) {
+    padding-top: rem(30);
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+  }
 }
 
 .chart {

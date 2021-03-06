@@ -22,23 +22,23 @@ export default () => {
             <h1 className={`${style.title} ray__heading mb-4`}>
               Our pools are looking for delegators.
               <br />
-              RAY Token airdrop is coming soon — hurry up!
+              RAY airdrop is coming soon — hurry up!
             </h1>
             <div className="mb-4">
-              <AnchorLink to="/stake/#submenu" stripHash className="ray__link mr-4">
+              <AnchorLink to="/stake/#submenu" stripHash className="ray__link d-inline-block text-nowrap mb-2 mb-sm-0 mr-4">
                 Staking Calculator
               </AnchorLink>
-              <AnchorLink to="/stake/#pools" stripHash className="ray__link mr-4">
+              <AnchorLink to="/stake/#pools" stripHash className="ray__link d-inline-block text-nowrap mb-2 mb-sm-0 mr-4">
                 RAY Pools
               </AnchorLink>
-              <a href="https://wallet.rraayy.com/#/stake" target="_blank" rel="noopener noreferrer" className="ray__link">
+              <a href="https://wallet.rraayy.com/#/stake" target="_blank" rel="noopener noreferrer" className="ray__link d-inline-block text-nowrap mb-2 mb-sm-0">
                 Visit Staking Center
                 <i className="fe fe-arrow-up-right ray__link__icon" />
               </a>
             </div>
             <div className={style.description}>
               <p>
-                Get <strong>5.5% ROI</strong> in ADA by delegating your funds to a <strong>RAY Pools</strong> and receive additional rewards:
+                Get <strong>5.5% ROI</strong> in ADA by delegating your funds to a <strong>RAY Pool</strong> and receive additional rewards:
                 <br />
                 <strong>1 RAY</strong> per each 100 ADA / Epoch.
               </p>

@@ -17,21 +17,23 @@ export default () => {
           RAY NFT is a decentralized marketplace for digital goods, including collectibles, gaming items, digital art, and other digital assets that are backed by a blockchain. On RAY NFT, you can buy, sell, and trade any of these items with anyone in the world.
           </p>
         <p>
-          Trading on on RAY NFT happens through a smart contract, meaning that no central authority ever holds custody of your items.
+          Trading on on RAY NFT takes place through a smart contract, meaning that no central authority ever holds custody of your items.
           </p>
         <div className="mt-4 pt-3 mb-5">
-          <Button
-            className="ray__btn mr-3"
-            href="https://wallet.rraayy.com/#/rewards"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span>
-              Visit NFT Marketplace
-            </span>
-            <i className="fe fe-arrow-up-right ray__btn__icon" />
-          </Button>
-          <Tooltip title="soon">
+          <span className="d-inline-block mr-3 mb-2">
+            <Button
+              className="ray__btn"
+              href="https://wallet.rraayy.com/#/rewards"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>
+                Visit NFT Marketplace
+              </span>
+              <i className="fe fe-arrow-up-right ray__btn__icon" />
+            </Button>
+          </span>
+          <Tooltip title="soon" className="mr-3 mb-2">
             <span className="d-inline-block">
               <Button
                 className="ray__btn"

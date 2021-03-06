@@ -38,14 +38,14 @@ export default () => {
       <div className="container-fluid">
         <h2 className="ray__heading mb-4">RAY Stake Calculator</h2>
         <div className="mb-5">
-          <div className={style.outer}>
+          <div className={style.calculator}>
             <div className="mb-4">
               <Input value={amount} onChange={({ target: { value } }) => setAmount(value)} placeholder="Enter ADA amount..." size="large" />
             </div>
             <div className={style.performance}>
               <div className="row">
                 <div className="col-md-6">
-                  <ul className="mb-0">
+                  <ul>
                     <li>ADA Return of Investment (ROI): <strong>~ 5.6% / Year</strong></li>
                     <li>
                       Year Returns: <strong>{format(totalAda, 2)} ADA</strong>{' '}
@@ -62,7 +62,7 @@ export default () => {
                   </ul>
                 </div>
                 <div className="col-md-6">
-                  <ul className="mb-0">
+                  <ul>
                     <li>RAY Rewards Rate: <strong>100 ADA = 1 RAY / Epoch</strong></li>
                     <li>
                       Year Returns: <strong>{format(totalRay)} RAY</strong>{' '}
@@ -251,7 +251,7 @@ export default () => {
           </div>
           <div className="col-md-4">
             <div className={style.pool}>
-              <span className="badge badge-white">SCHEDULED</span>
+              <span className="badge badge-transparent">SCHEDULED</span>
               <div className={style.poolItem}>
                 <div className={style.poolLabel}>
                   Pool Id
@@ -379,7 +379,7 @@ export default () => {
           </div>
           <div className="col-md-4">
             <div className={style.pool}>
-              <span className="badge badge-white">SCHEDULED</span>
+              <span className="badge badge-transparent">SCHEDULED</span>
               <div className={style.poolItem}>
                 <div className={style.poolLabel}>
                   Pool Id

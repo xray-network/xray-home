@@ -8,6 +8,7 @@ import Promo from "@/components/layout/Promo"
 import Features from "@/components/layout/Features"
 import Switcher from "@/components/layout/Switcher"
 import Submenu from "@/components/layout/Submenu"
+import Map from "@/components/layout/Map"
 
 export default ({ children }) => (
   <div>
@@ -25,6 +26,7 @@ export default ({ children }) => (
     <Submenu />
     {children}
     <Features />
+    <Map />
     <Footer />
     <Cookies />
   </div>

@@ -6,7 +6,18 @@
   margin-bottom: rem(20);
 
   @media (max-width: $md-max-width) {
-    flex-direction: column;
+    padding-bottom: rem(20);
+    margin-bottom: 0;
+  }
+}
+
+.burger {
+  display: none;
+  margin-left: auto;
+  font-size: rem(24);
+  line-height: 1;
+
+  @media (max-width: $md-max-width) {
     display: block;
   }
 }
@@ -14,10 +25,35 @@
 .menu {
   display: flex;
 
+  .close {
+    display: none;
+    position: absolute;
+    top: rem(20);
+    right: rem(20);
+    font-size: rem(24);
+    line-height: 1;
+    padding: rem(10);
+  }
+
   @media (max-width: $md-max-width) {
+    position: fixed;
+    top: rem(7);
+    left: rem(7);
+    right: rem(7);
+    background: #fff;
     display: block;
-    margin-bottom: rem(20);
-    margin-left: rem(-10);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1), 0 10px 50px -10px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: rem(20);
+    display: none;
+
+    &.opened {
+      display: block;
+    }
+
+    .close {
+      display: block;
+    }
   }
 }
 
@@ -28,9 +64,7 @@
   right: rem(20);
 
   @media (max-width: $md-max-width) {
-    position: relative;
-    top: 0;
-    right: 0;
+    display: none;
   }
 }
 
@@ -88,11 +122,23 @@
     margin-right: 0;
   }
 
+  &.active {
+    background: $white !important;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: $white;
+    color: $dark;
+  }
+
   @media (max-width: $md-max-width) {
-    font-size: rem(18);
-    padding: rem(7) rem(15) rem(6);
-    display: inline-block;
+    font-size: rem(21);
+    padding: rem(10) rem(15) rem(6);
+    display: block;
     margin-right: 0;
+    border-radius: 4px;
 
     &Icon, &IconTwi {
       height: rem(16);
@@ -103,17 +149,6 @@
       height: rem(18);
       width: rem(18);
     }
-  }
-
-  &.active {
-    background: $white !important;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    background: $white;
-    color: $dark;
   }
 }
 
@@ -302,6 +337,12 @@ a.mItem {
   .logo {
     .name {
       color: $white;
+    }
+  }
+
+  .menu {
+    @media (max-width: $md-max-width) {
+      background: darken($dark-gray-3, 15%);
     }
   }
 

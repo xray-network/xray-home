@@ -42,7 +42,7 @@ export default () => {
     <div className="ray__block pb-4">
       <div className="container-fluid">
         <h2 className="ray__heading mb-5">RAY Wallet</h2>
-        <p className="mb-4">RAY Wallet is a web light wallet for Cardano. Light wallets don't need to download or synchronize the blockchain. This means that once you open the wallet, you can send or verify the reception of transactions right away.</p>
+        <p className="mb-4">RAY Wallet is a web light wallet for Cardano. Light wallets don't need to download or synchronize the blockchain. This means that once you open the wallet, you can send or verify the transaction receipts right away.</p>
         <div className={style.items}>
           {items.map((item, index) => {
             return (
@@ -56,18 +56,20 @@ export default () => {
           })}
         </div>
         <div className="mt-4 pt-3">
-          <Button
-            className="ray__btn mr-3"
-            href="https://wallet.rraayy.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span>
-              RAY Wallet Web
-            </span>
-            <i className="fe fe-arrow-up-right ray__btn__icon" />
-          </Button>
-          <Tooltip title="soon" className="mr-3">
+          <span className="d-inline-block mr-3 mb-2">
+            <Button
+              className="ray__btn"
+              href="https://wallet.rraayy.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>
+                RAY Wallet Web
+              </span>
+              <i className="fe fe-arrow-up-right ray__btn__icon" />
+            </Button>
+          </span>
+          <Tooltip title="soon" className="mr-3 mb-2">
             <span className="d-inline-block">
               <Button
                 className="ray__btn"
@@ -81,8 +83,8 @@ export default () => {
             </span>
           </Tooltip>
         </div>
-        <div className="pt-2">
-          <Tooltip title="soon" className="mr-3">
+        <div className="d-sm-flex">
+          <Tooltip title="soon" className="mr-3 mb-2">
             <span className="d-inline-block">
               <Button
                 className="ray__btn"
@@ -95,7 +97,7 @@ export default () => {
               </Button>
             </span>
           </Tooltip>
-          <Tooltip title="soon" className="mr-3">
+          <Tooltip title="soon" className="mr-3 mb-2">
             <span className="d-inline-block">
               <Button
                 className="ray__btn"
@@ -108,7 +110,7 @@ export default () => {
               </Button>
             </span>
           </Tooltip>
-          <Tooltip title="soon" className="mr-3">
+          <Tooltip title="soon" className="mr-3 mb-2">
             <span className="d-inline-block">
               <Button
                 className="ray__btn"
@@ -121,7 +123,7 @@ export default () => {
               </Button>
             </span>
           </Tooltip>
-          <Tooltip title="soon" className="mr-3">
+          <Tooltip title="soon" className="mr-3 mb-2">
             <span className="d-inline-block">
               <Button
                 className="ray__btn"

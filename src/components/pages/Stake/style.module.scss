@@ -8,17 +8,24 @@
   }
 }
 
-.outer {
-  padding: rem(20) rem(30);
+.calculator {
+  padding: rem(20) rem(30) rem(10);
   border: 1px solid $border;
   border-radius: 12px;
+
+  @media (max-width: $sm-max-width) {
+    padding-top: rem(30);
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+  }
 }
 
 .pool {
   padding: rem(20) rem(20);
   margin-bottom: rem(30);
   border-radius: 12px;
-  font-size: rem(16);
   position: relative;
   background: $primary;
 
@@ -84,7 +91,7 @@
     }
   }
 
-  .outer {
+  .calculator {
     border-color: darken($dark-gray-3, 15%);
   }
 }

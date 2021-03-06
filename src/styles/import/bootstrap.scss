@@ -7,17 +7,11 @@
   &-success {
     background: $success;
   }
-  &-white {
-    background: $white;
+  &-transparent {
+    background: rgba($white, .2);
+    color: $white;
   }
 }
 
 // dark theme
-[data-theme='dark'] {
-  .badge {
-    &-white {
-      background: $dark-gray-4;
-      color: lighten($dark-gray-2, 5%);
-    }
-  }
-}
+[data-theme='dark'] {}

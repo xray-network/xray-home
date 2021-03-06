@@ -7,7 +7,7 @@ export default () => {
     <div className="ray__block">
       <div className="container-fluid">
         <h2 className="ray__heading mb-4">RAY Rewards</h2>
-        <p>Earn rewards by participating in the use of RAY services.</p>
+        <p>Earn rewards by using RAY services.</p>
         <p>RAY is currently running several activities that allow you to earn rewards:</p>
         <ul>
           <li>Additional staking rewards in RAY Tokens</li>
@@ -15,18 +15,20 @@ export default () => {
           <li>Twitter activities</li>
         </ul>
         <div className="mt-4 pt-3">
-          <Button
-            className="ray__btn mr-3"
-            href="https://wallet.rraayy.com/#/rewards"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span>
-              Visit Rewards Center
-            </span>
-            <i className="fe fe-arrow-up-right ray__btn__icon" />
-          </Button>
-          <Tooltip title="soon">
+          <span className="d-inline-block mr-3 mb-2">
+            <Button
+              className="ray__btn"
+              href="https://wallet.rraayy.com/#/rewards"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>
+                Visit Rewards Center
+              </span>
+              <i className="fe fe-arrow-up-right ray__btn__icon" />
+            </Button>
+          </span>
+          <Tooltip title="soon" className="mr-3 mb-2">
             <span className="d-inline-block">
               <Button
                 className="ray__btn"

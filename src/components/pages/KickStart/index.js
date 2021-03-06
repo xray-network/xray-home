@@ -16,18 +16,20 @@ export default () => {
           Our mission is to help bring creative projects to life.
         </p>
         <div className="mt-4 pt-3">
-          <Button
-            className="ray__btn mr-3"
-            href="https://wallet.rraayy.com/#/rewards"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span>
-              Visit Crowdfunding Center
-            </span>
-            <i className="fe fe-arrow-up-right ray__btn__icon" />
-          </Button>
-          <Tooltip title="soon">
+          <span className="d-inline-block mr-3 mb-2">
+            <Button
+              className="ray__btn"
+              href="https://wallet.rraayy.com/#/rewards"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>
+                Visit Crowdfunding Center
+              </span>
+              <i className="fe fe-arrow-up-right ray__btn__icon" />
+            </Button>
+          </span>
+          <Tooltip title="soon" className="mr-3 mb-2">
             <span className="d-inline-block">
               <Button
                 className="ray__btn"
