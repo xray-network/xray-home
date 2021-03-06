@@ -149,20 +149,20 @@ export default () => {
 
   useEffect(() => {
     fetchedData = []
-    // Promise.all(repos.map(repo => {
-    //   return fetch(`https://api.github.com/repos/ray-network/${repo}/commits?page=1&per_page=50`)
-    //     .then(res => res.json())
-    //     .then((result => {
-    //       fetchedData.push({
-    //         repo,
-    //         data: result,
-    //       })
-    //     }))
-    // }))
-    //   .then(() => {
-    //     setLoading(false)
-    //     formatData()
-    //   })
+    Promise.all(repos.map(repo => {
+      return fetch(`https://api.github.com/repos/ray-network/${repo}/commits?page=1&per_page=50`)
+        .then(res => res.json())
+        .then((result => {
+          fetchedData.push({
+            repo,
+            data: result,
+          })
+        }))
+    }))
+      .then(() => {
+        setLoading(false)
+        formatData()
+      })
     // eslint-disable-next-line
   }, [])
 
