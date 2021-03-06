@@ -7,8 +7,7 @@ export default () => {
       <div className={style.bg}>
         <div></div>
         <div></div>
-        <div id="canvas">
-        </div>
+        <div></div>
       </div>
     </div>
   )

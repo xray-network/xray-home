@@ -20,6 +20,7 @@
     "chart.js": "^2.9.4",
     "chartjs-plugin-datalabels": "^0.7.0",
     "classnames": "^2.2.6",
+    "date-fns": "^2.19.0",
     "gatsby": "^2.19.45",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-anchor-links": "^1.2.1",

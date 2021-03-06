@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
+import { format } from 'date-fns'
 import { Table } from "antd"
+
 import style from "./style.module.scss"
 
 const columns = [
@@ -34,7 +36,7 @@ const columns = [
     key: 'date',
     sorter: (a, b) => new Date(a.date) - new Date(b.date),
     render: record => {
-      return new Date(record).toLocaleDateString() + ' ' + new Date(record).toLocaleTimeString()
+      return format(new Date(record), 'MM/dd/yyyy HH:mm')
     }
   },
 ]
@@ -43,11 +45,12 @@ const repos = [
   'ray-home',
   'ray-wallet',
   'ray-cordova-wrapper',
-  'cardano-verified-tokens-list',
   'ray-swap-contracts',
   'ray-kickstart-contracts',
   'ray-nft-contracts',
   'cloudflare-workers',
+  'cardano-verified-tokens-list',
+  'awesome-cardano-pools',
 ]
 
 let fetchedData = []
