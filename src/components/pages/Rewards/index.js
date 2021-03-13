@@ -18,7 +18,7 @@ export default () => {
           <span className="d-inline-block mr-3 mb-2">
             <Button
               className="ray__btn"
-              href="https://wallet.rraayy.com/#/rewards"
+              href="https://raywallet.io/#/rewards"
               rel="noopener noreferrer"
               target="_blank"
             >

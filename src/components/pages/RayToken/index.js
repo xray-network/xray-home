@@ -97,7 +97,7 @@ export default () => {
             <p>In the near future RAY Token will provide holders with discounted fees on the platform, and it also serves as a governance token, giving owners a say in future development.</p>
             <p>
               You can receive RaRAYy Tokens via a{' '}
-              <a href="https://wallet.rraayy.com/#/rewards" target="_blank" rel="noopener noreferrer" className="ray__link">Rewards Program</a>
+              <a href="https://raywallet.io/#/rewards" target="_blank" rel="noopener noreferrer" className="ray__link">Rewards Program</a>
               , or{' '}
               <Tooltip title="Planned to 2022"><span className="ray__link">ICO</span></Tooltip>.
             </p>

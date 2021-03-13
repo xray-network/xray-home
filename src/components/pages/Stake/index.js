@@ -237,7 +237,7 @@ export default () => {
               </div>
               <div className="mt-2">
                 <Button
-                  href="https://wallet.rraayy.com/#/stake/"
+                  href="https://raywallet.io/#/stake/"
                   target="_blank"
                   rel="noopener noreferrer"
                   type="primary"
@@ -364,7 +364,7 @@ export default () => {
               </div>
               <div className="mt-2">
                 <Button
-                  href="https://wallet.rraayy.com/#/stake/"
+                  href="https://raywallet.io/#/stake/"
                   target="_blank"
                   rel="noopener noreferrer"
                   disabled
@@ -492,7 +492,7 @@ export default () => {
               </div>
               <div className="mt-2">
                 <Button
-                  href="https://wallet.rraayy.com/#/stake/"
+                  href="https://raywallet.io/#/stake/"
                   target="_blank"
                   rel="noopener noreferrer"
                   disabled

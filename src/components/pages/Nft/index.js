@@ -23,7 +23,7 @@ export default () => {
           <span className="d-inline-block mr-3 mb-2">
             <Button
               className="ray__btn"
-              href="https://wallet.rraayy.com/#/rewards"
+              href="https://raywallet.io/#/rewards"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -80,7 +80,7 @@ export default () => {
                       xray{Math.random().toString(36).substring(7)}
                     </div>
                     <a
-                      href="https://wallet.rraayy.com/#/nft"
+                      href="https://raywallet.io/#/nft"
                       className={`${style.itemLink} ray__link`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -126,7 +126,7 @@ export default () => {
                       xray{Math.random().toString(36).substring(7)}
                     </div>
                     <a
-                      href="https://wallet.rraayy.com/#/nft"
+                      href="https://raywallet.io/#/nft"
                       className={`${style.itemLink} ray__link`}
                       target="_blank"
                       rel="noopener noreferrer"

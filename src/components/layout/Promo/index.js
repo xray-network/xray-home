@@ -31,7 +31,7 @@ export default () => {
               <AnchorLink to="/stake/#pools" stripHash className="ray__link d-inline-block text-nowrap mb-2 mb-sm-0 mr-4">
                 RAY Pools
               </AnchorLink>
-              <a href="https://wallet.rraayy.com/#/stake" target="_blank" rel="noopener noreferrer" className="ray__link d-inline-block text-nowrap mb-2 mb-sm-0">
+              <a href="https://raywallet.io/#/stake" target="_blank" rel="noopener noreferrer" className="ray__link d-inline-block text-nowrap mb-2 mb-sm-0">
                 Visit Staking Center
                 <i className="fe fe-arrow-up-right ray__link__icon" />
               </a>

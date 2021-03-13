@@ -103,7 +103,7 @@ export default () => {
         </div>
         <Button
           className={`${style.fixed} ray__btn`}
-          href="https://wallet.rraayy.com"
+          href="https://raywallet.io"
           rel="noopener noreferrer"
           target="_blank"
         >
