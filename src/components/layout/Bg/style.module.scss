@@ -34,11 +34,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .07;
+    opacity: 1;
     border-radius: 20px;
     // background: linear-gradient(-45deg, #ee7752, #8a84c5, #A79F9F, #23d5ab);
-    background: #a2a8b3;
-
+    background: #f0f0f0;
 	  // background-size: 400% 400%;
 	  // animation: gradient 5s ease infinite;
 
@@ -58,12 +57,14 @@
       top: 50px;
       left: -50px;
       animation-delay: 2.5s;
+      opacity: .6;
     }
 
     &:nth-child(3) {
       top: 100px;
       left: -100px;
       animation-delay: 2.5s;
+      opacity: .4;
     }
   }
 }
