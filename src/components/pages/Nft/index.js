@@ -23,7 +23,7 @@ export default () => {
           <span className="d-inline-block mr-3 mb-2">
             <Button
               className="ray__btn"
-              href="https://raywallet.io/#/rewards"
+              href="https://raywallet.io/#/nft"
               rel="noopener noreferrer"
               target="_blank"
             >
