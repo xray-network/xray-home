@@ -21,6 +21,12 @@ const columns = [
     render: (record, records) => <a href={records.url} className="ray__link">{record.substring(0, 7)}</a>,
   },
   {
+    title: 'Branch',
+    dataIndex: 'branch',
+    key: 'branch',
+    sorter: (a, b) => ('' + a.branch).localeCompare(b.author),
+  },
+  {
     title: 'Message',
     dataIndex: 'message',
     key: 'message',
@@ -41,18 +47,6 @@ const columns = [
       return format(new Date(record), 'MM/dd/yyyy HH:mm')
     }
   },
-]
-
-const repos = [
-  'ray-home',
-  'ray-wallet',
-  'ray-cordova-wrapper',
-  'ray-swap-contracts',
-  'ray-kickstart-contracts',
-  'ray-nft-contracts',
-  'cloudflare-workers',
-  'cardano-verified-tokens-list',
-  'awesome-cardano-pools',
 ]
 
 const dev = [
@@ -143,6 +137,45 @@ const apps = [
 
 let fetchedData = []
 
+const repos = [
+  {
+    id: 'ray-home',
+    branch: 'main',
+  },
+  {
+    id: 'ray-wallet',
+    branch: 'dev',
+  },
+  {
+    id: 'ray-cordova-wrapper',
+    branch: 'dev',
+  },
+  {
+    id: 'ray-swap-contracts',
+    branch: 'dev',
+  },
+  {
+    id: 'ray-kickstart-contracts',
+    branch: 'dev',
+  },
+  {
+    id: 'ray-nft-contracts',
+    branch: 'dev',
+  },
+  {
+    id: 'cloudflare-workers',
+    branch: 'dev',
+  },
+  {
+    id: 'cardano-verified-tokens-list',
+    branch: 'main',
+  },
+  {
+    id: 'awesome-cardano-pools',
+    branch: 'main',
+  },
+]
+
 export default () => {
   const [dataSource, setDataSource] = useState([])
   const [loading, setLoading] = useState(true)
@@ -150,13 +183,16 @@ export default () => {
   useEffect(() => {
     fetchedData = []
     Promise.all(repos.map(repo => {
-      return fetch(`https://api.github.com/repos/ray-network/${repo}/commits?page=1&per_page=50`)
+      return fetch(`https://api.github.com/repos/ray-network/${repo.id}/commits?sha=${repo.branch}&page=1&per_page=50`)
         .then(res => res.json())
         .then((result => {
-          fetchedData.push({
-            repo,
-            data: result,
-          })
+          if (Array.isArray(result)) {
+            fetchedData.push({
+              repo: repo.id,
+              branch: repo.branch,
+              data: result,
+            })
+          }
         }))
     }))
       .then(() => {
@@ -173,6 +209,7 @@ export default () => {
         repo.data.forEach(item => {
           let commit = {}
           commit.repo = repo.repo
+          commit.branch = repo.branch
           commit.sha = item.sha
           commit.author = item.commit.author.name
           commit.author_avatar = item.committer.avatar_url
