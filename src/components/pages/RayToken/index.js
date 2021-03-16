@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import { Tooltip } from "antd"
 import { Doughnut } from 'react-chartjs-2'
 import 'chartjs-plugin-datalabels'
 import { globalContext } from "@/provider"
@@ -11,7 +10,7 @@ export default () => {
 
   const total = 406152800
   const rewards = parseInt(total * 0.28)
-  const ico = parseInt(total * 0.50)
+  const kickstart = parseInt(total * 0.50)
   const development = parseInt(total * 0.14)
   const founders = parseInt(total * 0.08)
 
@@ -37,10 +36,10 @@ export default () => {
   }
 
   const distributionData = {
-    labels: ['ICO', 'Rewards', 'Development', 'Founders'],
+    labels: ['KickStart', 'Rewards', 'Development', 'Founders'],
     datasets: [
       {
-        data: [ico, rewards, development, founders],
+        data: [kickstart, rewards, development, founders],
         ...colors,
         borderWidth: 1,
       },
@@ -99,7 +98,7 @@ export default () => {
               You can receive RaRAYy Tokens via a{' '}
               <a href="https://raywallet.io/#/rewards" target="_blank" rel="noopener noreferrer" className="ray__link">Rewards Program</a>
               , or{' '}
-              <Tooltip title="Planned to 2022"><span className="ray__link">ICO</span></Tooltip>.
+              <a href="https://raywallet.io/#/kickstart" className="ray__link">KickStart Distribution</a> (total five phases).
             </p>
           </div>
         </div>
@@ -112,7 +111,7 @@ export default () => {
               </ul>
               <ul>
                 <li>Rewards Program: <strong>{format(rewards)} RAY</strong> <sup>28%</sup></li>
-                <li>2022 ICO: <strong>{format(ico)} RAY</strong> <sup>64%</sup></li>
+                <li>KickStart: <strong>{format(kickstart)} RAY</strong> <sup>64%</sup></li>
               </ul>
             </div>
             <div className="col-md-6">
