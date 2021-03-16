@@ -95,7 +95,7 @@ export default () => {
             <p>RAY Token - <strong>RAY</strong> - is a Cardano based cryptocurrency token for a fuelling the RAY platform. RAY is a highly functional open source project that banks on blockchain technology’s permissionless nature to provide decentralized finance (DeFi) solutions and other services.</p>
             <p>In the near future RAY Token will provide holders with discounted fees on the platform, and it also serves as a governance token, giving owners a say in future development.</p>
             <p>
-              You can receive RaRAYy Tokens via a{' '}
+              You can receive RAY Tokens via a{' '}
               <a href="https://raywallet.io/#/rewards" target="_blank" rel="noopener noreferrer" className="ray__link">Rewards Program</a>
               , or{' '}
               <a href="https://raywallet.io/#/kickstart" className="ray__link">KickStart Distribution</a> (total five phases).
