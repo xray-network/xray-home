@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ray Wallet - Cardano Advanced Light Wallet`,
+        name: `RAY Network - Cardano Ecosystem`,
         icon: `static/favicon.png`,
       },
     },

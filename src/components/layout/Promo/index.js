@@ -20,9 +20,9 @@ export default () => {
           </div>
           <div className={style.content}>
             <h1 className={`${style.title} ray__heading mb-4`}>
-              RAY Network - advanced ecosystem for Cardano's blockchain platform.
+              RAY Network is an advanced ecosystem for the Cardano blockchain platform.
               <br />
-              All about ADA finances (defi) in one place.
+              All about ADA finances (DeFi) in one place.
             </h1>
             <div className="mb-4">
               <AnchorLink to="/stake/#submenu" stripHash className="ray__link d-inline-block text-nowrap mb-2 mb-sm-0 mr-4">
