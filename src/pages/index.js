@@ -6,7 +6,7 @@ import Wallet from "@/components/pages/Wallet"
 export default () => {
   return (
     <Layout>
-      <Helmet title="Advanced Ecosystem" />
+      <Helmet title="Cardano Ecosystem" />
       <Wallet />
     </Layout>
   )

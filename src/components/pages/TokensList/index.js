@@ -10,11 +10,30 @@ const columns = [
     render: (record, records) => {
       return records.name === 'RAY'
         ? <div className={style.image}><img src={`/resources/tokens/RAY.jpg`} alt={records.name} /></div>
-        : <div className={style.image}><img src={`https://raw.githubusercontent.com/ray-network/cardano-verified-tokens-list/main/logo/${records.policyId}.${records.name}.jpg`} alt={records.name} /></div>
+        : <div className={style.image}><img src={`https://raw.githubusercontent.com/ray-network/cardano-verified-tokens-list/main/logo/${records.fingerprint}.jpg`} alt={records.name} /></div>
     }
   },
   {
-    title: 'Name (Ticker)',
+    title: 'Ticker',
+    dataIndex: 'ticker',
+    key: 'ticker',
+    render: (record, records) => {
+      return (
+        <strong>
+          <a
+            href={records.homepage}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ray__link"
+          >
+            {record}
+          </a>
+        </strong>
+      )
+    }
+  },
+  {
+    title: 'Name',
     dataIndex: 'name',
     key: 'name',
     render: (record, records) => {
@@ -33,28 +52,25 @@ const columns = [
     }
   },
   {
-    title: 'Policy ID',
-    dataIndex: 'policyId',
-    key: 'policyId',
+    title: 'Fingerprint',
+    dataIndex: 'fingerprint',
+    key: 'fingerprint',
   },
   {
-    title: 'Minted',
-    dataIndex: 'mintedAt',
-    key: 'mintedAt',
-    render: (record, records) => {
-      return records.name === 'RAY'
-        ? record
-        : new Date(record).toLocaleDateString()
-    }
-  },
-  {
-    title: 'Added',
-    dataIndex: 'addedAt',
-    key: 'addedAt',
-    render: (record, records) => {
-      return records.name === 'RAY'
-        ? record
-        : new Date(record).toLocaleDateString()
+    title: 'Homepage',
+    dataIndex: 'homepage',
+    key: 'homepage',
+    render: (record) => {
+      return (
+        <a
+          href={record}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ray__link"
+        >
+          {record}
+        </a>
+      )
     }
   },
 ]
@@ -68,14 +84,14 @@ export default () => {
       .then(res => res.json())
       .then((result => {
         setDataSource([
-          ...result,
           {
-            "policyId": "TBD",
+            "fingerprint": "To be defined",
             "name": "RAY",
+            "ticker": "RAY",
             "homepage": "https://rraayy.com",
-            "mintedAt": "TBD",
-            "addedAt": "TBD"
-          }
+            "description": "Governance Ray Token"
+          },
+          ...result,
         ])
         setLoading(false)
       }))

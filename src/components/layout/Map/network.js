@@ -58,12 +58,12 @@ export default [
   {
     type: 'api',
     tags: ['api', 'relay'],
-    name: 'wallet-api',
+    name: 'cardano-graphql',
     coords: [36.4, 49.4],
     data: {
-      ip: '167.71.37.100:3001',
+      ip: '207.154.199.27',
       country: 'DE',
-      region: 'Hessen',
+      region: 'Hesse',
       location: 'Frankfurt am Main',
     }
   },

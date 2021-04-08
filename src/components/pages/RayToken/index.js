@@ -98,7 +98,7 @@ export default () => {
               You can receive RAY Tokens via a{' '}
               <a href="https://raywallet.io/#/rewards" target="_blank" rel="noopener noreferrer" className="ray__link">Rewards Program</a>
               , or{' '}
-              <a href="https://raywallet.io/#/kickstart" className="ray__link">KickStart Distribution</a> (total five phases).
+              <a href="https://raywallet.io/#/kickstart" target="_blank" rel="noopener noreferrer" className="ray__link">KickStart Distribution</a> (total five phases).
             </p>
           </div>
         </div>
