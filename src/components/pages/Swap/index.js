@@ -18,6 +18,7 @@ export default () => {
           RAY is open-source software licensed
           under MIT License.
         </p>
+        <div className="mb-5" />
         <h2 className="ray__heading mb-4">How Swap Works</h2>
         <p>
           Prices are determined by the amount of each token in a pool. The smart

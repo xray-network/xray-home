@@ -40,7 +40,7 @@ export default () => {
               <p>
                 Get <strong>5.5% ROI</strong> in ADA by delegating your funds to a <strong>RAY Pool</strong> and receive additional rewards:
                 <br />
-                <strong>1 RAY</strong> per each 100 ADA / Epoch.
+                <strong>1 RAY</strong> per each 20 ADA / Epoch.
               </p>
             </div>
           </div>

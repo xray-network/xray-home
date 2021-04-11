@@ -107,17 +107,22 @@ export default () => {
           <div className="row">
             <div className="col-md-6">
               <ul>
-                <li>Circulating Supply: <strong>{format(total)} RAY</strong></li>
+                <li>
+                  Circulating Supply
+                  <br />
+                  <strong className="font-size-32">{format(total)} RAY</strong>
+                </li>
               </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6">
               <ul>
                 <li>Rewards Program: <strong>{format(rewards)} RAY</strong> <sup>28%</sup></li>
-                <li>KickStart: <strong>{format(kickstart)} RAY</strong> <sup>64%</sup></li>
+                <li>KickStart: <strong>{format(kickstart)} RAY</strong> <sup>50%</sup></li>
               </ul>
             </div>
             <div className="col-md-6">
-              <ul>
-                <li>Target RAY Price: <strong>{format(1, 2)} $</strong> <sup>{format(1 / context.prices.btc, 8)} BTC</sup></li>
-              </ul>
               <ul>
                 <li>Development Fund: <strong>{format(development)} RAY</strong> <sup>14%</sup></li>
                 <li>Founders: <strong>{format(founders)} RAY</strong> <sup>4+4%</sup></li>

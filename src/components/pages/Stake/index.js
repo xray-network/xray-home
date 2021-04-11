@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react"
-import { Input, Button, Tooltip, message } from "antd"
+import { Input, Button, message } from "antd"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import { globalContext } from "@/provider"
 import { format, formatValue } from "@/utils"
@@ -28,9 +28,11 @@ export default () => {
       }))
   }
 
+  const coeff = 50
+
   useEffect(() => {
     setTotalAda(amount * 0.056 || 0)
-    setTotalRay(amount / 100 * 73 || 0)
+    setTotalRay(amount / coeff * 73 || 0)
   }, [amount])
 
   return (
@@ -46,7 +48,9 @@ export default () => {
               <div className="row">
                 <div className="col-md-6">
                   <ul>
-                    <li>ADA Return of Investment (ROI): <strong>~ 5.6% / Year</strong></li>
+                    <li>ADA Return of Investment (ROI): <strong>~ 5.6% <sup>/ Year</sup></strong></li>
+                  </ul>
+                  <ul>
                     <li>
                       Year Returns: <strong>{format(totalAda, 2)} ADA</strong>{' '}
                       <sup>{format(totalAda * context.prices.ada, 2)}$</sup>
@@ -63,27 +67,17 @@ export default () => {
                 </div>
                 <div className="col-md-6">
                   <ul>
-                    <li>RAY Rewards Rate: <strong>100 ADA = 1 RAY / Epoch</strong></li>
+                    <li>RAY Rewards Rate: <strong>{coeff} ADA = 1 RAY <sup>/ Epoch</sup></strong></li>
+                  </ul>
+                  <ul>
                     <li>
                       Year Returns: <strong>{format(totalRay)} RAY</strong>{' '}
-                      <sup>{format(totalRay, 2)}$</sup>{' '}
-                      <Tooltip title="If price reaches 1$ per RAY">
-                        <i className="fe fe-info" />
-                      </Tooltip>
                     </li>
                     <li>
                       Month Returns: <strong>{format(totalRay / 12)} RAY</strong>{' '}
-                      <sup>{format(totalRay / 12, 2)}$</sup>{' '}
-                      <Tooltip title="If price reaches 1$ per RAY">
-                        <i className="fe fe-info" />
-                      </Tooltip>
                     </li>
                     <li>
                       Epoch Returns: <strong>{format(totalRay / 73)} RAY</strong>{' '}
-                      <sup>{format(totalRay / 73, 2)}$</sup>{' '}
-                      <Tooltip title="If price reaches 1$ per RAY">
-                        <i className="fe fe-info" />
-                      </Tooltip>
                     </li>
                   </ul>
                 </div>
