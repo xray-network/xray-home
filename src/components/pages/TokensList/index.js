@@ -8,9 +8,9 @@ const columns = [
     key: 'logo',
     width: 40,
     render: (record, records) => {
-      return records.name === 'RAY'
-        ? <div className={style.image}><img src={`/resources/tokens/RAY.jpg`} alt={records.name} /></div>
-        : <div className={style.image}><img src={`https://raw.githubusercontent.com/ray-network/cardano-verified-tokens-list/main/logo/${records.fingerprint}.jpg`} alt={records.name} /></div>
+      return (
+        <div className={style.image}><img src={`https://raw.githubusercontent.com/ray-network/cardano-verified-tokens-list/main/logo/${records.fingerprint}.jpg`} alt={records.name} /></div>
+      )
     }
   },
   {
@@ -84,13 +84,6 @@ export default () => {
       .then(res => res.json())
       .then((result => {
         setDataSource([
-          {
-            "fingerprint": "To be defined",
-            "name": "RAY",
-            "ticker": "RAY",
-            "homepage": "https://rraayy.com",
-            "description": "Governance Ray Token"
-          },
           ...result,
         ])
         setLoading(false)
