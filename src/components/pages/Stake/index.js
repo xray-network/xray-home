@@ -99,11 +99,11 @@ export default () => {
                 </div>
                 <div className={style.poolValue}>
                   <CopyToClipboard
-                    text={pools[0]}
+                    text="pool1rjxdqghfjw5rv6lxg8qhedkechvfgnsqhl8rrzwck9g45n43yql"
                     onCopy={() => message.success('Pool ID copied successfully')}
                   >
                     <strong className={style.copy}>
-                      {(pools[0]).substring(0, 4)}...{(pools[0]).slice(-8)}
+                      {"pool1rjxdqghfjw5rv6lxg8qhedkechvfgnsqhl8rrzwck9g45n43yql".substring(0, 8)}...{"pool1rjxdqghfjw5rv6lxg8qhedkechvfgnsqhl8rrzwck9g45n43yql".slice(-8)}
                       <i className="fe fe-copy ml-1" />
                     </strong>
                   </CopyToClipboard>

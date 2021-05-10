@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { Button } from "antd"
+import { Button, Tooltip } from "antd"
 import style from "./style.module.scss"
 
 import SvgGithub from "../../../../static/resources/images/github.inline.svg"
@@ -69,36 +69,54 @@ export default () => {
             Status
           </a>
           <div className={style.social}>
-            <a
-              className={style.link}
-              href="https://github.com/ray-network"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <span>
-                <SvgGithub className={style.linkIcon} />
-              </span>
-            </a>
-            <a
-              className={style.link}
-              href="https://t.me/RayNetwork"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <span>
-                <SvgTelegram className={style.linkIconTg} />
-              </span>
-            </a>
-            <a
-              className={style.link}
-              href="https://twitter.com/RayWallet"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <span>
-                <SvgTwitter className={style.linkIconTwi} />
-              </span>
-            </a>
+            <Tooltip placement="bottom" title="Twitter">
+              <a
+                className={style.link}
+                href="https://twitter.com/RayWallet"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span>
+                  <SvgTwitter className={style.linkIconTwi} />
+                </span>
+              </a>
+            </Tooltip>
+            <Tooltip placement="bottom" title="Telegram Announcements">
+              <a
+                className={style.link}
+                href="https://t.me/RayWallet"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span>
+                  <SvgTelegram className={style.linkIconTg} />
+                </span>
+              </a>
+            </Tooltip>
+            <Tooltip placement="bottom" title="Telegram Chat">
+              <a
+                className={style.link}
+                href="https://t.me/RayWalletCommunity"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span>
+                  <SvgTelegram className={style.linkIconTg} />
+                </span>
+              </a>
+            </Tooltip>
+            <Tooltip placement="bottom" title="GitHub">
+              <a
+                className={style.link}
+                href="https://github.com/ray-network"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span>
+                  <SvgGithub className={style.linkIcon} />
+                </span>
+              </a>
+            </Tooltip>
           </div>
         </div>
         <Button
