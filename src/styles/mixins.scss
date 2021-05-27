@@ -1,10 +1,9 @@
 // Colors
 $white: #fff;
-$black: #253858;
-$black-2: #17202A;
-$blue: #017AFF;
-$blue-light: #42baf9;
-$blue-dark: #2c60e4;
+$black: #04021D;
+$blue: #1940ED;
+$blue-light: #4171eb;
+$blue-dark: rgb(36, 84, 206);
 $gray-1: #f2f4f8;
 $gray-2: #e4e9f0;
 $gray-3: #d9dee9;
@@ -16,10 +15,19 @@ $orange: #faad15;
 $red: #f5222e;
 $pink: #fd3995;
 $purple: #652eff;
-$green: #19D195;
+$green: #3FCB9B;
 
-$text: $black;
+// dark theme
+$dark-gray-1: #B8B8DB;
+$dark-gray-2: #8484AD;
+$dark-gray-3: #4f4f7a;
+$dark-gray-4: #232236;
+$dark-gray-5: #11192E;
+$dark-gray-6: #0c0c1b;
+
+$text: $dark-gray-3;
 $border: $gray-2;
+$dark-border: #272639;
 
 $pastel-1: #f6f6f6;
 $pastel-2: #ffedea;
@@ -34,15 +42,6 @@ $warning: $orange;
 $danger: $red;
 $light: $gray-1;
 $dark: $black;
-$dark-2: $black-2;
-
-// dark theme
-$dark-gray-1: #aeaee0;
-$dark-gray-2: #7575a3;
-$dark-gray-3: #4f4f7a;
-$dark-gray-4: #232135;
-$dark-gray-5: #141322;
-$dark-gray-6: #0c0c1b;
 
 // Font Family
 $base-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,

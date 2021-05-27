@@ -1,35 +1,41 @@
 import React, { useState, useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
 import style from "./style.module.scss"
 
 export default () => {
-  const cookiesViewed =
-    typeof window !== "undefined" &&
-    window.localStorage.getItem("cookiesViewed")
-  const [cookiesHidden, setCookiesHidden] = useState(cookiesViewed)
+  const cookiesViewed = useSelector((state) => state.settings.cookiesViewed)
+  const dispatch = useDispatch()
+
   const [cookiesAnimation, setCookiesAnimation] = useState(false)
 
+  const setCookiesHidden = () => {
+    dispatch({
+      type: 'settings/CHANGE_SETTING',
+      payload: {
+        setting: 'cookiesViewed',
+        value: true,
+      },
+    })
+  }
+
   useEffect(() => {
-    window.localStorage.setItem("cookiesViewed", true)
     setTimeout(() => {
       setCookiesAnimation(true)
     }, 2000)
     // eslint-disable-next-line
   }, [])
 
-  return (
-    !cookiesHidden && (
+  return !cookiesViewed
+    ? (
       <div
-        className={`
-    ${style.cookies}
-    ${cookiesAnimation ? style.cookiesAnimated : ""}
-  `}
+        className={`${style.cookies} ${cookiesViewed && 'd-none'} ${cookiesAnimation && style.cookiesAnimated}`}
       >
-        <h5 className="mb-2">
+        <h5 className="mb-3">
           <strong>
             Our site uses cookies{" "}
             <span role="img" aria-label="">
               🍪
-            </span>
+          </span>
           </strong>
         </h5>
         <p className={style.description}>
@@ -37,18 +43,18 @@ export default () => {
           to enhance the experience on our site, and for advertising purposes.
           Usage of a cookie is in no way linked to any personally identifiable
           information on our website.
-        </p>
+      </p>
         <a
           href="/"
           onClick={e => {
             e.preventDefault()
             setCookiesHidden(true)
           }}
-          className="ray__btn ray__btn--small"
+          className="ray__button ray__button--small"
         >
           Got it
-        </a>
+      </a>
       </div>
     )
-  )
+    : null
 }

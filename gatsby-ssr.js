@@ -1,6 +1,2 @@
-import Provider from './src/provider'
-const wrapRootElement = Provider
-
-export {
-  wrapRootElement,
-}
+import store from '@/redux/provider'
+export const wrapRootElement = store

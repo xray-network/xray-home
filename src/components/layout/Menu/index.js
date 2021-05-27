@@ -1,135 +1,118 @@
-import React, { useState } from "react"
+import React, { useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
 import { Link } from "gatsby"
-import { Button, Tooltip } from "antd"
 import style from "./style.module.scss"
 
-import SvgGithub from "../../../../static/resources/images/github.inline.svg"
-import SvgTelegram from "../../../../static/resources/images/telegram.inline.svg"
-import SvgTwitter from "../../../../static/resources/images/twitter.inline.svg"
-
 export default () => {
-  const [opened, isOpened] = useState(false)
+  const theme = useSelector((state) => state.settings.theme)
+  const dispatch = useDispatch()
+
+  const changeTheme = () => {
+    dispatch({
+      type: 'settings/CHANGE_SETTING',
+      payload: {
+        setting: 'theme',
+        value: theme === 'default' ? 'dark' : 'default',
+      },
+    })
+  }
+
+  const setTheme = (theme) => {
+    document.querySelector('html').setAttribute('data-theme', theme)
+  }
+
+  useEffect(() => {
+    setTheme(theme)
+    // eslint-disable-next-line
+  }, [theme])
+
+  const openRewards = (e) => {
+    e.preventDefault()
+    dispatch({
+      type: 'settings/CHANGE_SETTING',
+      payload: {
+        setting: 'modalRewards',
+        value: true,
+      }
+    })
+  }
 
   return (
-    <div className="ray__block mb-0 z-index-5">
-      <div className={style.header}>
-        <Link to="/" className={style.logoContainer}>
-          <div className={style.logo}>
-            <img src="/resources/logo.svg" alt="" />
-            <div className={style.name}>NETWORK</div>
-          </div>
-        </Link>
-        <span
-          className={style.burger}
-          onClick={() => isOpened(!opened)}
-          onKeyPress={() => isOpened(!opened)}
-          role="button"
-          tabIndex="-1"
-        >
-          <i className="fe fe-menu" />
-        </span>
-        <div className={`${style.menu} ${opened ? style.opened : ''}`}>
-          <span
-            className={style.close}
-            onClick={() => isOpened(!opened)}
-            onKeyPress={() => isOpened(!opened)}
-            role="button"
-            tabIndex="-1"
-          >
-            <i className="fe fe-x" />
-          </span>
-          <Link
-            className={style.link}
-            activeClassName={style.active}
-            to="/"
-          >
-            Home
-          </Link>
-          <Link
-            className={style.link}
-            activeClassName={style.active}
-            to="/updates/"
-          >
-            Updates
-          </Link>
-          <Link
-            className={style.link}
-            activeClassName={style.active}
-            to="/wiki/"
-          >
-            Wiki
-          </Link>
-          <a
-            className={style.link}
-            href="https://status.rraayy.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span className={style.status} />
-            Status
-          </a>
-          <div className={style.social}>
-            <Tooltip placement="bottom" title="Twitter">
-              <a
-                className={style.link}
-                href="https://twitter.com/RayWallet"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span>
-                  <SvgTwitter className={style.linkIconTwi} />
-                </span>
-              </a>
-            </Tooltip>
-            <Tooltip placement="bottom" title="Telegram Announcements">
-              <a
-                className={style.link}
-                href="https://t.me/RayWallet"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span>
-                  <SvgTelegram className={style.linkIconTg} />
-                </span>
-              </a>
-            </Tooltip>
-            <Tooltip placement="bottom" title="Telegram Chat">
-              <a
-                className={style.link}
-                href="https://t.me/RayWalletCommunity"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span>
-                  <SvgTelegram className={style.linkIconTg} />
-                </span>
-              </a>
-            </Tooltip>
-            <Tooltip placement="bottom" title="GitHub">
-              <a
-                className={style.link}
-                href="https://github.com/ray-network"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span>
-                  <SvgGithub className={style.linkIcon} />
-                </span>
-              </a>
-            </Tooltip>
+    <div className={`ray__block ray__block--bottom ${style.menu}`}>
+      <div className={style.menuTop}>
+        <div className={style.menuContent}>
+          <h2 className="mb-0">
+            Ray Network
+          </h2>
+          <div className="text-active">
+            Powered with{' '}
+            <strong>Cardano</strong>{' '}
           </div>
         </div>
-        <Button
-          className={`${style.fixed} ray__btn`}
-          href="https://raywallet.io"
-          rel="noopener noreferrer"
-          target="_blank"
+        <div className={style.menuControls}>
+          <div className={style.menuTheme}>
+            <div
+              role="button"
+              tabIndex="0"
+              onClick={changeTheme}
+              onKeyPress={changeTheme}
+            >
+              {theme === 'default' && <i className="fe fe-sun" />}
+              {theme !== 'default' && <i className="fe fe-moon" />}
+            </div>
+          </div>
+          <div className={style.menuLogo}>
+            <a href="https://rraayy.com" target="_blank" rel="noopener noreferrer">
+              <img src="/resources/logo.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="pt-3">
+        <Link
+          to="/"
+          className={style.link}
+          activeClassName={style.linkActive}
         >
-          <span>
-            Open RAY Wallet
-          </span>
-          <i className="fe fe-arrow-up-right ray__btn__icon" />
-        </Button>
+          <span>About Token</span>
+          <span>About Token</span>
+        </Link>
+        <Link
+          to="/distribution"
+          className={style.link}
+          activeClassName={style.linkActive}
+        >
+          <span>Distribution</span>
+          <span>Distribution</span>
+        </Link>
+        <a
+          href="/"
+          className={style.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={openRewards}
+        >
+          <span>Delegators Rewards</span>
+          <span>Delegators Rewards</span>
+        </a>
+        <a
+          href="https://rraayy.com/wiki/"
+          className={style.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Wiki &rarr;</span>
+          <span>Wiki &rarr;</span>
+        </a>
+        <a
+          href="https://raywallet.io/"
+          className={style.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Ray Wallet &rarr;</span>
+          <span>Ray Wallet &rarr;</span>
+        </a>
       </div>
     </div>
   )

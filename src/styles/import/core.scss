@@ -18,12 +18,12 @@ body {
 
 a {
   text-decoration: none;
-  color: $black;
+  color: $blue;
   @include transition-color();
   &:hover,
   &:active,
   &:focus {
-    color: $blue;
+    color: $blue-light;
     text-decoration: none;
   }
 }
@@ -51,11 +51,16 @@ input {
 
 strong {
   font-weight: 700;
+
+  &.bolder {
+    font-weight: 900;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: $dark;
+  margin-bottom: rem(20);
 }
 
 h1 {
@@ -63,7 +68,28 @@ h1 {
 }
 
 h2 {
-  font-size: rem(32);
+  font-size: rem(36);
+}
+
+h5 {
+  font-size: rem(21);
+}
+
+p {
+  margin-bottom: rem(20);
+}
+
+ul {
+  padding-left: rem(30);
+
+  li {
+    margin-bottom: rem(8);
+  }
+}
+
+sup {
+  font-size: 60%;
+  font-weight: normal !important;
 }
 
 svg {
@@ -86,11 +112,15 @@ code {
   font-size: 80%;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 // dark theme
 [data-theme='dark'] {
   body {
-    background: $dark-2;
-    color: lighten($dark-gray-2, 5%);
+    background: $dark;
+    color: $dark-gray-2;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -98,7 +128,7 @@ code {
   }
 
   a {
-    color: $blue;
+    color: $blue-light;
 
     &:hover,
     &:active,

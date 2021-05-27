@@ -17,6 +17,12 @@
   &-muted {
     color: $gray-5 !important;
   }
+  &-active {
+    color: $dark !important;
+  }
+  &-shade {
+    color: $text !important;
+  }
 }
 
 .table-hover {
@@ -39,5 +45,17 @@
   }
   &-32 {
     font-size: rem(32);
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .text {
+    &-active {
+      color: $white !important;
+    }
+    &-shade {
+      color: $dark-gray-2 !important;
+    }
   }
 }

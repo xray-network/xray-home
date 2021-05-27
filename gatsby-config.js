@@ -7,19 +7,16 @@
 const path = require("path")
 
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -25,
-      }
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `RAY Network - Cardano Ecosystem`,
+        name: `Ray Network - Cardano Ecosystem`,
         icon: `static/favicon.png`,
       },
     },
@@ -44,13 +41,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-41062113-16",
+        trackingId: "UA-41062113-22",
       },
     },
     {
       resolve: `gatsby-plugin-yandex-metrika`,
       options: {
-        trackingId: "70157308",
+        trackingId: "77966719",
         webvisor: true,
         trackHash: true,
       },
@@ -66,7 +63,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
-        'data-theme': 'light'
+        'data-theme': 'default'
       }
     },
   ],

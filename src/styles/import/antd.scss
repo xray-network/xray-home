@@ -38,6 +38,37 @@
       transition: none !important;
     }
   }
+
+  &-modal {
+    &-mask {
+      background: rgba($black, 0.7) !important;
+    }
+
+    &-close-x {
+      color: $gray-5;
+
+      &:hover {
+        color: $gray-3;
+      }
+    }
+
+    &-content {
+      border-radius: 12px !important;
+    }
+  
+    &-header {
+      background: transparent !important;
+    }
+  
+    &-body {
+      font-size: rem(16) !important;
+      color: $black;
+    }
+  
+    &-title {
+      color: $black !important;
+    }
+  }
 }
 
 // dark theme
@@ -90,7 +121,6 @@
 
     &-table {
       color: lighten($dark-gray-2, 5%);
-      background: $dark-2;
 
       td, th {
         border-bottom-color: darken($dark-gray-3, 15%);
@@ -123,6 +153,24 @@
         &:after {
           background: $dark-gray-4;
         }
+      }
+    }
+
+    &-modal {
+      &-content {
+        background: $dark-gray-4 !important;
+      }
+  
+      &-header {
+        border-color: $dark-border;
+      }
+  
+      &-body {
+        color: $dark-gray-1 !important;
+      }
+  
+      &-title {
+        color: $dark-gray-1 !important;
       }
     }
   }

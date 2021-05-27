@@ -1,0 +1,25 @@
+@import "@/styles/mixins";
+
+.announce {
+  background: $blue;
+  color: $white;
+  padding: rem(5) 0;
+  font-size: rem(16);
+  height: rem(33);
+
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $gray-1;
+      text-decoration: none;
+    }
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+}

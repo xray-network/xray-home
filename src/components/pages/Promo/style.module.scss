@@ -1,0 +1,77 @@
+@import "@/styles/mixins";
+
+.text {
+  font-size: rem(92);
+  line-height: 1;
+  font-weight: 900;
+  display: block;
+  padding-bottom: rem(10);
+  margin-bottom: rem(30);
+
+  @media (max-width: 820px) {
+    font-size: rem(64);
+  }
+
+  background: linear-gradient(45deg, $blue 20%, $black 20%, $black 80%, $blue 80%);
+  background-size: 200% auto;
+  background-position: -135%;
+
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 1s linear;
+  animation-iteration-count: 1;
+  @keyframes shine {
+    to {
+      background-position: -335% center;
+    }
+  }
+}
+
+.descr {
+  font-size: rem(42);
+  margin-bottom: 0;
+}
+
+.cardano {
+  display: inline-block;
+  width: rem(90);
+  height: rem(60);
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: rem(-18);
+    left: 0;
+    height: rem(90);
+    width: rem(90);
+    
+    g {
+      fill: $blue;
+    }
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .text {
+    background: linear-gradient(45deg, $blue 20%, $white 20%, $white 80%, $blue 80%);
+    background-size: 200% auto;
+    background-position: -135%;
+
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 1s linear;
+    animation-iteration-count: 1;
+    @keyframes shine {
+      to {
+        background-position: -335% center;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "@/styles/mixins";
+
+.emoji {
+  font-size: rem(92);
+}
+
+// dark theme
+[data-theme='dark'] {
+}

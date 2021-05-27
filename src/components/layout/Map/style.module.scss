@@ -2,9 +2,12 @@
 
 .map {
   margin-top: rem(10);
-  padding-top: rem(20);
   margin-bottom: rem(20);
   position: relative;
+  border: 1px solid $border;
+  border-left: 7px solid $blue;
+  padding: rem(55) rem(30);
+  border-radius: 8px;
 
   .itemLabel {
     position: absolute;
@@ -20,7 +23,7 @@
     margin: 0 auto;
     img {
       width: 100%;
-      opacity: .3;
+      opacity: .4;
       user-select: none;
     }
   }
@@ -131,9 +134,12 @@
 // dark theme
 [data-theme='dark'] {
   .map {
+    border: 1px solid $dark-border;
+    border-left: 7px solid $blue;
+
     .img {
       img {
-        opacity: .8;
+        opacity: 1;
       }
     }
   }

@@ -1,17 +1,37 @@
 @import "@/styles/mixins";
 
 .badge {
-  &-primary {
-    background: $primary;
+  font-size: rem(14);
+  display: inline-block;
+  padding: rem(5) rem(8);
+
+  &-token {
+    background: $border;
+    color: $text;
   }
+
   &-success {
     background: $success;
   }
-  &-transparent {
-    background: rgba($white, .2);
-    color: $white;
+
+  &-primary {
+    background: $blue;
+  }
+}
+
+h5 {
+  .badge {
+    position: relative;
+    top: -2px;
   }
 }
 
 // dark theme
-[data-theme='dark'] {}
+[data-theme='dark'] {
+  .badge {
+    &-token {
+      background: $dark-gray-4;
+      color: $dark-gray-2;
+    }
+  }
+}

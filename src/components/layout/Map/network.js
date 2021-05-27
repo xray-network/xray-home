@@ -16,7 +16,7 @@ export default [
     name: 'ray-relay-1',
     coords: [46.6, 13.5],
     data: {
-      ip: '178.128.178.48:6000',
+      ip: '143.198.105.5:6000',
       country: 'US',
       region: 'California',
       location: 'Santa Clara',
@@ -24,10 +24,10 @@ export default [
   },
   {
     tags: ['relay'],
-    name: 'ray-relay-3',
+    name: 'ray-relay-2',
     coords: [41.5, 26.1],
     data: {
-      ip: '104.131.30.242:6000',
+      ip: '68.183.62.149:6000',
       country: 'US',
       region: 'New Jersey',
       location: 'Clifton',
@@ -35,10 +35,10 @@ export default [
   },
   {
     tags: ['relay'],
-    name: 'ray-relay-2',
+    name: 'ray-relay-3',
     coords: [28.8, 42.3],
     data: {
-      ip: '161.35.41.136:6000',
+      ip: '159.65.23.21:6000',
       country: 'UK',
       region: 'England',
       location: 'London',
@@ -49,7 +49,7 @@ export default [
     name: 'ray-relay-4',
     coords: [59.5, 78.1],
     data: {
-      ip: '139.59.118.155:6000',
+      ip: '128.199.234.204:6000',
       country: 'SG',
       region: 'Singapore',
       location: 'Singapore',
@@ -61,7 +61,7 @@ export default [
     name: 'cardano-graphql',
     coords: [36.4, 49.4],
     data: {
-      ip: '207.154.199.27',
+      ip: '207.154.251.39',
       country: 'DE',
       region: 'Hesse',
       location: 'Frankfurt am Main',

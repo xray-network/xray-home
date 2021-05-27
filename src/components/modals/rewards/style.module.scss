@@ -1,0 +1,23 @@
+@import "@/styles/mixins";
+
+.emoji {
+  font-size: rem(92);
+}
+
+.key {
+  font-size: rem(21);
+  font-weight: bold;
+  color: $black;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: rem(5);
+}
+
+// dark theme
+[data-theme='dark'] {
+  .key {
+    color: $white;
+  }
+}
