@@ -1,5 +1,12 @@
 @import "@/styles/mixins";
 
+.promo {
+  margin: 0 rem(-80);
+  background: $pastel-2;
+  padding: rem(80) rem(80);
+  border-radius: 20px;
+}
+
 .text {
   font-size: rem(92);
   line-height: 1;
@@ -52,10 +59,26 @@
       fill: $blue;
     }
   }
+
+  @media (max-width: 820px) {
+    width: rem(60);
+    height: rem(40);
+
+    svg {
+      top: rem(-13);
+      left: 0;
+      height: rem(60);
+      width: rem(60);
+    }
+  }
 }
 
 // dark theme
 [data-theme='dark'] {
+  .promo {
+    background: darken($dark-gray-3, 15%);
+  }
+
   .text {
     background: linear-gradient(45deg, $blue 20%, $white 20%, $white 80%, $blue 80%);
     background-size: 200% auto;

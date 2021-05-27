@@ -1,7 +1,100 @@
+/* eslint-disable no-alert */
+
 import React, { useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
 import { Link } from "gatsby"
+import { Button, Tooltip } from "antd"
+import { useSelector, useDispatch } from "react-redux"
 import style from "./style.module.scss"
+
+const products = [
+  {
+    title: 'Ray Wallet',
+    url: '/wallet',
+  },
+  {
+    title: 'Ray Stake',
+    url: '/stake',
+  },
+  {
+    title: 'Ray Rewards',
+    url: '/rewards',
+  },
+  {
+    title: 'Ray Swap',
+    url: '/swap',
+  },
+  {
+    title: 'Ray KickStart',
+    url: '/kickstart',
+  },
+  {
+    title: 'Ray NFT',
+    url: '/nft-marketplace',
+  },
+  {
+    title: 'Tokens List',
+    url: '/tokens-list',
+  },
+  {
+    title: 'Data Containers',
+    url: '/data-containers',
+  },
+  {
+    title: 'Cardano-Web3.js',
+    url: 'https://github.com/ray-network/cardano-web3.js',
+    ext: true,
+  },
+]
+
+const developers = [
+  {
+    title: 'Updates',
+    url: '/updates',
+  },
+  {
+    title: 'GitHub',
+    url: 'https://github.com/ray-network',
+    ext: true,
+  },
+  {
+    title: 'Documentation',
+    url: '',
+    disabled: true,
+  },
+  {
+    title: 'Whitepaper',
+    url: '',
+    disabled: true,
+  },
+  {
+    title: 'Audit',
+    url: '',
+    disabled: true,
+  },
+]
+
+const community = [
+  {
+    title: 'Twitter',
+    url: 'https://twitter.com/RayWallet',
+    ext: true,
+  },
+  {
+    title: 'Telegram',
+    url: 'https://t.me/RayWallet',
+    ext: true,
+  },
+  {
+    title: 'Telegram Chat',
+    url: 'https://t.me/RayWalletCommunity',
+    ext: true,
+  },
+  {
+    title: 'Reddit',
+    url: 'https://www.reddit.com/r/RayWallet',
+    ext: true,
+  },
+]
 
 export default () => {
   const theme = useSelector((state) => state.settings.theme)
@@ -26,93 +119,143 @@ export default () => {
     // eslint-disable-next-line
   }, [theme])
 
-  const openRewards = (e) => {
-    e.preventDefault()
-    dispatch({
-      type: 'settings/CHANGE_SETTING',
-      payload: {
-        setting: 'modalRewards',
-        value: true,
-      }
-    })
-  }
-
   return (
-    <div className={`ray__block ray__block--bottom ${style.menu}`}>
-      <div className={style.menuTop}>
-        <div className={style.menuContent}>
-          <h2 className="mb-0">
-            Ray Network
-          </h2>
-          <div className="text-active">
-            Powered with{' '}
-            <strong>Cardano</strong>{' '}
+    <div>
+      <div className={style.header}>
+        <Link to="/" className={style.logoContainer}>
+          <div className={style.logo}>
+            <img src="/resources/logo.svg" alt="" />
+            <div className={style.name}>Ray Network</div>
           </div>
-        </div>
-        <div className={style.menuControls}>
-          <div className={style.menuTheme}>
-            <div
-              role="button"
-              tabIndex="0"
-              onClick={changeTheme}
-              onKeyPress={changeTheme}
-            >
-              {theme === 'default' && <i className="fe fe-sun" />}
-              {theme !== 'default' && <i className="fe fe-moon" />}
+        </Link>
+        <div className={style.menu}>
+          <div
+            className={`${style.link} ${style.products}`}
+          >
+            Products
+            <div className={style.mContainer}>
+              <div className={style.mInner}>
+                {products.map((item, index) => {
+                  return (
+                    <Link
+                      key={index}
+                      to={item.url}
+                      className={style.mItem}
+                      activeClassName={style.mItemActive}
+                    >
+                      <div className={style.mTitle}>
+                        {item.title}{' '}
+                        {item.ext && <i className="fe fe-arrow-up-right" />}
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
             </div>
           </div>
-          <div className={style.menuLogo}>
-            <a href="https://rraayy.com" target="_blank" rel="noopener noreferrer">
-              <img src="/resources/logo.svg" alt="" />
-            </a>
+          <div
+            className={`${style.link} ${style.products}`}
+          >
+            Developers
+            <div className={style.mContainer}>
+              <div className={style.mInner}>
+                {developers.map((item, index) => {
+                  if (item.disabled) {
+                    return (
+                      <Tooltip title="Soon" placement="right">
+                        <div className={style.mItem}>
+                          <div className={style.mTitle}>
+                            {item.title}
+                          </div>
+                        </div>
+                      </Tooltip>
+                    )
+                  }
+                  return (
+                    <Link
+                      key={index}
+                      to={item.url}
+                      className={style.mItem}
+                      activeClassName={style.mItemActive}
+                    >
+                      <div className={style.mTitle}>
+                        {item.title}{' '}
+                        {item.ext && <i className="fe fe-arrow-up-right" />}
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
           </div>
+          <div
+            className={`${style.link} ${style.products}`}
+          >
+            Community
+            <div className={style.mContainer}>
+              <div className={style.mInner}>
+                {community.map((item, index) => {
+                  return (
+                    <Link
+                      key={index}
+                      to={item.url}
+                      className={style.mItem}
+                      activeClassName={style.mItemActive}
+                    >
+                      <div className={style.mTitle}>
+                        {item.title}{' '}
+                        {item.ext && <i className="fe fe-arrow-up-right" />}
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+          <Link
+            className={style.link}
+            activeClassName={style.active}
+            to="https://x.rraayy.com"
+          >
+            XRAY Token
+          </Link>
+          <Link
+            className={style.link}
+            activeClassName={style.active}
+            to="/wiki"
+          >
+            Wiki
+          </Link>
+          <Link
+            className={style.link}
+            activeClassName={style.active}
+            to="https://status.rraayy.com"
+          >
+            <span className={style.status} />
+            Status
+          </Link>
+          <span
+            className={`${style.link} ${style.linkIcon}`}
+            role="button"
+            tabIndex="0"
+            onClick={changeTheme}
+            onKeyPress={changeTheme}
+          >
+            {theme === 'default' && <i className="fe fe-sun" />}
+            {theme !== 'default' && <i className="fe fe-moon" />}
+          </span>
         </div>
-      </div>
-      <div className="pt-3">
-        <Link
-          to="/"
-          className={style.link}
-          activeClassName={style.linkActive}
-        >
-          <span>About Token</span>
-          <span>About Token</span>
-        </Link>
-        <Link
-          to="/distribution"
-          className={style.link}
-          activeClassName={style.linkActive}
-        >
-          <span>Distribution</span>
-          <span>Distribution</span>
-        </Link>
-        <a
-          href="/"
-          className={style.link}
-          target="_blank"
+        <Button
+          className={`${style.fixed} ant-button ray__button`}
+          href="https://app.visualbuilder.cloud"
           rel="noopener noreferrer"
-          onClick={openRewards}
-        >
-          <span>Delegators Rewards</span>
-          <span>Delegators Rewards</span>
-        </a>
-        <a
-          href="https://rraayy.com/wiki/"
-          className={style.link}
           target="_blank"
-          rel="noopener noreferrer"
         >
-          <span>Wiki &rarr;</span>
-          <span>Wiki &rarr;</span>
-        </a>
-        <a
-          href="https://raywallet.io/"
-          className={style.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>Ray Wallet &rarr;</span>
-          <span>Ray Wallet &rarr;</span>
-        </a>
+          <span>
+            Open Ray Wallet
+          </span>
+          <i className="fe fe-arrow-up-right ray__button__icon" />
+        </Button>
       </div>
     </div>
   )

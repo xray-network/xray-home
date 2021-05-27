@@ -6,6 +6,12 @@ import style from "./style.module.scss"
 export default () => {
   const items = [
     {
+      title: 'XRAY Token',
+      descr: 'Ray Network governance & payment token',
+      url: 'https://x.rraayy.com',
+      ext: true,
+    },
+    {
       title: 'Ray Wallet',
       descr: 'A lightweight Cardano multiplatform and multifunctional wallet',
       url: '/wallet',
@@ -31,20 +37,24 @@ export default () => {
       url: '/kickstart',
     },
     {
-      title: 'Ray NFT',
+      title: 'Ray NFT Marketplace',
       descr: 'NFT Marketplace with advanced features',
-      url: '/nft',
+      url: '/nft-marketplace',
     },
     {
-      title: 'Ray Token',
-      descr: 'Ray Network governance & payment token',
-      url: 'https://x.rraayy.com',
-      ext: true,
-    },
-    {
-      title: 'Ray Data',
+      title: 'Ray Data Containers',
       descr: 'B2B data storage and authorization solution',
       url: '/data-containers',
+    },
+    {
+      title: 'Wiki',
+      descr: 'Cardano & Ray Network information database',
+      url: '/wiki',
+    },
+    {
+      title: 'Tokens List',
+      descr: 'Cardano native token list curated by Ray',
+      url: '/tokens-list',
     },
     {
       title: 'Cardano-Web3.js',
@@ -68,8 +78,6 @@ export default () => {
                   ? (
                     <a
                       href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className={style.itemInner}
                     >
                       <i className="fe fe-external-link" />

@@ -20,7 +20,7 @@ const defaultShared = [
     icon: "fe fe-star",
   },
   {
-    title: "Activity Rewarding Programs",
+    title: "Community Loyalty Programs",
     icon: "fe fe-dollar-sign",
   },
   {

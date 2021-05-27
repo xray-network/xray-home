@@ -1,100 +1,263 @@
 @import "@/styles/mixins";
 
-.menu {
-  padding-top: rem(40);
-  padding-bottom: rem(30);
+.header {
+  display: flex;
+  padding: rem(22) rem(20) rem(20);
   margin-bottom: rem(60);
 
-  &Top {
-    display: flex;
-    justify-content: center;
-
-    @media (max-width: 820px) {
-      flex-direction: column;
-    }
+  @media (max-width: $md-max-width) {
+    flex-direction: column;
+    // align-items: center;
+    display: block;
   }
+}
 
-  &Controls {
-    display: flex;
-    margin-left: auto;
+.menu {
+  display: flex;
 
-    @media (max-width: 820px) {
-      margin-left: 0;
-      margin-bottom: rem(20);
-    }
+  @media (max-width: $md-max-width) {
+    display: block;
+    margin-bottom: rem(20);
+    margin-left: rem(-10);
   }
+}
 
-  &Content {
-    @media (max-width: 820px) {
-      order: 2;
+.status {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: $success;
+  margin-right: rem(12);
+  position: relative;
+  top: -1px;
+  animation: pulse 2s infinite;
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba($success, 0.4);
     }
-  }
-
-  &Theme {
-    margin-left: auto;
-    margin-right: rem(30);
-    display: flex;
-    align-self: center;
-    font-size: rem(24);
-    cursor: pointer;
-
-    @media (max-width: 820px) {
-      margin-right: 0;
-      margin-left: rem(30);
-      order: 2;
+    70% {
+      box-shadow: 0 0 0 10px rgba($success, 0);
     }
-  }
-
-  &Logo {
-    display: flex;
-    justify-content: center;
-
-    a {
-      display: flex;
+    100% {
+      box-shadow: 0 0 0 0 rgba($success, 0);
     }
   }
 }
 
+.fixed {
+  position: fixed;
+  z-index: 100;
+  top: rem(20);
+  right: rem(20);
+
+  @media (max-width: $md-max-width) {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
+
 .link {
-  margin-right: rem(25);
-  display: inline-block;
-  margin-bottom: rem(10);
-  position: relative;
+  display: block;
+  font-weight: 600;
+  padding: rem(10) rem(20) rem(8);
+  border-radius: 50px;
+  @include transition-middle;
+  color: $dark;
+  font-size: rem(16);
+  line-height: 1;
   white-space: nowrap;
 
-  :global(.fe) {
-    font-size: rem(14);
-    top: -1px;
-    left: 2px;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $blue;
+    // background: $pastel-1;
   }
 
   &:last-child {
     margin-right: 0;
   }
 
-  span:first-child {
-    opacity: 0;
-    font-weight: 600;
+  &Icon {
+    font-size: rem(21);
+    margin-right: rem(8);
+    margin-top: rem(-3);
+    cursor: pointer;
   }
 
-  span:last-child {
-    position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center;
+  &Ext {
+    float: right;
+    margin-left: rem(4);
+    margin-top: 1px;
   }
 
-  &Active {
-    color: $black !important;
+  @media (max-width: $md-max-width) {
+    font-size: rem(21);
+    padding: rem(7) rem(14) rem(6);
+    display: inline-block;
+    margin-right: 0;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 rem(28) 0 0;
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: rem(30);
+    white-space: nowrap;
+    width: 100%;
+    font-weight: bold;
+    color: $dark;
+
+    img {
+      height: rem(28);
+      width: rem(28);
+      margin-right: rem(10);
+    }
+  }
+  .name {
+    font-size: rem(18);
     font-weight: 700;
+    color: $black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 90%;
+    display: block;
+  }
+
+  @media (max-width: $lg-max-width) {
+    .name {
+      display: none;
+    }
+  }
+
+  @media (max-width: $md-max-width) {
+    margin-bottom: rem(20);
+
+    .name,
+    .descr {
+      display: block;
+    }
+  }
+}
+
+.products {
+  position: relative;
+  z-index: 200;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    .mContainer {
+      transform: none;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.m {
+  &Item {
+    display: block;
+    margin-bottom: rem(15);
+    position: relative;
+    @include transition-middle();
+
+    &:last-child {
+      margin-bottom: rem(0);
+    }
+  }
+
+  &Container {
+    position: absolute;
+    font-weight: normal;
+    color: $dark;
+    z-index: 20;
+    top: calc(100% - 5px);
+    left: 0;
+    padding-top: rem(20);
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 0.25s;
+    transform: perspective(50em) rotateX(-15deg);
+    transform-origin: 50% -50px;
+  }
+
+  &Inner {
+    box-shadow: 0 20px 100px -20px rgba(50, 50, 93, 0.25),
+      0 20px 60px -30px rgba(0, 0, 0, 0.3),
+      0 -18px 60px -10px rgba(0, 0, 0, 0.025);
+    background: $white;
+    padding: rem(25) rem(20) rem(20);
+    border-radius: 15px;
+    // width: rem(260);
+    position: relative;
+  
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50px;
+      border-radius: 4px 0 0 0;
+      top: -6px;
+      margin: 0 0 0 -6px;
+      width: 12px;
+      height: 12px;
+      background: $white;
+      box-shadow: -3px -3px 5px rgba(82, 95, 127, 0.02);
+      transform: rotate(45deg);
+    }
+  }
+  
+  &Block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &Title {
+    margin-bottom: rem(5);
+  }
+  
+  &Description {
+    font-size: rem(14);
+    color: $gray-6;
   }
 }
 
 // dark theme
 [data-theme='dark'] {
   .link {
-    &Active {
-      color: $white !important;
+    color: $white;
+
+    &:hover {
+      color: $gray-2;
+    }
+  }
+
+  .logoContainer {
+    .name {
+      color: $white;
+    }
+  }
+
+  .m {
+    &Inner {
+      background: $dark-gray-4;
+      color: $dark-gray-1;
+
+      &:before {
+        background: $dark-gray-4;
+      }
     }
   }
 }
+
