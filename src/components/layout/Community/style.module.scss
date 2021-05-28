@@ -7,6 +7,11 @@
   display: block;
   height: 100%;
   text-align: center;
+  @include transition-middle();
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   &Image {
     height: rem(70);

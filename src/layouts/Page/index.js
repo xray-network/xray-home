@@ -6,7 +6,7 @@ import Footer from '@/components/layout/Footer'
 import Cookies from '@/components/layout/Cookies'
 import Questions from "@/components/layout/Questions"
 import Community from "@/components/layout/Community"
-import Map from "@/components/layout/Map"
+import Solutions from "@/components/pages/Solutions"
 
 export default ({ children }) => {
   return (
@@ -21,7 +21,7 @@ export default ({ children }) => {
       {/* <Announce /> */}
       <Menu />
       {children}
-      <Map />
+      <Solutions />
       <Community />
       <Questions />
       <Footer />

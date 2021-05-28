@@ -9,7 +9,7 @@ export default () => {
       <div className="ray__heading">Do you have any questions?</div>
       <div className="font-size-24">
         Read our {' '}
-        <Link to="/wiki/">Wiki</Link>{' '}
+        <Link to="/wiki">Wiki</Link>{' '}
         or drop us a letter {' '}
         <a href="mailto:hello@rraayy.com">hello@rraayy.com</a>
       </div>

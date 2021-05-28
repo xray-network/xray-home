@@ -25,6 +25,11 @@
     }
   }
 
+  &__table {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
   &__ticker {
     display: inline-block;
     font-size: 83%;

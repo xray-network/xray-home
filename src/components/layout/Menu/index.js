@@ -1,6 +1,7 @@
 /* eslint-disable no-alert */
 
 import React, { useEffect } from "react"
+import { useLocation } from "@reach/router"
 import { Link } from "gatsby"
 import { Button, Tooltip } from "antd"
 import { useSelector, useDispatch } from "react-redux"
@@ -52,9 +53,13 @@ const developers = [
     url: '/updates',
   },
   {
-    title: 'GitHub',
+    title: 'Github',
     url: 'https://github.com/ray-network',
     ext: true,
+  },
+  {
+    title: 'Logo & Brand',
+    url: '/wiki/brand',
   },
   {
     title: 'Documentation',
@@ -97,6 +102,10 @@ const community = [
 ]
 
 export default () => {
+  const location = useLocation()
+  const isProductPage = /^(\/wallet|\/stake|\/rewards|\/swap|\/kickstart|\/nft-marketplace|\/tokens-list|\/data-containers)/.test(location.pathname)
+  const isDevelopersPage = /(updates)/.test(location.pathname)
+  const isWikiPage = /(wiki)/.test(location.pathname)
   const theme = useSelector((state) => state.settings.theme)
   const dispatch = useDispatch()
 
@@ -130,9 +139,9 @@ export default () => {
         </Link>
         <div className={style.menu}>
           <div
-            className={`${style.link} ${style.products}`}
+            className={`${style.link} ${style.products} ${isProductPage ? style.linkActive : ''}`}
           >
-            Products
+            <span>Products</span>
             <div className={style.mContainer}>
               <div className={style.mInner}>
                 {products.map((item, index) => {
@@ -142,6 +151,7 @@ export default () => {
                       to={item.url}
                       className={style.mItem}
                       activeClassName={style.mItemActive}
+                      target={item.ext ? '_blank' : ''}
                     >
                       <div className={style.mTitle}>
                         {item.title}{' '}
@@ -154,15 +164,15 @@ export default () => {
             </div>
           </div>
           <div
-            className={`${style.link} ${style.products}`}
+            className={`${style.link} ${style.products} ${isDevelopersPage ? style.linkActive : ''}`}
           >
-            Developers
+            <span>Developers</span>
             <div className={style.mContainer}>
               <div className={style.mInner}>
                 {developers.map((item, index) => {
                   if (item.disabled) {
                     return (
-                      <Tooltip title="Soon" placement="right">
+                      <Tooltip key={index} title="Soon" placement="right">
                         <div className={style.mItem}>
                           <div className={style.mTitle}>
                             {item.title}
@@ -177,6 +187,7 @@ export default () => {
                       to={item.url}
                       className={style.mItem}
                       activeClassName={style.mItemActive}
+                      target={item.ext ? '_blank' : ''}
                     >
                       <div className={style.mTitle}>
                         {item.title}{' '}
@@ -191,7 +202,7 @@ export default () => {
           <div
             className={`${style.link} ${style.products}`}
           >
-            Community
+            <span>Community</span>
             <div className={style.mContainer}>
               <div className={style.mInner}>
                 {community.map((item, index) => {
@@ -201,6 +212,7 @@ export default () => {
                       to={item.url}
                       className={style.mItem}
                       activeClassName={style.mItemActive}
+                      target={item.ext ? '_blank' : ''}
                     >
                       <div className={style.mTitle}>
                         {item.title}{' '}
@@ -214,21 +226,20 @@ export default () => {
           </div>
           <Link
             className={style.link}
-            activeClassName={style.active}
             to="https://x.rraayy.com"
+            target={'_blank'}
           >
-            XRAY Token
+            XRAY Token{' '}
+            <i className={`fe fe-arrow-up-right ${style.linkIcon}`} />
           </Link>
           <Link
-            className={style.link}
-            activeClassName={style.active}
+            className={`${style.link}  ${isWikiPage ? style.linkActive : ''}`}
             to="/wiki"
           >
             Wiki
           </Link>
           <Link
             className={style.link}
-            activeClassName={style.active}
             to="https://status.rraayy.com"
           >
             <span className={style.status} />

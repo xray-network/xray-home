@@ -26,8 +26,8 @@
       position: absolute;
       top: rem(28);
       right: rem(27);
-      opacity: 0;
-      color: $white !important;
+      // opacity: 0;
+      // color: $white !important;
       @include transition-middle();
       font-size: rem(21);
     }
@@ -40,19 +40,21 @@
       @include transition-middle();
     }
 
-    &:hover {
+    &Active, &:hover {
       background: $blue;
       color: $white !important;
 
-      transform: scale(1.1);
-
-      :global(.fe) {
-        opacity: 1;
-      }
+      // :global(.fe) {
+      //   opacity: 1;
+      // }
 
       .itemInnerTitle {
         color: $white !important;
       }
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
@@ -70,7 +72,7 @@
         color: $white !important;
       }
   
-      &:hover {
+      &Active, &:hover {
         background: $blue;
         color: $white !important;
       }

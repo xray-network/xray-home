@@ -1,12 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import Menu from '@/components/layout/Menu'
+import MenuWiki from '@/components/layout/MenuWiki'
 // import Announce from '@/components/layout/Announce'
 import Footer from '@/components/layout/Footer'
 import Cookies from '@/components/layout/Cookies'
 import Questions from "@/components/layout/Questions"
 import Community from "@/components/layout/Community"
-import Map from "@/components/layout/Map"
+import Solutions from "@/components/pages/Solutions"
 
 export default ({ children }) => {
   return (
@@ -20,8 +21,9 @@ export default ({ children }) => {
       </Helmet>
       {/* <Announce /> */}
       <Menu />
+      <MenuWiki />
       {children}
-      <Map />
+      <Solutions />
       <Community />
       <Questions />
       <Footer />
