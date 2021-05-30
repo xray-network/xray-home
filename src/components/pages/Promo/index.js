@@ -23,7 +23,7 @@ export default () => {
         </h2>
         <p className="mt-4 pt-2">Get <strong>5.5% ROI in ADA</strong> by delegating your funds to a Ray pools and receive additional rewards: <strong>1 XRAY per each 50 ADA / Epoch</strong>.</p>
         <div>
-          <AnchorLink to="/stake/#submenu" stripHash className="ray__link d-inline-block text-nowrap mb-2 mb-sm-0 mr-4">
+          <AnchorLink to="/stake/#calculator" stripHash className="ray__link d-inline-block text-nowrap mb-2 mb-sm-0 mr-4">
             Staking Calculator
           </AnchorLink>
           <AnchorLink to="/stake/#pools" stripHash className="ray__link d-inline-block text-nowrap mb-2 mb-sm-0 mr-4">

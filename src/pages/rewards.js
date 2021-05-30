@@ -1,14 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import LayoutPage from "@/layouts/Page"
+import Rewards from "@/components/pages/Rewards"
 
 export default () => {
   return (
     <LayoutPage>
-      <Helmet title="Cardano Ecosystem" />
-      <div className="ray__block">
-        [rewards]
-      </div>
+      <Helmet title="Ray Rewards" />
+      <Rewards />
     </LayoutPage>
   )
 }

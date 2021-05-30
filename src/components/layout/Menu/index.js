@@ -10,7 +10,7 @@ import style from "./style.module.scss"
 const products = [
   {
     title: 'Ray Wallet',
-    url: '/wallet',
+    url: '/ray-wallet',
   },
   {
     title: 'Ray Stake',
@@ -103,7 +103,7 @@ const community = [
 
 export default () => {
   const location = useLocation()
-  const isProductPage = /^(\/wallet|\/stake|\/rewards|\/swap|\/kickstart|\/nft-marketplace|\/tokens-list|\/data-containers)/.test(location.pathname)
+  const isProductPage = /^(\/ray-wallet|\/stake|\/rewards|\/swap|\/kickstart|\/nft-marketplace|\/tokens-list|\/data-containers)/.test(location.pathname)
   const isDevelopersPage = /(updates)/.test(location.pathname)
   const isWikiPage = /(wiki)/.test(location.pathname)
   const theme = useSelector((state) => state.settings.theme)
@@ -227,7 +227,7 @@ export default () => {
           <Link
             className={style.link}
             to="https://x.rraayy.com"
-            target={'_blank'}
+            target="_blank"
           >
             XRAY Token{' '}
             <i className={`fe fe-arrow-up-right ${style.linkIcon}`} />
@@ -241,6 +241,7 @@ export default () => {
           <Link
             className={style.link}
             to="https://status.rraayy.com"
+            target="_blank"
           >
             <span className={style.status} />
             Status
@@ -257,7 +258,7 @@ export default () => {
           </span>
         </div>
         <Button
-          className={`${style.fixed} ant-button ray__button`}
+          className={`${style.fixed} ant-button ray__button ray__button--success`}
           href="https://app.visualbuilder.cloud"
           rel="noopener noreferrer"
           target="_blank"

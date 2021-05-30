@@ -7,6 +7,10 @@ import style from "./style.module.scss"
 
 const wiki = [
   {
+    title: 'Wiki',
+    url: '/wiki',
+  },
+  {
     title: 'Stake Delegators',
     url: '/wiki/stake-delegators',
   },

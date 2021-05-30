@@ -13,7 +13,7 @@ const items = [
   {
     title: 'Ray Wallet',
     descr: 'A lightweight Cardano multiplatform and multifunctional wallet',
-    url: '/wallet',
+    url: '/ray-wallet',
   },
   {
     title: 'Ray Stake',

@@ -63,12 +63,12 @@ const dev = [
   },
   {
     status: 'completed',
-    title: 'Light Wallet Frontend',
+    title: 'Ray Wallet',
     date: 'Q1 2021',
   },
   {
     status: 'completed',
-    title: 'Wallet Send/Receive',
+    title: 'Wallet Send / Receive',
     date: 'Q1 2021',
   },
   {
@@ -83,22 +83,42 @@ const dev = [
   },
   {
     status: 'active',
+    title: 'XRAY Token',
+    date: 'Q2 2021',
+  },
+  {
+    status: 'active',
     title: 'Cardano-Web3.js',
     date: 'Q2 2021',
   },
   {
     status: 'active',
-    title: 'Native Tokens Support',
+    title: 'Wallet Native Tokens',
     date: 'Q2 2021',
   },
   {
     status: 'active',
-    title: 'Chrome Extension',
+    title: 'Wallet Mobile Layout',
     date: 'Q2 2021',
   },
   {
     status: 'active',
     title: 'Ray Swap',
+    date: 'Q3 2021',
+  },
+  {
+    status: 'pending',
+    title: 'Wallet Tokens Minting',
+    date: 'Q3 2021',
+  },
+  {
+    status: 'pending',
+    title: 'Wallet Tx Metadata',
+    date: 'Q3 2021',
+  },
+  {
+    status: 'pending',
+    title: 'Chrome Extension',
     date: 'Q3 2021',
   },
   {
@@ -113,6 +133,11 @@ const dev = [
   },
   {
     status: 'pending',
+    title: 'Ergo Support',
+    date: '2022',
+  },
+  {
+    status: 'pending',
     title: 'Data Containers',
     date: '2022',
   },
@@ -120,14 +145,14 @@ const dev = [
 
 const apps = [
   {
-    status: 'active',
+    status: 'pending',
     title: 'Windows App Electron',
-    date: 'Q2 2021',
+    date: 'Q3 2021',
   },
   {
-    status: 'active',
+    status: 'pending',
     title: 'macOS App Electron',
-    date: 'Q2 2021',
+    date: 'Q3 2021',
   },
   {
     status: 'pending',
@@ -236,7 +261,7 @@ export default () => {
     <div className="ray__block">
       <Heading id="roadmap">
         <strong className="bolder">Development</strong> Roadmap
-        </Heading>
+      </Heading>
       <div className="mb-3">
         <h5 className="mb-4">Services & Solutions</h5>
         <div className={style.roadmap}>

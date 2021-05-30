@@ -9,7 +9,7 @@ export default () => {
   return (
     <div className="ray__block">
       <Heading id="map">
-        <strong className="bolder">Ray relays</strong> map
+        <strong className="bolder">Ray</strong> relays map
       </Heading>
       <div className={style.map}>
         <div className={style.img}>

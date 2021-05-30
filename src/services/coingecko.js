@@ -19,9 +19,8 @@ import axios from 'axios'
 import { notification } from 'antd'
 
 const apiClient = axios.create({
-  // baseURL: 'https://graphql-helper.rraayy.com',
-  baseURL: 'http://localhost:8080',
-  // timeout: 100,
+  baseURL: 'https://api.coingecko.com/api/v3',
+  // timeout: 1000,
   // headers: { 'X-Custom-Header': 'foobar' }
 })
 
@@ -29,44 +28,20 @@ const apiClient = axios.create({
 //   return request
 // })
 
-apiClient.interceptors.response.use(
-  (response) => {
-    const { data } = response
-    if (data.errors) {
-      data.errors.forEach((item) => {
-        notification.warning({
-          message: 'Something went wrong :(',
-          description: item.message,
-        })
-      })
-      return false
-    }
-    return response
-  },
-  (error) => {
-    // Errors handling
-    console.log(error)
+apiClient.interceptors.response.use(undefined, (error) => {
+  // Errors handling
+  const { response } = error
+  const { data } = response
+  if (data) {
     notification.warning({
-      message: 'Something went wrong :(',
+      message: data,
     })
-  },
-)
+  }
+})
 
-export async function GetDelegationRewardsState() {
+export async function GetRawUrl(url) {
   return apiClient
-    .get('/rewards/delegation/state')
-    .then((response) => {
-      if (response) {
-        return response.data
-      }
-      return false
-    })
-    .catch((err) => console.log(err))
-}
-
-export async function GetDelegationRewardsStateByKey(stakeKey) {
-  return apiClient
-    .get(`/rewards/delegation/state/${stakeKey}`)
+    .get(url)
     .then((response) => {
       if (response) {
         return response.data

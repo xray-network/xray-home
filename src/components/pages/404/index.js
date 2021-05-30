@@ -9,7 +9,7 @@ export default () => {
         <div className="row">
           <div className="col-lg-6">
             <div className={style.pig}>
-              <img src="/resources/images/pig.svg" title="RAY Piglet" alt="RAY Piglet" />
+              <img src="/resources/images/pig.svg" title="Ray Piglet" alt="Ray Piglet" />
             </div>
           </div>
           <div className="col-lg-6">

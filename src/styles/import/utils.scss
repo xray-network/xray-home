@@ -25,6 +25,31 @@
     }
   }
 
+  &__wiki {
+    &__link {
+      display: block;
+      padding: rem(20);
+      // background: $pastel-1;
+      border-radius: 12px;
+      padding-right: rem(50);
+      position: relative;
+      margin-bottom: rem(30);
+      border: 1px solid $border;
+      border-left: 7px solid $primary;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &__icon {
+        position: absolute;
+        top: rem(22);
+        right: rem(20);
+        font-size: rem(24);
+      }
+    }
+  }
+
   &__table {
     overflow: auto;
     white-space: nowrap;
@@ -131,11 +156,13 @@
     background: $blue;
     height: rem(40);
     line-height: 2.5 !important;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 100px;
     font-weight: 600;
     font-size: rem(16);
     text-align: center;
+    text-shadow: none !important;
+    box-shadow: 0 5px 10px -4px rgba(0,0,0,.2), 0 0 30px -4px rgba(0,0,0,.2);
     @include transition-middle();
 
     &:hover,
@@ -143,23 +170,13 @@
     &:active {
       color: $white !important;
       background: $blue-light;
+      border: 1px solid transparent;
     }
 
     &[disabled] {
-      background: $gray-2 !important;
+      background: transparent !important;
+      border: 1px solid $border !important;
       color: $dark-gray-1 !important;
-
-      @at-root {
-        [data-theme='dark'] {
-          .ant-modal-content {
-            .ray__button {
-              &[disabled] {
-                background: $dark-gray-5 !important;
-              }
-            }
-          }
-        }
-      }
     }
 
     &__icon {
@@ -172,7 +189,7 @@
     &--small {
       padding: 0 rem(20);
       height: rem(32);
-      line-height: rem(34) !important;
+      line-height: rem(31) !important;
     }
 
     &--large {
@@ -191,6 +208,24 @@
         background: lighten($success, 5%);
       }
     }
+
+    &--white {
+      background: $white;
+      color: $dark !important;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: darken($white, 5%);
+        color: $dark-gray-5 !important;
+      }
+
+      &[disabled] {
+        background: transparent !important;
+        border-color: rgba($border, .2) !important;
+        color: $dark-gray-1 !important;
+      }
+    }
   }
 }
 
@@ -204,6 +239,13 @@
 
       &--bottom {
         border-bottom: 1px solid $dark-border;
+      }
+    }
+
+    &__wiki {
+      &__link {
+        border-color: $dark-border;
+        border-left-color: $primary;
       }
     }
 
@@ -223,6 +265,15 @@
       &[disabled] {
         background: $dark-gray-4 !important;
         color: $dark-gray-3 !important;
+        border-color: transparent !important;
+      }
+
+      &--white {
+        &[disabled] {
+          background: transparent !important;
+          border-color: rgba($border, .2) !important;
+          color: $dark-gray-1 !important;
+        }
       }
     }
 

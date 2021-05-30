@@ -7,7 +7,7 @@ export default () => {
     <LayoutWiki>
       <Helmet title="Liquidity Providers Wiki" />
       <div className="ray__block">
-        [liquidity-providers]
+        <h5>No articles yet</h5>
       </div>
     </LayoutWiki>
   )

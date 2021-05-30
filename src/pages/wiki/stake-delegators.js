@@ -7,7 +7,7 @@ export default () => {
     <LayoutWiki>
       <Helmet title="Stake Delegators Wiki" />
       <div className="ray__block">
-        [stake-delegators]
+        <h5>No articles yet</h5>
       </div>
     </LayoutWiki>
   )

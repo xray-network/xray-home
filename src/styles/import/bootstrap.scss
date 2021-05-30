@@ -17,6 +17,11 @@
   &-primary {
     background: $blue;
   }
+  
+  &-transparent {
+    background: rgba($white, .2);
+    color: $white;
+  }
 }
 
 h5 {

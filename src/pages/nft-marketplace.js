@@ -1,14 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import LayoutPage from "@/layouts/Page"
+import NftMarketplace from "@/components/pages/NftMarketplace"
 
 export default () => {
   return (
     <LayoutPage>
-      <Helmet title="Cardano Ecosystem" />
-      <div className="ray__block">
-        [nft-marketplace]
-      </div>
+      <Helmet title="Ray NFT Marketplace" />
+      <NftMarketplace />
     </LayoutPage>
   )
 }
