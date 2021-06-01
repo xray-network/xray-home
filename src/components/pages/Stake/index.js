@@ -9,7 +9,9 @@ export default () => {
   const [amount, setAmount] = useState(undefined)
   const [totalAda, setTotalAda] = useState(0)
   const [totalRay, setTotalRay] = useState(0)
-  const [poolData, setPoolData] = useState({})
+  const [poolRay, setPoolRay] = useState({})
+  const [poolRay2, setPoolRay2] = useState({})
+  const [poolRay3, setPoolRay3] = useState({})
   const [prices, setPrices] = useState({
     btc: 0,
     ada: 0,
@@ -17,19 +19,31 @@ export default () => {
 
   const pools = [
     '1c8cd022e993a8366be641c17cb6d9c5d8944e00bfce3189d8b1515a',
+    '9ad2692a4865c5999f27d65baf170be5ba38b25489c8e21007193edd',
+    '22cfa3b8612c146a0737c974dcfcbb8cddd86f3a511cf531ce8d91a1',
   ]
 
   useEffect(() => {
-    fetchData(pools[0])
+    fetchData()
     fetchPrices()
     // eslint-disable-next-line
   }, [])
 
-  const fetchData = (id) => {
-    fetch(`https://js.adapools.org/pools/${id}/summary.json`)
+  const fetchData = () => {
+    fetch(`https://js.adapools.org/pools/${pools[0]}/summary.json`)
       .then(res => res.json())
       .then((result => {
-        setPoolData(result.data)
+        setPoolRay(result.data)
+      }))
+    fetch(`https://js.adapools.org/pools/${pools[1]}/summary.json`)
+      .then(res => res.json())
+      .then((result => {
+        setPoolRay2(result.data)
+      }))
+    fetch(`https://js.adapools.org/pools/${pools[2]}/summary.json`)
+      .then(res => res.json())
+      .then((result => {
+        setPoolRay3(result.data)
       }))
   }
 
@@ -151,7 +165,7 @@ export default () => {
                     Ticker
                   </div>
                   <div className={style.poolValue}>
-                    <strong className="font-size-24">{formatValue(poolData.ticker_orig)}</strong>
+                    <strong className="font-size-24">{formatValue(poolRay.ticker_orig)}</strong>
                   </div>
                 </div>
               </div>
@@ -162,79 +176,7 @@ export default () => {
                   </div>
                   <div className={style.poolValue}>
                     <strong>
-                      {formatValue(poolData.delegators)}
-                    </strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Fee Margin
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>
-                      {formatValue(poolData.tax_ratio, '%')}
-                    </strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Fixed Fee
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>
-                      {formatValue(poolData.tax_fix / 1000000, <sup> ADA</sup>)}
-                    </strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Blocks Lifetime
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>
-                      {formatValue(poolData.blocks_lifetime)}
-                    </strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Blocks in Epoch
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>
-                      {formatValue(poolData.blocks_epoch)}
-                    </strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    ROA Lifetime
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>
-                      {formatValue(poolData.roa_lifetime, '%')}
-                    </strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    ROA
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>
-                      {formatValue(poolData.roa, '%')}
+                      {formatValue(poolRay.delegators)}
                     </strong>
                   </div>
                 </div>
@@ -246,7 +188,7 @@ export default () => {
                   </div>
                   <div className={style.poolValue}>
                     <strong>
-                      {formatValue(format(poolData.total_stake / 1000000), <sup> ADA</sup>)}
+                      {formatValue(format(poolRay.total_stake / 1000000), <sup> ADA</sup>)}
                     </strong>
                   </div>
                 </div>
@@ -254,15 +196,87 @@ export default () => {
               <div className="col-6">
                 <div className={style.poolItem}>
                   <div className={style.poolLabel}>
-                    Active Stake
+                    Saturation
                   </div>
                   <div className={style.poolValue}>
                     <strong>
-                      {formatValue(format(poolData.active_stake / 1000000), <sup> ADA</sup>)}
+                      {formatValue((poolRay.saturated * 100).toFixed(4), '%')}
                     </strong>
                   </div>
                 </div>
               </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Fee Margin
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay.tax_ratio, '%')}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Fixed Fee
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay.tax_fix / 1000000, <sup> ADA</sup>)}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Blocks Lifetime
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay.blocks_lifetime)}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Blocks in Epoch
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay.blocks_epoch)}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    ROA Lifetime
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay.roa_lifetime, '%')}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    ROA
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay.roa, '%')}
+                    </strong>
+                  </div>
+                </div>
+              </div> */}
             </div>
             <div className="mt-2">
               <Button
@@ -280,13 +294,21 @@ export default () => {
         </div>
         <div className="col-md-4">
           <div className={style.pool}>
-            <span className="badge badge-transparent">SCHEDULED</span>
+            <span className="badge badge-success">ACTIVE</span>
             <div className={style.poolItem}>
               <div className={style.poolLabel}>
                 Pool Id
               </div>
               <div className={style.poolValue}>
-                <strong>—</strong>
+                <CopyToClipboard
+                  text="pool1ntfxj2jgvhzen8e86ed679ctukar3vj538ywyyq8ryld66jj4sx"
+                  onCopy={() => message.success('Pool ID copied successfully')}
+                >
+                  <strong className={style.copy}>
+                    {"pool1ntfxj2jgvhzen8e86ed679ctukar3vj538ywyyq8ryld66jj4sx".substring(0, 8)}...{"pool1ntfxj2jgvhzen8e86ed679ctukar3vj538ywyyq8ryld66jj4sx".slice(-8)}
+                    <i className="fe fe-copy ml-1" />
+                  </strong>
+                </CopyToClipboard>
               </div>
             </div>
             <div className={style.poolItem}>
@@ -294,7 +316,15 @@ export default () => {
                 Pool Hash
               </div>
               <div className={style.poolValue}>
-                <strong>—</strong>
+                <CopyToClipboard
+                  text="9ad2692a4865c5999f27d65baf170be5ba38b25489c8e21007193edd"
+                  onCopy={() => message.success('Pool ID copied successfully')}
+                >
+                  <strong className={style.copy}>
+                    {"9ad2692a4865c5999f27d65baf170be5ba38b25489c8e21007193edd".substring(0, 8)}...{"9ad2692a4865c5999f27d65baf170be5ba38b25489c8e21007193edd".slice(-8)}
+                    <i className="fe fe-copy ml-1" />
+                  </strong>
+                </CopyToClipboard>
               </div>
             </div>
             <div className="row">
@@ -304,7 +334,7 @@ export default () => {
                     Ticker
                   </div>
                   <div className={style.poolValue}>
-                    <strong className="font-size-24">RAY2</strong>
+                    <strong className="font-size-24">{formatValue(poolRay2.ticker_orig)}</strong>
                   </div>
                 </div>
               </div>
@@ -314,67 +344,9 @@ export default () => {
                     Delegators
                   </div>
                   <div className={style.poolValue}>
-                    <strong>0</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Fee Margin
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>0%</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Fixed Fee
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>340 <sup>ADA</sup></strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Blocks Lifetime
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>0</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Blocks in Epoch
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>0</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    ROA Lifetime
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>—</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    ROA
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>—</strong>
+                    <strong>
+                      {formatValue(poolRay2.delegators)}
+                    </strong>
                   </div>
                 </div>
               </div>
@@ -384,29 +356,104 @@ export default () => {
                     Live Stake
                   </div>
                   <div className={style.poolValue}>
-                    <strong>—</strong>
+                    <strong>
+                      {formatValue(format(poolRay2.total_stake / 1000000), <sup> ADA</sup>)}
+                    </strong>
                   </div>
                 </div>
               </div>
               <div className="col-6">
                 <div className={style.poolItem}>
                   <div className={style.poolLabel}>
-                    Active Stake
+                    Saturation
                   </div>
                   <div className={style.poolValue}>
-                    <strong>—</strong>
+                    <strong>
+                      {formatValue((poolRay2.saturated * 100).toFixed(4), '%')}
+                    </strong>
                   </div>
                 </div>
               </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Fee Margin
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay2.tax_ratio, '%')}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Fixed Fee
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay2.tax_fix / 1000000, <sup> ADA</sup>)}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Blocks Lifetime
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay2.blocks_lifetime)}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Blocks in Epoch
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay2.blocks_epoch)}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    ROA Lifetime
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay2.roa_lifetime, '%')}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    ROA
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay2.roa, '%')}
+                    </strong>
+                  </div>
+                </div>
+              </div> */}
             </div>
             <div className="mt-2">
               <Button
                 href="https://raywallet.io/#/stake/"
                 target="_blank"
                 rel="noopener noreferrer"
-                disabled
                 type="primary"
-                className="ray__button ray__button--white ray__button--small w-100"
+                className="ray__button ray__button--success ray__button--small w-100"
               >
                 <i className="fe fe-arrow-up-circle mr-1" />
                 Delegate
@@ -416,13 +463,21 @@ export default () => {
         </div>
         <div className="col-md-4">
           <div className={style.pool}>
-            <span className="badge badge-transparent">SCHEDULED</span>
+            <span className="badge badge-success">ACTIVE</span>
             <div className={style.poolItem}>
               <div className={style.poolLabel}>
                 Pool Id
               </div>
               <div className={style.poolValue}>
-                <strong>—</strong>
+                <CopyToClipboard
+                  text="pool1yt868wrp9s2x5pehe96del9m3nwasme62yw02vww3kg6zwzspcz"
+                  onCopy={() => message.success('Pool ID copied successfully')}
+                >
+                  <strong className={style.copy}>
+                    {"pool1yt868wrp9s2x5pehe96del9m3nwasme62yw02vww3kg6zwzspcz".substring(0, 8)}...{"pool1yt868wrp9s2x5pehe96del9m3nwasme62yw02vww3kg6zwzspcz".slice(-8)}
+                    <i className="fe fe-copy ml-1" />
+                  </strong>
+                </CopyToClipboard>
               </div>
             </div>
             <div className={style.poolItem}>
@@ -430,7 +485,15 @@ export default () => {
                 Pool Hash
               </div>
               <div className={style.poolValue}>
-                <strong>—</strong>
+                <CopyToClipboard
+                  text="22cfa3b8612c146a0737c974dcfcbb8cddd86f3a511cf531ce8d91a1"
+                  onCopy={() => message.success('Pool ID copied successfully')}
+                >
+                  <strong className={style.copy}>
+                    {"22cfa3b8612c146a0737c974dcfcbb8cddd86f3a511cf531ce8d91a1".substring(0, 8)}...{"22cfa3b8612c146a0737c974dcfcbb8cddd86f3a511cf531ce8d91a1".slice(-8)}
+                    <i className="fe fe-copy ml-1" />
+                  </strong>
+                </CopyToClipboard>
               </div>
             </div>
             <div className="row">
@@ -440,7 +503,7 @@ export default () => {
                     Ticker
                   </div>
                   <div className={style.poolValue}>
-                    <strong className="font-size-24">RAY3</strong>
+                    <strong className="font-size-24">{formatValue(poolRay3.ticker_orig)}</strong>
                   </div>
                 </div>
               </div>
@@ -450,67 +513,9 @@ export default () => {
                     Delegators
                   </div>
                   <div className={style.poolValue}>
-                    <strong>0</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Fee Margin
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>0%</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Fixed Fee
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>340 <sup>ADA</sup></strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Blocks Lifetime
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>0</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    Blocks in Epoch
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>0</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    ROA Lifetime
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>—</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className={style.poolItem}>
-                  <div className={style.poolLabel}>
-                    ROA
-                  </div>
-                  <div className={style.poolValue}>
-                    <strong>—</strong>
+                    <strong>
+                      {formatValue(poolRay3.delegators)}
+                    </strong>
                   </div>
                 </div>
               </div>
@@ -520,32 +525,107 @@ export default () => {
                     Live Stake
                   </div>
                   <div className={style.poolValue}>
-                    <strong>—</strong>
+                    <strong>
+                      {formatValue(format(poolRay3.total_stake / 1000000), <sup> ADA</sup>)}
+                    </strong>
                   </div>
                 </div>
               </div>
               <div className="col-6">
                 <div className={style.poolItem}>
                   <div className={style.poolLabel}>
-                    Active Stake
+                    Saturation
                   </div>
                   <div className={style.poolValue}>
-                    <strong>—</strong>
+                    <strong>
+                      {formatValue((poolRay3.saturated * 100).toFixed(4), '%')}
+                    </strong>
                   </div>
                 </div>
               </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Fee Margin
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay3.tax_ratio, '%')}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Fixed Fee
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay3.tax_fix / 1000000, <sup> ADA</sup>)}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Blocks Lifetime
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay3.blocks_lifetime)}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    Blocks in Epoch
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay3.blocks_epoch)}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    ROA Lifetime
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay3.roa_lifetime, '%')}
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className={style.poolItem}>
+                  <div className={style.poolLabel}>
+                    ROA
+                  </div>
+                  <div className={style.poolValue}>
+                    <strong>
+                      {formatValue(poolRay3.roa, '%')}
+                    </strong>
+                  </div>
+                </div>
+              </div> */}
             </div>
             <div className="mt-2">
               <Button
                 href="https://raywallet.io/#/stake/"
                 target="_blank"
                 rel="noopener noreferrer"
-                disabled
                 type="primary"
-                className="ray__button ray__button--white ray__button--small w-100"
+                className="ray__button ray__button--success ray__button--small w-100"
               >
                 <i className="fe fe-arrow-up-circle mr-1" />
-                  Delegate
+                Delegate
               </Button>
             </div>
           </div>

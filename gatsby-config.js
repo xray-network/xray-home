@@ -32,6 +32,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
+        google: {
+          families: ["Inter:400,700,900"],
+        },
         custom: {
           families: ["Feather"],
           urls: ["/resources/fonts/font-feathericons/dist/feather.css"],

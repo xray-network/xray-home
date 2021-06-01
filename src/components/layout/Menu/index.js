@@ -10,35 +10,35 @@ import style from "./style.module.scss"
 const products = [
   {
     title: 'Ray Wallet',
-    url: '/ray-wallet',
+    url: '/ray-wallet/',
   },
   {
     title: 'Ray Stake',
-    url: '/stake',
+    url: '/stake/',
   },
   {
     title: 'Ray Rewards',
-    url: '/rewards',
+    url: '/rewards/',
   },
   {
     title: 'Ray Swap',
-    url: '/swap',
+    url: '/swap/',
   },
   {
     title: 'Ray KickStart',
-    url: '/kickstart',
+    url: '/kickstart/',
   },
   {
     title: 'Ray NFT',
-    url: '/nft-marketplace',
+    url: '/nft-marketplace/',
   },
   {
     title: 'Tokens List',
-    url: '/tokens-list',
+    url: '/tokens-list/',
   },
   {
     title: 'Data Containers',
-    url: '/data-containers',
+    url: '/data-containers/',
   },
   {
     title: 'Cardano-Web3.js',
@@ -234,7 +234,7 @@ export default () => {
           </Link>
           <Link
             className={`${style.link}  ${isWikiPage ? style.linkActive : ''}`}
-            to="/wiki"
+            to="/wiki/"
           >
             Wiki
           </Link>
@@ -247,7 +247,7 @@ export default () => {
             Status
           </Link>
           <span
-            className={`${style.link} ${style.linkIcon}`}
+            className={`${style.link} ${style.linkSwitch}`}
             role="button"
             tabIndex="0"
             onClick={changeTheme}

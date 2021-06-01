@@ -2,7 +2,7 @@
 
 .item {
   padding: rem(20) rem(20) rem(30);
-  border: 1px solid $border;
+  // border: 1px solid $border;
   border-radius: 12px;
   display: block;
   height: 100%;
@@ -34,7 +34,7 @@
 // dark theme
 [data-theme='dark'] {
   .item {
-    border: 1px solid $dark-border;
+    // border: 1px solid $dark-border;
 
     &Image {
       svg {

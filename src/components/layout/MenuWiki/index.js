@@ -8,27 +8,27 @@ import style from "./style.module.scss"
 const wiki = [
   {
     title: 'Wiki',
-    url: '/wiki',
-  },
-  {
-    title: 'Stake Delegators',
-    url: '/wiki/stake-delegators',
-  },
-  {
-    title: 'Liquidity Providers',
-    url: '/wiki/liquidity-providers',
+    url: '/wiki/',
   },
   {
     title: 'Ray Network',
-    url: '/wiki/ray',
+    url: '/wiki/ray-network/',
   },
   {
     title: 'Cardano',
-    url: '/wiki/cardano',
+    url: '/wiki/cardano/',
+  },
+  {
+    title: 'Stake Delegators',
+    url: '/wiki/stake-delegators/',
+  },
+  {
+    title: 'Liquidity Providers',
+    url: '/wiki/liquidity-providers/',
   },
   {
     title: 'Logo & Brand',
-    url: '/wiki/brand',
+    url: '/wiki/brand/',
   },
 ]
 
@@ -36,7 +36,7 @@ export default () => {
   return (
     <div className="ray__block mb-5">
       <Heading id="solutions">
-        Ray <strong className="bolder">Wiki</strong>
+        <strong className="bolder">Ray</strong> Wiki
       </Heading>
       {wiki.map((item, index) => {
         return (

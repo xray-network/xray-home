@@ -25,11 +25,18 @@
     }
   }
 
+  &__line {
+    height: 1px;
+    background: $border;
+    margin: rem(30) 0;
+  }
+
   &__wiki {
     &__link {
       display: block;
       padding: rem(20);
       // background: $pastel-1;
+      font-weight: 700;
       border-radius: 12px;
       padding-right: rem(50);
       position: relative;
@@ -240,6 +247,10 @@
       &--bottom {
         border-bottom: 1px solid $dark-border;
       }
+    }
+
+    &__line {
+      background: $dark-border;
     }
 
     &__wiki {

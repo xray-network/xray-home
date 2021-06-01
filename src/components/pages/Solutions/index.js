@@ -13,47 +13,47 @@ const items = [
   {
     title: 'Ray Wallet',
     descr: 'A lightweight Cardano multiplatform and multifunctional wallet',
-    url: '/ray-wallet',
+    url: '/ray-wallet/',
   },
   {
     title: 'Ray Stake',
     descr: 'Stake solution, earn 5.5% ROI in ADA',
-    url: '/stake',
+    url: '/stake/',
   },
   {
     title: 'Ray Rewards',
     descr: 'Get additional rewards in XRAYs for staking and other activities',
-    url: '/rewards',
+    url: '/rewards/',
   },
   {
     title: 'Ray Swap',
     descr: 'Automated liquidity protocol, AMM DEX',
-    url: '/swap',
+    url: '/swap/',
   },
   {
     title: 'Ray KickStart',
-    descr: 'Decentralized fundrising',
-    url: '/kickstart',
+    descr: 'Decentralised fundraising',
+    url: '/kickstart/',
   },
   {
     title: 'Ray NFT Marketplace',
     descr: 'NFT Marketplace with advanced features',
-    url: '/nft-marketplace',
+    url: '/nft-marketplace/',
   },
   {
     title: 'Ray Data Containers',
     descr: 'B2B data storage and authorization solution',
-    url: '/data-containers',
+    url: '/data-containers/',
   },
   {
     title: 'Wiki',
     descr: 'Cardano & Ray Network information database',
-    url: '/wiki',
+    url: '/wiki/',
   },
   {
     title: 'Tokens List',
     descr: 'Cardano native token list curated by Ray',
-    url: '/tokens-list',
+    url: '/tokens-list/',
   },
   {
     title: 'Cardano-Web3.js',

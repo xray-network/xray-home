@@ -89,10 +89,13 @@
     cursor: pointer;
     margin-left: rem(5);
     float: right;
+  }
 
-    @media (max-width: 820px) {
-      float: none;
-    }
+  &Switch {
+    font-size: rem(18);
+    margin-top: rem(-5);
+    position: relative;
+    top: rem(3);
   }
 
   &Ext {

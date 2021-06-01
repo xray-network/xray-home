@@ -8,7 +8,7 @@
   &Inner {
     height: 100%;
     display: block;
-    border: 1px solid $border;
+    // border: 1px solid $border;
     border-left: 7px solid $blue;
     padding: rem(25) rem(30);
     border-radius: 8px;
@@ -63,9 +63,8 @@
 [data-theme='dark'] {
   .item {
     &Inner {
-      // background: $dark-gray-5;
       color: $dark-gray-2 !important;
-      border: 1px solid $dark-border;
+      // border: 1px solid $dark-border;
       border-left: 7px solid $blue;
 
       &Title {
