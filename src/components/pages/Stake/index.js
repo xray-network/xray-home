@@ -120,7 +120,7 @@ export default () => {
         <strong className="bolder">Ray</strong> Pools
       </Heading>
       <p className="mb-5">
-        Use any Cardano wallet (Ray Wallet, Daedalus, Yoroi, Adalite, or any another) to delegate to Ray pools. XRAY rewards will be transferred automatically to your delegation address after the end of the Epoch.
+        Use any Cardano wallet (Ray Wallet, Daedalus, Yoroi, Adalite, or any another) to delegate to Ray pools. XRAY rewards will accrue automatically after the end of the epoch. You can check/withdraw rewards here - <a href="https://x.rraayy.com">https://x.rraayy.com</a>
       </p>
       <div className="row">
         <div className="col-md-4">

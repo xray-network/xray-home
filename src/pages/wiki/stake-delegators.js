@@ -33,11 +33,18 @@ export default () => {
         </ul>
         <div className="ray__line" />
         <h5>Where can I withdraw my rewards? Or check my balance?</h5>
-        <p>After two epochs after the delegation you will start to receive your rewards.</p>
+        <p>After two epochs after the delegation you will start to receive your rewards. Rewards can be withdrawn at any time. You can accumulate them, or withdraw them each epoch.</p>
         <p>You can check or withdraw your <span className="ray__ticker">XRAY</span> or <span className="ray__ticker">ADA</span> rewards in Ray Wallet. If you don't use Ray Wallet, do so on the token distribution page - <a href="https://x.rraayy.com" target="_blank" rel="noopener noreferrer">https://x.rraayy.com</a>.</p>
         <div className="ray__line" />
         <h5>Where can I see the distribution rules?</h5>
         <p>Visit the token distribution page - <a href="https://x.rraayy.com" target="_blank" rel="noopener noreferrer">https://x.rraayy.com</a></p>
+        <div className="ray__line" />
+        <h5>Why should I send 2 ADA's to a special address?</h5>
+        <p>Native tokens cannot be sent separately from <span className="ray__ticker">ADA</span>, this is a limitation of Cardano. Minimum amount of <span className="ray__ticker">ADA</span> sent together with token is ~1.5 (it will be returned to you with <span className="ray__ticker">XRAY</span> rewards) and ~0.5 as transaction fee.</p>
+        <p>Therefore, we require 2 <span className="ray__ticker">ADA</span> to be sent to a special address to cover these costs.</p>
+        <div className="ray__line" />
+        <h5>Can I use the Hardware Wallet for delegation?</h5>
+        <p>Implementation of hardware wallets is still in progress, so you can use any other wallet that supports hardware wallets.</p>
         <div className="ray__line" />
       </div>
     </LayoutWiki>

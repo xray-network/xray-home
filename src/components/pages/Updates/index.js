@@ -82,7 +82,7 @@ const dev = [
     date: 'Q1 2021',
   },
   {
-    status: 'active',
+    status: 'completed',
     title: 'XRAY Token',
     date: 'Q2 2021',
   },
@@ -100,6 +100,11 @@ const dev = [
     status: 'active',
     title: 'Wallet Mobile Layout',
     date: 'Q2 2021',
+  },
+  {
+    status: 'active',
+    title: 'Hardware Wallets Support',
+    date: 'Q3 2021',
   },
   {
     status: 'active',

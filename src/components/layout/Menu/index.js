@@ -50,7 +50,7 @@ const products = [
 const developers = [
   {
     title: 'Updates',
-    url: '/updates',
+    url: '/updates/',
   },
   {
     title: 'Github',
@@ -59,7 +59,7 @@ const developers = [
   },
   {
     title: 'Logo & Brand',
-    url: '/wiki/brand',
+    url: '/wiki/brand/',
   },
   {
     title: 'Documentation',
@@ -259,7 +259,7 @@ export default () => {
         </div>
         <Button
           className={`${style.fixed} ant-button ray__button ray__button--success`}
-          href="https://app.visualbuilder.cloud"
+          href="https://raywallet.io"
           rel="noopener noreferrer"
           target="_blank"
         >

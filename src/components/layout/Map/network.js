@@ -2,13 +2,13 @@ export default [
   {
     type: 'producer',
     tags: ['producer'],
-    name: 'RAY',
+    name: 'POOLS',
     coords: [46.6, 11.7],
     data: {
       ip: 'hidden',
-      country: 'US',
-      region: 'California',
-      location: 'Santa Clara',
+      country: 'worldwide',
+      region: 'worldwide',
+      location: 'worldwide',
     }
   },
   {
