@@ -26,7 +26,7 @@ const items = [
   },
   {
     icon: 'fe fe-activity',
-    title: 'KickStart',
+    title: 'KickStart Crowdfunding',
   },
   {
     icon: 'fe fe-shopping-cart',

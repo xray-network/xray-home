@@ -179,6 +179,14 @@ const repos = [
     branch: 'main',
   },
   {
+    id: 'ray-home-x',
+    branch: 'main',
+  },
+  {
+    id: 'cardano-web3.js',
+    branch: 'dev',
+  },
+  {
     id: 'ray-wallet',
     branch: 'dev',
   },
@@ -204,10 +212,6 @@ const repos = [
   },
   {
     id: 'cardano-verified-tokens-list',
-    branch: 'main',
-  },
-  {
-    id: 'awesome-cardano-pools',
     branch: 'main',
   },
 ]
