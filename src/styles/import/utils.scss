@@ -1,59 +1,114 @@
 @import "@/styles/mixins";
 
 .ray {
+  &__icon {
+    display: flex !important;
+    align-items: center;
+
+    svg {
+      height: rem(18) !important;
+      width: auto !important;
+
+      * {
+        fill: $dark;
+      }
+    }
+
+    &--inline {
+      display: inline-flex !important;
+    }
+
+    &--14 {
+      svg {
+        height: rem(14) !important;
+      }
+    }
+
+    &--16 {
+      svg {
+        height: rem(16) !important;
+      }
+    }
+
+    &--22 {
+      svg {
+        height: rem(22) !important;
+      }
+    }
+
+    &--24 {
+      svg {
+        height: rem(24) !important;
+      }
+    }
+
+    &--32 {
+      svg {
+        height: rem(32) !important;
+      }
+    }
+
+    @at-root {
+      a:not(.ray__btn),
+      .cursor-pointer {
+        &:hover {
+          .ray__icon {
+            svg {
+              * {
+                fill: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   &__block {
-    max-width: rem(1280);
+    max-width: rem(1040);
     margin: 0 auto rem(80);
-    padding: 0 rem(100);
+    padding: 0 rem(25);
+  }
 
-    @media (max-width: 820px) {
-      padding: 0 rem(20);
-    } 
+  &__box {
+    &--bg {
+      border-radius: 8px;
+      background: $white;
+      padding: rem(40) rem(30);
 
-    &--top {
-      border-top: 1px solid $border;
-      padding-top: rem(80);
-    }
-
-    &--bottom {
-      border-bottom: 1px solid $border;
-      padding-bottom: rem(80);
-    }
-
-    &--hidden {
-      overflow: hidden;
+      @media (max-width: $sm-max-width) {
+        padding: rem(25);
+      }
     }
   }
 
   &__line {
     height: 1px;
     background: $border;
-    margin: rem(30) 0;
+
+    &--margin {
+      margin: rem(25) 0;
+    }
   }
 
-  &__wiki {
-    &__link {
-      display: block;
-      padding: rem(20);
-      // background: $pastel-1;
-      font-weight: 700;
-      border-radius: 12px;
-      padding-right: rem(50);
-      position: relative;
-      margin-bottom: rem(30);
-      border: 1px solid $border;
-      border-left: 7px solid $primary;
+  &__point {
+    font-style: normal;
+    display: inline-flex;
+    margin-right: rem(3);
+    align-items: center;
+    justify-content: center;
+    width: rem(20);
+    height: rem(20);
+    border-radius: 100%;
+    border: 2px solid $black;
+    font-weight: bold;
+    font-size: rem(14);
+    background: $black;
+    color: $white;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &__icon {
-        position: absolute;
-        top: rem(22);
-        right: rem(20);
-        font-size: rem(24);
-      }
+    &--outline {
+      background: transparent;
+      color: $black;
     }
   }
 
@@ -65,145 +120,104 @@
   &__ticker {
     display: inline-block;
     font-size: 83%;
-    border: 1px solid $gray-3;
+    border: 1px solid $pastel-2;
     line-height: 120%;
     padding: rem(2) rem(5);
     border-radius: 5px;
     font-weight: bold;
     text-transform: uppercase;
+    vertical-align: baseline;
   }
 
-  &__details {
-    color: $blue;
-    border-bottom: 1px dashed $blue;
-    cursor: default;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $blue-light;
-      text-decoration: none;
-    }
-  }
-
-  &__info {
-    ul {
-      margin-bottom: 0;
-      li {
-        margin-bottom: 0;
-      }
-    }
-
-    &__label {
-      font-size: rem(12);
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-bottom: rem(5);
-    }
-  }
-
-  &__copy {
-    font-size: 80%;
-    color: $gray-3;
-    cursor: pointer;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $blue !important;
-    }
-  }
-
-  &__form {
-    &__label {
-    position: relative;
-    font-size: rem(12);
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: rem(10);
-    }
-  }
-
-  &__title {
-    margin-bottom: rem(50);
-    position: relative;
-
-    // &:after {
-    //   display: block;
-    //   content: "";
-    //   height: rem(8);
-    //   width: rem(55);
-    //   border-radius: 10px;
-    //   background: $orange;
-    //   position: absolute;
-    //   top: rem(20);
-    //   left: rem(-100);
-    // }
-  }
-
-  &__heading {
-    color: $black;
-    font-size: rem(36);
-    margin-bottom: rem(10);
+  &__btn {
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-  }
-
-  &__link {
-    &__icon {
-      position: relative;
-      margin-left: 5px;
-      top: 2px;
-    }
-  }
-
-  &__button {
-    display: inline-block;
-    padding: 0 rem(30);
-    color: $white !important;
-    background: $blue;
-    height: rem(40);
-    line-height: 2.5 !important;
+    padding: 0 rem(20);
+    color: $white;
+    background: $dark;
+    height: rem(38);
     border: 1px solid transparent;
-    border-radius: 100px;
-    font-weight: 600;
     font-size: rem(16);
     text-align: center;
-    text-shadow: none !important;
-    box-shadow: 0 5px 10px -4px rgba(0,0,0,.2), 0 0 30px -4px rgba(0,0,0,.2);
+    font-weight: 700;
+    border-radius: 8px;
+    border: 1px solid transparent !important;
     @include transition-middle();
+
+    svg {
+      height: rem(18) !important;
+      width: auto !important;
+      * {
+        fill: $white;
+      }
+    }
 
     &:hover,
     &:focus,
     &:active {
-      color: $white !important;
-      background: $blue-light;
-      border: 1px solid transparent;
+      color: $white;
+      background: lighten($dark, 10%);
     }
 
     &[disabled] {
       background: transparent !important;
       border: 1px solid $border !important;
-      color: $dark-gray-1 !important;
+      color: $gray-5 !important;
+
+      .ray__icon {
+        svg {
+          * {
+            fill: $gray-5;
+          }
+        }
+      }
     }
 
-    &__icon {
-      font-size: rem(21);
-      position: relative;
-      top: 4px;
-      right: -8px;
+    &--round {
+      border-radius: 100px;
     }
 
     &--small {
-      padding: 0 rem(20);
       height: rem(32);
-      line-height: rem(31) !important;
+      font-size: rem(14);
+      font-weight: normal;
+
+      @media (max-width: $lg-max-width) {
+        height: rem(36);
+      }
+
+      @media (max-width: $md-max-width) {
+        height: rem(40);
+      }
+
+      svg {
+        height: rem(16) !important;
+      }
     }
 
     &--large {
-      padding: 0 rem(50);
-      height: rem(56);
-      line-height: rem(54) !important;
+      padding: 0 rem(40);
       font-size: rem(21);
+    }
+
+    &--extra {
+      font-size: rem(21);
+      height: rem(50) !important;
+      padding-left: rem(30);
+      padding-right: rem(30);
+    }
+
+    &--primary {
+      background: $primary;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: lighten($primary, 5%);
+      }
     }
 
     &--success {
@@ -216,36 +230,64 @@
       }
     }
 
-    &--white {
-      background: $white;
+    &--transparent {
       color: $dark !important;
+      background: transparent !important;
+      border-color: $pastel-2 !important;
 
-      &:hover,
-      &:focus,
-      &:active {
-        background: darken($white, 5%);
-        color: $dark-gray-5 !important;
+      &:hover {
+        border-color: $primary !important;
+        color: $primary !important;
+
+        svg {
+          * {
+            fill: $primary;
+          }
+        }
       }
 
-      &[disabled] {
-        background: transparent !important;
-        border-color: rgba($border, .2) !important;
-        color: $dark-gray-1 !important;
+      svg {
+        * {
+          fill: $dark;
+        }
       }
     }
   }
 }
 
 // dark theme
-[data-theme='dark'] {
-  .ray {
-    &__block {
-      &--top {
-        border-top: 1px solid $dark-border;
+[data-theme="dark"] {
+  a:not(.ray__btn),
+  .ant-btn,
+  .cursor-pointer {
+    &:hover {
+      .ray__icon {
+        svg {
+          * {
+            fill: $white !important;
+          }
+        }
       }
+    }
+  }
 
-      &--bottom {
-        border-bottom: 1px solid $dark-border;
+  .ray {
+    // &__block {
+    //   &--top {
+    //     border-top: 1px solid $dark-border;
+    //   }
+
+    //   &--bottom {
+    //     border-bottom: 1px solid $dark-border;
+    //   }
+    // }
+
+    &__icon {
+      svg {
+        * {
+          @include transition-fast();
+          fill: $blue-light;
+        }
       }
     }
 
@@ -253,26 +295,27 @@
       background: $dark-border;
     }
 
-    &__wiki {
-      &__link {
-        border-color: $dark-border;
-        border-left-color: $primary;
-      }
-    }
-
     &__ticker {
       border: 1px solid $dark-gray-3;
     }
 
-    &__copy {
-      color: $dark-gray-3;
+    &__box {
+      &--bg {
+        background: $dark-gray-5;
+      }
     }
 
-    &__heading {
-      color: $white;
-    }
+    &__btn {
+      color: $white !important;
 
-    &__button {
+      svg {
+        height: rem(18) !important;
+        width: auto !important;
+        * {
+          fill: $white !important;
+        }
+      }
+
       &[disabled] {
         background: $dark-gray-4 !important;
         color: $dark-gray-3 !important;
@@ -282,21 +325,29 @@
       &--white {
         &[disabled] {
           background: transparent !important;
-          border-color: rgba($border, .2) !important;
+          border-color: rgba($border, 0.2) !important;
           color: $dark-gray-1 !important;
+        }
+      }
+
+      &--transparent {
+        border-color: $dark-gray-3 !important;
+
+        &:hover {
+          border-color: $dark-gray-3 !important;
+          background-color: $dark-gray-4 !important;
         }
       }
     }
 
-    &__details {
-      color: $blue-light;
-  
-      &:hover,
-      &:active,
-      &:focus {
-        color: $white;
-        text-decoration: none;
-        border-color: $white;
+    &__point {
+      border: 2px solid $dark-gray-2;
+      background: $dark-gray-2;
+      color: $dark;
+
+      &--outline {
+        background: transparent;
+        color: $dark-gray-2;
       }
     }
   }

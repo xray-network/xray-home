@@ -1,5 +1,5 @@
-### XRAY Token Information ###
-https://x.rraayy.com
+### Ray Network Homepage ###
+https://rraayy.com
 
 ### Gatsby Documentation ###
 Please read documentation here https://www.gatsbyjs.com/docs/

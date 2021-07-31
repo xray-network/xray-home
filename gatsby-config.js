@@ -1,56 +1,43 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
-const path = require("path")
-
 module.exports = {
-  flags: {
-    DEV_SSR: false,
+  siteMetadata: {
+    siteUrl: "https://minterr.org",
+    title: "Ray Network - Cardano Ecosystem",
   },
   plugins: [
+    "gatsby-plugin-sitemap",
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("node-sass"),
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Ray Network - Cardano Ecosystem`,
-        icon: `static/favicon.png`,
+        icon: `static/resources/favicon.svg`,
       },
     },
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          "@": path.resolve(__dirname, "src"),
+          "@": require("path").resolve(__dirname, "src"),
         },
         extensions: ["js", "scss", "sass"],
       },
     },
     {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        google: {
-          families: ["Inter:400,700,900"],
-        },
-        custom: {
-          families: ["Feather"],
-          urls: ["/resources/fonts/font-feathericons/dist/feather.css"],
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-41062113-22",
+        trackingId: "UA-41062113-23",
       },
     },
     {
       resolve: `gatsby-plugin-yandex-metrika`,
       options: {
-        trackingId: "77966719",
+        trackingId: "83032947",
         webvisor: true,
         trackHash: true,
       },
@@ -59,15 +46,15 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /\.inline\.svg$/
-        }
-      }
+          include: /\.*\.svg$/,
+        },
+      },
     },
     {
-      resolve: 'gatsby-plugin-html-attributes',
+      resolve: "gatsby-plugin-html-attributes",
       options: {
-        'data-theme': 'default'
-      }
+        "data-theme": "default",
+      },
     },
   ],
 }

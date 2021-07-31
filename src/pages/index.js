@@ -1,17 +1,15 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Layout from "@/layouts/Main"
+import MainLayout from "@/layouts/Main"
 import Promo from "@/components/pages/Promo"
-import Solutions from "@/components/pages/Solutions"
-import About from "@/components/pages/About"
 
-export default () => {
+const Page = () => {
   return (
-    <Layout>
+    <MainLayout>
       <Helmet title="Cardano Ecosystem" />
       <Promo />
-      <Solutions />
-      <About />
-    </Layout>
+    </MainLayout>
   )
 }
+
+export default Page

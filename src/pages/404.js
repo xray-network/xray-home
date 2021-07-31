@@ -1,15 +1,17 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import LayoutEmpty from "@/layouts/Empty"
-import Error404 from "@/components/pages/404"
+import MainLayout from "@/layouts/Main"
+import Error404 from "@/components/shared/404"
 
-export default () => {
+const Page404 = () => {
   return (
-    <LayoutEmpty>
+    <MainLayout>
       <Helmet title="Page Not Found">
         <meta name="description" content="Page 404" />
       </Helmet>
       <Error404 />
-    </LayoutEmpty>
+    </MainLayout>
   )
 }
+
+export default Page404

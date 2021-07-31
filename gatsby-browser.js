@@ -8,15 +8,20 @@ import "antd/es/popover/style/index.css"
 import "antd/es/alert/style/index.css"
 import "antd/es/spin/style/index.css"
 import "antd/es/dropdown/style/index.css"
-import "antd/es/menu/style/index.css"
 import "antd/es/table/style/index.css"
+import "antd/es/upload/style/index.css"
+import "antd/es/checkbox/style/index.css"
+import "antd/es/radio/style/index.css"
+import "antd/es/form/style/index.css"
+import "antd/es/input-number/style/index.css"
 import "antd/es/modal/style/index.css"
+import "antd/es/result/style/index.css"
 
 import "aos/dist/aos.css"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "react-alice-carousel/lib/alice-carousel.css"
-import "react-perfect-scrollbar/dist/css/styles.css"
 import "@/styles/style.scss"
 
-import store from '@/redux/provider'
+import AOS from "aos"
+import store from "@/redux/provider"
+AOS.init({ duration: 1000 })
 export const wrapRootElement = store

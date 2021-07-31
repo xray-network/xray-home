@@ -1,9 +1,19 @@
 @import "@/styles/mixins";
 
+html,
+body {
+  height: auto;
+  width: auto;
+  min-height: 100%;
+}
+
 html {
-  font-size: 18px;
+  font-size: 16px;
   @media (max-width: $lg-max-width) {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  @media (max-width: $md-max-width) {
+    font-size: 12px;
   }
 }
 
@@ -12,14 +22,21 @@ body {
   color: $text;
   overflow-x: hidden;
   position: relative;
-  font-variant: normal;
-  font-feature-settings: normal;
+
+  * {
+    font-variant: normal !important;
+    font-feature-settings: normal !important;
+  }
 }
 
-a {
+a,
+.link {
   text-decoration: none;
   color: $blue;
+  cursor: pointer;
+
   @include transition-color();
+
   &:hover,
   &:active,
   &:focus {
@@ -28,19 +45,20 @@ a {
   }
 }
 
+.link {
+  &--dashed {
+    border-bottom: 1px dashed $primary;
+
+    &:hover {
+      border-color: $blue-light;
+    }
+  }
+}
+
 input {
   outline: none !important;
   font-family: $base-font-family;
   color: $text;
-}
-
-.ps__thumb-y {
-  background: $dark-gray-4;
-}
-
-.container-fluid {
-  max-width: rem(1000);
-  margin: 0 auto;
 }
 
 button,
@@ -57,10 +75,15 @@ strong {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $dark;
   margin-bottom: rem(20);
+  font-weight: 900;
 }
 
 h1 {
@@ -92,10 +115,6 @@ sup {
   font-weight: normal !important;
 }
 
-svg {
-  vertical-align: baseline;
-}
-
 [role="button"] {
   outline: none;
 }
@@ -116,25 +135,52 @@ code {
   cursor: pointer;
 }
 
+// disable transitions
+[data-disable-transitions="true"] {
+  * {
+    transition: none !important;
+  }
+}
+
+@media (pointer:none), (pointer:coarse) {
+  [data-aos^=fade][data-aos^=fade],
+  [data-aos=fade-down],
+  [data-aos=fade-up] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 // dark theme
-[data-theme='dark'] {
+[data-theme="dark"] {
   body {
-    background: $dark;
+    background: $dark-gray-6;
     color: $dark-gray-2;
+
+    &:before {
+      opacity: 0.07;
+      background: transparent repeat url(/resources/pattern-white.svg) top
+        center;
+    }
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $white;
   }
 
-  a {
+  a,
+  .link {
     color: $blue-light;
 
     &:hover,
     &:active,
     &:focus {
       color: $white;
-      text-decoration: none;
     }
   }
 

@@ -17,22 +17,85 @@
   &-primary {
     background: $blue;
   }
-  
+
   &-transparent {
-    background: rgba($white, .2);
+    background: rgba($white, 0.2);
     color: $white;
   }
 }
 
-h5 {
-  .badge {
-    position: relative;
-    top: -2px;
+.text {
+  &-primary {
+    color: $primary !important;
+  }
+
+  &-success {
+    color: $success !important;
+  }
+
+  &-danger {
+    color: $danger !important;
+  }
+
+  &-muted {
+    color: $gray-5 !important;
+
+    @at-root {
+      a.text-muted {
+        &:hover,
+        &:active,
+        &:focus {
+          color: $blue !important;
+          text-decoration: none !important;
+        }
+      }
+    }
+  }
+}
+
+.table-hover {
+  tr:hover {
+    td {
+      background: $gray-3;
+    }
+  }
+}
+
+.font-size {
+  &-14 {
+    font-size: rem(14);
+  }
+  &-16 {
+    font-size: rem(16);
+  }
+  &-18 {
+    font-size: rem(18);
+  }
+  &-21 {
+    font-size: rem(21);
+  }
+  &-24 {
+    font-size: rem(24);
+  }
+  &-32 {
+    font-size: rem(32);
+  }
+  &-48 {
+    font-size: rem(48);
+  }
+}
+
+.max-width {
+  &-700 {
+    max-width: rem(700);
+  }
+  &-800 {
+    max-width: rem(800);
   }
 }
 
 // dark theme
-[data-theme='dark'] {
+[data-theme="dark"] {
   .badge {
     &-token {
       background: $dark-gray-4;
