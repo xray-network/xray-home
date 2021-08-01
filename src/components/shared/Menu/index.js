@@ -10,15 +10,13 @@ import {
   SVGCardano,
 
   SVGZap,
-  IMGTwitter,
-  IMGTelegram,
-  IMGReddit,
-  IMGDiscord,
 
   SVGBarChart,
   SVGActivity,
   SVGDiamond,
   SVGPercent,
+
+  SVGLink,
 } from "@/svg"
 import * as style from "./style.module.scss"
 
@@ -52,6 +50,14 @@ const config = [
     url: '/nft/',
   },
   {
+    title: 'Graph',
+    url: '/graph/',
+  },
+  {
+    title: 'Data',
+    url: '/data/',
+  },
+  {
     title: 'Minterr',
     url: 'https://minterr.io',
     external: true,
@@ -66,14 +72,6 @@ const config = [
     url: '/tokens-list/',
   },
   {
-    title: 'Graph',
-    url: '/graph/',
-  },
-  {
-    title: 'Data',
-    url: '/data/',
-  },
-  {
     title: 'XRAY Token',
     url: '/xray-token/',
   },
@@ -86,41 +84,51 @@ const config = [
     url: '/wiki/',
   },
   {
-    title: 'Company',
-    url: '/company/',
+    title: 'About',
+    url: '/about/',
   },
   {
-    title: 'Socials',
+    title: 'Whitepaper',
+    url: '/whitepaper/',
+    disabled: true,
+  },
+  {
+    title: 'Audit',
+    url: '/audit/',
+    disabled: true,
+  },
+  {
+    title: 'Community',
     submenu: [
       {
         title: 'Twitter',
         url: 'https://twitter.com/RayNetwork',
         external: true,
-        icon: <IMGTwitter />,
+        icon: <SVGLink />,
       },
       {
         title: 'Telegram Chat',
         url: 'https://t.me/RayNetwork',
         external: true,
-        icon: <IMGTelegram />,
+        icon: <SVGLink />,
       },
       {
         title: 'Telegram',
         url: 'https://t.me/RayNetworkChannel',
         external: true,
-        icon: <IMGTelegram />,
+        icon: <SVGLink />,
       },
       {
         title: 'Reddit',
         url: 'https://www.reddit.com/r/RayNetwork',
         external: true,
-        icon: <IMGReddit />,
+        icon: <SVGLink />,
       },
       {
         title: 'Discord',
         url: 'https://discord.gg/WhZmm46APN',
         external: true,
-        icon: <IMGDiscord />,
+        icon: <SVGLink />,
       },
     ],
   },
@@ -134,16 +142,6 @@ const config = [
     url: 'https://status.rraayy.com',
     status: true,
     external: true,
-  },
-  {
-    title: 'Whitepaper',
-    url: '/whitepaper/',
-    disabled: true,
-  },
-  {
-    title: 'Audit',
-    url: '/audit/',
-    disabled: true,
   },
 ]
 
@@ -201,11 +199,11 @@ const Menu = () => {
     })
   }
 
-  const isStake = location.pathname.includes('/stake')
-  const isRewards = location.pathname.includes('/rewards')
+  const isStake = location.pathname.includes('/stake/')
+  const isRewards = location.pathname.includes('/rewards/')
 
   return (
-    <div className="ray__block mb-3">
+    <div className="ray__block">
       <div className={style.menu}>
         <Link to="/" className={`${style.menuLogo} me-4`}>
           <SVGRay />
@@ -318,7 +316,6 @@ const Menu = () => {
           )
         })}
       </div>
-      <div className="ray__line" />
       {isStake && (
         <div className={style.submenu}>
           {stake.map((item, index) => {

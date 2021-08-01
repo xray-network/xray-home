@@ -2,6 +2,8 @@
 
 .links {
   margin-bottom: rem(10);
+  padding-bottom: rem(5);
+  border-bottom: 1px solid $border;
 
   &Container {
     margin-right: rem(20);
@@ -21,31 +23,35 @@
   &Link {
     margin-bottom: rem(10);
     display: inline-block;
-    color: $dark;
+    // color: $dark;
+
+    @media (max-width: $sm-max-width) {
+      font-size: rem(18);
+    }
 
     &Container {
       position: relative;
   
-      span:first-child {
+      > span:first-child {
         position: absolute;
         z-index: 1;
         left: 0;
         top: 0;
       }
   
-      span:last-child {
+      > span:last-child {
         opacity: 0;
-        font-weight: 900;
+        font-weight: 700;
       }
     }
 
     &Active {
-      font-weight: 900;
-      color: $primary;
+      font-weight: 700;
+      color: $dark;
     }
     
     &:hover {
-      color: $primary;
+      color: $dark;
     }
 
     &Title {
@@ -72,11 +78,14 @@
 
     :global(.ray__icon) {
       position: relative;
-      top: rem(3);
-      padding: rem(5);
-      border-radius: 20px;
-      background: $pastel-1;
+      top: rem(4);
       margin-left: rem(-5);
+
+      svg {
+        * {
+          fill: $primary;
+        }
+      }
     }
   }
 
@@ -167,7 +176,7 @@
     top: -2px;
     svg {
       width: auto !important;
-      height: rem(16);
+      height: rem(18);
       * {
         fill: $blue;
       }
@@ -236,19 +245,21 @@
 .submenu {
   display: flex;
   flex-wrap: wrap;
-  padding: rem(20) 0;
+
+  @media (max-width: $sm-max-width) {
+    padding-top: rem(20);
+  }
 
   &Link {
     display: flex;
     margin-right: rem(25);
     margin-bottom: rem(10);
-    color: $dark;
     white-space: nowrap;
 
     @media (max-width: $sm-max-width) {
-      border: 2px solid $dark;
+      border: 2px solid $blue;
       margin-right: rem(15);
-      font-weight: 900;
+      font-weight: 700;
       font-size: rem(18);
       border-radius: 20px;
       padding: 0 rem(10);
@@ -275,16 +286,16 @@
     }
 
     &Active {
-      color: $blue;
-      font-weight: 900;
+      color: $dark !important;
+      font-weight: 700;
 
       @media (max-width: $sm-max-width) {
-        font-weight: 900;
-        border-color: $blue;
+        font-weight: 700;
+        border-color: $dark;
 
         svg {
           * {
-            fill: $blue;
+            fill: $dark;
           }
         }
       }
@@ -297,7 +308,11 @@
   .m {
     &Container {
       :global(.ray__icon) {
-        background: $dark-gray-5;
+        svg {
+          * {
+            fill: $blue-light;
+          }
+        }
       }
     }
 
@@ -310,7 +325,40 @@
     }
   }
 
+  .links {
+    border-bottom: 1px solid $dark-border;
+    
+    &Link {
+      &Active {
+        color: $white;
+      }
+    }
+  }
+
+  .submenu {
+    &Link {
+      &Active {
+        color: $white !important;
+        border-color: $white;
+
+        svg {
+          * {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+
   .menu {
+    &Cardano {
+      svg {
+        * {
+          fill: $blue-light;
+        }
+      }
+    }
+
     &Logo {
       color: $white !important;
     }

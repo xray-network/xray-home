@@ -32,7 +32,7 @@ $pastel-1: #feedeb;
 $pastel-2: #e7cac7;
 
 $text: $black;
-$border: $pastel-2;
+$border: lighten($pastel-2, 3%);
 $dark-border: #272639;
 
 // Accent colors

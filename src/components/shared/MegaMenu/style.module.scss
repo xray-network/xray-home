@@ -76,7 +76,7 @@
     top: -2px;
     svg {
       width: auto !important;
-      height: rem(16);
+      height: rem(18);
       * {
         fill: $blue;
       }
@@ -233,6 +233,26 @@
         &:after,
         &:before {
           background: $white;
+        }
+      }
+    }
+
+    &Cardano {
+      svg {
+        * {
+          fill: $blue-light !important;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &Lists {
+      :global(.ray__icon) {
+        svg {
+          * {
+            fill: $blue-light !important;
+          }
         }
       }
     }

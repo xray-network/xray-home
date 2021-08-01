@@ -1,0 +1,39 @@
+@import "@/styles/mixins";
+
+.link {
+  margin-right: rem(25);
+  margin-bottom: rem(10);
+  display: block;
+  position: relative;
+
+  @media (max-width: $sm-max-width) {
+    font-size: rem(18);
+  }
+
+  span {
+    &:first-child {
+      font-weight: 700;
+      opacity: 0;
+    }
+    &:last-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &Active {
+    font-weight: 700;
+    color: $dark !important;
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .link {
+    &Active {
+      color: $white !important;
+    }
+  }
+}
+

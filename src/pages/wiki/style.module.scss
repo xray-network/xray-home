@@ -1,0 +1,58 @@
+@import "@/styles/mixins";
+
+.wiki {
+  &Link {
+    display: block;
+    font-size: rem(20);
+    padding-bottom: rem(20);
+    padding-top: rem(20);
+    font-weight: bold;
+    border-bottom: 1px solid $border;
+
+    &:first-child {
+      border-top: 1px solid $border;
+    }
+  }
+}
+
+.brand {
+  &Logos {
+    background: $pastel-1;
+    border-radius: 8px;
+    margin-bottom: rem(40);
+
+    img {
+      margin: rem(15);
+      height: rem(70);
+      max-width: 100%;
+    }
+  }
+
+  &Media {
+    img {
+      max-width: rem(120);
+      max-height: rem(120);
+      margin: 0 rem(30) rem(30) 0;
+    }
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .brand {
+    &Logos {
+      background: $dark-gray-4;
+    }
+
+    &Dark {
+      background: $white;
+      border-radius: 6px;
+    }
+  }
+
+  .wiki {
+    &Link {
+      border-color: $dark-border;
+    }
+  }
+}

@@ -1,13 +1,17 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-// import Promo from "@/components/pages/Promo"
+import Roadmap from "@/components/pages/Roadmap"
+import Solutions from "@/components/shared/Solutions"
+import Community from "@/components/shared/Community"
 
 const Page = () => {
   return (
     <MainLayout>
       <Helmet title="" />
-      [roadmap]
+      <Roadmap />
+      <Solutions />
+      <Community />
     </MainLayout>
   )
 }

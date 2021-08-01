@@ -1,0 +1,89 @@
+@import "@/styles/mixins";
+
+.promo {
+  margin: 0 0 rem(80);
+  border-radius: 20px;
+  font-size: rem(20);
+
+  h5 {
+    line-height: 1.5;
+    font-weight: normal;
+  }
+}
+
+.text {
+  font-size: rem(58);
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+  padding-bottom: rem(10);
+  margin-bottom: rem(35);
+
+  background: linear-gradient(45deg, $blue 20%, $black 20%, $black 80%, $blue 80%);
+  background-size: 200% auto;
+  background-position: -135%;
+
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 1s linear;
+  animation-iteration-count: 1;
+  @keyframes shine {
+    to {
+      background-position: -335% center;
+    }
+  }
+
+  &Cardano {
+    display: inline-block;
+    width: rem(60);
+    height: rem(40);
+    position: relative;
+    top: rem(-5);
+  
+    svg {
+      height: rem(60);
+      width: rem(60);
+      
+      g {
+        fill: $blue;
+      }
+    }
+  
+    @media (max-width: 820px) {
+      width: rem(60);
+      height: rem(40);
+  
+      svg {
+        top: rem(-13);
+        left: 0;
+        height: rem(60);
+        width: rem(60);
+      }
+    }
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .text {
+    background: linear-gradient(45deg, $blue 20%, $white 20%, $white 80%, $blue 80%);
+    background-size: 200% auto;
+    background-position: -135%;
+
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 1s linear;
+    animation-iteration-count: 1;
+    @keyframes shine {
+      to {
+        background-position: -335% center;
+      }
+    }
+  }
+}

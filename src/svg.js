@@ -41,6 +41,15 @@ import SVGActivity from "@/components/icons/activity.svg"
 import SVGBookmark from "@/components/icons/bookmark.svg"
 import SVGDiamond from "@/components/icons/diamond.svg"
 import SVGPercent from "@/components/icons/percent.svg"
+import SVGOpen from "@/components/icons/open.svg"
+import SVGCompass from "@/components/icons/compass.svg"
+import SVGShieldCheck from "@/components/icons/shield_check.svg"
+import SVGShuffle from "@/components/icons/shuffle.svg"
+import SVGDollar from "@/components/icons/dollar.svg"
+import SVGFire from "@/components/icons/fire.svg"
+import SVGBank from "@/components/icons/bank.svg"
+import SVGCart from "@/components/icons/cart.svg"
+import SVGLink from "@/components/icons/link.svg"
 
 export {
   SVGMinterr,
@@ -86,4 +95,13 @@ export {
   SVGBookmark,
   SVGDiamond,
   SVGPercent,
+  SVGOpen,
+  SVGCompass,
+  SVGShieldCheck,
+  SVGShuffle,
+  SVGDollar,
+  SVGFire,
+  SVGBank,
+  SVGCart,
+  SVGLink,
 }

@@ -1,6 +1,17 @@
 @import "@/styles/mixins";
 
 .ray {
+  &__tip {
+    display: inline-block;
+    margin: 0 rem(15) rem(10) 0;
+    padding: rem(7) rem(13);
+    background: $pastel-1;
+    color: $dark;
+    border-radius: 8px;
+    font-size: rem(18);
+    @include transition-middle();
+  }
+
   &__icon {
     display: flex !important;
     align-items: center;
@@ -65,8 +76,8 @@
   }
 
   &__block {
-    max-width: rem(1040);
-    margin: 0 auto rem(80);
+    max-width: rem(1080);
+    margin: 0 auto rem(60);
     padding: 0 rem(25);
   }
 
@@ -282,10 +293,18 @@
     //   }
     // }
 
+    &__tip {
+      background: $dark-gray-4;
+      color: $white;
+
+      &:hover {
+        background: lighten($dark-gray-4, 5%);
+      }
+    }
+
     &__icon {
       svg {
         * {
-          @include transition-fast();
           fill: $blue-light;
         }
       }

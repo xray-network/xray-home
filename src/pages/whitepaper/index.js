@@ -1,13 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-// import Promo from "@/components/pages/Promo"
+import Whitepaper from "@/components/pages/Whitepaper"
 
 const Page = () => {
   return (
     <MainLayout>
       <Helmet title="" />
-      [whitepaper]
+      <Whitepaper />
     </MainLayout>
   )
 }

@@ -1,14 +1,40 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import MainLayout from "@/layouts/Main"
-// import Promo from "@/components/pages/Promo"
+import { Link } from "gatsby"
+import LayoutWiki from "@/layouts/Wiki"
+import Heading from "@/components/shared/Heading"
+import * as style from "./style.module.scss"
 
 const Page = () => {
   return (
-    <MainLayout>
+    <LayoutWiki>
       <Helmet title="" />
-      [wiki]
-    </MainLayout>
+      <Heading id="table-of-contents">
+        Table of Contents
+      </Heading>
+      <div>
+        <Link className={style.wikiLink} to="/wiki/ray-network/">
+          <i className="fe fe-arrow-right ray__wiki__link__icon" />
+          Ray Network Information
+        </Link>
+        <Link className={style.wikiLink} to="/wiki/cardano/">
+          <i className="fe fe-arrow-right ray__wiki__link__icon" />
+          Cardano Information
+        </Link>
+        <Link className={style.wikiLink} to="/wiki/stake-delegators/">
+          <i className="fe fe-arrow-right ray__wiki__link__icon" />
+          Stake Delegators Information
+        </Link>
+        <Link className={style.wikiLink} to="/wiki/liquidity-providers/">
+          <i className="fe fe-arrow-right ray__wiki__link__icon" />
+          Liquidity Providers Information
+        </Link>
+        <Link className={style.wikiLink} to="/wiki/brand/">
+          <i className="fe fe-arrow-right ray__wiki__link__icon" />
+          Logo & Brand
+        </Link>
+      </div>
+    </LayoutWiki>
   )
 }
 

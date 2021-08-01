@@ -47,7 +47,7 @@
       width: auto !important;
 
       * {
-        fill: blue;
+        fill: $blue;
       }
     }
   }
@@ -98,4 +98,23 @@
 
 // dark theme
 [data-theme="dark"] {
+  .footer {
+    &Cardano {
+      svg {
+        * {
+          fill: $blue-light !important;
+        }
+      }
+    }
+
+    &Lists {
+      :global(.ray__icon) {
+        svg {
+          * {
+            fill: $blue-light !important;
+          }
+        }
+      }
+    }
+  }
 }

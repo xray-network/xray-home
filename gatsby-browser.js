@@ -19,6 +19,7 @@ import "antd/es/result/style/index.css"
 
 import "aos/dist/aos.css"
 import "bootstrap/dist/css/bootstrap.min.css"
+import "react-alice-carousel/lib/alice-carousel.css"
 import "@/styles/style.scss"
 
 import AOS from "aos"

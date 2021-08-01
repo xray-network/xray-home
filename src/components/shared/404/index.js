@@ -1,7 +1,7 @@
 import React from "react"
 import * as style from "./style.module.scss"
 
-const Soon = () => {
+const Page404 = () => {
   return (
     <div className="ray__block">
       <div className={style.error}>
@@ -30,4 +30,4 @@ const Soon = () => {
   )
 }
 
-export default Soon
+export default Page404
