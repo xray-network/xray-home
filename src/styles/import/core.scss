@@ -22,6 +22,7 @@ body {
   color: $text;
   overflow-x: hidden;
   position: relative;
+  background: $pastel-1;
 
   * {
     font-variant: normal !important;
@@ -83,7 +84,7 @@ h5,
 h6 {
   color: $dark;
   margin-bottom: rem(20);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h1 {
@@ -154,7 +155,7 @@ code {
 // dark theme
 [data-theme="dark"] {
   body {
-    background: $dark-gray-6;
+    background: $dark-gray-5;
     color: $dark-gray-2;
 
     &:before {
@@ -181,6 +182,10 @@ code {
     &:active,
     &:focus {
       color: $white;
+    }
+
+    &--dashed {
+      border-bottom: 1px dashed $primary;
     }
   }
 

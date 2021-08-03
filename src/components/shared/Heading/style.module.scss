@@ -1,0 +1,30 @@
+@import "@/styles/mixins";
+
+.heading {
+  position: relative;
+  padding-left: rem(50);
+  margin-bottom: rem(50);
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(10);
+    height: 100%;
+    border-radius: 20px;
+    background: $primary;
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+  .heading {
+    svg {
+      * {
+        fill: $white;
+      }
+    }
+  }
+}

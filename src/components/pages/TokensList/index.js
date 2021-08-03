@@ -69,7 +69,7 @@ const TokensList = () => {
   return (
     <div className="ray__block">
       <Heading id="list">
-        Cardano Verified Tokens List
+        <strong>Ray Tokens List</strong>, Cardano verified tokens
       </Heading>
       <div className="mb-5">
         <p>

@@ -9,8 +9,7 @@ const Promo = () => {
     <div className="ray__block">
       <div className={style.promo}>
         <h1 className={style.text}>
-          Hello, we are Ray Network!
-          <br />
+          Hello, we're Ray Network!
           We build an advanced ecosystem{' '}
           <span className="text-nowrap">
             for {' '}
@@ -26,20 +25,20 @@ const Promo = () => {
           It's all about ADA DeFi finances in one place!
         </p>
         <p className="mb-5">
-          Stake ADA with Ray and get <strong>5% ROI</strong> with extra rewards each epoch{' '}
+          Stake ADA with Ray and get <strong>~5% ROI</strong> with extra rewards each epoch{' '}
           <strong className="ray__ticker">1 XRAY</strong> per each <strong className="ray__ticker">50 ADA</strong> staked.
         </p>
         <div>
-          <Link to="/rewards/" className="ray__tip">
+          <Link to="/rewards/" className="ray__btn ray__btn--round me-3 mb-3">
             Rewards
           </Link>
-          <Link to="/stake/calculator/" className="ray__tip">
+          <Link to="/stake/calculator/" className="ray__btn ray__btn--round me-3 mb-3">
             Staking Calculator
           </Link>
-          <Link to="/stake/pools/" className="ray__tip">
+          <Link to="/stake/pools/" className="ray__btn ray__btn--round me-3 mb-3">
             Staking Pools
           </Link>
-          <Link to="/xray-token/" className="ray__tip">
+          <Link to="/xray-token/" className="ray__btn ray__btn--round me-3 mb-3">
             XRAY Token
           </Link>
         </div>

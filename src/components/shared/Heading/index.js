@@ -3,13 +3,14 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 import { useLocation } from "@reach/router"
 import { message, Tooltip } from "antd"
 import { SVGLink } from "@/svg"
+import * as style from "./style.module.scss"
 
 const Heading = ({ children, id }) => {
   const location = useLocation()
   const link = `${location.origin}${location.pathname}#${id}`
 
   return (
-    <h2 className="mb-5" id={id}>
+    <h2 className={style.heading} id={id}>
       {children}
       <CopyToClipboard
         text={link}

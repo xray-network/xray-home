@@ -166,12 +166,12 @@ const dev = [
 const apps = [
   {
     status: 'pending',
-    title: 'Ray Track iOS',
+    title: 'Ray Stake iOS',
     date: 'Q4 2021',
   },
   {
     status: 'pending',
-    title: 'Ray Track Android',
+    title: 'Ray Stake Android',
     date: 'Q4 2021',
   },
   {
@@ -298,10 +298,10 @@ const Roadmap = () => {
   return (
     <div className="ray__block">
       <Heading id="roadmap">
-        Development Roadmap
+        <strong>Development</strong> Roadmap
       </Heading>
       <div className="mb-3">
-        <h5 className="mb-5">Ray Ecosystem</h5>
+        <h5 className="mb-5"><strong>Ray Ecosystem</strong></h5>
         <div>
           {dev.map((item, index) => {
             return (
@@ -324,7 +324,7 @@ const Roadmap = () => {
         </div>
       </div>
       <div className="mb-5">
-        <h5 className="mb-5">Desktop & Mobile Apps</h5>
+        <h5 className="mb-5"><strong>Desktop & Mobile Apps</strong></h5>
         <div>
           {apps.map((item, index) => {
             return (
@@ -346,7 +346,7 @@ const Roadmap = () => {
         </div>
       </div>
       <Heading id="updates">
-        Development Activity
+        <strong>Development</strong> Activity
       </Heading>
       <div className="mb-5">
         <p>

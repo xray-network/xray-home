@@ -11,7 +11,7 @@
   margin: 0 rem(20) rem(20) 0;
   color: $dark-gray-2;
   border-radius: 8px;
-  border: 1px solid $border;
+  // border: 1px solid $border;
   padding: rem(12) rem(20) rem(8);
   position: relative;
   overflow: hidden;
@@ -82,8 +82,7 @@
   }
 
   .item {
-    background: transparent;
-    border-color: $dark-gray-4;
+    background: $dark-gray-6;
 
     &Icon {
       color: $dark-gray-2;

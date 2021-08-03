@@ -6,7 +6,7 @@ import Audit from "@/components/pages/Audit"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="" />
+      <Helmet title="Audit" />
       <Audit />
     </MainLayout>
   )

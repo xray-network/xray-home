@@ -1,8 +1,7 @@
 import React from "react"
-import { Alert } from "antd"
 import { useSelector } from "react-redux"
 import Heading from "@/components/shared/Heading"
-// import style from "./style.module.scss"
+import * as style from "./style.module.scss"
 
 const Data = () => {
   const theme = useSelector((state) => state.settings.theme)
@@ -10,19 +9,11 @@ const Data = () => {
   return (
     <div className="ray__block">
       <Heading id="data">
-        Ray Data. Cardano on-chain storage with access roles
+        <strong>Ray Data</strong>, on-chain storage with access roles
       </Heading>
       <div className="mb-5">
-        <Alert
-          message="Experimental Solution"
-          description="This is an experimental feature that requires further research into the use of Cardano sidechains."
-          type="info"
-          showIcon
-        />
-      </div>
-      <div className="mb-5">
         <p>
-          Data Containers is a protocol that standardizes information written in a blockchain. The basic model is containers that are created by users, with write or read access allowed by the creator.
+          Ray Data is a protocol that standardizes information written in a blockchain. The basic model is containers that are created by users, with write or read access allowed by the creator.
         </p>
         <p>
           For example, your medical records are always with you: when you visit a new doctor you can share the necessary historical data for your check-up, while at the same time the doctor will trust this information, knowing that it is really yours.
@@ -43,8 +34,10 @@ const Data = () => {
           .
         </p>
       </div>
-      {theme === 'default' && <img src="/resources/images/scheme.png" alt="" className="img-fluid" />}
-      {theme !== 'default' && <img src="/resources/images/scheme-dark.png" alt="" className="img-fluid" />}
+      <div className={style.img}>
+        {theme === 'default' && <img src="/resources/images/scheme.png" alt="" className="img-fluid" />}
+        {theme !== 'default' && <img src="/resources/images/scheme-dark.png" alt="" className="img-fluid" />}
+      </div>
     </div>
   )
 }

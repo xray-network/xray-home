@@ -1,17 +1,6 @@
 @import "@/styles/mixins";
 
 .ray {
-  &__tip {
-    display: inline-block;
-    margin: 0 rem(15) rem(10) 0;
-    padding: rem(7) rem(13);
-    background: $pastel-1;
-    color: $dark;
-    border-radius: 8px;
-    font-size: rem(18);
-    @include transition-middle();
-  }
-
   &__icon {
     display: flex !important;
     align-items: center;
@@ -77,7 +66,7 @@
 
   &__block {
     max-width: rem(1080);
-    margin: 0 auto rem(60);
+    margin: 0 auto rem(90);
     padding: 0 rem(25);
   }
 
@@ -126,12 +115,15 @@
   &__table {
     overflow: auto;
     white-space: nowrap;
+    padding: rem(20);
+    background: $white;
+    border-radius: 8px;
   }
 
   &__ticker {
     display: inline-block;
     font-size: 83%;
-    border: 1px solid $pastel-2;
+    border: 1px solid $border;
     line-height: 120%;
     padding: rem(2) rem(5);
     border-radius: 5px;
@@ -141,7 +133,7 @@
   }
 
   &__btn {
-    display: flex;
+    display: inline-flex;
     white-space: nowrap;
     justify-content: center;
     align-items: center;
@@ -174,9 +166,9 @@
     }
 
     &[disabled] {
-      background: transparent !important;
+      background: $white !important;
       border: 1px solid $border !important;
-      color: $gray-5 !important;
+      color: $gray-4 !important;
 
       .ray__icon {
         svg {
@@ -243,8 +235,8 @@
 
     &--transparent {
       color: $dark !important;
-      background: transparent !important;
-      border-color: $pastel-2 !important;
+      background: $white !important;
+      border-color: $border !important;
 
       &:hover {
         border-color: $primary !important;
@@ -283,23 +275,8 @@
   }
 
   .ray {
-    // &__block {
-    //   &--top {
-    //     border-top: 1px solid $dark-border;
-    //   }
-
-    //   &--bottom {
-    //     border-bottom: 1px solid $dark-border;
-    //   }
-    // }
-
-    &__tip {
-      background: $dark-gray-4;
-      color: $white;
-
-      &:hover {
-        background: lighten($dark-gray-4, 5%);
-      }
+    &__table {
+      background: $dark-gray-6;
     }
 
     &__icon {
@@ -339,6 +316,12 @@
         background: $dark-gray-4 !important;
         color: $dark-gray-3 !important;
         border-color: transparent !important;
+
+        svg {
+          * {
+            fill: $dark-gray-3 !important;
+          }
+        }
       }
 
       &--white {
@@ -351,6 +334,7 @@
 
       &--transparent {
         border-color: $dark-gray-3 !important;
+        background: $dark-gray-5 !important;
 
         &:hover {
           border-color: $dark-gray-3 !important;

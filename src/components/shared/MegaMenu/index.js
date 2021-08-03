@@ -43,9 +43,9 @@ const MegaMenu = () => {
         <div className={style.menu}>
           <Link to="/" className={`${style.menuLogo} me-4`}>
             <SVGRay />
-            <span>Ray Network</span>
+            <span><strong>Ray Network</strong></span>
           </Link>
-          <span className="flex-grow-1 d-none d-sm-inline pe-2 pe-md-4">
+          <span className="flex-grow-1 text-muted d-none d-sm-inline pe-2 pe-md-4">
             Powered with{" "}
             <span className={style.menuCardano}>
               <SVGCardano />
@@ -96,12 +96,14 @@ const MegaMenu = () => {
       </div>
       <div className="ray__block pt-5 mb-0">
         <h1 data-aos="fade-down" data-aos-delay="0">
-          Welcome to Ray Network, mate.{" "}
-          <span role="img" aria-label="">
-            👋
-          </span>
-          <br />
-          Our Cardano ecosystem is waiting for you!
+          <strong>
+            Welcome to Ray Network, mate.{" "}
+            <span role="img" aria-label="">
+              👋
+            </span>
+            <br />
+            Our Cardano ecosystem is waiting for you!
+          </strong>
         </h1>
         <div className="mb-5">
           <div className={style.footerTop}>
@@ -117,7 +119,7 @@ const MegaMenu = () => {
                       <span className="ray__icon me-2 mb-1 mb-sm-0">
                         <SVGWallet />
                       </span>
-                      <h6 className="mb-0">Cardano Solutions</h6>
+                      <h6 className="mb-0"><strong>Cardano Solutions</strong></h6>
                     </div>
                     <ul className="list-unstyled mb-4">
                       <li>
@@ -216,7 +218,7 @@ const MegaMenu = () => {
                       <span className="ray__icon me-2 mb-1 mb-sm-0">
                         <SVGAtSign />
                       </span>
-                      <h6 className="mb-0">Information</h6>
+                      <h6 className="mb-0"><strong>Information</strong></h6>
                     </div>
                     <ul className="list-unstyled mb-5">
                       <li>
@@ -304,7 +306,7 @@ const MegaMenu = () => {
                           <span className="ray__icon me-2 mb-1 mb-sm-0">
                             <SVGTwitter />
                           </span>
-                          <h6 className="mb-0">Ray Network</h6>
+                          <h6 className="mb-0"><strong>Ray Network</strong></h6>
                         </div>
                         <ul className="list-unstyled mb-5">
                           <li>
@@ -354,7 +356,7 @@ const MegaMenu = () => {
                           <span className="ray__icon me-2 mb-1 mb-sm-0">
                             <SVGTwitter />
                           </span>
-                          <h6 className="mb-0">Ray Wallet</h6>
+                          <h6 className="mb-0"><strong>Ray Wallet</strong></h6>
                         </div>
                         <ul className="list-unstyled mb-5">
                           <li>
@@ -370,7 +372,7 @@ const MegaMenu = () => {
                           <span className="ray__icon me-2 mb-1 mb-sm-0">
                             <SVGTwitter />
                           </span>
-                          <h6 className="mb-0">Minterr</h6>
+                          <h6 className="mb-0"><strong>Minterr</strong></h6>
                         </div>
                         <ul className="list-unstyled mb-4">
                           <li>
@@ -402,7 +404,7 @@ const MegaMenu = () => {
               <div className="row">
                 <div className="col-6 col-md-12">
                   <div className="mb-3">
-                    <h6 className="mb-0">Ray Wallet Apps</h6>
+                    <h6 className="mb-0"><strong>Ray Wallet Apps</strong></h6>
                   </div>
                   <div className="mb-4">
                     <div>
@@ -473,7 +475,7 @@ const MegaMenu = () => {
                 </div>
                 <div className="col-6 col-md-12">
                   <div className="mb-3">
-                    <h6 className="mb-0">Ray Stake Apps</h6>
+                    <h6 className="mb-0"><strong>Ray Stake Apps</strong></h6>
                   </div>
                   <div className="mb-4">
                     <div>

@@ -6,7 +6,7 @@ import Whitepaper from "@/components/pages/Whitepaper"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="" />
+      <Helmet title="Whitepaper" />
       <Whitepaper />
     </MainLayout>
   )

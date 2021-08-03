@@ -35,7 +35,7 @@ const About = () => {
     <div className="ray__block">
       <div className={style.features}>
         <Heading id="about">
-          About Ray Network
+          About <strong>Ray Network</strong>
         </Heading>
         <p>Ray Network is an advanced <a href="https://github.com/ray-network" target="_blank" rel="noopener noreferrer" className="ray__link">open source</a> ecosystem for the Cardano blockchain platform. It includes a light wallet with many features such as: sending and receiving funds, defi swap, NFT marketplace, staking center and others.</p>
         <p>

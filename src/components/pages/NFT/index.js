@@ -14,16 +14,16 @@ const Nft = () => {
   return (
     <div className="ray__block">
       <Heading id="nft">
-        <strong className="bolder">Ray</strong> NFT Marketplace
+        <strong>Ray NFT</strong>, Cardano NFT Marketplace
       </Heading>
       <p>
         Ray NFT is a decentralized marketplace for digital goods, including collectibles, gaming items, digital art, and other digital assets that are backed by a blockchain. On Ray NFT, you can buy, sell, and trade any of these items with anyone in the world.
       </p>
-      <p>
+      <p className="mb-5">
         Trading on on Ray NFT takes place through a smart contract, meaning that no central authority ever holds custody of your items.
       </p>
-      <h5 className="mb-4">What is an NFT?</h5>
-      <p>
+      <h5 className="mb-5"><strong>What is an NFT?</strong></h5>
+      <p className="mb-5">
         NFTs are tokens that we can use to represent ownership of unique items. They let us tokenise things like art, collectibles, even real estate. They can only have one official owner at a time and they're secured by the Cardano blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
       </p>
       <div className="mt-4 pt-3 mb-5">

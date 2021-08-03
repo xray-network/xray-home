@@ -8,14 +8,14 @@ const Page = () => {
     <LayoutWiki>
       <Helmet title="Liquidity Providers Wiki" />
       <Heading id="liquidity-provider">
-        Liquidity Providers
+        <strong>Liquidity Providers</strong>
       </Heading>
 
-      <h5>What is the Liquidity Providers program?</h5>
+      <h5><strong>What is the Liquidity Providers program?</strong></h5>
       <p>This is a program for distributing <span className="ray__ticker">XRAY</span> tokens to liquidity providers.</p>
       <div className="ray__line mb-4" />
 
-      <h5>When does this program start?</h5>
+      <h5><strong>When does this program start?</strong></h5>
       <p>The program will be available as soon as Ray Swap launches (when smart contracts are available on the Cardano blockchain).</p>
     </LayoutWiki>
   )

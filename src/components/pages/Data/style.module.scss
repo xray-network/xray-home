@@ -1,1 +1,14 @@
 @import "@/styles/mixins";
+
+.img {
+  background: $white;
+  padding: rem(20);
+  border-radius: 8px;
+}
+
+// dark theme
+[data-theme='dark'] {
+  .img {
+    background: $dark-gray-6;
+  }
+}

@@ -8,14 +8,17 @@ const Kickstart = () => {
   return (
     <div className="ray__block">
       <Heading id="graph">
-        Ray Graph. Graphql API Provisioning
+        <strong>Ray Graph</strong>, GraphQL API provisioning
       </Heading>
       <p>
-        [text]
+        Any dAPP needs to get historical blockchain data, so Ray Graph is ready to let you deploy graphql-based APIs to access historical data and websockets to directly access ledger node state. Ray Graph's work uses automation to deploy a scalable infrastructure in the Cloudflare cloud.
       </p>
-      <h5 className="mb-4">What is GraphQL?</h5>
-      <p>
-        [text]
+      <p className="mb-5">
+        All you need to do is to top up your special ADA address. Then a server with the latest version of cardano-graphql and ogmios will be deployed to handle gql queries and websockets. Just use CardanoWeb3.js on top of this infrastructure to populate your dApp, it's that easy!
+      </p>
+      <h5 className="mb-5"><strong>What is GraphQL?</strong></h5>
+      <p className="mb-5">
+        GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
       </p>
       <div className="mt-4 pt-3">
         <Tooltip title="soon" className="me-3 mb-2">

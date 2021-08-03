@@ -6,7 +6,7 @@
   padding: rem(5) rem(8);
 
   &-token {
-    background: $border;
+    background: $white;
     color: $text;
   }
 
@@ -94,6 +94,12 @@
   }
 }
 
+.bg {
+  &-pastel {
+    background: $pastel-1;
+  }
+}
+
 // dark theme
 [data-theme="dark"] {
   .text {
@@ -106,6 +112,12 @@
     &-token {
       background: $dark-gray-4;
       color: $dark-gray-2;
+    }
+  }
+
+  .bg {
+    &-pastel {
+      background: $dark-gray-5;
     }
   }
 }

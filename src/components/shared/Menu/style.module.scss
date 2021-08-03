@@ -1,10 +1,6 @@
 @import "@/styles/mixins";
 
 .links {
-  margin-bottom: rem(10);
-  padding-bottom: rem(5);
-  border-bottom: 1px solid $border;
-
   &Container {
     margin-right: rem(20);
     position: relative;
@@ -23,10 +19,21 @@
   &Link {
     margin-bottom: rem(10);
     display: inline-block;
-    // color: $dark;
+    color: $dark;
 
     @media (max-width: $sm-max-width) {
       font-size: rem(18);
+    }
+
+    &Status {
+      display: inline-block;
+      width: rem(8);
+      height: rem(8);
+      border-radius: 10px;
+      background: $success;
+      margin-right: rem(7);
+      position: relative;
+      top: -1px;
     }
 
     &Container {
@@ -47,11 +54,11 @@
 
     &Active {
       font-weight: 700;
-      color: $dark;
+      color: $blue;
     }
     
     &:hover {
-      color: $dark;
+      color: $blue;
     }
 
     &Title {
@@ -156,7 +163,6 @@
     display: flex;
     align-items: center;
     font-size: rem(18);
-    font-weight: bold;
     color: $dark !important;
 
     svg {
@@ -252,9 +258,10 @@
 
   &Link {
     display: flex;
-    margin-right: rem(25);
+    margin-right: rem(20);
     margin-bottom: rem(10);
     white-space: nowrap;
+    color: $dark;
 
     @media (max-width: $sm-max-width) {
       border: 2px solid $blue;
@@ -286,7 +293,7 @@
     }
 
     &Active {
-      color: $dark !important;
+      color: $blue !important;
       font-weight: 700;
 
       @media (max-width: $sm-max-width) {
@@ -326,8 +333,6 @@
   }
 
   .links {
-    border-bottom: 1px solid $dark-border;
-    
     &Link {
       &Active {
         color: $white;

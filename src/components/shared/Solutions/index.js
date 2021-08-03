@@ -17,7 +17,7 @@ const items = [
   },
   {
     title: 'Ray Stake',
-    descr: 'Stake solution, earn 5% ROI in ADA with XRAYs on top',
+    descr: 'Stake solution, earn ~5% ROI in ADA with XRAYs on top',
     url: '/stake/',
   },
   {
@@ -70,42 +70,44 @@ const items = [
 
 const Solutions = () => {
   return (
-    <div className="ray__block">
-      <Heading id="solutions">
-        Ray Network Solutions
-      </Heading>
-      <div className="row">
-        {items.map((item, key) => {
-          return (
-            <div key={key} className="col-md-4 col-sm-6 col-12">
-              <div className={style.item}>
-                <Link
-                  to={item.url}
-                  className={style.itemInner}
-                  activeClassName={style.itemInnerActive}
-                  partiallyActive
-                  target={item.external ? '_blank' : ''}
-                >
-                  {item.external && (
-                    <span className={style.itemInnerExternal}>
-                      <span className="ray__icon">
-                        <SVGOpen />
+    <div className={style.outer}>
+      <div className="ray__block mb-0">
+        <Heading id="solutions">
+          <strong>Ray Network</strong> solutions
+        </Heading>
+        <div className="row">
+          {items.map((item, key) => {
+            return (
+              <div key={key} className="col-md-4 col-sm-6 col-12">
+                <div className={style.item}>
+                  <Link
+                    to={item.url}
+                    className={style.itemInner}
+                    activeClassName={style.itemInnerActive}
+                    partiallyActive
+                    target={item.external ? '_blank' : ''}
+                  >
+                    {item.external && (
+                      <span className={style.itemInnerExternal}>
+                        <span className="ray__icon">
+                          <SVGOpen />
+                        </span>
                       </span>
-                    </span>
-                  )}
-                  <div className={style.itemInnerTitle}>
-                    {item.title}
-                  </div>
-                  <div>
-                    {item.descr}
-                  </div>
-                </Link>
+                    )}
+                    <div className={style.itemInnerTitle}>
+                      {item.title}
+                    </div>
+                    <div>
+                      {item.descr}
+                    </div>
+                  </Link>
+                </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
+        </div>
       </div>
-    </div >
+    </div>
   )
 }
 

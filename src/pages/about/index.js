@@ -1,13 +1,15 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-// import Promo from "@/components/pages/Promo"
+import About from "@/components/pages/About"
+import AboutCompany from "@/components/pages/AboutCompany"
 
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="" />
-      [company]
+      <Helmet title="About" />
+      <About />
+      <AboutCompany />
     </MainLayout>
   )
 }

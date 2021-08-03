@@ -8,7 +8,7 @@ const Soon = () => {
         <div className="row">
           <div className="col-lg-12 text-center">
             <div>
-              <h1 className={style.title}>Coming soon!</h1>
+              {/* <h1 className={style.title}>Coming soon!</h1> */}
               <p className="mb-4">
                 Our team is working tirelessly to make this page come alive
                 soon!

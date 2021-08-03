@@ -4,9 +4,22 @@
   margin-top: rem(10);
   margin-bottom: rem(20);
   position: relative;
-  border-left: 7px solid $blue;
+  // border-left: 7px solid $blue;
+  background: $white;
   padding: rem(55) rem(30);
   border-radius: 8px;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: rem(10);
+    border-radius: 20px;
+    background: $primary;
+  }
 
   .itemLabel {
     position: absolute;
@@ -131,6 +144,8 @@
 // dark theme
 [data-theme='dark'] {
   .map {
+    background: $dark-gray-6;
+
     .img {
       img {
         opacity: 1;

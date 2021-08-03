@@ -9,7 +9,7 @@ const Map = () => {
   return (
     <div className="ray__block">
       <Heading id="map">
-        Ray Relays Map
+        <strong>Ray Network</strong> relays map
       </Heading>
       <div className={style.map}>
         <div className={style.img}>

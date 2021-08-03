@@ -8,7 +8,7 @@ const Swap = () => {
   return (
     <div className="ray__block">
       <Heading id="swap">
-        Ray Swap. Cardano DEX
+        <strong>Ray Swap</strong>, Cardano DEX
       </Heading>
       <p>
         Ray Swap is an automated liquidity protocol for creating liquidity and trading native tokens
@@ -17,12 +17,12 @@ const Swap = () => {
         Where it makes tradeoffs decentralization, censorship resistance,
         and security are prioritized.
       </p>
-      <p className="mb-4">
+      <p className="mb-5">
         Ray is open-source software licensed
         under MIT License.
       </p>
-      <h5 className="mb-4">How AMM swap works?</h5>
-      <p>
+      <h5 className="mb-5"><strong>How AMM swap works?</strong></h5>
+      <p className="mb-5">
         Prices are determined by the amount of each token in a pool. The smart
         contract maintains a constant using the following function: <code>x*y=k</code>.
         In this case <code>x = token0</code>, <code>y = token1</code>, <code>k = constant</code>. For each trade a

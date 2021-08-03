@@ -22,8 +22,9 @@
     width: rem(44);
     height: rem(44);
     margin-right: rem(10);
-    background: $pastel-1;
+    background: $white;
     border-radius: 40px;
+    border: 1px solid $border;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,14 +33,13 @@
 
 .images {
   position: relative;
-  overflow: hidden;
 
   :global(.container-fluid) {
     position: relative;
   }
 
   &Container {
-    margin-top: rem(80);
+    margin-top: rem(60);
     position: relative;
     height: 35vw;
     max-height: 340px !important;
@@ -49,14 +49,22 @@
       position: absolute;
       bottom: -50%;
       left: 0;
-      border: 3px solid $dark;
       border-radius: 8px;
-      // box-shadow: 0 0 50px -10px rgba(0,0,0,0.2), 0 0 5px 0 rgba(0,0,0,0.1);
+      box-shadow: 0 20px 70px -30px rgba(0,0,0,0.4), 0 0 10px 0 rgba(0,0,0,0.05);
+      @include transition-slow();
 
       &:last-child {
         bottom: -20%;
         left: auto;
         right: 0;
+      }
+
+      &:hover {
+        bottom: -45%;
+
+        &:last-child {
+          bottom: -15%;
+        }
       }
     }
 
@@ -86,7 +94,7 @@
     left: 0;
     height: 30px;
     width: 100%;
-    box-shadow: 0 0 50px rgba(0,0,0,0.15);
+    box-shadow: 0 0 50px rgba(0,0,0,0.25);
   }
 }
 
@@ -100,6 +108,7 @@
     &Icon {
       color: $white;
       background: $dark-gray-4;
+      border: 1px solid transparent;
 
       svg {
         * {

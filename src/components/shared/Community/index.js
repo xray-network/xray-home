@@ -23,7 +23,7 @@ const Community = () => {
       descr: <span><strong>Join</strong> Ray Network community on Reddit</span>,
     },
     {
-      title: 'Telegram',
+      title: 'Telegram Chat',
       url: 'https://t.me/RayNetwork',
       image: <IMGTelegram />,
       descr: <span><strong>Chat</strong> in the realtime with the community</span>,
@@ -37,15 +37,15 @@ const Community = () => {
   ]
 
   return (
-    <div className="ray__block mb-5">
+    <div className="ray__block">
       <h2 className="text-center">Join a global community</h2>
       <h4 className="mb-5 text-center">
         Learn more about Ray Network, chat with the team, others in the community
       </h4>
-      <div className="row justify-content-center">
+      <div className="row">
         {items.map((item, index) => {
           return (
-            <div key={index} className="col-12 col-sm-6 col-md-4 mb-3">
+            <div key={index} className="col-12 col-sm-6 col-md-4 mb-4">
               <a href={item.url} className={style.item} target="_blank" rel="noopener noreferrer">
                 <div className={style.itemImage}>
                   {item.image}

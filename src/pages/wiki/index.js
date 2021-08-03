@@ -8,9 +8,9 @@ import * as style from "./style.module.scss"
 const Page = () => {
   return (
     <LayoutWiki>
-      <Helmet title="" />
+      <Helmet title="Wiki" />
       <Heading id="table-of-contents">
-        Table of Contents
+        <strong>Table of Contents</strong>
       </Heading>
       <div>
         <Link className={style.wikiLink} to="/wiki/ray-network/">

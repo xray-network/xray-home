@@ -1,5 +1,11 @@
 @import "@/styles/mixins";
 
+.outer {
+  padding: rem(70) 0 rem(60);
+  margin-bottom: rem(90);
+  background: $white;
+}
+
 .item {
   height: 100%;
   display: block;
@@ -8,8 +14,6 @@
   &Inner {
     height: 100%;
     display: block;
-    // border: 1px solid $border;
-    border-left: 5px solid $blue;
     padding: rem(25) rem(30);
     border-radius: 8px;
     color: $text !important;
@@ -17,6 +21,25 @@
     position: relative;
     min-height: rem(160);
     @include transition-middle();
+
+    position: relative;
+    padding-left: rem(50);
+  
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(10);
+      height: 100%;
+      border-radius: 20px;
+      background: $gray-2;
+      opacity: 1;
+      @include transition-middle();
+    }
+
+
 
     @media (max-width: 820px) {
       min-height: auto;
@@ -40,6 +63,10 @@
       background: $blue;
       color: $white !important;
 
+      &:before {
+        opacity: 0;
+      }
+
       .itemInnerTitle {
         color: $white !important;
       }
@@ -60,11 +87,18 @@
 }
 // dark theme
 [data-theme='dark'] {
+  .outer {
+    background: $dark-gray-6;
+  }
+
   .item {
     &Inner {
       color: $dark-gray-2 !important;
-      // border: 1px solid $dark-border;
-      border-left: 7px solid $blue;
+      background: $dark-gray-5;
+
+      &:before {
+        background: $dark-gray-4;
+      }
 
       &Title {
         color: $white !important;

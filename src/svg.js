@@ -50,6 +50,9 @@ import SVGFire from "@/components/icons/fire.svg"
 import SVGBank from "@/components/icons/bank.svg"
 import SVGCart from "@/components/icons/cart.svg"
 import SVGLink from "@/components/icons/link.svg"
+import SVGRocket from "@/components/icons/rocket.svg"
+import SVGDonutChart from "@/components/icons/donut_chart.svg"
+import SVGCheckCircled from "@/components/icons/check_circled.svg"
 
 export {
   SVGMinterr,
@@ -104,4 +107,7 @@ export {
   SVGBank,
   SVGCart,
   SVGLink,
+  SVGRocket,
+  SVGDonutChart,
+  SVGCheckCircled,
 }

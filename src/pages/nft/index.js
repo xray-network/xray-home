@@ -8,7 +8,7 @@ import Community from "@/components/shared/Community"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="" />
+      <Helmet title="Ray NFT" />
       <Nft />
       <Solutions />
       <Community />

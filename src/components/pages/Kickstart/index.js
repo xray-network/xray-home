@@ -8,18 +8,18 @@ const Kickstart = () => {
   return (
     <div className="ray__block">
       <Heading id="kickstart">
-        Ray Kickstart. Cardano IDO Platform
+        <strong>Ray Kickstart</strong>, Cardano IDO platform
       </Heading>
       <p>
         Ray KickStart exists to help bring creative projects to life through tokenization.
         It allows you to create and fund your projects in minutes.
         A crypto-home for services, products, film, music, art, theater, games, comics, design, photography, and more.
       </p>
-      <p>
+      <p className="mb-5">
         Our mission is to help bring creative projects to life.
       </p>
-      <h5 className="mb-4">What is an Initial DEX Offering (IDO)?</h5>
-      <p>
+      <h5 className="mb-5"><strong>What is an Initial DEX Offering (IDO)?</strong></h5>
+      <p className="mb-5">
         An IDO refers to a project launching a coin or token via a decentralized liquidity exchange. This is a type of crypto asset exchange that depends on liquidity pools where traders can swap tokens, including crypto coins and stablecoins.
       </p>
       <div className="mt-4 pt-3">

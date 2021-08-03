@@ -17,6 +17,7 @@
   width: rem(200);
   height: rem(365);
   border: 1px solid $border;
+  background: $white;
   border-radius: 10px;
   padding: rem(15) rem(20);
   color: $dark;
@@ -49,12 +50,12 @@
     width: rem(30);
     height: rem(30);
     border-radius: 20px;
-    border: 1px solid $white;
+    border: 1px solid $gray-4;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $white;
-    background: $pastel-1;
+    color: $gray-4;
+    background: $white;
 
     + .itemCollection {
       margin-left: rem(-10);
@@ -76,8 +77,8 @@
 // dark theme
 [data-theme='dark'] {
   .item {
-    background: $dark-gray-5;
-    border-color: $dark-gray-5;
+    background: $dark-gray-6;
+    border-color: $dark-gray-6;
     color: $white;
 
     &Collection {
