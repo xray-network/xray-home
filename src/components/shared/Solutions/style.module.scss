@@ -31,10 +31,10 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: rem(10);
+      width: rem(7);
       height: 100%;
       border-radius: 20px;
-      background: $gray-2;
+      background: $primary;
       opacity: 1;
       @include transition-middle();
     }
@@ -95,10 +95,6 @@
     &Inner {
       color: $dark-gray-2 !important;
       background: $dark-gray-5;
-
-      &:before {
-        background: $dark-gray-4;
-      }
 
       &Title {
         color: $white !important;

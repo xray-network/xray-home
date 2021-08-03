@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import Data from "@/components/pages/Data"
+import Data from "@/components/shared/Data"
 import Solutions from "@/components/shared/Solutions"
 import Community from "@/components/shared/Community"
 

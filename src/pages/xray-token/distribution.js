@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import XrayDistribution from "@/components/pages/XrayDistribution"
+import XrayDistribution from "@/components/shared/XrayDistribution"
 
 const Page = () => {
   return (

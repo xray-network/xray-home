@@ -97,54 +97,66 @@ const XrayTokenomics = () => {
       <Heading id="tokenomics">
         <strong>XRAY</strong> tokenomics
       </Heading>
-      <h5 className="mb-0">
-        <strong>Circulating Supply (Max Supply 406,152,800 <span className="ray__ticker">XRAY</span>)</strong>
-      </h5>
-      <div className={`${style.supply} ${style.supplyLarge}`}>
-        <strong className="bolder">10,152,800 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+      <div className="ray__left">
+        <h5 className="mb-0">
+          <strong>Circulating Supply (Max Supply 406,152,800 <span className="ray__ticker">XRAY</span>)</strong>
+        </h5>
+        <div className={`${style.supply} ${style.supplyLarge}`}>
+          <strong className="bolder">10,152,800 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+        </div>
+        <p>
+          A total of 406 million XRAYs will be issued and will be available over a 3-year period. The initial four year allocation is as follows:
+        </p>
+        <ul className="mb-5">
+          <li>58.00% to Ray Network community members <span className="badge badge-token">235,568,624 XRAY</span></li>
+          <li>20.00% to investors with 3-year vesting <span className="badge badge-token">81,230,560 XRAY</span></li>
+          <li>14.00% to team members and future employees with 3-year vesting <span className="badge badge-token">56,681,392 XRAY</span></li>
+          <li>8.00% founders and advisors <span className="badge badge-token">32,492,224 XRAY</span></li>
+        </ul>
       </div>
-      <p>
-        A total of 406 million XRAYs will be issued and will be available over a 3-year period. The initial four year allocation is as follows:
-      </p>
-      <ul className="mb-5">
-        <li>58.00% to Ray Network community members <span className="badge badge-token">235,568,624 XRAY</span></li>
-        <li>20.00% to investors with 3-year vesting <span className="badge badge-token">81,230,560 XRAY</span></li>
-        <li>14.00% to team members and future employees with 3-year vesting <span className="badge badge-token">56,681,392 XRAY</span></li>
-        <li>8.00% founders and advisors <span className="badge badge-token">32,492,224 XRAY</span></li>
-      </ul>
       <div className="row">
         <div className="col-12 col-sm-6">
-          <h5 className="mb-1">
-            <strong>Stake Delegators <span className="text-shade">25%</span></strong>
-          </h5>
-          <div className={`${style.supply} mb-4 pb-2`}>
-            <strong className="bolder">101,538,200 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+          <div className="ray__left">
+            <h5 className="mb-1">
+              <strong>Stake Delegators <span className="text-shade">25%</span></strong>
+            </h5>
+            <div className={`${style.supply} mb-5`}>
+              <strong className="bolder">101,538,200 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+            </div>
           </div>
-          <h5 className="mb-1">
-            <strong>Liquidity Providers <span className="text-shade">33%</span></strong>
-          </h5>
-          <div className={`${style.supply} mb-4 pb-2`}>
-            <strong className="bolder">134,030,424 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+          <div className="ray__left">
+            <h5 className="mb-1">
+              <strong>Liquidity Providers <span className="text-shade">33%</span></strong>
+            </h5>
+            <div className={`${style.supply} mb-5`}>
+              <strong className="bolder">134,030,424 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+            </div>
           </div>
-          <h5 className="mb-1">
-            <strong>Investors Round <span className="text-shade">20%</span></strong>
-          </h5>
-          <div className={`${style.supply} mb-4 pb-2`}>
-            <strong className="bolder">81,230,560 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+          <div className="ray__left">
+            <h5 className="mb-1">
+              <strong>Investors Round <span className="text-shade">20%</span></strong>
+            </h5>
+            <div className={`${style.supply} mb-5`}>
+              <strong className="bolder">81,230,560 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+            </div>
           </div>
         </div>
         <div className="col-12 col-sm-6">
-          <h5 className="mb-1">
-            <strong>Development Fund <span className="text-shade">14%</span></strong>
-          </h5>
-          <div className={`${style.supply} mb-4 pb-2`}>
-            <strong className="bolder">56,861,392 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+          <div className="ray__left">
+            <h5 className="mb-1">
+              <strong>Development Fund <span className="text-shade">14%</span></strong>
+            </h5>
+            <div className={`${style.supply} mb-5`}>
+              <strong className="bolder">56,861,392 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+            </div>
           </div>
-          <h5 className="mb-1">
-            <strong>Founders <span className="text-shade">8%</span></strong>
-          </h5>
-          <div className={`${style.supply} mb-4 pb-2`}>
-            <strong className="bolder">32,492,224 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+          <div className="ray__left">
+            <h5 className="mb-1">
+              <strong>Founders <span className="text-shade">8%</span></strong>
+            </h5>
+            <div className={`${style.supply} mb-5`}>
+              <strong className="bolder">32,492,224 <sup><span className="ray__ticker">XRAY</span></sup></strong>
+            </div>
           </div>
         </div>
       </div>
@@ -162,7 +174,7 @@ const XrayTokenomics = () => {
           <Doughnut data={distributionData} options={chartOptions(total)} width={300} height={300} />
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

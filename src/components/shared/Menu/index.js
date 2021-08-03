@@ -28,6 +28,10 @@ const config = [
     url: '/',
   },
   {
+    title: 'XRAY Token',
+    url: '/xray-token/',
+  },
+  {
     title: 'Wallet',
     url: '/wallet/',
   },
@@ -64,30 +68,16 @@ const config = [
     url: '/tokens-list/',
   },
   {
-    title: 'Minterr.io',
-    url: 'https://minterr.io',
-    external: true,
-  },
-  {
-    title: 'CardanoWeb3.js',
-    url: 'https://github.com/ray-network/cardano-web3.js',
-    external: true,
-  },
-  {
-    title: 'XRAY Token',
-    url: '/xray-token/',
-  },
-  {
-    title: 'Roadmap & Updates',
-    url: '/roadmap/',
-  },
-  {
     title: 'Wiki',
     url: '/wiki/',
   },
   {
     title: 'About',
     url: '/about/',
+  },
+  {
+    title: 'Roadmap & Updates',
+    url: '/roadmap/',
   },
   // {
   //   title: 'Whitepaper',
@@ -99,6 +89,16 @@ const config = [
   //   url: '/audit/',
   //   disabled: true,
   // },
+  {
+    title: 'Minterr.io',
+    url: 'https://minterr.io',
+    external: true,
+  },
+  {
+    title: 'CardanoWeb3.js',
+    url: 'https://github.com/ray-network/cardano-web3.js',
+    external: true,
+  },
   {
     title: 'Community',
     submenu: [

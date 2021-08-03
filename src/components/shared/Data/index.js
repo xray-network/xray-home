@@ -34,7 +34,7 @@ const Data = () => {
           .
         </p>
       </div>
-      <div className={style.img}>
+      <div className={`${style.img} ray__left ray__left--gray`}>
         {theme === 'default' && <img src="/resources/images/scheme.png" alt="" className="img-fluid" />}
         {theme !== 'default' && <img src="/resources/images/scheme-dark.png" alt="" className="img-fluid" />}
       </div>

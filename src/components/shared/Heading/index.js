@@ -10,7 +10,7 @@ const Heading = ({ children, id }) => {
   const link = `${location.origin}${location.pathname}#${id}`
 
   return (
-    <h2 className={style.heading} id={id}>
+    <h2 className={`${style.heading} ray__left`} id={id}>
       {children}
       <CopyToClipboard
         text={link}

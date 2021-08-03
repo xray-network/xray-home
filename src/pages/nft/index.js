@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import Nft from "@/components/pages/NFT"
+import Nft from "@/components/shared/NFT"
 import Solutions from "@/components/shared/Solutions"
 import Community from "@/components/shared/Community"
 

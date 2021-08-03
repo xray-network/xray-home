@@ -29,7 +29,7 @@ const Nft = () => {
       <div className="mt-4 pt-3 mb-5">
         <span className="d-inline-block me-3 mb-2">
           <Button
-            className="ray__btn ray__btn--primary ray__btn--round"
+            className="ray__btn ray__btn--round"
             href="https://app.raywallet.io/#/nft"
             rel="noopener noreferrer"
             target="_blank"

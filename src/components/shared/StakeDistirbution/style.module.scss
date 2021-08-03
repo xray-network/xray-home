@@ -8,16 +8,7 @@
 
 .item {
   position: relative;
-  margin-bottom: rem(10);
-  padding: rem(5) 0 rem(65) rem(90);
-
-  @media(max-width: 480px) {
-    padding-right: 0;
-  }
-
-  &:last-child {
-    padding-bottom: rem(10);
-  }
+  margin-bottom: rem(60);
 }
 
 .point {
@@ -26,9 +17,10 @@
   background: $dark;
   color: $pastel-1;
   border-radius: 80px;
-  position: absolute;
-  top: rem(2);
-  left: rem(-4);
+  // position: absolute;
+  // top: rem(2);
+  // left: rem(-4);
+  margin-right: rem(20);
   font-weight: 900;
   display: flex;
   align-items: center;
@@ -41,26 +33,8 @@
   }
 
   &Active {
-    background: $dark !important;
-    color: $pastel-1;
-  }
-}
-
-.line {
-  position: absolute;
-  left: rem(23);
-  top: rem(85);
-  bottom: rem(15);
-  width: rem(7);
-  background: $dark;
-  border-radius: 8px;
-
-  @media(max-width: 480px) {
-    display: none;
-  }
-  
-  &Active {
     background: $success !important;
+    color: $pastel-1;
   }
 }
 

@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import Graph from "@/components/pages/Graph"
+import Graph from "@/components/shared/Graph"
 import Solutions from "@/components/shared/Solutions"
 import Community from "@/components/shared/Community"
 

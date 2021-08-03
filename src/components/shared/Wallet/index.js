@@ -83,7 +83,7 @@ const Wallet = () => {
         <div className="mt-4 pt-3">
           <span className="d-inline-block me-3 mb-3">
             <Button
-              className="ray__btn ray__btn--primary ray__btn--round"
+              className="ray__btn ray__btn--round"
               href="https://raywallet.io"
               rel="noopener noreferrer"
               target="_blank"

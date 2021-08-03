@@ -1,9 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import XrayPromo from "@/components/pages/XrayPromo"
-import XrayIntroducing from "@/components/pages/XrayIntroducing"
-import XrayGovernance from "@/components/pages/XrayGovernance"
+import XrayPromo from "@/components/shared/XrayPromo"
+import XrayIntroducing from "@/components/shared/XrayIntroducing"
+import XrayGovernance from "@/components/shared/XrayGovernance"
 
 const Page = () => {
   return (

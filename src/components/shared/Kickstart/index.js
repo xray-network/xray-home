@@ -25,7 +25,7 @@ const Kickstart = () => {
       <div className="mt-4 pt-3">
         <span className="d-inline-block me-3 mb-2">
           <Button
-            className="ray__btn ray__btn--round ray__btn--primary"
+            className="ray__btn ray__btn--round"
             href="https://app.raywallet.io/#/nft"
             rel="noopener noreferrer"
             target="_blank"

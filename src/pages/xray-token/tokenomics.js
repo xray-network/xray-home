@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import XrayTokenomics from "@/components/pages/XrayTokenomics"
+import XrayTokenomics from "@/components/shared/XrayTokenomics"
 
 const Page = () => {
   return (

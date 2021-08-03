@@ -24,10 +24,11 @@
     margin-right: rem(10);
     background: $white;
     border-radius: 40px;
-    border: 1px solid $border;
+    // border: 1px solid $border;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 5px 20px -3px rgba(0,0,10,0.15);
   }
 }
 

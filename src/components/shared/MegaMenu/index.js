@@ -95,16 +95,18 @@ const MegaMenu = () => {
         <div className="ray__line" />
       </div>
       <div className="ray__block pt-5 mb-0">
-        <h1 data-aos="fade-down" data-aos-delay="0">
-          <strong>
-            Welcome to Ray Network, mate.{" "}
-            <span role="img" aria-label="">
-              👋
-            </span>
-            <br />
-            Our Cardano ecosystem is waiting for you!
-          </strong>
-        </h1>
+        <div className="ray__left" data-aos="fade-up" data-aos-delay="0">
+          <h1>
+            <strong>
+              Welcome to Ray Network, mate.{" "}
+              <span role="img" aria-label="">
+                👋
+              </span>
+              <br />
+              Our Cardano ecosystem is waiting for you!
+            </strong>
+          </h1>
+        </div>
         <div className="mb-5">
           <div className={style.footerTop}>
             <div className="row">
@@ -112,7 +114,7 @@ const MegaMenu = () => {
                 <div className={`${style.footerLists} row`}>
                   <div
                     className="col-6 col-sm-4"
-                    data-aos="fade-down"
+                    data-aos="fade-up"
                     data-aos-delay="200"
                   >
                     <div className="d-flex mb-4">
@@ -211,7 +213,7 @@ const MegaMenu = () => {
                   </div>
                   <div
                     className="col-6 col-sm-4"
-                    data-aos="fade-down"
+                    data-aos="fade-up"
                     data-aos-delay="400"
                   >
                     <div className="d-flex mb-4">
@@ -297,7 +299,7 @@ const MegaMenu = () => {
                   </div>
                   <div
                     className="col-12 col-sm-4"
-                    data-aos="fade-down"
+                    data-aos="fade-up"
                     data-aos-delay="600"
                   >
                     <div className="row">
@@ -399,7 +401,7 @@ const MegaMenu = () => {
               </div>
             </div>
           </div>
-          <div className="row" data-aos="fade-down" data-aos-delay="900">
+          <div className="row" data-aos="fade-up" data-aos-delay="900">
             <div className="col-12 col-md-6">
               <div className="row">
                 <div className="col-6 col-md-12">
