@@ -1,13 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-// import Promo from "@/components/shared/Promo"
+import StakeCalculator from "@/components/shared/StakeCalculator"
 
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="Stake Calculator" />
-      [stake/calculator]
+      <Helmet title="Cardano Staking Calculator" />
+      <StakeCalculator />
     </MainLayout>
   )
 }

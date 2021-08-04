@@ -19,17 +19,18 @@ const Cookies = () => {
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      setCookiesAnimation(true)
-    }, 2000)
+    if (!cookiesViewed) {
+      setTimeout(() => {
+        setCookiesAnimation(true)
+      }, 2000)
+    }
     // eslint-disable-next-line
   }, [])
 
   return (
     <div
-      className={`${style.cookies} ${cookiesViewed && "d-none"} ${
-        cookiesAnimation && style.cookiesAnimated
-      }`}
+      className={`${style.cookies} ${cookiesViewed && "d-none"} ${cookiesAnimation && style.cookiesAnimated
+        }`}
     >
       <h5 className="mb-3">
         <strong>

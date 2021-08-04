@@ -53,6 +53,7 @@ import SVGLink from "@/components/icons/link.svg"
 import SVGRocket from "@/components/icons/rocket.svg"
 import SVGDonutChart from "@/components/icons/donut_chart.svg"
 import SVGCheckCircled from "@/components/icons/check_circled.svg"
+import SVGFiles from "@/components/icons/files.svg"
 
 export {
   SVGMinterr,
@@ -110,4 +111,5 @@ export {
   SVGRocket,
   SVGDonutChart,
   SVGCheckCircled,
+  SVGFiles,
 }

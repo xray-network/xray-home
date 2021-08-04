@@ -29,10 +29,54 @@ const config = [
   {
     title: 'XRAY',
     url: '/xray/',
+    submenu: [
+      {
+        title: 'Introducing',
+        url: '/xray/',
+        icon: <SVGRocket />,
+      },
+      {
+        title: 'Distribution',
+        url: '/xray/distribution/',
+        icon: <SVGActivity />,
+      },
+      {
+        title: 'Tokenomics',
+        url: '/xray/tokenomics/',
+        icon: <SVGDonutChart />,
+      },
+      {
+        title: 'XDIAMOND',
+        url: '/xray/xdiamond/',
+        icon: <SVGDiamond />,
+      },
+    ],
   },
   {
     title: 'Stake',
     url: '/stake/',
+    submenu: [
+      {
+        title: 'Distribution',
+        url: '/stake/',
+        icon: <SVGActivity />,
+      },
+      {
+        title: 'Pools',
+        url: '/stake/pools/',
+        icon: <SVGZap />,
+      },
+      {
+        title: 'Calculator',
+        url: '/stake/calculator/',
+        icon: <SVGPercent />,
+      },
+      {
+        title: 'Track & Withdraw',
+        url: '/stake/track/',
+        icon: <SVGBarChart />,
+      },
+    ],
   },
   {
     title: 'Wallet',
@@ -313,20 +357,35 @@ const Menu = () => {
                 {item.submenu && (
                   <div className={style.mContainer}>
                     <div className={style.mInner}>
-                      {item.submenu.map((item, index) => {
+                      {item.submenu.map((subItem, subIndex) => {
                         return (
-                          <a
-                            key={index}
-                            href={item.url}
-                            className={style.mItem}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                          >
-                            <div className={style.mTitle}>
-                              <span className="ray__icon ray__icon--inline me-2">{item.icon}</span>
-                              <span>{item.title}</span>
-                            </div>
-                          </a>
+                          <span key={subIndex}>
+                            {subItem.external && (
+                              <a
+                                href={subItem.url}
+                                className={style.mItem}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                              >
+                                <div className={style.mTitle}>
+                                  <span className="ray__icon ray__icon--inline me-2">{subItem.icon}</span>
+                                  <span>{subItem.title}</span>
+                                </div>
+                              </a>
+                            )}
+                            {!subItem.external && (
+                              <Link
+                                to={subItem.url}
+                                className={style.mItem}
+                              >
+                                <div className={style.mTitle}>
+                                  <span className="ray__icon ray__icon--inline me-2">{subItem.icon}</span>
+                                  {subItem.url === location.pathname && (<strong>{subItem.title}</strong>)}
+                                  {subItem.url !== location.pathname && (<span>{subItem.title}</span>)}
+                                </div>
+                              </Link>
+                            )}
+                          </span>
                         )
                       })}
                     </div>

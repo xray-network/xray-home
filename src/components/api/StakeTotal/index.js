@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import { Line } from 'react-chartjs-2'
 import { format } from "@/utils"
 
-const StakeTotal = () => {
+const StakeTotal = ({ callback = () => { } }) => {
   const theme = useSelector((state) => state.settings.theme)
   const isLight = theme === 'default'
   const [rewards, setRewards] = useState({
@@ -20,12 +20,13 @@ const StakeTotal = () => {
       .then((response) => response.json())
       .then((data) => {
         setRewards(data)
+        callback(data)
       })
   }
 
   useEffect(() => {
     fetchData()
-    // eslint-disable-nextline
+    // eslint-disable-next-line
   }, [])
 
   const chartData = {
@@ -116,23 +117,23 @@ const StakeTotal = () => {
     <div>
       <div className="row mb-4">
         <div className="col-6 col-sm-4 mb-4">
-          <div className="ray__left ray__left--gray">
+          <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
-              {format(rewards.totalAccrued)} <span className="ray__ticker">ADA</span>
+              {format(rewards.totalAccrued)} <span className="ray__ticker">XRAY</span>
             </div>
             <div>Total Distributed</div>
           </div>
         </div>
         <div className="col-6 col-sm-4 mb-4">
-          <div className="ray__left ray__left--gray">
+          <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
-              {format(rewards.totalUndelivered)} <span className="ray__ticker">ADA</span>
+              {format(rewards.totalUndelivered)} <span className="ray__ticker">XRAY</span>
             </div>
             <div>Undelivered</div>
           </div>
         </div>
         <div className="col-6 col-sm-4 mb-4">
-          <div className="ray__left ray__left--gray">
+          <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
               {format(rewards.currentEpoch)}
             </div>

@@ -6,6 +6,7 @@ import {
   SVGChrome,
   SVGCategory,
   SVGAndroid,
+  SVGShieldCheck,
 
   SVGZap,
   SVGApple,
@@ -19,12 +20,24 @@ import * as style from "./style.module.scss"
 
 const items = [
   {
-    icon: <SVGZap />,
-    title: 'Multi Asset Wallet',
+    icon: <SVGInternet />,
+    title: 'Web Version',
+  },
+  {
+    icon: <SVGChrome />,
+    title: 'Chrome Extension',
+  },
+  {
+    icon: <SVGCategory />,
+    title: 'Desktop Apps',
   },
   {
     icon: <SVGApple />,
     title: 'Mobile Apps',
+  },
+  {
+    icon: <SVGZap />,
+    title: 'Multi Assets Wallet',
   },
   {
     icon: <SVGBank />,
@@ -47,8 +60,12 @@ const items = [
     title: 'NFT Marketplace',
   },
   {
-    icon: <SVGZap />,
-    title: 'Hardware Wallets',
+    icon: <SVGShieldCheck />,
+    title: 'Hardware Wallets Support',
+  },
+  {
+    icon: <SVGInternet />,
+    title: 'Web3 Connector',
   },
 ]
 

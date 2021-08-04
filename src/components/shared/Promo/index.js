@@ -25,7 +25,7 @@ const Promo = () => {
             It's all about ADA DeFi finances in one place!
           </p>
           <p className="mb-5">
-            Stake ADA with Ray and get <strong>~5% ROI</strong> with extra rewards each epoch{' '}
+            Stake ADA in Ray pools and get <strong>~5% ROI</strong> with extra rewards each epoch{' '}
             <strong className="ray__ticker">1 XRAY</strong> per each <strong className="ray__ticker">50 ADA</strong> staked.
           </p>
         </div>

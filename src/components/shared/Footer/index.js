@@ -52,6 +52,14 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
+                        <a
+                          href="https://rraayy.com/rewards/"
+                          className="text-muted"
+                        >
+                          Ray Rewards
+                        </a>
+                      </li>
+                      <li>
                         <a href="https://rraayy.com/swap/" className="text-muted">
                           Ray Swap
                         </a>
