@@ -9,13 +9,12 @@ import {
   SVGMoon,
   SVGCardano,
 
-  SVGShieldCheck,
-  SVGZap,
-  SVGRocket,
-  SVGDonutChart,
-  SVGCheckCircled,
-  SVGActivity,
+  SVGBarChart,
   SVGDiamond,
+  SVGRocket,
+  SVGZap,
+  SVGDonutChart,
+  SVGActivity,
   SVGPercent,
 
   SVGLink,
@@ -28,20 +27,16 @@ const config = [
     url: '/',
   },
   {
-    title: 'XRAY Token',
-    url: '/xray-token/',
-  },
-  {
-    title: 'Wallet',
-    url: '/wallet/',
+    title: 'XRAY',
+    url: '/xray/',
   },
   {
     title: 'Stake',
     url: '/stake/',
   },
   {
-    title: 'Rewards',
-    url: '/rewards/',
+    title: 'Wallet',
+    url: '/wallet/',
   },
   {
     title: 'Swap',
@@ -151,7 +146,7 @@ const stake = [
   {
     title: 'Distribution',
     url: '/stake/',
-    icon: <SVGRocket />,
+    icon: <SVGActivity />,
   },
   {
     title: 'Pools',
@@ -166,38 +161,30 @@ const stake = [
   {
     title: 'Track & Withdraw',
     url: '/stake/track/',
-    icon: <SVGActivity />,
-  },
-]
-
-const rewards = [
-  {
-    title: 'Activities',
-    url: '/rewards/',
-    icon: <SVGCheckCircled />,
-  },
-  {
-    title: 'X Diamond',
-    url: '/rewards/xdiamond/',
-    icon: <SVGDiamond />,
+    icon: <SVGBarChart />,
   },
 ]
 
 const xray = [
   {
     title: 'Introducing',
-    url: '/xray-token/',
-    icon: <SVGShieldCheck />,
-  },
-  {
-    title: 'Distribution',
-    url: '/xray-token/distribution/',
+    url: '/xray/',
     icon: <SVGRocket />,
   },
   {
+    title: 'Distribution',
+    url: '/xray/distribution/',
+    icon: <SVGActivity />,
+  },
+  {
     title: 'Tokenomics',
-    url: '/xray-token/tokenomics/',
+    url: '/xray/tokenomics/',
     icon: <SVGDonutChart />,
+  },
+  {
+    title: 'XDIAMOND',
+    url: '/xray/xdiamond/',
+    icon: <SVGDiamond />,
   },
 ]
 
@@ -245,8 +232,7 @@ const Menu = () => {
   }
 
   const isStake = location.pathname.includes('/stake/')
-  const isRewards = location.pathname.includes('/rewards/')
-  const isXray = location.pathname.includes('/xray-token/')
+  const isXray = location.pathname.includes('/xray/')
 
   return (
     <div>
@@ -370,7 +356,6 @@ const Menu = () => {
       <div className="ray__line mt-3 mb-4" />
       <div className="ray__block mb-5">
         {isStake && submenu(stake)}
-        {isRewards && submenu(rewards)}
         {isXray && submenu(xray)}
       </div>
     </div>

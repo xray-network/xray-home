@@ -8,7 +8,7 @@ const Page = () => {
     <LayoutWiki>
       <Helmet title="Cardano Wiki" />
       <Heading id="cardano">
-        <strong>Cardano</strong>
+        <strong>Cardano Wiki</strong>
       </Heading>
 
       <h5><strong>What is the Cardano?</strong></h5>

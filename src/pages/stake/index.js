@@ -1,13 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-// import Promo from "@/components/shared/Promo"
+import StakeDistribution from "@/components/shared/StakeDistribution"
 
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="" />
-      [stake]
+      <Helmet title="Stake Distribution" />
+      <StakeDistribution />
     </MainLayout>
   )
 }

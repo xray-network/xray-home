@@ -1,6 +1,25 @@
 @import "@/styles/mixins";
 
 .ray {
+  &__card {
+    padding: rem(20) rem(25);
+    background: $white;
+    border: 1px solid $border;
+    border-radius: 8px;
+    line-height: 1;
+
+    &__value {
+      font-size: rem(21);
+      font-weight: bold;
+    }
+
+    .ray__ticker {
+      font-size: rem(18);
+      position: relative;
+      top: rem(-5);
+    }
+  }
+
   &__left {
     padding-left: rem(50);
     position: relative;
@@ -321,22 +340,22 @@
         font-size: rem(54);
       }
     
-      background: linear-gradient(45deg, $blue 20%, $black 20%, $black 80%, $blue 80%);
-      background-size: 200% auto;
-      background-position: -145%;
+      // background: linear-gradient(45deg, $blue 20%, $black 20%, $black 80%, $blue 80%);
+      // background-size: 200% auto;
+      // background-position: -145%;
     
-      background-clip: text;
-      text-fill-color: transparent;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background-clip: text;
+      // text-fill-color: transparent;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
     
-      animation: shine 1s linear;
-      animation-iteration-count: 1;
-      @keyframes shine {
-        to {
-          background-position: -335% center;
-        }
-      }
+      // animation: shine 1s linear;
+      // animation-iteration-count: 1;
+      // @keyframes shine {
+      //   to {
+      //     background-position: -335% center;
+      //   }
+      // }
     }
 
     &__cardano {
@@ -387,6 +406,12 @@
   }
 
   .ray {
+    &__card {
+      color: $white;
+      background: transparent;
+      border: 1px solid $dark-border;
+    }
+
     &__left {
       &--gray {
         &:before {
@@ -474,25 +499,25 @@
       }
     }
 
-    &__promo {
-      &__text {
-        background: linear-gradient(45deg, $blue 20%, $white 20%, $white 80%, $blue 80%);
-        background-size: 200% auto;
-        background-position: -145%;
+    // &__promo {
+    //   &__text {
+    //     background: linear-gradient(45deg, $blue 20%, $white 20%, $white 80%, $blue 80%);
+    //     background-size: 200% auto;
+    //     background-position: -145%;
     
-        background-clip: text;
-        text-fill-color: transparent;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    //     background-clip: text;
+    //     text-fill-color: transparent;
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;
     
-        animation: shine 1s linear;
-        animation-iteration-count: 1;
-        @keyframes shine {
-          to {
-            background-position: -335% center;
-          }
-        }
-      }
-    }
+    //     animation: shine 1s linear;
+    //     animation-iteration-count: 1;
+    //     @keyframes shine {
+    //       to {
+    //         background-position: -335% center;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }

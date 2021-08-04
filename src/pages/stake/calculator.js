@@ -6,7 +6,7 @@ import MainLayout from "@/layouts/Main"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="Ray Stake" />
+      <Helmet title="Stake Calculator" />
       [stake/calculator]
     </MainLayout>
   )

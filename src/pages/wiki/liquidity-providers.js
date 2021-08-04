@@ -8,7 +8,7 @@ const Page = () => {
     <LayoutWiki>
       <Helmet title="Liquidity Providers Wiki" />
       <Heading id="liquidity-provider">
-        <strong>Liquidity Providers</strong>
+        <strong>Liquidity Providers Wiki</strong>
       </Heading>
 
       <h5><strong>What is the Liquidity Providers program?</strong></h5>

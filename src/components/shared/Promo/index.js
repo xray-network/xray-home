@@ -9,7 +9,7 @@ const Promo = () => {
       <div className="ray__promo">
         <h1 className="ray__promo__text" data-aos="fade-up" data-aos-delay="0">
           Hello, we're Ray Network!
-          We build an advanced ecosystem{' '}
+          An advanced DeFi ecosystem{' '}
           <span className="text-nowrap">
             for {' '}
             <span className="ray__promo__cardano">
@@ -30,17 +30,17 @@ const Promo = () => {
           </p>
         </div>
         <div data-aos="fade-up" data-aos-delay="600">
-          <Link to="/rewards/" className="ray__btn ray__btn--round me-3 mb-3">
-            Rewards
+          <Link to="/xray/distribution/" className="ray__btn ray__btn--round me-3 mb-3">
+            XRAY Fair Launch
+          </Link>
+          <Link to="/xray/xdiamond/" className="ray__btn ray__btn--round me-3 mb-3">
+            XDIAMOND
           </Link>
           <Link to="/stake/calculator/" className="ray__btn ray__btn--round me-3 mb-3">
-            Staking Calculator
+            Stake Calculator
           </Link>
           <Link to="/stake/pools/" className="ray__btn ray__btn--round me-3 mb-3">
-            Staking Pools
-          </Link>
-          <Link to="/xray-token/" className="ray__btn ray__btn--round me-3 mb-3">
-            XRAY Token
+            Stake Pools
           </Link>
         </div>
       </div>

@@ -6,8 +6,8 @@ import MainLayout from "@/layouts/Main"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="" />
-      [stake/track]
+      <Helmet title="Track / Withdraw Delegators XRAY Rewards" />
+      [stake/pools]
     </MainLayout>
   )
 }

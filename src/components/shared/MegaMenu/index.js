@@ -98,7 +98,7 @@ const MegaMenu = () => {
         <div className="ray__left" data-aos="fade-up" data-aos-delay="0">
           <h1>
             <strong>
-              Welcome to Ray Network, mate.{" "}
+              Welcome to Ray Network!{" "}
               <span role="img" aria-label="">
                 👋
               </span>
@@ -138,14 +138,6 @@ const MegaMenu = () => {
                           className="text-muted"
                         >
                           Ray Stake
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://rraayy.com/rewards/"
-                          className="text-muted"
-                        >
-                          Ray Rewards
                         </a>
                       </li>
                       <li>
@@ -225,10 +217,18 @@ const MegaMenu = () => {
                     <ul className="list-unstyled mb-5">
                       <li>
                         <a
-                          href="https://rraayy.com/xray-token/"
+                          href="https://rraayy.com/xray/"
                           className="text-muted"
                         >
                           XRAY Token
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://rraayy.com/xray/"
+                          className="text-muted"
+                        >
+                          XDIAMOND
                         </a>
                       </li>
                       <li>
@@ -354,22 +354,6 @@ const MegaMenu = () => {
                         </ul>
                       </div>
                       <div className="col-6 col-sm-12">
-                        <div className="d-flex mb-4">
-                          <span className="ray__icon me-2 mb-1 mb-sm-0">
-                            <SVGTwitter />
-                          </span>
-                          <h6 className="mb-0"><strong>Ray Wallet</strong></h6>
-                        </div>
-                        <ul className="list-unstyled mb-5">
-                          <li>
-                            <a
-                              href="https://twitter.com/RayWallet"
-                              className="text-muted"
-                            >
-                              Twitter
-                            </a>
-                          </li>
-                        </ul>
                         <div className="d-flex mb-4">
                           <span className="ray__icon me-2 mb-1 mb-sm-0">
                             <SVGTwitter />

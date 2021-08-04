@@ -1,121 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Button, Popover } from "antd"
 import { Link } from "gatsby"
-import { useSelector } from "react-redux"
-import { Line } from 'react-chartjs-2'
-import { format } from "@/utils"
 import Heading from "@/components/shared/Heading"
+import StakeTotal from "@/components/api/StakeTotal"
 import * as style from "./style.module.scss"
 
 const XrayDistribution = () => {
-  const theme = useSelector((state) => state.settings.theme)
-  const isLight = theme === 'default'
-  const [rewards, setRewards] = useState({
-    currentEpoch: 0,
-    distributed: [],
-    totalAccrued: 0,
-    totalUndelivered: 0,
-  })
-  const { distributed } = rewards
-
-  const fetchData = () => {
-    // fetch(`http://localhost:8080/rewards/delegation/state/`)
-    fetch(`https://api-mainnet-helper.rraayy.com/rewards/delegation/state/`)
-      .then((response) => response.json())
-      .then((data) => {
-        setRewards(data)
-      })
-  }
-
-  useEffect(() => {
-    fetchData()
-    // eslint-disable-nextline
-  }, [])
-
-  const chartData = {
-    labels: distributed.map(epoch => epoch.epoch),
-    datasets: [
-      {
-        type: 'line',
-        label: 'Max Rewards',
-        data: distributed.map(epoch => epoch.maxRewards),
-        fill: true,
-        radius: 0,
-        backgroundColor: [
-          'rgba(54, 162, 235, 0.1)',
-        ],
-        hoverBackgroundColor: [
-          '#355aeb',
-        ],
-        borderColor: [
-          '#355aeb',
-        ],
-        postfix: 'XRAY',
-      },
-      {
-        type: 'bar',
-        label: 'Epoch Rewards Distributed',
-        data: distributed.map(epoch => epoch.xray),
-        fill: true,
-        stepped: 'before',
-        radius: 0,
-        backgroundColor: [
-          '#355aeb',
-        ],
-        hoverBackgroundColor: [
-          '#355aeb',
-        ],
-        borderColor: [
-          '#355aeb',
-        ],
-        postfix: 'XRAY',
-      },
-    ]
-  }
-
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    interaction: {
-      intersect: false,
-      axis: 'x'
-    },
-    scales: {
-      x: {
-        grid: {
-          color: isLight ? '#e4e9f0' : '#232236',
-        },
-        ticks: {
-          autoSkip: true,
-          color: isLight ? '#8484AD' : '#4f4f7a',
-        }
-      },
-      y: {
-        grid: {
-          color: isLight ? '#e4e9f0' : '#232236',
-        },
-        ticks: {
-          color: isLight ? '#8484AD' : '#4f4f7a',
-        }
-      },
-    },
-    plugins: {
-      tooltip: {
-        callbacks: {
-          title: (tooltipItem) => `Epoch ${tooltipItem[0].label} (for Epoch ${parseInt(tooltipItem[0].label) - 2})`,
-          label: (tooltipItem) => {
-            const { datasetIndex } = tooltipItem
-            const ds = chartData.datasets[datasetIndex]
-            const arr = []
-            arr.push(`${ds.label}: ${ds.data[tooltipItem.dataIndex]} ${ds.postfix}`)
-            datasetIndex === 1 && arr.push(`ADA per 1 XRAY: ${distributed[tooltipItem.dataIndex].rate / 1000000} ADA`)
-            return arr
-          },
-        }
-      }
-    }
-  }
-
   return (
     <div className="ray__block">
       <Heading id="activities">
@@ -124,7 +14,7 @@ const XrayDistribution = () => {
       <p className="mb-5">
         XRAY tokens are delivered to the community through a fair launch. A total of 58-78% of all tokens will be distributed (depending on how many tokens will be redeemed at Investors Round).
       </p>
-      <div className="ray__left ray__left--dark">
+      <div className={style.itemOuter}>
         <div className={style.item}>
           <div className="mb-3 d-flex">
             <div>
@@ -207,25 +97,14 @@ const XrayDistribution = () => {
               </li>
               <li>All unrealized tokens will be burned in Epoch 505</li>
             </ul>
-            <p className="mb-3">
-              <strong className="text-active">
-                Current Epoch: {rewards.currentEpoch};{' '}
-                Total Accrued: {format(rewards.totalAccrued)}{' '}
-                <span className="ray__ticker">XRAY</span>;{' '}
-                Undelivered: {format(rewards.totalUndelivered)}{' '}
-                <span className="ray__ticker">XRAY</span>
-              </strong>
-            </p>
-            <div className="mb-5">
-              <Line data={chartData} options={options} height={300} />
-            </div>
+            <StakeTotal />
             <div className={style.controls}>
               <div className="me-4">
                 <a href="https://app.raywallet.io/#/stake" target="_blank" rel="noopener noreferrer" className="ray__btn ray__btn--round">Delegate ADA</a>
               </div>
               <div className="align-self-center">
                 <Link to="/stake/track/">
-                  Check / Withdraw Rewards
+                  Track / Withdraw Rewards
                 </Link>
               </div>
             </div>
@@ -262,7 +141,6 @@ const XrayDistribution = () => {
           </div>
         </div>
       </div>
-
       <div className="ray__left ray__left--dark">
         <div className={style.item}>
           <div className={style.line} />

@@ -6,7 +6,7 @@ import MainLayout from "@/layouts/Main"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="Ray Rewards" />
+      <Helmet title="XDIAMOND" />
       [rewards]
     </MainLayout>
   )

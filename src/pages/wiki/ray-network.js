@@ -8,7 +8,7 @@ const Page = () => {
     <LayoutWiki>
       <Helmet title="Ray Network Wiki" />
       <Heading id="ray-network">
-        <strong>Ray Network</strong>
+        <strong>Ray Network Wiki</strong>
       </Heading>
 
       <h5><strong>What is the Ray Network?</strong></h5>

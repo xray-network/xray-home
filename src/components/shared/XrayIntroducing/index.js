@@ -13,9 +13,7 @@ const XrayIntroducing = () => {
         <strong>What is Ray Network and XRAY token?</strong>
       </h5>
       <p>
-        <a href="https://rraayy.com" target="_blank" rel="noopener noreferrer">Ray Network</a> is an advanced ecosystem for the <a href="https://cardano.org" target="_blank" rel="noopener noreferrer">Cardano</a> blockchain platform. Our goal is to create the best multifunctional (DeFi) wallet for Cardano.
-      </p>
-      <p>
+        <a href="https://rraayy.com" target="_blank" rel="noopener noreferrer">Ray Network</a> is an advanced ecosystem for the <a href="https://cardano.org" target="_blank" rel="noopener noreferrer">Cardano</a> blockchain platform. Our goal is to create the best multifunctional DeFi ecosystem for Cardano blockchain.{' '}
         XRAY is a governance token that powers Ray Network ecosystem. This is well positioned for community-led growth, development, and self-sustainability token.
       </p>
       <p className="mb-5">
@@ -35,9 +33,7 @@ const XrayIntroducing = () => {
         <strong>Development team</strong>
       </h5>
       <p>
-        We are a JavaScript-oriented company located in Kiev, Ukraine.
-      </p>
-      <p>
+        We are a JavaScript-oriented company located in Kiev, Ukraine.{' '}
         We provide full circle integrations of different web systems for clients from all over the world based on our framework - <a href="https://visualbuilder.cloud" target="_blank" rel="noopener noreferrer">Visual Builder</a>. Since 2017 we have successfully implemented several cryptocurrency projects for our clients, and in 2021 we are ready and able to build own ecosystem.
       </p>
       <p className="mb-5">

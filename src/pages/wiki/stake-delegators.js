@@ -9,7 +9,7 @@ const Page = () => {
     <LayoutWiki>
       <Helmet title="Stake Delegators Wiki" />
       <Heading id="stake-delegators">
-        <strong>Stake Delegators</strong>
+        <strong>Stake Delegators Wiki</strong>
       </Heading>
 
       <h5><strong>What is the Stake Delegators program?</strong></h5>
@@ -56,7 +56,7 @@ const Page = () => {
 
       <div className="ray__line mb-4" />
       <h5><strong>Where can I see the distribution rules?</strong></h5>
-      <p>Visit the token distribution page <Link to="/xray-token/distribution/">XRAY Token &rarr; Distribution</Link>.</p>
+      <p>Visit the token distribution page <Link to="/xray/distribution/">XRAY &rarr; Distribution</Link>.</p>
 
       <div className="ray__line mb-4" />
       <h5><strong>Why should I send 2 ADA's to a special address?</strong></h5>

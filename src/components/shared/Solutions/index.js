@@ -8,7 +8,7 @@ const items = [
   {
     title: 'XRAY Token',
     descr: 'Ray Network governance & payment token',
-    url: '/xray-token/',
+    url: '/xray/',
   },
   {
     title: 'Ray Wallet',

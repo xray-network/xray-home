@@ -97,7 +97,7 @@ const XrayTokenomics = () => {
       <Heading id="tokenomics">
         <strong>XRAY</strong> tokenomics
       </Heading>
-      <div className="ray__left">
+      <div className="ray__left ray__left--dark">
         <h5 className="mb-0">
           <strong>Circulating Supply (Max Supply 406,152,800 <span className="ray__ticker">XRAY</span>)</strong>
         </h5>
@@ -116,7 +116,7 @@ const XrayTokenomics = () => {
       </div>
       <div className="row">
         <div className="col-12 col-sm-6">
-          <div className="ray__left">
+          <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>Stake Delegators <span className="text-shade">25%</span></strong>
             </h5>
@@ -124,7 +124,7 @@ const XrayTokenomics = () => {
               <strong className="bolder">101,538,200 <sup><span className="ray__ticker">XRAY</span></sup></strong>
             </div>
           </div>
-          <div className="ray__left">
+          <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>Liquidity Providers <span className="text-shade">33%</span></strong>
             </h5>
@@ -132,7 +132,7 @@ const XrayTokenomics = () => {
               <strong className="bolder">134,030,424 <sup><span className="ray__ticker">XRAY</span></sup></strong>
             </div>
           </div>
-          <div className="ray__left">
+          <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>Investors Round <span className="text-shade">20%</span></strong>
             </h5>
@@ -142,7 +142,7 @@ const XrayTokenomics = () => {
           </div>
         </div>
         <div className="col-12 col-sm-6">
-          <div className="ray__left">
+          <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>Development Fund <span className="text-shade">14%</span></strong>
             </h5>
@@ -150,7 +150,7 @@ const XrayTokenomics = () => {
               <strong className="bolder">56,861,392 <sup><span className="ray__ticker">XRAY</span></sup></strong>
             </div>
           </div>
-          <div className="ray__left">
+          <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>Founders <span className="text-shade">8%</span></strong>
             </h5>
@@ -167,14 +167,14 @@ const XrayTokenomics = () => {
           </h5>
           <div className="mb-3">
             Looking for distribution information?{' '}
-            <Link to="/xray-token/distribution/">Read here.</Link>
+            <Link to="/xray/distribution/">Read here.</Link>
           </div>
         </div>
         <div>
           <Doughnut data={distributionData} options={chartOptions(total)} width={300} height={300} />
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 
