@@ -38,7 +38,7 @@ const XrayPromo = () => {
             Tokenomics
           </Link>
           <Link
-            to="/xray/tokenomics/"
+            to="/xray/xdiamond/"
             className="ray__btn ray__btn--round me-3 mb-3"
           >
             XDIAMOND

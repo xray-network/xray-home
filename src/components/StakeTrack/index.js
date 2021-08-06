@@ -31,7 +31,7 @@ const columns = [
   },
 ]
 
-const StakeTrack = ({ callback = () => {} }) => {
+const StakeTrack = ({ callback = () => { } }) => {
   const theme = useSelector((state) => state.settings.theme)
   const networkEpochStartedAt = useSelector(
     (state) => state.settings.networkEpochStartedAt
@@ -199,8 +199,7 @@ const StakeTrack = ({ callback = () => {} }) => {
       tooltip: {
         callbacks: {
           title: (tooltipItem) =>
-            `Epoch ${tooltipItem[0].label} (for Epoch ${
-              parseInt(tooltipItem[0].label) - 2
+            `Epoch ${tooltipItem[0].label} (for Epoch ${parseInt(tooltipItem[0].label) - 2
             })`,
           label: (tooltipItem) =>
             chartData.datasets.map(
@@ -226,9 +225,8 @@ const StakeTrack = ({ callback = () => {} }) => {
             return (
               <span
                 key={index}
-                className={`${style.stakeLink} ${
-                  !showAdd && address === key && style.stakeLinkActive
-                }`}
+                className={`${style.stakeLink} ${!showAdd && address === key && style.stakeLinkActive
+                  }`}
                 onClick={() => setAndFetch(key)}
                 onKeyPress={() => setAndFetch(key)}
                 role="button"
@@ -263,7 +261,7 @@ const StakeTrack = ({ callback = () => {} }) => {
           <div className="mb-5">
             <Input
               value={findAddress}
-              placeholder="addr1..."
+              placeholder="addr1... or stake1..."
               size="large"
               onChange={(e) => setFindAddress(e.target.value)}
             />
