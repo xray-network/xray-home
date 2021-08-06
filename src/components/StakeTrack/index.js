@@ -86,11 +86,12 @@ const StakeTrack = ({ callback = () => { } }) => {
       setKeys([])
     } else {
       const index = keys.indexOf(key)
-      const newKeys = [...keys].splice(index, 1)
-      console.log(newKeys)
+      const newKeys = [...keys]
+      newKeys.splice(index, 1)
+      console.log('newKeys', newKeys)
       setKeys(newKeys)
       store.set("RAY.track.keys", newKeys)
-      setAndFetch(keys[0])
+      setAndFetch(newKeys[0])
     }
   }
 
@@ -219,193 +220,201 @@ const StakeTrack = ({ callback = () => { } }) => {
 
   return (
     <div className="ray__block">
-      {keysNotEmpty && (
-        <div className="mb-5 text-wrap">
-          {keys.map((key, index) => {
-            return (
+      <div>
+        {keysNotEmpty && (
+          <div className="mb-5 text-wrap">
+            {keys.map((key, index) => {
+              return (
+                <span
+                  key={index}
+                  className={`${style.stakeLink} ${!showAdd && address === key && style.stakeLinkActive
+                    }`}
+                  onClick={() => setAndFetch(key)}
+                  onKeyPress={() => setAndFetch(key)}
+                  role="button"
+                  tabIndex="0"
+                >
+                  {truncate(key)}{" "}
+                </span>
+              )
+            })}
+            <span
+              className={`${style.stakeLink} ${showAdd && style.stakeLinkActive}`}
+              onClick={() => setShowAdd(true)}
+              onKeyPress={() => setShowAdd(true)}
+              role="button"
+              tabIndex="0"
+            >
+              <span className="ray__icon ray__icon--inline ray__icon--14">
+                <SVGAdd />
+              </span>
+            </span>
+          </div>
+        )}
+      </div>
+      <div>
+        {(!keysNotEmpty || showAdd) && (
+          <div className={style.addWallet}>
+            <h3 className="mb-5">
+              <strong>Add Rewards Tracking</strong>
+            </h3>
+            <p className="mb-4">
+              Enter your any used wallet address (addr1…) or stake key (stake1…)
+              below
+            </p>
+            <div className="mb-5">
+              <Input
+                value={findAddress}
+                placeholder="addr1... or stake1..."
+                size="large"
+                onChange={(e) => setFindAddress(e.target.value)}
+              />
+            </div>
+            <div>
+              <Button
+                className="ray__btn ray__btn--round"
+                onClick={lookupAddress}
+              >
+                <span className="me-2">Add Wallet</span>
+                <span className="ray__icon">
+                  <SVGAdd />
+                </span>
+              </Button>
+            </div>
+          </div>
+        )}
+      </div>
+      <div>
+        {(keysNotEmpty && !showAdd) && (
+          <div>
+            <div>
               <span
-                key={index}
-                className={`${style.stakeLink} ${!showAdd && address === key && style.stakeLinkActive
-                  }`}
-                onClick={() => setAndFetch(key)}
-                onKeyPress={() => setAndFetch(key)}
+                className="link ms-4 float-end"
+                onClick={() => removeItem(address)}
+                onKeyPress={() => removeItem(address)}
                 role="button"
                 tabIndex="0"
               >
-                {truncate(key)}{" "}
+                <span className="me-1">Remove</span>
+                <span className="ray__icon ray__icon--inline ray__icon--14">
+                  <SVGClose />
+                </span>
               </span>
-            )
-          })}
-          <span
-            className={`${style.stakeLink} ${showAdd && style.stakeLinkActive}`}
-            onClick={() => setShowAdd(true)}
-            onKeyPress={() => setShowAdd(true)}
-            role="button"
-            tabIndex="0"
-          >
-            <span className="ray__icon ray__icon--inline ray__icon--14">
-              <SVGAdd />
-            </span>
-          </span>
-        </div>
-      )}
-      {(!keysNotEmpty || showAdd) && (
-        <div className={style.addWallet}>
-          <h3 className="mb-5">
-            <strong>Add Rewards Tracking</strong>
-          </h3>
-          <p className="mb-4">
-            Enter your any used wallet address (addr1…) or stake key (stake1…)
-            below
-          </p>
-          <div className="mb-5">
-            <Input
-              value={findAddress}
-              placeholder="addr1... or stake1..."
-              size="large"
-              onChange={(e) => setFindAddress(e.target.value)}
-            />
-          </div>
-          <div>
-            <Button
-              className="ray__btn ray__btn--round"
-              onClick={lookupAddress}
-            >
-              <span className="me-2">Add Wallet</span>
-              <span className="ray__icon">
-                <SVGAdd />
-              </span>
-            </Button>
-          </div>
-        </div>
-      )}
-      <div className={!(keysNotEmpty && !showAdd) ? "d-none" : ""}>
-        <div>
-          <span
-            className="link ms-4 float-end"
-            onClick={() => removeItem(address)}
-            onKeyPress={() => removeItem(address)}
-            role="button"
-            tabIndex="0"
-          >
-            <span className="me-1">Remove</span>
-            <span className="ray__icon ray__icon--inline ray__icon--14">
-              <SVGClose />
-            </span>
-          </span>
-          <h5 className="mb-4 pb-2 text-break">
-            <strong>{address}</strong>
-          </h5>
-        </div>
-        {!rewards.rewardsHistory?.length && rewards.found && (
-          <div className="mb-5">
-            <Alert
-              type="warning"
-              showIcon
-              message="Stake is not matured"
-              description="You should wait 2 epochs after delegation to receive your XRAY rewards"
-            />
+              <h5 className="mb-4 pb-2 text-break">
+                <strong>{address}</strong>
+              </h5>
+            </div>
+            {!rewards.rewardsHistory?.length && rewards.found && (
+              <div className="mb-5">
+                <Alert
+                  type="warning"
+                  showIcon
+                  message="Stake is not matured"
+                  description="You should wait 2 epochs after delegation to receive your XRAY rewards"
+                />
+              </div>
+            )}
+            <div className="row mb-4">
+              <div className="col-6 col-sm-4 mb-4">
+                <div className="ray__left ray__left--dark">
+                  <div className="ray__card__value">
+                    {format(rewards.total || 0)}{" "}
+                    <span className="ray__ticker">XRAY</span>
+                  </div>
+                  <div>Accrued Balance</div>
+                </div>
+              </div>
+              {rewards.totalEarlyBonus > 0 && (
+                <div className="col-6 col-sm-4 mb-4">
+                  <div className="ray__left ray__left--dark">
+                    <div className="ray__card__value">
+                      {format(rewards.totalEarlyBonus || 0)}{" "}
+                      <span className="ray__ticker">XDIAMOND</span>
+                    </div>
+                    <div>
+                      <span className="me-2">Early Delegator Bonus</span>
+                      <Tooltip title="Will be sent on next withdrawal">
+                        <span className="ray__icon ray__icon--14 ray__icon--inline">
+                          <SVGHelp />
+                        </span>
+                      </Tooltip>
+                    </div>
+                  </div>
+                </div>
+              )}
+              <div className="col-6 col-sm-4 mb-4">
+                <div className="ray__left ray__left--dark">
+                  <div className="ray__card__value">
+                    {formatDate(
+                      addDays(new Date(networkEpochStartedAt || null), 5),
+                      "MM/dd/yyyy HH:mm"
+                    )}
+                  </div>
+                  <div>Next Accrual</div>
+                </div>
+              </div>
+            </div>
+            <div className="ray__left ray__left--dark mb-5">
+              <h5>
+                <strong>Withdraw Rewards</strong>
+              </h5>
+              <div className={style.redeem}>
+                <div className={style.redeemQr}>
+                  <QRCode
+                    value={withdrawalAddress}
+                    size="100"
+                    bgColor={theme === "default" ? "#fff" : "#000"}
+                    fgColor={theme === "default" ? "#000" : "#fff"}
+                  />
+                </div>
+                <div className={style.redeemInfo}>
+                  <p>
+                    <strong>
+                      Send 2 <span className="ray__ticker">ADA</span> from wallet
+                      you delegated to the address below.
+                    </strong>{" "}
+                    This amount subtract transaction fee will be returned to your
+                    wallet with accrued <span className="ray__ticker">XRAY</span>{" "}
+                    rewards.
+                  </p>
+                  <p className="mb-4 mb-md-0">
+                    <CopyToClipboard
+                      text={withdrawalAddress}
+                      onCopy={() => message.success("Copied to clipboard")}
+                    >
+                      <Tooltip title="Copy to clipboard">
+                        <span className="link">
+                          <span className="me-2">
+                            Withdrawals will be opened soon
+                          </span>
+                          <span className="ray__icon ray__icon--16 ray__icon--inline">
+                            <SVGFiles />
+                          </span>
+                        </span>
+                      </Tooltip>
+                    </CopyToClipboard>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="ray__left ray__left--dark mb-4">
+              <h5 className="mb-0">
+                <strong>Distribution history</strong>
+              </h5>
+            </div>
+            <div className="mb-5">
+              <Line data={chartData} options={options} height={200} />
+            </div>
+            <div className="ray__left ray__left--dark mb-4">
+              <h5 className="mb-0">
+                <strong>Withdrawals history</strong>
+              </h5>
+            </div>
+            <div className="ray__table">
+              <Table dataSource={[]} columns={columns} pagination={false} />
+            </div>
           </div>
         )}
-        <div className="row mb-4">
-          <div className="col-6 col-sm-4 mb-4">
-            <div className="ray__left ray__left--dark">
-              <div className="ray__card__value">
-                {format(rewards.total || 0)}{" "}
-                <span className="ray__ticker">XRAY</span>
-              </div>
-              <div>Accrued Balance</div>
-            </div>
-          </div>
-          {rewards.totalEarlyBonus > 0 && (
-            <div className="col-6 col-sm-4 mb-4">
-              <div className="ray__left ray__left--dark">
-                <div className="ray__card__value">
-                  {format(rewards.totalEarlyBonus || 0)}{" "}
-                  <span className="ray__ticker">XDIAMOND</span>
-                </div>
-                <div>
-                  <span className="me-2">Early Delegator Bonus</span>
-                  <Tooltip title="Will be sent on next withdrawal">
-                    <span className="ray__icon ray__icon--14 ray__icon--inline">
-                      <SVGHelp />
-                    </span>
-                  </Tooltip>
-                </div>
-              </div>
-            </div>
-          )}
-          <div className="col-6 col-sm-4 mb-4">
-            <div className="ray__left ray__left--dark">
-              <div className="ray__card__value">
-                {formatDate(
-                  addDays(new Date(networkEpochStartedAt || null), 5),
-                  "MM/dd/yyyy HH:mm"
-                )}
-              </div>
-              <div>Next Accrual</div>
-            </div>
-          </div>
-        </div>
-        <div className="ray__left ray__left--dark mb-5">
-          <h5>
-            <strong>Withdraw Rewards</strong>
-          </h5>
-          <div className={style.redeem}>
-            <div className={style.redeemQr}>
-              <QRCode
-                value={withdrawalAddress}
-                size="100"
-                bgColor={theme === "default" ? "#fff" : "#000"}
-                fgColor={theme === "default" ? "#000" : "#fff"}
-              />
-            </div>
-            <div className={style.redeemInfo}>
-              <p>
-                <strong>
-                  Send 2 <span className="ray__ticker">ADA</span> from wallet
-                  you delegated to the address below.
-                </strong>{" "}
-                This amount subtract transaction fee will be returned to your
-                wallet with accrued <span className="ray__ticker">XRAY</span>{" "}
-                rewards.
-              </p>
-              <p className="mb-4 mb-md-0">
-                <CopyToClipboard
-                  text={withdrawalAddress}
-                  onCopy={() => message.success("Copied to clipboard")}
-                >
-                  <Tooltip title="Copy to clipboard">
-                    <span className="link">
-                      <span className="me-2">
-                        Withdrawals will be opened soon
-                      </span>
-                      <span className="ray__icon ray__icon--16 ray__icon--inline">
-                        <SVGFiles />
-                      </span>
-                    </span>
-                  </Tooltip>
-                </CopyToClipboard>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="ray__left ray__left--dark mb-4">
-          <h5 className="mb-0">
-            <strong>Distribution history</strong>
-          </h5>
-        </div>
-        <div className="mb-5">
-          <Line data={chartData} options={options} height={200} />
-        </div>
-        <div className="ray__left ray__left--dark mb-4">
-          <h5 className="mb-0">
-            <strong>Withdrawals history</strong>
-          </h5>
-        </div>
-        <div className="ray__table">
-          <Table dataSource={[]} columns={columns} pagination={false} />
-        </div>
       </div>
     </div>
   )
