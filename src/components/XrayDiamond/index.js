@@ -106,7 +106,7 @@ const XrayTokenomics = () => {
               Send a an amount divisible by 15{" "}
               <span className="ray__ticker">ADA</span> to the address below.
               This amount in ADA minus the transaction fee will be returned to
-              your wallet with <span className="ray__ticker">XRAY</span> tokens.
+              your wallet with <span className="ray__ticker">XDIAMOND</span> tokens.
             </p>
             <p>
               Current rate is 1 <span className="ray__ticker">XDIAMOND</span> =
