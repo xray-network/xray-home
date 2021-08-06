@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import Whitepaper from "@/components/shared/Whitepaper"
+import Whitepaper from "@/components/Whitepaper"
 
 const Page = () => {
   return (

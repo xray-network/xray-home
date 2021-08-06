@@ -1,9 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import Kickstart from "@/components/shared/Kickstart"
-import Solutions from "@/components/shared/Solutions"
-import Community from "@/components/shared/Community"
+import Kickstart from "@/components/Kickstart"
+import Solutions from "@/components/Solutions"
+import Community from "@/components/Community"
 
 const Page = () => {
   return (

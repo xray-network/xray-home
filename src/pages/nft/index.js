@@ -1,9 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import Nft from "@/components/shared/NFT"
-import Solutions from "@/components/shared/Solutions"
-import Community from "@/components/shared/Community"
+import Nft from "@/components/NFT"
+import Solutions from "@/components/Solutions"
+import Community from "@/components/Community"
 
 const Page = () => {
   return (

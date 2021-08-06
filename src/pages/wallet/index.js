@@ -1,9 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import Wallet from "@/components/shared/Wallet"
-import Solutions from "@/components/shared/Solutions"
-import Community from "@/components/shared/Community"
+import Wallet from "@/components/Wallet"
+import Solutions from "@/components/Solutions"
+import Community from "@/components/Community"
 
 const Page = () => {
   return (

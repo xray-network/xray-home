@@ -1,0 +1,43 @@
+@import "@/styles/mixins";
+
+.diamond {
+  @media (max-width: $md-max-width) {
+    padding: rem(60) rem(40) rem(50);
+    margin-bottom: rem(40);
+    border-radius: 12px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.redeem {
+  display: flex;
+
+  @media (max-width: $lg-max-width) {
+    display: block;
+  }
+
+  &Qr {
+    width: rem(160);
+    flex-shrink: 0;
+    margin-right: rem(30);
+
+    @media (max-width: $lg-max-width) {
+      margin-bottom: rem(20);
+    }
+
+    canvas {
+      max-width: 100%;
+    }
+  }
+
+  &Info {
+    flex-grow: 1;
+  }
+}
+
+// dark theme
+[data-theme='dark'] {
+}

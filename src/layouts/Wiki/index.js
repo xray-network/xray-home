@@ -1,6 +1,6 @@
 import React from "react"
 import LayoutMain from "@/layouts/Main"
-import MenuWiki from "@/components/shared/MenuWiki"
+import MenuWiki from "@/components/MenuWiki"
 
 const MainLayout = ({ children }) => {
 

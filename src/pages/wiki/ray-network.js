@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import LayoutWiki from "@/layouts/Wiki"
-import Heading from "@/components/shared/Heading"
+import Heading from "@/components/Heading"
 
 const Page = () => {
   return (

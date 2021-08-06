@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import Audit from "@/components/shared/Audit"
+import Audit from "@/components/Audit"
 
 const Page = () => {
   return (

@@ -195,6 +195,15 @@
         background: $gray-2 !important;
       }
     }
+
+    &-tbody > tr.ant-table-placeholder > td {
+      background: transparent !important;
+      color: $dark-gray-2;
+
+      svg {
+        display: none;
+      }
+    }
   }
 
   &-modal {

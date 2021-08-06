@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import LayoutWiki from "@/layouts/Wiki"
-import Heading from "@/components/shared/Heading"
+import Heading from "@/components/Heading"
 import * as style from "./style.module.scss"
 
 const svg = ['logo.svg', 'logo-inverse.svg', 'logo-white.svg', 'logo-black.svg']
@@ -40,7 +40,7 @@ const Page = () => {
 
       <h5><strong>Font & Colors</strong></h5>
       <p>
-        Font: <span className="ray__ticker text-active">Inter</span> - <a href="https://fonts.google.com/specimen/Inter">https://fonts.google.com/specimen/Inter</a>
+        Font: <span className="ray__ticker text-active">Chivo</span> - <a href="https://fonts.google.com/specimen/Chivo">https://fonts.google.com/specimen/Chivo</a>
       </p>
       <p className="mb-5">
         Blue: <span className="ray__ticker text-active">#1940ed</span>{' '}

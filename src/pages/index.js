@@ -1,11 +1,11 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import Promo from "@/components/shared/Promo"
-import About from "@/components/shared/About"
-import Solutions from "@/components/shared/Solutions"
-import Map from "@/components/shared/Map"
-import Community from "@/components/shared/Community"
+import Promo from "@/components/Promo"
+import About from "@/components/About"
+import Solutions from "@/components/Solutions"
+import Map from "@/components/Map"
+import Community from "@/components/Community"
 
 const Page = () => {
   return (

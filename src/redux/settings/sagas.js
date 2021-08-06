@@ -75,7 +75,7 @@ export function* FETCH_NETWORK_STATE() {
   yield put({
     type: "settings/CHANGE_SETTING",
     payload: {
-      setting: "networkEpochStartetAd",
+      setting: "networkEpochStartedAt",
       value: networkInfo?.data?.data?.cardano?.currentEpoch?.startedAt || undefined,
     },
   })
