@@ -70,6 +70,22 @@
 
 // dark theme
 [data-theme="dark"] {
+  .stakeLink {
+    color: $blue-light;
+    border: 2px solid $primary;
+  
+    &Active {
+      background: transparent;
+      border: 2px solid $white;
+      color: $white;
+      :global(.ray__icon) {
+        * {
+          fill: white;
+        }
+      }
+    }
+  }
+
   .addWallet {
     background: $dark-gray-6;
   }
