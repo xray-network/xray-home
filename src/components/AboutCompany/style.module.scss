@@ -52,14 +52,14 @@
 }
 
 // dark theme
-[data-theme='dark'] {
+[data-theme="dark"] {
   .quote {
     background: $dark-gray-4;
 
     &:before {
       border-top-color: $dark-gray-4;
     }
-  
+
     div:first-child {
       color: $dark-gray-2;
     }

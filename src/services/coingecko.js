@@ -15,11 +15,11 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-import axios from 'axios'
-import { notification } from 'antd'
+import axios from "axios"
+import { notification } from "antd"
 
 const apiClient = axios.create({
-  baseURL: 'https://api.coingecko.com/api/v3',
+  baseURL: "https://api.coingecko.com/api/v3",
   // timeout: 1000,
   // headers: { 'X-Custom-Header': 'foobar' }
 })

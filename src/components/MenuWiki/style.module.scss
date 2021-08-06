@@ -29,11 +29,10 @@
 }
 
 // dark theme
-[data-theme='dark'] {
+[data-theme="dark"] {
   .link {
     &Active {
       color: $white !important;
     }
   }
 }
-

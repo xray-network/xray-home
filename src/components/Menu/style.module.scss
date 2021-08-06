@@ -38,14 +38,14 @@
 
     &Container {
       position: relative;
-  
+
       > span:first-child {
         position: absolute;
         z-index: 1;
         left: 0;
         top: 0;
       }
-  
+
       > span:last-child {
         opacity: 0;
         font-weight: 700;
@@ -59,9 +59,9 @@
 
     &Disabled {
       color: $dark !important;
-      opacity: .4;
+      opacity: 0.4;
     }
-    
+
     &:hover {
       color: $blue;
     }
@@ -97,7 +97,7 @@
     padding: rem(20) rem(30) rem(15) rem(25);
     border-radius: 15px;
     position: relative;
-  
+
     &:before {
       content: "";
       display: block;
@@ -113,7 +113,6 @@
       transform: rotate(45deg);
     }
   }
-
 
   &Item {
     display: block;
@@ -141,16 +140,16 @@
       margin-bottom: rem(0);
     }
   }
-  
+
   &Block {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   &Title {
     margin-bottom: rem(5);
   }
-  
+
   &Description {
     font-size: rem(14);
     color: $gray-6;
@@ -348,7 +347,7 @@
 
       &Disabled {
         color: $blue !important;
-        opacity: .6;
+        opacity: 0.6;
       }
     }
   }

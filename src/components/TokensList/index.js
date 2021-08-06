@@ -5,36 +5,41 @@ import * as style from "./style.module.scss"
 
 const columns = [
   {
-    title: '',
-    key: 'logo',
+    title: "",
+    key: "logo",
     width: 40,
     render: (record, records) => {
       return (
-        <div className={style.image}><img src={`https://raw.githubusercontent.com/ray-network/cardano-verified-tokens-list/main/logo/${records.fingerprint}.jpg`} alt={records.name} /></div>
+        <div className={style.image}>
+          <img
+            src={`https://raw.githubusercontent.com/ray-network/cardano-verified-tokens-list/main/logo/${records.fingerprint}.jpg`}
+            alt={records.name}
+          />
+        </div>
       )
-    }
+    },
   },
   {
-    title: 'Ticker',
-    dataIndex: 'ticker',
-    key: 'ticker',
-    render: (record) => <strong>{record}</strong>
+    title: "Ticker",
+    dataIndex: "ticker",
+    key: "ticker",
+    render: (record) => <strong>{record}</strong>,
   },
   {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
-    render: (record) => <strong>{record}</strong>
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
+    render: (record) => <strong>{record}</strong>,
   },
   {
-    title: 'Fingerprint',
-    dataIndex: 'fingerprint',
-    key: 'fingerprint',
+    title: "Fingerprint",
+    dataIndex: "fingerprint",
+    key: "fingerprint",
   },
   {
-    title: 'Homepage',
-    dataIndex: 'homepage',
-    key: 'homepage',
+    title: "Homepage",
+    dataIndex: "homepage",
+    key: "homepage",
     render: (record) => {
       return (
         <a
@@ -46,7 +51,7 @@ const columns = [
           {record}
         </a>
       )
-    }
+    },
   },
 ]
 
@@ -55,14 +60,14 @@ const TokensList = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/ray-network/cardano-verified-tokens-list/main/list.json')
-      .then(res => res.json())
-      .then((result => {
-        setDataSource([
-          ...result,
-        ])
+    fetch(
+      "https://raw.githubusercontent.com/ray-network/cardano-verified-tokens-list/main/list.json"
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        setDataSource([...result])
         setLoading(false)
-      }))
+      })
     // eslint-disable-next-line
   }, [])
 
@@ -73,8 +78,8 @@ const TokensList = () => {
       </Heading>
       <div className="mb-5">
         <p>
-          Cardano native token list curated by Ray. Used as defaults in Ray Wallet and other services.
-          Feel free to create a{' '}
+          Cardano native token list curated by Ray. Used as defaults in Ray
+          Wallet and other services. Feel free to create a{" "}
           <a
             href="https://github.com/ray-network/cardano-verified-tokens-list/pulls"
             target="_blank"
@@ -82,12 +87,17 @@ const TokensList = () => {
             className="ray__link"
           >
             pull request
-          </a>{' '}
+          </a>{" "}
           to add your token to our curated list.
         </p>
       </div>
       <div className="ray__table">
-        <Table loading={loading} dataSource={dataSource} columns={columns} pagination={false} />
+        <Table
+          loading={loading}
+          dataSource={dataSource}
+          columns={columns}
+          pagination={false}
+        />
       </div>
     </div>
   )

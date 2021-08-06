@@ -43,7 +43,9 @@ const MegaMenu = () => {
         <div className={style.menu}>
           <Link to="/" className={`${style.menuLogo} me-4`}>
             <SVGRay />
-            <span><strong>Ray Network</strong></span>
+            <span>
+              <strong>Ray Network</strong>
+            </span>
           </Link>
           <span className="flex-grow-1 text-muted d-none d-sm-inline pe-2 pe-md-4">
             Powered with{" "}
@@ -121,7 +123,9 @@ const MegaMenu = () => {
                       <span className="ray__icon me-2 mb-1 mb-sm-0">
                         <SVGWallet />
                       </span>
-                      <h6 className="mb-0"><strong>Cardano Solutions</strong></h6>
+                      <h6 className="mb-0">
+                        <strong>Cardano Solutions</strong>
+                      </h6>
                     </div>
                     <ul className="list-unstyled mb-4">
                       <li>
@@ -212,7 +216,9 @@ const MegaMenu = () => {
                       <span className="ray__icon me-2 mb-1 mb-sm-0">
                         <SVGAtSign />
                       </span>
-                      <h6 className="mb-0"><strong>Information</strong></h6>
+                      <h6 className="mb-0">
+                        <strong>Information</strong>
+                      </h6>
                     </div>
                     <ul className="list-unstyled mb-5">
                       <li>
@@ -308,7 +314,9 @@ const MegaMenu = () => {
                           <span className="ray__icon me-2 mb-1 mb-sm-0">
                             <SVGTwitter />
                           </span>
-                          <h6 className="mb-0"><strong>Ray Network</strong></h6>
+                          <h6 className="mb-0">
+                            <strong>Ray Network</strong>
+                          </h6>
                         </div>
                         <ul className="list-unstyled mb-5">
                           <li>
@@ -358,7 +366,9 @@ const MegaMenu = () => {
                           <span className="ray__icon me-2 mb-1 mb-sm-0">
                             <SVGTwitter />
                           </span>
-                          <h6 className="mb-0"><strong>Minterr.io</strong></h6>
+                          <h6 className="mb-0">
+                            <strong>Minterr.io</strong>
+                          </h6>
                         </div>
                         <ul className="list-unstyled mb-4">
                           <li>
@@ -390,7 +400,9 @@ const MegaMenu = () => {
               <div className="row">
                 <div className="col-6 col-md-12">
                   <div className="mb-3">
-                    <h6 className="mb-0"><strong>Ray Wallet Apps</strong></h6>
+                    <h6 className="mb-0">
+                      <strong>Ray Wallet Apps</strong>
+                    </h6>
                   </div>
                   <div className="mb-4">
                     <div>
@@ -461,7 +473,9 @@ const MegaMenu = () => {
                 </div>
                 <div className="col-6 col-md-12">
                   <div className="mb-3">
-                    <h6 className="mb-0"><strong>Ray Stake Apps</strong></h6>
+                    <h6 className="mb-0">
+                      <strong>Ray Stake Apps</strong>
+                    </h6>
                   </div>
                   <div className="mb-4">
                     <div>

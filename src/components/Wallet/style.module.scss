@@ -17,7 +17,7 @@
     font-weight: 700;
     color: $black;
   }
-  
+
   &Icon {
     width: rem(44);
     height: rem(44);
@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 20px -3px rgba(0,0,10,0.15);
+    box-shadow: 0 5px 20px -3px rgba(0, 0, 10, 0.15);
   }
 }
 
@@ -51,7 +51,8 @@
       bottom: -50%;
       left: 0;
       border-radius: 8px;
-      box-shadow: 0 20px 70px -30px rgba(0,0,0,0.4), 0 0 10px 0 rgba(0,0,0,0.05);
+      box-shadow: 0 20px 70px -30px rgba(0, 0, 0, 0.4),
+        0 0 10px 0 rgba(0, 0, 0, 0.05);
       @include transition-slow();
 
       &:last-child {
@@ -68,8 +69,6 @@
         }
       }
     }
-
-
 
     @media (max-width: $md-max-width) {
       height: rem(500);
@@ -95,12 +94,12 @@
     left: 0;
     height: 30px;
     width: 100%;
-    box-shadow: 0 0 50px rgba(0,0,0,0.25);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
   }
 }
 
 // dark theme
-[data-theme='dark'] {
+[data-theme="dark"] {
   .item {
     span {
       color: $white;

@@ -190,7 +190,7 @@
       transition: none !important;
     }
 
-    &-thead  {
+    &-thead {
       > tr > th {
         background: $gray-2 !important;
       }
@@ -365,7 +365,7 @@
         }
       }
     }
-    
+
     &-alert {
       background: $dark-gray-4;
       border-color: $dark-gray-3;
@@ -379,11 +379,12 @@
     &-table {
       color: $dark-gray-2;
 
-      td, th {
+      td,
+      th {
         border-bottom-color: $dark-border;
       }
 
-      &-thead  {
+      &-thead {
         > tr > th {
           background: $dark-gray-5 !important;
           color: $dark-gray-2;

@@ -12,7 +12,9 @@ const XrayDistribution = () => {
         <strong>XRAY</strong> token distribution
       </Heading>
       <p className="mb-5">
-        XRAY tokens are delivered to the community through a fair launch. A total of 58-78% of all tokens will be distributed (depending on how many tokens will be redeemed at Investors Round).
+        XRAY tokens are delivered to the community through a fair launch. A
+        total of 58-78% of all tokens will be distributed (depending on how many
+        tokens will be redeemed at Investors Round).
       </p>
       <div className={style.itemOuter}>
         <div className={style.item}>
@@ -22,75 +24,91 @@ const XrayDistribution = () => {
             </div>
             <div>
               <h3 className="mb-0">
-                <span className="me-3"><strong>Stake Delegators</strong></span>
+                <span className="me-3">
+                  <strong>Stake Delegators</strong>
+                </span>
                 <span className="badge badge-success align-middle">ACTIVE</span>
               </h3>
               <div className="text-active">
-                101,538,200{' '}
-                <span className="ray__ticker">XRAY</span>
+                101,538,200 <span className="ray__ticker">XRAY</span>
               </div>
             </div>
           </div>
           <div className="pt-4">
             <p>
-              Delegate your ADA to Ray Network pools and receive rewards in ADA and XRAY. <Link to="/stake/pools/" target="_blank" rel="noopener noreferrer">Pools list.</Link>
+              Delegate your ADA to Ray Network pools and receive rewards in ADA
+              and XRAY.{" "}
+              <Link
+                to="/stake/pools/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Pools list.
+              </Link>
               <br />
-              Use Ray Wallet, Yoroi, Adalite or Daedalus to delegate. Please do not use exchanges or centralized wallets, your rewards may be lost.{' '}
+              Use Ray Wallet, Yoroi, Adalite or Daedalus to delegate. Please do
+              not use exchanges or centralized wallets, your rewards may be
+              lost.{" "}
             </p>
             <ul className="mb-5">
               <li>5.5% ROI in ADA per epoch</li>
               <li>
-                100,000,000{' '}
-                <span className="ray__ticker">XRAY</span>{' '}
-                in ~3 years;{' '}
+                100,000,000 <span className="ray__ticker">XRAY</span> in ~3
+                years;{" "}
                 <Popover
-                  content={(
+                  content={
                     <div className="ray__info">
                       <div className="ray__info__label mb-2">Epoch 235-500</div>
                       <ul className="mb-0">
                         <li>
                           <strong>Total:</strong> 100,000,000
-                          <span className="ray__ticker">XRAY</span>{' '}
+                          <span className="ray__ticker">XRAY</span>{" "}
                         </li>
                         <li>
-                          <strong>Epoch Rewards:</strong> 888,888{' '}
-                          <span className="ray__ticker">XRAY</span>{' '}
-                          / epoch
+                          <strong>Epoch Rewards:</strong> 888,888{" "}
+                          <span className="ray__ticker">XRAY</span> / epoch
                         </li>
-                        <li><strong>Decrease:</strong> -0.444% each epoch</li>
-                        <li><strong>Decrease from Epoch:</strong> 275</li>
                         <li>
-                          <strong>Max Rewards Rate:</strong> 1{' '}
-                          <span className="ray__ticker">XRAY</span>{' '}
-                          per{' '}
-                          50 {' '}
+                          <strong>Decrease:</strong> -0.444% each epoch
+                        </li>
+                        <li>
+                          <strong>Decrease from Epoch:</strong> 275
+                        </li>
+                        <li>
+                          <strong>Max Rewards Rate:</strong> 1{" "}
+                          <span className="ray__ticker">XRAY</span> per 50{" "}
                           <span className="ray__ticker">ADA</span>
                         </li>
-                        <li><strong>Epoch Share:</strong> (delegator_stake / pools_stake) * epoch_reward</li>
+                        <li>
+                          <strong>Epoch Share:</strong> (delegator_stake /
+                          pools_stake) * epoch_reward
+                        </li>
                       </ul>
                     </div>
-                  )}
+                  }
                 >
                   <span className="link--dashed">distribution rules</span>
                 </Popover>
               </li>
               <li>
-                1,538,200 {' '}
-                <span className="ray__ticker">XRAY</span>{' '}
-                to early delegators;{' '}
+                1,538,200 <span className="ray__ticker">XRAY</span> to early
+                delegators;{" "}
                 <Popover
-                  content={(
+                  content={
                     <div className="ray__info">
                       <div className="ray__info__label mb-2">Epoch 235-275</div>
                       <ul className="mb-0">
                         <li>
-                          <strong>Total Rewards:</strong> 1,538,200{' '}
+                          <strong>Total Rewards:</strong> 1,538,200{" "}
                           <span className="ray__ticker">XRAY</span>
                         </li>
-                        <li><strong>Share:</strong> (rewards / accum_pools_stake) * accum_delegator_stake</li>
+                        <li>
+                          <strong>Share:</strong> (rewards / accum_pools_stake)
+                          * accum_delegator_stake
+                        </li>
                       </ul>
                     </div>
-                  )}
+                  }
                 >
                   <span className="link--dashed">distribution rules</span>
                 </Popover>
@@ -100,12 +118,17 @@ const XrayDistribution = () => {
             <StakeTotal />
             <div className={style.controls}>
               <div className="me-4">
-                <a href="https://app.raywallet.io/#/stake" target="_blank" rel="noopener noreferrer" className="ray__btn ray__btn--round">Delegate ADA</a>
+                <a
+                  href="https://app.raywallet.io/#/stake"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ray__btn ray__btn--round"
+                >
+                  Delegate ADA
+                </a>
               </div>
               <div className="align-self-center">
-                <Link to="/stake/track/">
-                  Track / Withdraw Rewards
-                </Link>
+                <Link to="/stake/track/">Track / Withdraw Rewards</Link>
               </div>
             </div>
           </div>
@@ -120,18 +143,20 @@ const XrayDistribution = () => {
             </div>
             <div>
               <h3 className="mb-0">
-                <span className="me-3"><strong>Liquidity Providers</strong></span>
+                <span className="me-3">
+                  <strong>Liquidity Providers</strong>
+                </span>
                 <span className="badge badge-token align-middle">SOON</span>
               </h3>
               <div className="text-active">
-                134,030,424{' '}
-                <span className="ray__ticker">XRAY</span>
+                134,030,424 <span className="ray__ticker">XRAY</span>
               </div>
             </div>
           </div>
           <div className="pt-4">
             <p className="mb-5">
-              Support for liquidity providers. To be announced after the release of Ray Swap.
+              Support for liquidity providers. To be announced after the release
+              of Ray Swap.
             </p>
             <div className={style.controls}>
               <Button className="ray__btn ray__btn--round" disabled>
@@ -150,22 +175,28 @@ const XrayDistribution = () => {
             </div>
             <div>
               <h3 className="mb-0">
-                <span className="me-3"><strong>Investors Round</strong></span>
+                <span className="me-3">
+                  <strong>Investors Round</strong>
+                </span>
                 <span className="badge badge-token align-middle">SOON</span>
               </h3>
               <div className="text-active">
-                81,230,560{' '}
-                <span className="ray__ticker">XRAY</span>
+                81,230,560 <span className="ray__ticker">XRAY</span>
               </div>
             </div>
           </div>
           <div className="pt-4">
             <p>
-              IDE token distribution with vesting period and buy back option. To be announced after the release of Ray Kickstart.
+              IDE token distribution with vesting period and buy back option. To
+              be announced after the release of Ray Kickstart.
             </p>
             <ul className="mb-5">
               <li>ADA/XRAY pair</li>
-              <li>Locking funds in a smart contract for 6, 12, 18 months with an option to cancel the purchase at any time with a 30%, 20%, 10% penalty</li>
+              <li>
+                Locking funds in a smart contract for 6, 12, 18 months with an
+                option to cancel the purchase at any time with a 30%, 20%, 10%
+                penalty
+              </li>
               <li>All unrealized and returned tokens will be burned</li>
             </ul>
             <div className={style.controls}>

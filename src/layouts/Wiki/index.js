@@ -3,7 +3,6 @@ import LayoutMain from "@/layouts/Main"
 import MenuWiki from "@/components/MenuWiki"
 
 const MainLayout = ({ children }) => {
-
   return (
     <LayoutMain>
       <div className="ray__block">
@@ -13,9 +12,7 @@ const MainLayout = ({ children }) => {
               <MenuWiki />
             </div>
           </div>
-          <div className="col-12 col-sm-9">
-            {children}
-          </div>
+          <div className="col-12 col-sm-9">{children}</div>
         </div>
       </div>
     </LayoutMain>

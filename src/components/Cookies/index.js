@@ -29,8 +29,9 @@ const Cookies = () => {
 
   return (
     <div
-      className={`${style.cookies} ${cookiesViewed && "d-none"} ${cookiesAnimation && style.cookiesAnimated
-        }`}
+      className={`${style.cookies} ${cookiesViewed && "d-none"} ${
+        cookiesAnimation && style.cookiesAnimated
+      }`}
     >
       <h5 className="mb-3">
         <strong>

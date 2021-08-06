@@ -62,12 +62,10 @@ export {
   SVGFavicon,
   SVGRay,
   SVGCardano,
-
   IMGTwitter,
   IMGDiscord,
   IMGTelegram,
   IMGReddit,
-
   SVGWallet,
   SVGMoon,
   SVGSun,

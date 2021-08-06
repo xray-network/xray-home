@@ -21,18 +21,20 @@ const XrayCalculator = () => {
 
   useEffect(() => {
     setTotalAda(amount * 0.05 || 0)
-    setTotalRay(amount / coeff * 73 || 0)
+    setTotalRay((amount / coeff) * 73 || 0)
   }, [amount])
 
   const fetchPrices = () => {
-    fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,cardano&vs_currencies=USD`)
-      .then(res => res.json())
-      .then((result => {
+    fetch(
+      `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,cardano&vs_currencies=USD`
+    )
+      .then((res) => res.json())
+      .then((result) => {
         setPrices({
           btc: result.bitcoin.usd,
           ada: result.cardano.usd,
         })
-      }))
+      })
   }
 
   return (
@@ -41,7 +43,10 @@ const XrayCalculator = () => {
         <strong>Cardano staking calculator</strong>, calculate your returns
       </Heading>
       <p className="mb-5">
-        Calculate your income in ADA and XRAY with rewards calculator. This form will help you calculate your income level over the course of a year, month, and era (5 days). Enter the number of ADAs you want to delegate to the RAY pools.
+        Calculate your income in ADA and XRAY with rewards calculator. This form
+        will help you calculate your income level over the course of a year,
+        month, and era (5 days). Enter the number of ADAs you want to delegate
+        to the RAY pools.
       </p>
       <div className="row mb-5">
         <div className="col-12 col-sm-4 mb-4">
@@ -62,51 +67,88 @@ const XrayCalculator = () => {
         </div>
         <div className="col-12 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
-            <div className="ray__card__value">
-              TBD
-            </div>
+            <div className="ray__card__value">TBD</div>
             <div>XRAY Price</div>
           </div>
         </div>
       </div>
       <div className="ray__left ray__left--dark">
         <div className="mb-4">
-          <Input value={amount} onChange={({ target: { value } }) => setAmount(value)} placeholder="Enter ADA amount..." size="large" />
+          <Input
+            value={amount}
+            onChange={({ target: { value } }) => setAmount(value)}
+            placeholder="Enter ADA amount..."
+            size="large"
+          />
         </div>
         <div className={style.performance}>
           <div className="row">
             <div className="col-md-6">
               <ul>
-                <li>ADA ROI: <strong>~ 5% <sup>/ Year</sup></strong></li>
+                <li>
+                  ADA ROI:{" "}
+                  <strong>
+                    ~ 5% <sup>/ Year</sup>
+                  </strong>
+                </li>
               </ul>
               <ul className="mb-4 mb-md-0">
                 <li>
-                  Year Returns: <strong>{format(totalAda, 2)} <span className="ray__ticker">ADA</span></strong>{' '}
+                  Year Returns:{" "}
+                  <strong>
+                    {format(totalAda, 2)}{" "}
+                    <span className="ray__ticker">ADA</span>
+                  </strong>{" "}
                   <sup>{format(totalAda * prices.ada, 2)}$</sup>
                 </li>
                 <li>
-                  Month Returns: <strong>{format(totalAda / 12, 2)} <span className="ray__ticker">ADA</span></strong>{' '}
-                  <sup>{format(totalAda / 12 * prices.ada, 2)}$</sup>
+                  Month Returns:{" "}
+                  <strong>
+                    {format(totalAda / 12, 2)}{" "}
+                    <span className="ray__ticker">ADA</span>
+                  </strong>{" "}
+                  <sup>{format((totalAda / 12) * prices.ada, 2)}$</sup>
                 </li>
                 <li>
-                  Epoch Returns: <strong>{format(totalAda / 73, 2)} <span className="ray__ticker">ADA</span></strong>{' '}
-                  <sup>{format(totalAda / 73 * prices.ada, 2)}$</sup>
+                  Epoch Returns:{" "}
+                  <strong>
+                    {format(totalAda / 73, 2)}{" "}
+                    <span className="ray__ticker">ADA</span>
+                  </strong>{" "}
+                  <sup>{format((totalAda / 73) * prices.ada, 2)}$</sup>
                 </li>
               </ul>
             </div>
             <div className="col-md-6">
               <ul>
-                <li>XRAY Rate: min <strong>{coeff} <span className="ray__ticker">ADA</span> = 1 <span className="ray__ticker">XRAY</span> <sup>/ Epoch</sup></strong></li>
+                <li>
+                  XRAY Rate: min{" "}
+                  <strong>
+                    {coeff} <span className="ray__ticker">ADA</span> = 1{" "}
+                    <span className="ray__ticker">XRAY</span> <sup>/ Epoch</sup>
+                  </strong>
+                </li>
               </ul>
               <ul className="mb-0">
                 <li>
-                  Year Returns: <strong>{format(totalRay)} <span className="ray__ticker">XRAY</span></strong>{' '}
+                  Year Returns:{" "}
+                  <strong>
+                    {format(totalRay)} <span className="ray__ticker">XRAY</span>
+                  </strong>{" "}
                 </li>
                 <li>
-                  Month Returns: <strong>{format(totalRay / 12)} <span className="ray__ticker">XRAY</span></strong>{' '}
+                  Month Returns:{" "}
+                  <strong>
+                    {format(totalRay / 12)}{" "}
+                    <span className="ray__ticker">XRAY</span>
+                  </strong>{" "}
                 </li>
                 <li>
-                  Epoch Returns: <strong>{format(totalRay / 73)} <span className="ray__ticker">XRAY</span></strong>{' '}
+                  Epoch Returns:{" "}
+                  <strong>
+                    {format(totalRay / 73)}{" "}
+                    <span className="ray__ticker">XRAY</span>
+                  </strong>{" "}
                 </li>
               </ul>
             </div>

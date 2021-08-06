@@ -6,64 +6,64 @@ import * as style from "./style.module.scss"
 
 const items = [
   {
-    title: 'XRAY Token',
-    descr: 'Ray Network governance & payment token',
-    url: '/xray/',
+    title: "XRAY Token",
+    descr: "Ray Network governance & payment token",
+    url: "/xray/",
   },
   {
-    title: 'Ray Wallet',
-    descr: 'A lightweight Cardano multiplatform and multifunctional wallet',
-    url: '/wallet/',
+    title: "Ray Wallet",
+    descr: "A lightweight Cardano multiplatform and multifunctional wallet",
+    url: "/wallet/",
   },
   {
-    title: 'Ray Stake',
-    descr: 'Stake solution, earn ~5% ROI in ADA with XRAYs on top',
-    url: '/stake/',
+    title: "Ray Stake",
+    descr: "Stake solution, earn ~5% ROI in ADA with XRAYs on top",
+    url: "/stake/",
   },
   {
-    title: 'Ray Rewards',
-    descr: 'Get additional XRAY rewards for ADA staking and other activities',
-    url: '/rewards/',
+    title: "Ray Rewards",
+    descr: "Get additional XRAY rewards for ADA staking and other activities",
+    url: "/rewards/",
   },
   {
-    title: 'Ray Swap',
-    descr: 'Automated liquidity protocol, AMM DEX',
-    url: '/swap/',
+    title: "Ray Swap",
+    descr: "Automated liquidity protocol, AMM DEX",
+    url: "/swap/",
   },
   {
-    title: 'Ray Kickstart',
-    descr: 'Decentralised fundraising',
-    url: '/kickstart/',
+    title: "Ray Kickstart",
+    descr: "Decentralised fundraising",
+    url: "/kickstart/",
   },
   {
-    title: 'Ray NFT ',
-    descr: 'NFT marketplace with advanced features',
-    url: '/nft/',
+    title: "Ray NFT ",
+    descr: "NFT marketplace with advanced features",
+    url: "/nft/",
   },
   {
-    title: 'Ray Graph',
-    descr: 'Cardano blockhain graphql indexers',
-    url: '/graph/',
+    title: "Ray Graph",
+    descr: "Cardano blockhain graphql indexers",
+    url: "/graph/",
   },
   {
-    title: 'Ray Data',
-    descr: 'B2B data storage and authorization solution',
-    url: '/data/',
+    title: "Ray Data",
+    descr: "B2B data storage and authorization solution",
+    url: "/data/",
   },
   {
-    title: 'Wiki',
-    descr: 'Cardano & Ray Network information database',
-    url: '/wiki/',
+    title: "Wiki",
+    descr: "Cardano & Ray Network information database",
+    url: "/wiki/",
   },
   {
-    title: 'Tokens List',
-    descr: 'Cardano native token list curated by Ray',
-    url: '/tokens-list/',
+    title: "Tokens List",
+    descr: "Cardano native token list curated by Ray",
+    url: "/tokens-list/",
   },
   {
-    title: 'Cardano-Web3.js',
-    descr: 'JavaScript SDK for Cardano blockchain',
-    url: 'https://github.com/ray-network/cardano-web3.js',
+    title: "Cardano-Web3.js",
+    descr: "JavaScript SDK for Cardano blockchain",
+    url: "https://github.com/ray-network/cardano-web3.js",
     external: true,
   },
 ]
@@ -85,7 +85,7 @@ const Solutions = () => {
                     className={style.itemInner}
                     activeClassName={style.itemInnerActive}
                     partiallyActive
-                    target={item.external ? '_blank' : ''}
+                    target={item.external ? "_blank" : ""}
                   >
                     {item.external && (
                       <span className={style.itemInnerExternal}>
@@ -94,12 +94,8 @@ const Solutions = () => {
                         </span>
                       </span>
                     )}
-                    <div className={style.itemInnerTitle}>
-                      {item.title}
-                    </div>
-                    <div>
-                      {item.descr}
-                    </div>
+                    <div className={style.itemInnerTitle}>{item.title}</div>
+                    <div>{item.descr}</div>
                   </Link>
                 </div>
               </div>

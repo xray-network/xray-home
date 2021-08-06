@@ -6,28 +6,28 @@ import * as style from "./style.module.scss"
 
 const wiki = [
   {
-    title: 'Table of Сontents',
-    url: '/wiki/',
+    title: "Table of Сontents",
+    url: "/wiki/",
   },
   {
-    title: 'Ray Network',
-    url: '/wiki/ray-network/',
+    title: "Ray Network",
+    url: "/wiki/ray-network/",
   },
   {
-    title: 'Cardano',
-    url: '/wiki/cardano/',
+    title: "Cardano",
+    url: "/wiki/cardano/",
   },
   {
-    title: 'Stake Delegators',
-    url: '/wiki/stake-delegators/',
+    title: "Stake Delegators",
+    url: "/wiki/stake-delegators/",
   },
   {
-    title: 'Liquidity Providers',
-    url: '/wiki/liquidity-providers/',
+    title: "Liquidity Providers",
+    url: "/wiki/liquidity-providers/",
   },
   {
-    title: 'Logo & Brand',
-    url: '/wiki/brand/',
+    title: "Logo & Brand",
+    url: "/wiki/brand/",
   },
 ]
 

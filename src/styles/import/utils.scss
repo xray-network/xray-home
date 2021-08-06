@@ -23,7 +23,7 @@
   &__left {
     padding-left: rem(50);
     position: relative;
-  
+
     &:before {
       content: "";
       display: block;
@@ -308,12 +308,12 @@
   &__promo {
     margin: 0 0 rem(80);
     font-size: rem(20);
-  
+
     h5 {
       line-height: 1.5;
       font-weight: normal;
     }
-  
+
     &__text {
       font-size: rem(72);
       font-weight: 700;
@@ -323,7 +323,7 @@
       position: relative;
       padding-left: rem(50);
       line-height: 1.1;
-    
+
       &:before {
         content: "";
         display: block;
@@ -335,7 +335,7 @@
         border-radius: 20px;
         background: $primary;
       }
-    
+
       @media (max-width: 820px) {
         font-size: rem(54);
       }
@@ -347,20 +347,20 @@
       height: rem(40);
       position: relative;
       top: rem(-5);
-    
+
       svg {
         height: rem(60);
         width: rem(60);
-        
+
         g {
           fill: $blue;
         }
       }
-    
+
       @media (max-width: 820px) {
         width: rem(60);
         height: rem(40);
-    
+
         svg {
           top: rem(-13);
           left: 0;

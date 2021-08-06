@@ -6,8 +6,18 @@ import { SVGLink } from "@/svg"
 import * as style from "./style.module.scss"
 
 const items = [
-  '1.gif', '2.png', '3.gif', '4.gif', '5.png', '6.png',
-  '7.gif', '8.gif', '9.png', '10.png', '11.png', '12.png',
+  "1.gif",
+  "2.png",
+  "3.gif",
+  "4.gif",
+  "5.png",
+  "6.png",
+  "7.gif",
+  "8.gif",
+  "9.png",
+  "10.png",
+  "11.png",
+  "12.png",
 ]
 
 const Nft = () => {
@@ -17,14 +27,24 @@ const Nft = () => {
         <strong>Ray NFT</strong>, Cardano NFT Marketplace
       </Heading>
       <p>
-        Ray NFT is a decentralized marketplace for digital goods, including collectibles, gaming items, digital art, and other digital assets that are backed by a blockchain. On Ray NFT, you can buy, sell, and trade any of these items with anyone in the world.
+        Ray NFT is a decentralized marketplace for digital goods, including
+        collectibles, gaming items, digital art, and other digital assets that
+        are backed by a blockchain. On Ray NFT, you can buy, sell, and trade any
+        of these items with anyone in the world.
       </p>
       <p className="mb-5">
-        Trading on on Ray NFT takes place through a smart contract, meaning that no central authority ever holds custody of your items.
+        Trading on on Ray NFT takes place through a smart contract, meaning that
+        no central authority ever holds custody of your items.
       </p>
-      <h5 className="mb-5"><strong>What is an NFT?</strong></h5>
+      <h5 className="mb-5">
+        <strong>What is an NFT?</strong>
+      </h5>
       <p className="mb-5">
-        NFTs are tokens that we can use to represent ownership of unique items. They let us tokenise things like art, collectibles, even real estate. They can only have one official owner at a time and they're secured by the Cardano blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
+        NFTs are tokens that we can use to represent ownership of unique items.
+        They let us tokenise things like art, collectibles, even real estate.
+        They can only have one official owner at a time and they're secured by
+        the Cardano blockchain – no one can modify the record of ownership or
+        copy/paste a new NFT into existence.
       </p>
       <div className="mt-4 pt-3 mb-5">
         <span className="d-inline-block me-3 mb-2">
@@ -34,9 +54,7 @@ const Nft = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span className="me-2">
-              Ray NFT
-            </span>
+            <span className="me-2">Ray NFT</span>
             <span className="ray__icon">
               <SVGLink />
             </span>
@@ -49,9 +67,7 @@ const Nft = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <span>
-              SDK / Documentation
-            </span>
+            <span>SDK / Documentation</span>
           </a>
         </span>
       </div>
@@ -71,15 +87,9 @@ const Nft = () => {
               <div key={index} className={style.itemOuter}>
                 <div className={style.item}>
                   <div className="d-flex mb-3">
-                    <div className={style.itemCollection}>
-                      R
-                    </div>
-                    <div className={style.itemCollection}>
-                      W
-                    </div>
-                    <div className="ms-auto">
-                      ...
-                    </div>
+                    <div className={style.itemCollection}>R</div>
+                    <div className={style.itemCollection}>W</div>
+                    <div className="ms-auto">...</div>
                   </div>
                   <div className={style.itemImage}>
                     <img src={`/resources/nft/${item}`} alt="" />
@@ -117,15 +127,9 @@ const Nft = () => {
               <div key={index} className={style.itemOuter}>
                 <div className={style.item}>
                   <div className="d-flex mb-3">
-                    <div className={style.itemCollection}>
-                      R
-                    </div>
-                    <div className={style.itemCollection}>
-                      D
-                    </div>
-                    <div className="ms-auto">
-                      ...
-                    </div>
+                    <div className={style.itemCollection}>R</div>
+                    <div className={style.itemCollection}>D</div>
+                    <div className="ms-auto">...</div>
                   </div>
                   <div className={style.itemImage}>
                     <img src={`/resources/nft/${item}`} alt="" />

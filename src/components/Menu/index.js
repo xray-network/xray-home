@@ -8,7 +8,6 @@ import {
   SVGSun,
   SVGMoon,
   SVGCardano,
-
   SVGBarChart,
   SVGDiamond,
   SVGRocket,
@@ -16,218 +15,217 @@ import {
   SVGDonutChart,
   SVGActivity,
   SVGPercent,
-
   SVGLink,
 } from "@/svg"
 import * as style from "./style.module.scss"
 
 const config = [
   {
-    title: 'Home',
-    url: '/',
+    title: "Home",
+    url: "/",
   },
   {
-    title: 'XRAY',
-    url: '/xray/',
+    title: "XRAY",
+    url: "/xray/",
     submenu: [
       {
-        title: 'Introducing',
-        url: '/xray/',
+        title: "Introducing",
+        url: "/xray/",
         icon: <SVGRocket />,
       },
       {
-        title: 'Distribution',
-        url: '/xray/distribution/',
+        title: "Distribution",
+        url: "/xray/distribution/",
         icon: <SVGActivity />,
       },
       {
-        title: 'Tokenomics',
-        url: '/xray/tokenomics/',
+        title: "Tokenomics",
+        url: "/xray/tokenomics/",
         icon: <SVGDonutChart />,
       },
       {
-        title: 'XDIAMOND',
-        url: '/xray/xdiamond/',
+        title: "XDIAMOND",
+        url: "/xray/xdiamond/",
         icon: <SVGDiamond />,
       },
     ],
   },
   {
-    title: 'Stake',
-    url: '/stake/',
+    title: "Stake",
+    url: "/stake/",
     submenu: [
       {
-        title: 'Distribution',
-        url: '/stake/',
+        title: "Distribution",
+        url: "/stake/",
         icon: <SVGActivity />,
       },
       {
-        title: 'Pools',
-        url: '/stake/pools/',
+        title: "Pools",
+        url: "/stake/pools/",
         icon: <SVGZap />,
       },
       {
-        title: 'Calculator',
-        url: '/stake/calculator/',
+        title: "Calculator",
+        url: "/stake/calculator/",
         icon: <SVGPercent />,
       },
       {
-        title: 'Track & Withdraw',
-        url: '/stake/track/',
+        title: "Track & Withdraw",
+        url: "/stake/track/",
         icon: <SVGBarChart />,
       },
     ],
   },
   {
-    title: 'Wallet',
-    url: '/wallet/',
+    title: "Wallet",
+    url: "/wallet/",
   },
   {
-    title: 'Swap',
-    url: '/swap/',
+    title: "Swap",
+    url: "/swap/",
   },
   {
-    title: 'Kickstart',
-    url: '/kickstart/',
+    title: "Kickstart",
+    url: "/kickstart/",
   },
   {
-    title: 'NFT',
-    url: '/nft/',
+    title: "NFT",
+    url: "/nft/",
   },
   {
-    title: 'Graph',
-    url: '/graph/',
+    title: "Graph",
+    url: "/graph/",
   },
   {
-    title: 'Data',
-    url: '/data/',
+    title: "Data",
+    url: "/data/",
   },
   {
-    title: 'Tokens List',
-    url: '/tokens-list/',
+    title: "Tokens List",
+    url: "/tokens-list/",
   },
   {
-    title: 'Wiki',
-    url: '/wiki/',
+    title: "Wiki",
+    url: "/wiki/",
   },
   {
-    title: 'About',
-    url: '/about/',
+    title: "About",
+    url: "/about/",
   },
   {
-    title: 'Roadmap & Updates',
-    url: '/roadmap/',
+    title: "Roadmap & Updates",
+    url: "/roadmap/",
   },
   {
-    title: 'Minterr.io',
-    url: 'https://minterr.io',
+    title: "Minterr.io",
+    url: "https://minterr.io",
     external: true,
   },
   {
-    title: 'CardanoWeb3.js',
-    url: 'https://github.com/ray-network/cardano-web3.js',
+    title: "CardanoWeb3.js",
+    url: "https://github.com/ray-network/cardano-web3.js",
     external: true,
   },
   {
-    title: 'Community',
+    title: "Community",
     submenu: [
       {
-        title: 'Twitter',
-        url: 'https://twitter.com/RayNetwork',
+        title: "Twitter",
+        url: "https://twitter.com/RayNetwork",
         external: true,
         icon: <SVGLink />,
       },
       {
-        title: 'Telegram Chat',
-        url: 'https://t.me/RayNetwork',
+        title: "Telegram Chat",
+        url: "https://t.me/RayNetwork",
         external: true,
         icon: <SVGLink />,
       },
       {
-        title: 'Telegram',
-        url: 'https://t.me/RayNetworkChannel',
+        title: "Telegram",
+        url: "https://t.me/RayNetworkChannel",
         external: true,
         icon: <SVGLink />,
       },
       {
-        title: 'Reddit',
-        url: 'https://www.reddit.com/r/RayNetwork',
+        title: "Reddit",
+        url: "https://www.reddit.com/r/RayNetwork",
         external: true,
         icon: <SVGLink />,
       },
       {
-        title: 'Discord',
-        url: 'https://discord.gg/WhZmm46APN',
+        title: "Discord",
+        url: "https://discord.gg/WhZmm46APN",
         external: true,
         icon: <SVGLink />,
       },
     ],
   },
   {
-    title: 'Docs',
-    url: 'https://docs.rraayy.com',
+    title: "Docs",
+    url: "https://docs.rraayy.com",
     external: true,
   },
   {
-    title: 'Status',
-    url: 'https://status.rraayy.com',
+    title: "Status",
+    url: "https://status.rraayy.com",
     status: true,
     external: true,
   },
   {
-    title: 'Whitepaper',
-    url: '/whitepaper/',
+    title: "Whitepaper",
+    url: "/whitepaper/",
     disabled: true,
   },
   {
-    title: 'Audit',
-    url: '/audit/',
+    title: "Audit",
+    url: "/audit/",
     disabled: true,
   },
 ]
 
 const stake = [
   {
-    title: 'Distribution',
-    url: '/stake/',
+    title: "Distribution",
+    url: "/stake/",
     icon: <SVGActivity />,
   },
   {
-    title: 'Pools',
-    url: '/stake/pools/',
+    title: "Pools",
+    url: "/stake/pools/",
     icon: <SVGZap />,
   },
   {
-    title: 'Calculator',
-    url: '/stake/calculator/',
+    title: "Calculator",
+    url: "/stake/calculator/",
     icon: <SVGPercent />,
   },
   {
-    title: 'Track & Withdraw',
-    url: '/stake/track/',
+    title: "Track & Withdraw",
+    url: "/stake/track/",
     icon: <SVGBarChart />,
   },
 ]
 
 const xray = [
   {
-    title: 'Introducing',
-    url: '/xray/',
+    title: "Introducing",
+    url: "/xray/",
     icon: <SVGRocket />,
   },
   {
-    title: 'Distribution',
-    url: '/xray/distribution/',
+    title: "Distribution",
+    url: "/xray/distribution/",
     icon: <SVGActivity />,
   },
   {
-    title: 'Tokenomics',
-    url: '/xray/tokenomics/',
+    title: "Tokenomics",
+    url: "/xray/tokenomics/",
     icon: <SVGDonutChart />,
   },
   {
-    title: 'XDIAMOND',
-    url: '/xray/xdiamond/',
+    title: "XDIAMOND",
+    url: "/xray/xdiamond/",
     icon: <SVGDiamond />,
   },
 ]
@@ -261,9 +259,7 @@ const Menu = () => {
               className={style.submenuLink}
               activeClassName={style.submenuLinkActive}
             >
-              <span className="ray__icon me-2">
-                {item.icon}
-              </span>
+              <span className="ray__icon me-2">{item.icon}</span>
               <span className={style.submenuLinkWidth}>
                 <span>{item.title}</span>
                 <span>{item.title}</span>
@@ -275,8 +271,8 @@ const Menu = () => {
     )
   }
 
-  const isStake = location.pathname.includes('/stake/')
-  const isXray = location.pathname.includes('/xray/')
+  const isStake = location.pathname.includes("/stake/")
+  const isXray = location.pathname.includes("/xray/")
 
   return (
     <div>
@@ -284,7 +280,9 @@ const Menu = () => {
         <div className={style.menu}>
           <Link to="/" className={`${style.menuLogo} me-4`}>
             <SVGRay />
-            <span><strong>Ray Network</strong></span>
+            <span>
+              <strong>Ray Network</strong>
+            </span>
           </Link>
           <span className="text-muted flex-grow-1 d-none d-sm-inline pe-2 pe-md-4">
             Powered with{" "}
@@ -336,16 +334,18 @@ const Menu = () => {
         <div>
           {config.map((item, index) => {
             const isActive =
-              location.pathname === '/'
+              location.pathname === "/"
                 ? item.url === location.pathname
-                : item.url === '/'
-                  ? false
-                  : location.pathname.includes(item.url)
+                : item.url === "/"
+                ? false
+                : location.pathname.includes(item.url)
             return (
               <span key={index} className={style.linksContainer}>
                 {item.disabled && (
                   <span
-                    className={`${style.linksLink} ${style.linksLinkDisabled} ${isActive ? style.linksLinkActive : ''}`}
+                    className={`${style.linksLink} ${style.linksLinkDisabled} ${
+                      isActive ? style.linksLinkActive : ""
+                    }`}
                   >
                     <div className={style.linksLinkContainer}>
                       <span className={style.linksLinkTitle}>{item.title}</span>
@@ -356,7 +356,9 @@ const Menu = () => {
                 {!item.external && !item.disabled && (
                   <Link
                     to={item.url}
-                    className={`${style.linksLink} ${isActive ? style.linksLinkActive : ''}`}
+                    className={`${style.linksLink} ${
+                      isActive ? style.linksLinkActive : ""
+                    }`}
                   >
                     <div className={style.linksLinkContainer}>
                       <span className={style.linksLinkTitle}>{item.title}</span>
@@ -378,20 +380,25 @@ const Menu = () => {
                                 rel="noreferrer noopener"
                               >
                                 <div className={style.mTitle}>
-                                  <span className="ray__icon ray__icon--inline me-2">{subItem.icon}</span>
+                                  <span className="ray__icon ray__icon--inline me-2">
+                                    {subItem.icon}
+                                  </span>
                                   <span>{subItem.title}</span>
                                 </div>
                               </a>
                             )}
                             {!subItem.external && (
-                              <Link
-                                to={subItem.url}
-                                className={style.mItem}
-                              >
+                              <Link to={subItem.url} className={style.mItem}>
                                 <div className={style.mTitle}>
-                                  <span className="ray__icon ray__icon--inline me-2">{subItem.icon}</span>
-                                  {subItem.url === location.pathname && (<strong>{subItem.title}</strong>)}
-                                  {subItem.url !== location.pathname && (<span>{subItem.title}</span>)}
+                                  <span className="ray__icon ray__icon--inline me-2">
+                                    {subItem.icon}
+                                  </span>
+                                  {subItem.url === location.pathname && (
+                                    <strong>{subItem.title}</strong>
+                                  )}
+                                  {subItem.url !== location.pathname && (
+                                    <span>{subItem.title}</span>
+                                  )}
                                 </div>
                               </Link>
                             )}

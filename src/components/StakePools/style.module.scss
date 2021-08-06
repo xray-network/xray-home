@@ -45,10 +45,10 @@
   :global(.ray__btn) {
     width: 100%;
   }
-  
+
   :global(.ray__btn[disabled]) {
-    border-color: rgba($white, .3) !important;
-    color: rgba($white, .4) !important;
+    border-color: rgba($white, 0.3) !important;
+    color: rgba($white, 0.4) !important;
   }
 
   &Item {
@@ -58,7 +58,7 @@
   &Label {
     text-transform: uppercase;
     font-size: rem(12);
-    color: rgba($white, .6);
+    color: rgba($white, 0.6);
   }
 
   &Value {
@@ -72,5 +72,5 @@
 }
 
 // dark theme
-[data-theme='dark'] {
+[data-theme="dark"] {
 }

@@ -33,7 +33,9 @@ const Footer = () => {
                       <span className="ray__icon me-2 mb-1 mb-sm-0">
                         <SVGWallet />
                       </span>
-                      <h6 className="mb-0"><strong>Cardano Solutions</strong></h6>
+                      <h6 className="mb-0">
+                        <strong>Cardano Solutions</strong>
+                      </h6>
                     </div>
                     <ul className="list-unstyled mb-4">
                       <li>
@@ -61,7 +63,10 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="https://rraayy.com/swap/" className="text-muted">
+                        <a
+                          href="https://rraayy.com/swap/"
+                          className="text-muted"
+                        >
                           Ray Swap
                         </a>
                       </li>
@@ -90,7 +95,10 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="https://rraayy.com/data/" className="text-muted">
+                        <a
+                          href="https://rraayy.com/data/"
+                          className="text-muted"
+                        >
                           Ray Data
                         </a>
                       </li>
@@ -122,7 +130,9 @@ const Footer = () => {
                       <span className="ray__icon me-2 mb-1 mb-sm-0">
                         <SVGAtSign />
                       </span>
-                      <h6 className="mb-0"><strong>Information</strong></h6>
+                      <h6 className="mb-0">
+                        <strong>Information</strong>
+                      </h6>
                     </div>
                     <ul className="list-unstyled mb-5">
                       <li>
@@ -150,7 +160,10 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="https://rraayy.com/wiki/" className="text-muted">
+                        <a
+                          href="https://rraayy.com/wiki/"
+                          className="text-muted"
+                        >
                           Wiki
                         </a>
                       </li>
@@ -179,7 +192,10 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="https://docs.rraayy.com/" className="text-muted">
+                        <a
+                          href="https://docs.rraayy.com/"
+                          className="text-muted"
+                        >
                           Docs
                         </a>
                       </li>
@@ -208,7 +224,9 @@ const Footer = () => {
                           <span className="ray__icon me-2 mb-1 mb-sm-0">
                             <SVGTwitter />
                           </span>
-                          <h6 className="mb-0"><strong>Ray Network</strong></h6>
+                          <h6 className="mb-0">
+                            <strong>Ray Network</strong>
+                          </h6>
                         </div>
                         <ul className="list-unstyled mb-5">
                           <li>
@@ -258,7 +276,9 @@ const Footer = () => {
                           <span className="ray__icon me-2 mb-1 mb-sm-0">
                             <SVGTwitter />
                           </span>
-                          <h6 className="mb-0"><strong>Minterr.io</strong></h6>
+                          <h6 className="mb-0">
+                            <strong>Minterr.io</strong>
+                          </h6>
                         </div>
                         <ul className="list-unstyled mb-4">
                           <li>
@@ -287,7 +307,9 @@ const Footer = () => {
                 <div className="row">
                   <div className="col-6 col-sm-12">
                     <div className="mb-3">
-                      <h6 className="mb-0"><strong>Ray Wallet Apps</strong></h6>
+                      <h6 className="mb-0">
+                        <strong>Ray Wallet Apps</strong>
+                      </h6>
                     </div>
                     <div className="mb-4">
                       <div>
@@ -358,7 +380,9 @@ const Footer = () => {
                   </div>
                   <div className="col-6 col-sm-12">
                     <div className="mb-3">
-                      <h6 className="mb-0"><strong>Ray Stake Apps</strong></h6>
+                      <h6 className="mb-0">
+                        <strong>Ray Stake Apps</strong>
+                      </h6>
                     </div>
                     <div className="mb-4">
                       <div>
@@ -397,7 +421,9 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="mb-3">
-                  <h6 className="mb-0"><strong>Newsletters</strong></h6>
+                  <h6 className="mb-0">
+                    <strong>Newsletters</strong>
+                  </h6>
                 </div>
                 <div className="mb-4">
                   <Input.Search
@@ -405,7 +431,7 @@ const Footer = () => {
                     allowClear
                     enterButton="Subscribe"
                     size="large"
-                    onSearch={() => { }}
+                    onSearch={() => {}}
                   />
                 </div>
               </div>
@@ -420,7 +446,9 @@ const Footer = () => {
                 target="_blank"
               >
                 <SVGRay />
-                <span><strong>Ray Network</strong></span>
+                <span>
+                  <strong>Ray Network</strong>
+                </span>
               </a>
             </div>
             <p className="mb-2 text-muted">
@@ -441,7 +469,8 @@ const Footer = () => {
             </p>
             <p className="mb-2 text-muted">
               <span className="me-2 text-capitalize">
-                Cardano Mainnet Status: Epoch {networkEpoch}, Block {networkBlock}, Slot {networkSlot}
+                Cardano Mainnet Status: Epoch {networkEpoch}, Block{" "}
+                {networkBlock}, Slot {networkSlot}
               </span>
             </p>
             <p className="mb-0 text-muted">

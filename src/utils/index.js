@@ -1,21 +1,21 @@
 import React from "react"
 
 export const truncate = (x) => {
-  return x ? `${x.substring(0, 8)}...${x.slice(-8)}` : ''
+  return x ? `${x.substring(0, 8)}...${x.slice(-8)}` : ""
 }
 
 export const format = (x, precision = 0) => {
   return precision
     ? parseInt(x)
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
-    (parseFloat(x) - parseInt(x))
-      .toFixed(precision)
-      .toString()
-      .replace("0.", ".")
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+        (parseFloat(x) - parseInt(x))
+          .toFixed(precision)
+          .toString()
+          .replace("0.", ".")
     : parseInt(x)
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
 
 export const formatValue = (value, postfix = "") => {
@@ -84,7 +84,7 @@ export const fetchImageBlob = async (url) => {
           type: blob.type,
         }
       })
-      .catch((err) => { })
+      .catch((err) => {})
   } else {
     return Promise.reject("URL is not valid")
   }

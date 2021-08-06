@@ -16,7 +16,9 @@ export function* CHANGE_SETTING({ payload: { setting, value } }) {
 export function* SWITCH_MEGA_MENU() {
   const megaMenu = yield select((state) => state.settings.megaMenu)
   if (global.document) {
-    global.document.getElementsByTagName("body")[0].classList.toggle("overflow-hidden")
+    global.document
+      .getElementsByTagName("body")[0]
+      .classList.toggle("overflow-hidden")
   }
   yield put({
     type: "settings/SET_STATE",
@@ -33,7 +35,9 @@ export function* CHANGE_THEME({ theme }) {
       .setAttribute("data-disable-transitions", "true")
     global.document.querySelector("html").setAttribute("data-theme", theme)
     setTimeout(() => {
-      global.document.querySelector("html").removeAttribute("data-disable-transitions")
+      global.document
+        .querySelector("html")
+        .removeAttribute("data-disable-transitions")
     }, 500)
   }
   yield put({
@@ -76,7 +80,8 @@ export function* FETCH_NETWORK_STATE() {
     type: "settings/CHANGE_SETTING",
     payload: {
       setting: "networkEpochStartedAt",
-      value: networkInfo?.data?.data?.cardano?.currentEpoch?.startedAt || undefined,
+      value:
+        networkInfo?.data?.data?.cardano?.currentEpoch?.startedAt || undefined,
     },
   })
 }

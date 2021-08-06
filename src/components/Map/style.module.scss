@@ -35,7 +35,7 @@
     margin: 0 auto;
     img {
       width: 100%;
-      opacity: .4;
+      opacity: 0.4;
       user-select: none;
     }
   }
@@ -44,28 +44,28 @@
 .relays {
   .relay:nth-child(2) {
     &:after {
-      animation-delay: .2s;
+      animation-delay: 0.2s;
     }
   }
   .relay:nth-child(3) {
     &:after {
-      animation-delay: .4s;
+      animation-delay: 0.4s;
     }
   }
   .relay:nth-child(4) {
     &:after {
-      animation-delay: .6s;
+      animation-delay: 0.6s;
     }
   }
   .relay:nth-child(5) {
     &:after {
-      animation-delay: .8s;
+      animation-delay: 0.8s;
     }
   }
   .relay:nth-child(6) {
     &:after {
       animation: relayAnimation 1s ease infinite;
-      animation-delay: .8s;
+      animation-delay: 0.8s;
     }
   }
 }
@@ -78,9 +78,10 @@
   height: 17px;
   padding: 5px;
   cursor: pointer;
-  
-  span, &:after {
-    content: '';
+
+  span,
+  &:after {
+    content: "";
     display: block;
     width: 7px;
     height: 7px;
@@ -101,7 +102,8 @@
 
   &.isProducer {
     z-index: 6;
-    &:before, &:after {
+    &:before,
+    &:after {
       background: $success;
     }
   }
@@ -129,7 +131,7 @@
     opacity: 1;
   }
   25% {
-    opacity: .3;
+    opacity: 0.3;
   }
   50% {
     transform: scale(5);
@@ -142,7 +144,7 @@
 }
 
 // dark theme
-[data-theme='dark'] {
+[data-theme="dark"] {
   .map {
     background: $dark-gray-6;
 

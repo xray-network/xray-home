@@ -14,7 +14,7 @@ const Heading = ({ children, id }) => {
       {children}
       <CopyToClipboard
         text={link}
-        onCopy={() => message.success('Copied to clipboard')}
+        onCopy={() => message.success("Copied to clipboard")}
       >
         <Tooltip title="Copy link to anchor">
           <span className="ms-2 cursor-pointer">
