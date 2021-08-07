@@ -8,9 +8,8 @@ const Promo = () => {
     <div className="ray__block">
       <div className="ray__promo">
         <h1 className="ray__promo__text" data-aos="fade-up" data-aos-delay="0">
-          Hello, we’re Ray Network! An advanced DeFi ecosystem{" "}
+          Hello, we’re Ray Network! An advanced DeFi ecosystem for{" "}
           <span className="text-nowrap">
-            for{" "}
             <span className="ray__promo__cardano">
               <SVGCardano />
             </span>{" "}
