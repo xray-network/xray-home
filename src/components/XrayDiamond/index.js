@@ -60,12 +60,12 @@ const XrayTokenomics = () => {
             <br />
             Policy ID:{" "}
             <strong className="text-active">
-              b6798a74fb7441ef5f7af1ff4ea6150bbb7aaeb0aca0113e558592f6
+              <span className="text-break">b6798a74fb7441ef5f7af1ff4ea6150bbb7aaeb0aca0113e558592f6</span>
             </strong>
             <br />
             Fingerprint:{" "}
             <strong className="text-active">
-              asset1y7lphaaxkvjw5hl2kpq37nvlvg09qfqsh4qyme
+              <span className="text-break">asset1y7lphaaxkvjw5hl2kpq37nvlvg09qfqsh4qyme</span>
             </strong>
             <br />
             More info:{" "}

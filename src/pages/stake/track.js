@@ -6,7 +6,7 @@ import StakeTrack from "@/components/StakeTrack"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="Track / Withdraw Stake Delegators XRAY Rewards" />
+      <Helmet title="Track & Withdraw XRAY" />
       <StakeTrack />
     </MainLayout>
   )

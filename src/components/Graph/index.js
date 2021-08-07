@@ -17,7 +17,7 @@ const Kickstart = () => {
         scalable deploys to Cloudflare infrastructure.
       </p>
       <p className="mb-5">
-        Top up your accoundtADA address and a server with the latest version of
+        Top up your account ADA address and a server with the latest version of
         cardano-graphql and ogmios will be deployed to handle gql queries and
         websockets. Just use CardanoWeb3.js on top of this to populate your
         dApp!

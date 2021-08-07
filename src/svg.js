@@ -56,6 +56,7 @@ import SVGDonutChart from "@/icons/donut_chart.svg"
 import SVGCheckCircled from "@/icons/check_circled.svg"
 import SVGFiles from "@/icons/files.svg"
 import SVGHelp from "@/icons/help.svg"
+import SVGInfo from "@/icons/info.svg"
 
 export {
   SVGMinterr,
@@ -114,4 +115,5 @@ export {
   SVGCheckCircled,
   SVGFiles,
   SVGHelp,
+  SVGInfo,
 }

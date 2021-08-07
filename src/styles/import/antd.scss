@@ -185,6 +185,8 @@
 
   &-table {
     background: none;
+    font-size: rem(16);
+    color: $dark;
 
     th {
       transition: none !important;

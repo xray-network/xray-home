@@ -36,8 +36,9 @@ const XrayDistribution = () => {
           </div>
           <div className="pt-4">
             <p>
-              Delegate your ADA to Ray Network pools and receive rewards in ADA
-              and XRAY.{" "}
+              Stake ADA in Ray pools and get <strong>~5% ROI</strong> with extra
+              rewards each epoch <strong className="ray__ticker">1 XRAY</strong> per
+              each <strong className="ray__ticker">50 ADA</strong> staked.{' '}
               <Link
                 to="/stake/pools/"
                 target="_blank"
@@ -46,12 +47,14 @@ const XrayDistribution = () => {
                 Pools list.
               </Link>
               <br />
-              Use Ray Wallet, Yoroi, Adalite or Daedalus to delegate. Please do
+              Use Ray Wallet, Yoroi, Adalite or Daedalus to delegate.
+              <br />
+              Please do
               not use exchanges or centralized wallets, your rewards may be
               lost.{" "}
             </p>
             <ul className="mb-5">
-              <li>5.5% ROI in ADA per epoch</li>
+              <li>~5% ROI in ADA per epoch</li>
               <li>
                 100,000,000 <span className="ray__ticker">XRAY</span> in ~3
                 years;{" "}
@@ -91,8 +94,8 @@ const XrayDistribution = () => {
                 </Popover>
               </li>
               <li>
-                1,538,200 <span className="ray__ticker">XRAY</span> to early
-                delegators;{" "}
+                <strike>1,538,200 <span className="ray__ticker">XRAY</span> to early
+                  delegators;</strike> End. {" "}
                 <Popover
                   content={
                     <div className="ray__info">
