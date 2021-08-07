@@ -19,7 +19,7 @@ const BannerISPO = () => {
           <div className="ray__left ray__left--empty">
             <div className={style.content}>
               <p>
-                XRAY tokens are distributed through a fair launch. Delegate your <span className="ray__ticker">ADA</span> to Ray pools and receive each 1 <span className="ray__ticker">XRAY</span> each epoch for every <span className="ray__ticker">ADA</span> you staked.
+                XRAY tokens are distributed through a fair launch. Delegate your <span className="ray__ticker">ADA</span> to Ray pools and receive 1 <span className="ray__ticker">XRAY</span> each epoch for every 50 <span className="ray__ticker">ADA</span> you staked.
               </p>
               <p>
                 Ray pools have 0% fee comission, so <span className="ray__ticker">ADA</span> rewards stay with you.
