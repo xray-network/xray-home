@@ -431,7 +431,7 @@ const Footer = () => {
                     allowClear
                     enterButton="Subscribe"
                     size="large"
-                    onSearch={() => {}}
+                    onSearch={() => { }}
                   />
                 </div>
               </div>

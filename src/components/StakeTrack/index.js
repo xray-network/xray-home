@@ -407,7 +407,7 @@ const StakeTrack = ({ callback = () => { } }) => {
             </div>
             <div className="ray__left ray__left--dark mb-4">
               <h5 className="mb-0">
-                <strong>Withdrawals history</strong>
+                <strong>Withdrawal history</strong>
               </h5>
             </div>
             <div className="ray__table">

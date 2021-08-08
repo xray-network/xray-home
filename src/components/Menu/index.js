@@ -337,15 +337,14 @@ const Menu = () => {
               location.pathname === "/"
                 ? item.url === location.pathname
                 : item.url === "/"
-                ? false
-                : location.pathname.includes(item.url)
+                  ? false
+                  : location.pathname.includes(item.url)
             return (
               <span key={index} className={style.linksContainer}>
                 {item.disabled && (
                   <span
-                    className={`${style.linksLink} ${style.linksLinkDisabled} ${
-                      isActive ? style.linksLinkActive : ""
-                    }`}
+                    className={`${style.linksLink} ${style.linksLinkDisabled} ${isActive ? style.linksLinkActive : ""
+                      }`}
                   >
                     <div className={style.linksLinkContainer}>
                       <span className={style.linksLinkTitle}>{item.title}</span>
@@ -356,9 +355,8 @@ const Menu = () => {
                 {!item.external && !item.disabled && (
                   <Link
                     to={item.url}
-                    className={`${style.linksLink} ${
-                      isActive ? style.linksLinkActive : ""
-                    }`}
+                    className={`${style.linksLink} ${isActive ? style.linksLinkActive : ""
+                      }`}
                   >
                     <div className={style.linksLinkContainer}>
                       <span className={style.linksLinkTitle}>{item.title}</span>
