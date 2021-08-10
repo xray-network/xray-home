@@ -162,7 +162,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/nft-marketplace/"
+                          href="https://rraayy.com/nft/"
                           className="text-muted"
                         >
                           Ray NFT
@@ -191,7 +191,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/cardano-web3/"
+                          href="https://github.com/ray-network/cardano-web3.js"
                           className="text-muted"
                         >
                           CardanoWeb3.js
@@ -239,7 +239,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/updates/"
+                          href="https://rraayy.com/roadmap/"
                           className="text-muted"
                         >
                           Roadmap & Updates

@@ -137,7 +137,7 @@ const XrayDistribution = () => {
           </div>
         </div>
       </div>
-      <div className="ray__left ray__left--dark">
+      <div className={style.itemOuter}>
         <div className={style.item}>
           <div className={style.line} />
           <div className="mb-3 d-flex">
@@ -169,7 +169,7 @@ const XrayDistribution = () => {
           </div>
         </div>
       </div>
-      <div className="ray__left ray__left--dark">
+      <div className={style.itemOuter}>
         <div className={style.item}>
           <div className={style.line} />
           <div className="mb-3 d-flex">

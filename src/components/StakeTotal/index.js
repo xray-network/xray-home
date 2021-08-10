@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import { Line } from "react-chartjs-2"
 import { format } from "@/utils"
 
-const StakeTotal = ({ callback = () => {} }) => {
+const StakeTotal = ({ callback = () => { } }) => {
   const theme = useSelector((state) => state.settings.theme)
   const isLight = theme === "default"
   const [rewards, setRewards] = useState({
@@ -88,16 +88,14 @@ const StakeTotal = ({ callback = () => {} }) => {
       tooltip: {
         callbacks: {
           title: (tooltipItem) =>
-            `Epoch ${tooltipItem[0].label} (for Epoch ${
-              parseInt(tooltipItem[0].label) - 2
+            `Epoch ${tooltipItem[0].label} (for Epoch ${parseInt(tooltipItem[0].label) - 2
             })`,
           label: (tooltipItem) => {
             const { datasetIndex } = tooltipItem
             const ds = chartData.datasets[datasetIndex]
             const arr = []
             arr.push(
-              `${ds.label}: ${format(ds.data[tooltipItem.dataIndex])} ${
-                ds.postfix
+              `${ds.label}: ${format(ds.data[tooltipItem.dataIndex])} ${ds.postfix
               }`
             )
             datasetIndex === 1 &&
@@ -117,7 +115,7 @@ const StakeTotal = ({ callback = () => {} }) => {
   return (
     <div>
       <div className="row mb-4">
-        <div className="col-6 col-sm-4 mb-4">
+        <div className="col-12 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
               {format(rewards.totalAccrued)}{" "}
@@ -126,7 +124,7 @@ const StakeTotal = ({ callback = () => {} }) => {
             <div>Total Distributed</div>
           </div>
         </div>
-        <div className="col-6 col-sm-4 mb-4">
+        <div className="col-12 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
               {format(rewards.totalUndelivered)}{" "}
@@ -135,7 +133,7 @@ const StakeTotal = ({ callback = () => {} }) => {
             <div>Undelivered</div>
           </div>
         </div>
-        <div className="col-6 col-sm-4 mb-4">
+        <div className="col-12 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
               {format(rewards.currentEpoch)}

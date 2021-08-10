@@ -139,7 +139,7 @@ const XrayDistribution = () => {
               {format(totals.active / 1e6 || 0)}{" "}
               <span className="ray__ticker">ADA</span>
             </div>
-            <div>Total Ative Stake</div>
+            <div>Total Active Stake</div>
           </div>
         </div>
         <div className="col-12 col-sm-4 mb-4">
