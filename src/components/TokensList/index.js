@@ -99,7 +99,7 @@ const columnsNFT = [
             Home
           </a>
           <a
-            href={records.url}
+            href={records.twitter}
             target="_blank"
             rel="noopener noreferrer"
             className="ray__link"
