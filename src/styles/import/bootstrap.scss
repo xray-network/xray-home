@@ -94,6 +94,12 @@
   }
 }
 
+.min-width {
+  &-500 {
+    min-width: rem(500);
+  }
+}
+
 .bg {
   &-pastel {
     background: $pastel-1;

@@ -81,7 +81,7 @@ const columnsNFT = [
     title: "Description",
     dataIndex: "description",
     key: "description",
-    render: (record) => <div className="text-wrap">{record}</div>,
+    render: (record) => <div className="text-wrap min-width-500">{record}</div>,
   },
   {
     title: "Links",
