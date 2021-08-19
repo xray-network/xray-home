@@ -24,6 +24,7 @@ const initialState = {
   networkBlock: 0,
   networkEpoch: 0,
   networkEpochStartedAt: undefined,
+  rate: 0,
   megaMenu: false,
 }
 

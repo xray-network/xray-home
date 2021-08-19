@@ -36,7 +36,7 @@ const Kickstart = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span className="me-2">Ray NFT</span>
+            <span className="me-2">Ray Kickstart</span>
             <span className="ray__icon">
               <SVGLink />
             </span>

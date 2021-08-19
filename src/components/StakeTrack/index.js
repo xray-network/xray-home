@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { useSelector } from "react-redux"
-import { Table, Tooltip, message, Input, Button, Alert } from "antd"
+import { Table, Tooltip, message, Input, Button, Alert, Statistic } from "antd"
+import { addDays } from "date-fns"
 import { Line } from "react-chartjs-2"
 import QRCode from "qrcode.react"
 import store from "store"
-import { format as formatDate, addDays } from "date-fns"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import { format, truncate } from "@/utils"
 import { SVGClose, SVGFiles, SVGAdd, SVGHelp } from "@/svg"
@@ -97,9 +97,7 @@ const StakeTrack = ({ callback = () => { } }) => {
 
   const fetchData = (key) => {
     // fetch(`http://localhost:8080/rewards/delegation/state/${key}`)
-    fetch(
-      `https://api-mainnet-helper.rraayy.com/rewards/delegation/state/${key}`
-    )
+    fetch(`https://api-mainnet-helper.rraayy.com/rewards/delegation/state/${key}`)
       .then((response) => response.json())
       .then((data) => {
         setRewards(data)
@@ -137,7 +135,7 @@ const StakeTrack = ({ callback = () => { } }) => {
       },
       {
         type: "bar",
-        label: "Snapshot",
+        label: "Active Stake Snapshot",
         hidden: true,
         maxBarThickness: 5,
         data: datasetProcessed.map((epoch) => epoch.snapshot / 1000000),
@@ -217,6 +215,8 @@ const StakeTrack = ({ callback = () => { } }) => {
 
   const withdrawalAddress = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   const keysNotEmpty = keys.length > 0
+
+  const epochStat = rewards?.rewardsHistory?.length ? rewards?.rewardsHistory[0] : {}
 
   return (
     <div className="ray__block">
@@ -345,12 +345,32 @@ const StakeTrack = ({ callback = () => { } }) => {
               <div className="col-6 col-sm-4 mb-4">
                 <div className="ray__left ray__left--dark">
                   <div className="ray__card__value">
-                    {formatDate(
-                      addDays(new Date(networkEpochStartedAt || null), 5),
-                      "MM/dd/yyyy HH:mm"
-                    )}
+                    <Statistic.Countdown
+                      className="ray__count__inline"
+                      value={addDays(new Date(networkEpochStartedAt || null), 5)}
+                      format="D[d] HH[h] mm[m] ss[s]"
+                    />
                   </div>
                   <div>Next Accrual</div>
+                </div>
+              </div>
+              <div className="col-6 col-sm-4 mb-4">
+                <div className="ray__left ray__left--dark">
+                  <div className="ray__card__value">
+                    {format(epochStat.snapshot ? epochStat.snapshot / 1000000 : 0, 6)}{" "}
+                    <span className="ray__ticker">ADA</span>
+                  </div>
+                  <div>Last Snapshot</div>
+                </div>
+              </div>
+              <div className="col-6 col-sm-4 mb-4">
+                <div className="ray__left ray__left--dark">
+                  <div className="ray__card__value">
+                    {format(epochStat.perXray ? epochStat.perXray / 1000000 : 0, 6)}{" "}
+                    <span className="ray__ticker">ADA</span> / 1{" "}
+                    <span className="ray__ticker">XRAY</span>
+                  </div>
+                  <div>Rewards Rate</div>
                 </div>
               </div>
             </div>

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { Input } from "antd"
+import { useSelector } from "react-redux"
 import Heading from "@/components/Heading"
 import { format } from "@/utils"
 import * as style from "./style.module.scss"
 
 const XrayCalculator = () => {
+  const rate = useSelector((state) => state.settings.rate)
   const [amount, setAmount] = useState(undefined)
   const [totalAda, setTotalAda] = useState(0)
   const [totalRay, setTotalRay] = useState(0)
@@ -12,7 +14,6 @@ const XrayCalculator = () => {
     btc: 0,
     ada: 0,
   })
-  const coeff = 50
 
   useEffect(() => {
     fetchPrices()
@@ -21,8 +22,8 @@ const XrayCalculator = () => {
 
   useEffect(() => {
     setTotalAda(amount * 0.05 || 0)
-    setTotalRay((amount / coeff) * 73 || 0)
-  }, [amount])
+    setTotalRay((amount / (rate / 1000000)) * 73 || 0)
+  }, [amount, rate])
 
   const fetchPrices = () => {
     fetch(
@@ -122,9 +123,9 @@ const XrayCalculator = () => {
             <div className="col-md-6">
               <ul>
                 <li>
-                  XRAY Rate: min{" "}
+                  XRAY Rate: {" "}
                   <strong>
-                    {coeff} <span className="ray__ticker">ADA</span> = 1{" "}
+                    {rate / 1000000} <span className="ray__ticker">ADA</span> / 1{" "}
                     <span className="ray__ticker">XRAY</span> <sup>/ Epoch</sup>
                   </strong>
                 </li>

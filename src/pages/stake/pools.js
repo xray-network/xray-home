@@ -6,7 +6,7 @@ import StakePools from "@/components/StakePools"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="Cardano Pools" />
+      <Helmet title="Cardano Stake Pools" />
       <StakePools />
     </MainLayout>
   )

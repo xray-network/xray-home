@@ -16,6 +16,7 @@ import {
   SVGActivity,
   SVGPercent,
   SVGLink,
+  SVGShieldCheck,
 } from "@/svg"
 import * as style from "./style.module.scss"
 
@@ -34,14 +35,19 @@ const config = [
         icon: <SVGRocket />,
       },
       {
+        title: "Tokenomics",
+        url: "/xray/tokenomics/",
+        icon: <SVGDonutChart />,
+      },
+      {
         title: "Distribution",
         url: "/xray/distribution/",
         icon: <SVGActivity />,
       },
       {
-        title: "Tokenomics",
-        url: "/xray/tokenomics/",
-        icon: <SVGDonutChart />,
+        title: "Governance",
+        url: "/xray/governance/",
+        icon: <SVGShieldCheck />,
       },
       {
         title: "XDIAMOND",
@@ -60,7 +66,7 @@ const config = [
         icon: <SVGActivity />,
       },
       {
-        title: "Pools",
+        title: "Stake Pools",
         url: "/stake/pools/",
         icon: <SVGZap />,
       },
@@ -191,7 +197,7 @@ const stake = [
     icon: <SVGActivity />,
   },
   {
-    title: "Pools",
+    title: "Stake Pools",
     url: "/stake/pools/",
     icon: <SVGZap />,
   },
@@ -214,14 +220,19 @@ const xray = [
     icon: <SVGRocket />,
   },
   {
+    title: "Tokenomics",
+    url: "/xray/tokenomics/",
+    icon: <SVGDonutChart />,
+  },
+  {
     title: "Distribution",
     url: "/xray/distribution/",
     icon: <SVGActivity />,
   },
   {
-    title: "Tokenomics",
-    url: "/xray/tokenomics/",
-    icon: <SVGDonutChart />,
+    title: "Governance",
+    url: "/xray/governance/",
+    icon: <SVGShieldCheck />,
   },
   {
     title: "XDIAMOND",
@@ -331,7 +342,7 @@ const Menu = () => {
             aria-label="Open Menu"
           />
         </div>
-        <div>
+        <div className="max-width-1000">
           {config.map((item, index) => {
             const isActive =
               location.pathname === "/"

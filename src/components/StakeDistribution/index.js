@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react"
+import { Statistic } from "antd"
+import { useSelector } from "react-redux"
+import { addDays } from "date-fns"
 import { Link } from "gatsby"
 import { format } from "@/utils"
 import Heading from "@/components/Heading"
 import StakeTotal from "@/components/StakeTotal"
+import { SVGLink } from "@/svg"
 // import * as style from "./style.module.scss"
 
 const XrayDistribution = () => {
+  const rate = useSelector((state) => state.settings.rate)
+
   const [rewards, setRewards] = useState({
     currentEpoch: 0,
     distributed: [],
@@ -83,19 +89,9 @@ const XrayDistribution = () => {
       <p className="mb-5">
         Stake ADA in Ray pools and get <strong>~5% ROI</strong> with extra
         rewards each epoch <strong className="ray__ticker">1 XRAY</strong> per
-        each <strong className="ray__ticker">50 ADA</strong> staked.
+        each <strong className="ray__ticker">{rate / 1000000} ADA</strong> staked.
       </p>
       <div className="mt-4 pt-3 mb-5 pb-3">
-        <span className="d-inline-block me-3 mb-2">
-          <a
-            className="ray__btn ray__btn--round"
-            href="https://app.raywallet.io/#/stake"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Delegate
-          </a>
-        </span>
         <span className="d-inline-block me-3 mb-2">
           <Link className="ray__btn ray__btn--round" to="/stake/pools/">
             Stake Pools
@@ -118,6 +114,19 @@ const XrayDistribution = () => {
           >
             Wiki
           </Link>
+        </span>
+        <span className="d-inline-block me-3 mb-2">
+          <a
+            className="ray__btn ray__btn--round"
+            href="https://app.raywallet.io/#/stake"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="me-2">Delegate</span>
+            <span className="ray__icon">
+              <SVGLink />
+            </span>
+          </a>
         </span>
       </div>
       <h5>
@@ -152,9 +161,40 @@ const XrayDistribution = () => {
         </div>
       </div>
       <h5>
-        <strong>XRAY payouts in Epoch {rewards.currentEpoch}</strong>
+        <strong>XRAY payouts in Epoch {rewards.currentEpoch} (for Epoch {rewards.currentEpoch - 2})</strong>
       </h5>
       <div className="row mb-4">
+        <div className="col-12 col-sm-4 mb-4">
+          <div className="ray__left ray__left--dark">
+            <div className="ray__card__value">
+              {format(epochStats.rate ? epochStats.rate / 1000000 : 0, 6)}{" "}
+              <span className="ray__ticker">ADA</span> / 1{" "}
+              <span className="ray__ticker">XRAY</span>
+            </div>
+            <div>Rewards Rate</div>
+          </div>
+        </div>
+        <div className="col-12 col-sm-4 mb-4">
+          <div className="ray__left ray__left--dark">
+            <div className="ray__card__value">
+              {format(epochStats.total / 1000000 || 0)}{" "}
+              <span className="ray__ticker">ADA</span>
+            </div>
+            <div>Active Stake Snapshot</div>
+          </div>
+        </div>
+        <div className="col-12 col-sm-4 mb-4">
+          <div className="ray__left ray__left--dark">
+            <div className="ray__card__value">
+              <Statistic.Countdown
+                className="ray__count__inline"
+                value={addDays(new Date(epochStats.timeStart || null), 5)}
+                format="D[d] HH[h] mm[m] ss[s]"
+              />
+            </div>
+            <div>Epoch Ends In</div>
+          </div>
+        </div>
         <div className="col-12 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
@@ -171,16 +211,6 @@ const XrayDistribution = () => {
               <span className="ray__ticker">XRAY</span>
             </div>
             <div>XRAY Epoch Limit</div>
-          </div>
-        </div>
-        <div className="col-12 col-sm-4 mb-4">
-          <div className="ray__left ray__left--dark">
-            <div className="ray__card__value">
-              {format(epochStats.rate ? epochStats.rate / 1000000 : 0)}{" "}
-              <span className="ray__ticker">ADA</span> / 1{" "}
-              <span className="ray__ticker">XRAY</span>
-            </div>
-            <div>Rewards Rate</div>
           </div>
         </div>
       </div>

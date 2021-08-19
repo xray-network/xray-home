@@ -53,7 +53,7 @@ const XrayTokenomics = () => {
       "Stake Delegators",
       "Liquidity Providers",
       "Investors",
-      "Development Fund",
+      "Development & Marketing Fund",
       "Founders",
     ],
     datasets: [
@@ -108,21 +108,36 @@ const XrayTokenomics = () => {
       <div className="ray__left ray__left--dark">
         <h5 className="mb-0">
           <strong>
-            Circulating Supply (Max Supply 406,152,800{" "}
-            <span className="ray__ticker">XRAY</span>)
+            Circulating Supply
           </strong>
         </h5>
         <div className={`${style.supply} ${style.supplyLarge}`}>
           <strong className="bolder">
-            10,152,800{" "}
+            13,538,200{" "}
+            <sup>
+              <span className="ray__ticker">XRAY</span>
+            </sup>
+          </strong>
+        </div>
+        <div className="ray__progress mb-4">
+          <div style={{ width: `${13 / 406 * 100}%` }} />
+        </div>
+        <h5 className="mb-1">
+          <strong>
+            Max Supply
+          </strong>
+        </h5>
+        <div className={`${style.supply} mb-5`}>
+          <strong className="bolder">
+            406,152,800{" "}
             <sup>
               <span className="ray__ticker">XRAY</span>
             </sup>
           </strong>
         </div>
         <p>
-          A total of 406 million XRAYs will be issued and will be available over
-          a 3-year period. The initial four year allocation is as follows:
+          A total of 406,152,800 XRAYs will be issued and will be available over
+          a 3-year period. The initial three year allocation is as follows:
         </p>
         <ul className="mb-5">
           <li>
@@ -130,7 +145,7 @@ const XrayTokenomics = () => {
             <span className="badge badge-token">235,568,624 XRAY</span>
           </li>
           <li>
-            20.00% to investors with 3-year vesting{" "}
+            20.00% to investors with vesting periods{" "}
             <span className="badge badge-token">81,230,560 XRAY</span>
           </li>
           <li>
@@ -142,6 +157,20 @@ const XrayTokenomics = () => {
             <span className="badge badge-token">32,492,224 XRAY</span>
           </li>
         </ul>
+        <div className="mb-5">
+          <Link
+            to="/xray/distribution/"
+            className="ray__btn ray__btn--round me-3 mb-3"
+          >
+            Distribution
+          </Link>
+          <Link
+            to="/xray/governance/"
+            className="ray__btn ray__btn--round me-3 mb-3"
+          >
+            Governance
+          </Link>
+        </div>
       </div>
       <div className="row">
         <div className="col-12 col-sm-6">
@@ -151,13 +180,23 @@ const XrayTokenomics = () => {
                 Stake Delegators <span className="text-shade">25%</span>
               </strong>
             </h5>
-            <div className={`${style.supply} mb-5`}>
+            <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                101,538,200{" "}
+                11,538,200{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
+            </div>
+            <div className="ray__progress ray__progress--small mb-3 me-5">
+              <div style={{ width: `${10 / 101 * 100}%` }} />
+            </div>
+            <div>
+              <strong>Max Allocation</strong>
+            </div>
+            <div className="mb-5">
+              <strong>101,538,200</strong>{" "}
+              <span className="ray__ticker">XRAY</span>
             </div>
           </div>
           <div className="ray__left ray__left--dark">
@@ -166,13 +205,23 @@ const XrayTokenomics = () => {
                 Liquidity Providers <span className="text-shade">33%</span>
               </strong>
             </h5>
-            <div className={`${style.supply} mb-5`}>
+            <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                134,030,424{" "}
+                0{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
+            </div>
+            <div className="ray__progress ray__progress--small mb-3 me-5">
+              <div style={{ width: 0 }} />
+            </div>
+            <div>
+              <strong>Max Allocation</strong>
+            </div>
+            <div className="mb-5">
+              <strong>134,030,424</strong>{" "}
+              <span className="ray__ticker">XRAY</span>
             </div>
           </div>
           <div className="ray__left ray__left--dark">
@@ -181,13 +230,23 @@ const XrayTokenomics = () => {
                 Investors Round <span className="text-shade">20%</span>
               </strong>
             </h5>
-            <div className={`${style.supply} mb-5`}>
+            <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                81,230,560{" "}
+                0{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
+            </div>
+            <div className="ray__progress ray__progress--small mb-3 me-5">
+              <div style={{ width: 0 }} />
+            </div>
+            <div>
+              <strong>Max Allocation</strong>
+            </div>
+            <div className="mb-5">
+              <strong>81,230,560</strong>{" "}
+              <span className="ray__ticker">XRAY</span>
             </div>
           </div>
         </div>
@@ -195,31 +254,51 @@ const XrayTokenomics = () => {
           <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>
-                Development Fund <span className="text-shade">14%</span>
+                Development & Marketing Fund <span className="text-shade">14%</span>
               </strong>
             </h5>
-            <div className={`${style.supply} mb-5`}>
+            <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                56,861,392{" "}
+                2,000,000{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
             </div>
+            <div className="ray__progress ray__progress--small mb-3 me-5">
+              <div style={{ width: `${2 / 56 * 100}%` }} />
+            </div>
+            <div>
+              <strong>Max Allocation</strong>
+            </div>
+            <div className="mb-5">
+              <strong>56,861,392</strong>{" "}
+              <span className="ray__ticker">XRAY</span>
+            </div>
           </div>
           <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>
-                Founders <span className="text-shade">8%</span>
+                Founders Fund <span className="text-shade">8%</span>
               </strong>
             </h5>
-            <div className={`${style.supply} mb-5`}>
+            <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                32,492,224{" "}
+                0{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
+            </div>
+            <div className="ray__progress ray__progress--small mb-3 me-5">
+              <div style={{ width: 0 }} />
+            </div>
+            <div>
+              <strong>Max Allocation</strong>
+            </div>
+            <div className="mb-5">
+              <strong>32,492,224</strong>{" "}
+              <span className="ray__ticker">XRAY</span>
             </div>
           </div>
         </div>
@@ -227,10 +306,10 @@ const XrayTokenomics = () => {
       <div className={style.chart}>
         <div className="text-center">
           <h5 className="mb-2">
-            <strong>Distribution Breakdown</strong>
+            <strong>Planned Distribution Breakdown</strong>
           </h5>
           <div className="mb-3">
-            Looking for distribution information?{" "}
+            Looking for detailed distribution information?{" "}
             <Link to="/xray/distribution/">Read here.</Link>
           </div>
         </div>

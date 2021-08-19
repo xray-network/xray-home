@@ -1,11 +1,15 @@
 import React from "react"
 import { Button, Popover } from "antd"
 import { Link } from "gatsby"
+import { useSelector } from "react-redux"
 import Heading from "@/components/Heading"
 import StakeTotal from "@/components/StakeTotal"
+import { SVGLink } from "@/svg"
 import * as style from "./style.module.scss"
 
 const XrayDistribution = () => {
+  const rate = useSelector((state) => state.settings.rate)
+
   return (
     <div className="ray__block">
       <Heading id="activities">
@@ -38,7 +42,7 @@ const XrayDistribution = () => {
             <p>
               Stake ADA in Ray pools and get <strong>~5% ROI</strong> with extra
               rewards each epoch <strong className="ray__ticker">1 XRAY</strong> per
-              each <strong className="ray__ticker">50 ADA</strong> staked.{' '}
+              each <strong className="ray__ticker">{rate / 1000000} ADA</strong> staked.{' '}
               <Link
                 to="/stake/pools/"
                 target="_blank"
@@ -120,19 +124,23 @@ const XrayDistribution = () => {
             </ul>
             <StakeTotal />
             <div className={style.controls}>
-              <div className="me-4">
-                <a
-                  href="https://app.raywallet.io/#/stake"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ray__btn ray__btn--round"
-                >
-                  Delegate ADA
-                </a>
-              </div>
-              <div className="align-self-center">
-                <Link to="/stake/track/">Track / Withdraw Rewards</Link>
-              </div>
+              <Link
+                to="/xray/governance/"
+                className="ray__btn ray__btn--round me-3 mb-3"
+              >
+                Track / Withdraw Rewards
+              </Link>
+              <a
+                href="https://app.raywallet.io/#/stake"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ray__btn ray__btn--round"
+              >
+                <span className="me-2">Delegate ADA</span>
+                <span className="ray__icon">
+                  <SVGLink />
+                </span>
+              </a>
             </div>
           </div>
         </div>

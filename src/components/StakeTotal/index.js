@@ -55,6 +55,19 @@ const StakeTotal = ({ callback = () => { } }) => {
         borderColor: ["#355aeb"],
         postfix: "XRAY",
       },
+      // {
+      //   type: "bar",
+      //   label: "Snapshot",
+      //   hidden: true,
+      //   maxBarThickness: 5,
+      //   data: distributed.map((epoch) => epoch.total / 1000000),
+      //   radius: 0,
+      //   width: 2,
+      //   backgroundColor: ["#355aeb"],
+      //   hoverBackgroundColor: ["#355aeb"],
+      //   borderColor: ["#355aeb"],
+      //   postfix: "ADA",
+      // },
     ],
   }
 
@@ -102,6 +115,13 @@ const StakeTotal = ({ callback = () => { } }) => {
               arr.push(
                 `ADA per 1 XRAY: ${format(
                   distributed[tooltipItem.dataIndex].rate / 1000000,
+                  6
+                )} ADA`
+              )
+            datasetIndex === 1 &&
+              arr.push(
+                `Active Stake Snapshot: ${format(
+                  distributed[tooltipItem.dataIndex].total / 1000000,
                   6
                 )} ADA`
               )

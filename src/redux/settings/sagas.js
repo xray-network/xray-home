@@ -86,6 +86,22 @@ export function* FETCH_NETWORK_STATE() {
   })
 }
 
+export function* FETCH_RATE() {
+  // const rateInfo = yield fetch('http://localhost:8080/rewards/delegation/rate/')
+  const rateInfo = yield fetch(`https://api-mainnet-helper.rraayy.com/rewards/delegation/rate/`)
+    .then((res) => res.json())
+
+  if (rateInfo?.rate) {
+    yield put({
+      type: "settings/CHANGE_SETTING",
+      payload: {
+        setting: "rate",
+        value: rateInfo.rate || 0,
+      },
+    })
+  }
+}
+
 export function* SETUP() {
   const theme = yield select((state) => state.settings.theme)
   yield call(CHANGE_THEME, { theme })
@@ -97,6 +113,7 @@ export function* SETUP() {
     },
   })
   yield call(FETCH_NETWORK_STATE)
+  yield call(FETCH_RATE)
 }
 
 export default function* rootSaga() {
@@ -105,6 +122,7 @@ export default function* rootSaga() {
     takeEvery(actions.SWITCH_MEGA_MENU, SWITCH_MEGA_MENU),
     takeEvery(actions.CHANGE_THEME, CHANGE_THEME),
     takeEvery(actions.FETCH_NETWORK_STATE, FETCH_NETWORK_STATE),
+    takeEvery(actions.FETCH_RATE, FETCH_RATE),
     SETUP(),
   ])
 }

@@ -1,22 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
+import { useSelector } from "react-redux"
 import { SVGCardano } from "@/svg"
 // import * as style from "./style.module.scss"
 
 const Promo = () => {
+  const rate = useSelector((state) => state.settings.rate)
+
   return (
     <div className="ray__block">
       <div className="ray__promo">
-        <h1 className="ray__promo__text" data-aos="fade-up" data-aos-delay="0">
-          Hello, we’re Ray Network! An advanced DeFi ecosystem for{" "}
-          <span className="text-nowrap">
-            <span className="ray__promo__cardano">
-              <SVGCardano />
+        <div className="max-width-1000">
+          <h1 className="ray__promo__text" data-aos="fade-up" data-aos-delay="0">
+            Hello, we’re Ray Network! An advanced DeFi ecosystem for{" "}
+            <span className="text-nowrap">
+              <span className="ray__promo__cardano">
+                <SVGCardano />
+              </span>{" "}
+              Cardano
             </span>{" "}
-            Cardano
-          </span>{" "}
-          blockchain platform.
-        </h1>
+            blockchain platform.
+          </h1>
+        </div>
         <div data-aos="fade-up" data-aos-delay="300">
           <p>
             We provide the whole range of blockchain solutions for Cardano: from
@@ -28,7 +33,7 @@ const Promo = () => {
           <p className="mb-5">
             Stake ADA in Ray pools and get <strong>~5% ROI</strong> with extra
             rewards each epoch <strong className="ray__ticker">1 XRAY</strong>{" "}
-            per each <strong className="ray__ticker">50 ADA</strong> staked.
+            per each <strong className="ray__ticker">{rate / 1000000} ADA</strong> staked.
           </p>
         </div>
         <div data-aos="fade-up" data-aos-delay="600">

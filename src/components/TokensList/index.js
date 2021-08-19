@@ -163,7 +163,7 @@ const TokensList = () => {
       <h5><strong>Regular Tokens</strong></h5>
       <div className="ray__table mb-5">
         <Table
-          size="small"
+          // size="small"
           loading={loadingRegular}
           dataSource={dataSourceRegular}
           columns={columnsRegular}
@@ -173,7 +173,7 @@ const TokensList = () => {
       <h5><strong>NFT Projects</strong></h5>
       <div className="ray__table">
         <Table
-          size="small"
+          // size="small"
           loading={loadingNFT}
           dataSource={dataSourceNFT}
           columns={columnsNFT}

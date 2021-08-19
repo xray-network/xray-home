@@ -7,13 +7,15 @@ const XrayPromo = () => {
   return (
     <div className="ray__block">
       <div className="ray__promo">
-        <h1
-          className="ray__promo__text"
-          data-aos="fade-up"
-          data-aos-delay="000"
-        >
-          Send, Stake, Earn, Swap, Fund, Bid? XRAY.
-        </h1>
+        <div className="max-width-1000">
+          <h1
+            className="ray__promo__text"
+            data-aos="fade-up"
+            data-aos-delay="000"
+          >
+            Send, Stake, Earn, Swap, Fund, Bid? XRAY.
+          </h1>
+        </div>
         <p className="mb-5" data-aos="fade-up" data-aos-delay="300">
           Ray Network token - XRAY - is a Cardano based cryptocurrency token for
           a fuelling the Ray platform. Ray is a highly functional open source
@@ -26,16 +28,22 @@ const XrayPromo = () => {
           data-aos-delay="600"
         >
           <Link
+            to="/xray/tokenomics/"
+            className="ray__btn ray__btn--round me-3 mb-3"
+          >
+            Tokenomics
+          </Link>
+          <Link
             to="/xray/distribution/"
             className="ray__btn ray__btn--round me-3 mb-3"
           >
             Distribution
           </Link>
           <Link
-            to="/xray/tokenomics/"
+            to="/xray/governance/"
             className="ray__btn ray__btn--round me-3 mb-3"
           >
-            Tokenomics
+            Governance
           </Link>
           <Link
             to="/xray/xdiamond/"
