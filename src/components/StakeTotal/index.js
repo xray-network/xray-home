@@ -15,8 +15,8 @@ const StakeTotal = ({ callback = () => { } }) => {
   const { distributed } = rewards
 
   const fetchData = () => {
-    // fetch(`http://localhost:8080/rewards/delegation/state/`)
-    fetch(`https://api-mainnet-helper.rraayy.com/rewards/delegation/state/`)
+    // fetch(`http://localhost:8080/ispo/state/`)
+    fetch(`https://api-mainnet-helper.rraayy.com/ispo/state/`)
       .then((response) => response.json())
       .then((data) => {
         setRewards(data)

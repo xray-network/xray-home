@@ -87,8 +87,8 @@ export function* FETCH_NETWORK_STATE() {
 }
 
 export function* FETCH_RATE() {
-  // const rateInfo = yield fetch('http://localhost:8080/rewards/delegation/rate/')
-  const rateInfo = yield fetch(`https://api-mainnet-helper.rraayy.com/rewards/delegation/rate/`)
+  // const rateInfo = yield fetch('http://localhost:8080/ispo/rate/')
+  const rateInfo = yield fetch(`https://api-mainnet-helper.rraayy.com/ispo/rate/`)
     .then((res) => res.json())
 
   if (rateInfo?.rate) {

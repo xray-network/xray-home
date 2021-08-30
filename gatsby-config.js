@@ -31,13 +31,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-41062113-23",
+        trackingId: "UA-41062113-16",
       },
     },
     {
       resolve: `gatsby-plugin-yandex-metrika`,
       options: {
-        trackingId: "83032947",
+        trackingId: "70157308",
         webvisor: true,
         trackHash: true,
       },

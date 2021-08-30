@@ -47,7 +47,7 @@ const StakeTrack = ({ callback = () => { } }) => {
   const lookupAddress = () => {
     if (findAddress) {
       fetch(
-        `https://api-mainnet-helper.rraayy.com/rewards/search/${findAddress}`
+        `https://api-mainnet-helper.rraayy.com/ispo/search/${findAddress}`
       )
         // fetch(`http://localhost:8080/rewards/search/${findAddress}`)
         .then((response) => response.json())
@@ -96,8 +96,8 @@ const StakeTrack = ({ callback = () => { } }) => {
   }
 
   const fetchData = (key) => {
-    // fetch(`http://localhost:8080/rewards/delegation/state/${key}`)
-    fetch(`https://api-mainnet-helper.rraayy.com/rewards/delegation/state/${key}`)
+    // fetch(`http://localhost:8080/ispo/key/${key}`)
+    fetch(`https://api-mainnet-helper.rraayy.com/ispo/key/${key}`)
       .then((response) => response.json())
       .then((data) => {
         setRewards(data)

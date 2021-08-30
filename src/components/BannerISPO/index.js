@@ -1,9 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
+import { useSelector } from "react-redux"
 import * as style from "./style.module.scss"
 import { SVGInfo } from "@/svg"
 
 const BannerISPO = () => {
+  const rate = useSelector((state) => state.settings.rate)
+
   return (
     <div className={style.outer}>
       <div className="ray__block mb-0">
@@ -19,7 +22,7 @@ const BannerISPO = () => {
           <div className="ray__left ray__left--empty">
             <div className={style.content}>
               <p>
-                XRAY tokens are distributed through a fair launch. Delegate your <span className="ray__ticker">ADA</span> to Ray pools and receive 1 <span className="ray__ticker">XRAY</span> each epoch for every 50 <span className="ray__ticker">ADA</span> you staked.
+                XRAY tokens are distributed through a fair launch. Delegate your <span className="ray__ticker">ADA</span> to Ray pools and receive 1 <span className="ray__ticker">XRAY</span> each epoch for every {rate / 1000000} <span className="ray__ticker">ADA</span> you staked.
               </p>
               <p>
                 Ray pools have 0% fee comission, so <span className="ray__ticker">ADA</span> rewards stay with you.

@@ -363,6 +363,11 @@
       }
     }
 
+    &--disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
     &--transparent {
       color: $dark !important;
       background: $white !important;

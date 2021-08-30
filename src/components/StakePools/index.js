@@ -23,6 +23,10 @@ const XrayPools = () => {
     "22cfa3b8612c146a0737c974dcfcbb8cddd86f3a511cf531ce8d91a1",
   ]
 
+  const saturated = [
+    "1c8cd022e993a8366be641c17cb6d9c5d8944e00bfce3189d8b1515a",
+  ]
+
   const fetchData = () => {
     fetch(`https://js.adapools.org/pools/${pools[0]}/summary.json`)
       .then((res) => res.json())
@@ -67,10 +71,11 @@ const XrayPools = () => {
       </p>
       <div className="row">
         {[poolsData1, poolsData2, poolsData3].map((pool, index) => {
+          const isSaturated = saturated.includes(pool.pHash)
           return (
             <div className="col-md-4" key={index}>
               <div className={style.pool}>
-                <span className="badge badge-success">ACTIVE</span>
+                <span className="badge badge-success">{isSaturated ? 'SATURATED' : 'ACTIVE'}</span>
                 <div className={style.poolItem}>
                   <div className={style.poolLabel}>Pool Id</div>
                   <div className={style.poolValue}>
@@ -192,9 +197,9 @@ const XrayPools = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     type="primary"
-                    className="ray__btn ray__btn--success ray__btn--small w-100"
+                    className={`ray__btn ray__btn--success ray__btn--small w-100 ${isSaturated && 'ray__btn--disabled'}`}
                   >
-                    <strong>Delegate</strong>
+                    <strong>{isSaturated ? 'Saturated' : 'Delegate'}</strong>
                   </Button>
                 </div>
               </div>
