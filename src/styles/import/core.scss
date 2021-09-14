@@ -8,12 +8,9 @@ body {
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
   @media (max-width: $lg-max-width) {
-    font-size: 14px;
-  }
-  @media (max-width: $md-max-width) {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
@@ -22,7 +19,6 @@ body {
   color: $text;
   overflow-x: hidden;
   position: relative;
-  background: $pastel-1;
 
   * {
     font-variant: normal !important;
@@ -41,7 +37,7 @@ a,
   &:hover,
   &:active,
   &:focus {
-    color: $blue-light;
+    color: $blue;
     text-decoration: none;
   }
 }
@@ -155,14 +151,8 @@ code {
 // dark theme
 [data-theme="dark"] {
   body {
-    background: $dark-gray-5;
+    background: $dark;
     color: $dark-gray-2;
-
-    &:before {
-      opacity: 0.07;
-      background: transparent repeat url(/resources/pattern-white.svg) top
-        center;
-    }
   }
 
   h1,

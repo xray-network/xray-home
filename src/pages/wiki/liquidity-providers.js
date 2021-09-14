@@ -24,7 +24,7 @@ const Page = () => {
         <strong>When does this program start?</strong>
       </h5>
       <p>
-        The program will be available as soon as Ray Swap launches (when smart
+        The program will be available as soon as RaySwap launches (when smart
         contracts are available on the Cardano blockchain).
       </p>
     </LayoutWiki>

@@ -2,8 +2,7 @@
 
 .item {
   padding: rem(20) rem(20) rem(30);
-  border: 1px solid transparent;
-  background: $white;
+  border: 1px solid $border;
   border-radius: 12px;
   display: block;
   height: 100%;
@@ -35,7 +34,8 @@
 // dark theme
 [data-theme="dark"] {
   .item {
-    background: $dark-gray-6;
+    background: $dark-gray-5;
+    border-color: transparent;
 
     &:hover {
       border-color: $primary;

@@ -1,18 +1,14 @@
 @import "@/styles/mixins";
 
-.outer {
-  padding: rem(70) 0 rem(30);
-  background: $white;
-}
-
 .banner {
-  background: linear-gradient(darken($dark, 5%), $dark-gray-5);
+  background: $dark;
   color: $white;
   border-radius: 12px;
   padding: rem(70) rem(50) rem(70) 0;
   font-size: rem(20);
   position: relative;
   overflow: hidden;
+  margin-bottom: rem(120);
 
   :global(.ray__ticker) {
     border-color: $dark-gray-3;
@@ -36,7 +32,7 @@
 }
 
 .content {
-  max-width: rem(450);
+  max-width: rem(600);
 }
 
 .item {
@@ -73,7 +69,7 @@
 
 // dark theme
 [data-theme="dark"] {
-  .outer {
-    background: $dark-gray-6;
+  .banner {
+    background: $dark-gray-5;
   }
 }

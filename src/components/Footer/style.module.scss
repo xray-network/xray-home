@@ -6,8 +6,10 @@
 
 .footer {
   &Top {
-    margin-bottom: rem(40);
-    padding-top: rem(90);
+    margin-bottom: rem(60);
+    padding-top: rem(80);
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
   }
 
   &Lists {
@@ -84,6 +86,11 @@
   }
 
   .footer {
+    &Top {
+      border-top: 1px solid $dark-border;
+      border-bottom: 1px solid $dark-border;
+    }
+
     &Cardano {
       svg {
         * {
@@ -99,6 +106,14 @@
             fill: $blue-light !important;
           }
         }
+      }
+    }
+
+    &App {
+      background: $dark-gray-5;
+  
+      &:hover {
+        background: $dark-gray-4;
       }
     }
   }

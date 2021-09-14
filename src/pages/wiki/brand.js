@@ -43,17 +43,11 @@ const Page = () => {
       </div>
 
       <h5>
-        <strong>Font & Colors</strong>
+        <strong>Colors</strong>
       </h5>
-      <p>
-        Font: <span className="ray__ticker text-active">Chivo</span> -{" "}
-        <a href="https://fonts.google.com/specimen/Chivo">
-          https://fonts.google.com/specimen/Chivo
-        </a>
-      </p>
       <p className="mb-5">
         Blue: <span className="ray__ticker text-active">#1940ed</span> Dark:{" "}
-        <span className="ray__ticker text-active">#253858</span> Gray:{" "}
+        <span className="ray__ticker text-active">#0c0c1b</span> Gray:{" "}
         <span className="ray__ticker text-active">#F4F4F5</span>{" "}
       </p>
 

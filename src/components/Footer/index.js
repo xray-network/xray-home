@@ -43,7 +43,7 @@ const Footer = () => {
                           href="https://rraayy.com/wallet/"
                           className="text-muted"
                         >
-                          Ray Wallet
+                          RayWallet
                         </a>
                       </li>
                       <li>
@@ -51,7 +51,7 @@ const Footer = () => {
                           href="https://rraayy.com/stake/"
                           className="text-muted"
                         >
-                          Ray Stake
+                          RayStake
                         </a>
                       </li>
                       <li>
@@ -59,7 +59,7 @@ const Footer = () => {
                           href="https://rraayy.com/swap/"
                           className="text-muted"
                         >
-                          Ray Swap
+                          RaySwap
                         </a>
                       </li>
                       <li>
@@ -67,7 +67,7 @@ const Footer = () => {
                           href="https://rraayy.com/kickstart/"
                           className="text-muted"
                         >
-                          Ray Kickstart
+                          RayKickstart
                         </a>
                       </li>
                       <li>
@@ -75,7 +75,7 @@ const Footer = () => {
                           href="https://rraayy.com/nft/"
                           className="text-muted"
                         >
-                          Ray NFT
+                          RayNFT
                         </a>
                       </li>
                       <li>
@@ -83,7 +83,7 @@ const Footer = () => {
                           href="https://rraayy.com/graph/"
                           className="text-muted"
                         >
-                          Ray Graph
+                          RayGraph
                         </a>
                       </li>
                       <li>
@@ -91,7 +91,7 @@ const Footer = () => {
                           href="https://rraayy.com/data/"
                           className="text-muted"
                         >
-                          Ray Data
+                          RayData
                         </a>
                       </li>
                       <li>
@@ -109,10 +109,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/tokens-list/"
+                          href="https://rraayy.com/cardano-list/"
                           className="text-muted"
                         >
-                          Tokens List
+                          Cardano List
                         </a>
                       </li>
                     </ul>
@@ -137,7 +137,7 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/xray/xdiamond/"
+                          href="https://rraayy.com/xdiamond/"
                           className="text-muted"
                         >
                           XDIAMOND
@@ -300,7 +300,7 @@ const Footer = () => {
                   <div className="col-6 col-sm-12">
                     <div className="mb-3">
                       <h6 className="mb-0">
-                        <strong>Ray Wallet Apps</strong>
+                        <strong>RayWallet Apps</strong>
                       </h6>
                     </div>
                     <div className="mb-4">
@@ -373,7 +373,7 @@ const Footer = () => {
                   <div className="col-6 col-sm-12">
                     <div className="mb-3">
                       <h6 className="mb-0">
-                        <strong>Ray Stake Apps</strong>
+                        <strong>RayStake Apps</strong>
                       </h6>
                     </div>
                     <div className="mb-4">

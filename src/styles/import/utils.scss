@@ -7,7 +7,7 @@
     background: $gray-3;
 
     &--small {
-      height: rem(7);
+      height: rem(12);
     }
 
     > div {
@@ -73,8 +73,7 @@
       top: 0;
       bottom: 0;
       left: 0;
-      width: rem(7);
-      border-radius: 20px;
+      width: rem(9);
       background: $primary;
     }
 
@@ -167,7 +166,7 @@
   }
 
   &__block {
-    max-width: rem(1180);
+    max-width: rem(1380);
     margin: 0 auto rem(90);
     padding: 0 rem(25);
 
@@ -221,9 +220,6 @@
   &__table {
     overflow: auto;
     white-space: nowrap;
-    padding: rem(20);
-    background: $white;
-    border-radius: 8px;
   }
 
   &__ticker {
@@ -236,6 +232,12 @@
     font-weight: bold;
     text-transform: uppercase;
     vertical-align: baseline;
+
+    &__large {
+      font-size: 75%;
+      padding: rem(5) rem(15);
+      border-radius: 15px;
+    }
   }
 
   &__btn {
@@ -249,12 +251,12 @@
     background: $dark;
     height: rem(38);
     border: 1px solid transparent;
-    font-size: rem(16);
+    font-size: rem(18);
     text-align: center;
     font-weight: 700;
-    border-radius: 8px;
+    border-radius: rem(8);
     border: 1px solid transparent !important;
-    @include transition-middle();
+    @include transition-slow();
 
     svg {
       height: rem(18) !important;
@@ -269,6 +271,7 @@
     &:active {
       color: $white;
       background: lighten($dark, 10%);
+      transform: translateY(-3px);
     }
 
     &[disabled] {
@@ -283,10 +286,16 @@
           }
         }
       }
+
+      &:hover,
+      &:focus,
+      &:active {
+        transform: none !important;
+      }
     }
 
     &--round {
-      border-radius: 100px;
+      border-radius: rem(13);
     }
 
     &--small {
@@ -394,7 +403,7 @@
 
   &__promo {
     margin: 0 0 rem(80);
-    font-size: rem(20);
+    font-size: rem(21);
 
     h5 {
       line-height: 1.5;
@@ -422,8 +431,7 @@
         top: rem(15);
         bottom: rem(20);
         left: 0;
-        width: rem(7);
-        border-radius: 20px;
+        width: rem(9);
         background: $primary;
       }
 
@@ -465,8 +473,6 @@
 
 // dark theme
 [data-theme="dark"] {
-  a:not(.ray__btn),
-  .ant-btn,
   .cursor-pointer {
     &:hover {
       .ray__icon {
@@ -495,15 +501,15 @@
     }
 
     &__left {
+      &:before {
+        background: $primary;
+      }
+      
       &--gray {
         &:before {
           background: $dark-gray-4;
         }
       }
-    }
-
-    &__table {
-      background: $dark-gray-6;
     }
 
     &__icon {
@@ -515,7 +521,8 @@
     }
 
     &__line {
-      background: $dark-border;
+      background: $dark-gray-4;
+      margin: rem(25) 0;
     }
 
     &__ticker {
@@ -529,24 +536,25 @@
     }
 
     &__btn {
-      color: $white !important;
+      color: $dark !important;
+      background: $white;
 
       svg {
         height: rem(18) !important;
         width: auto !important;
         * {
-          fill: $white !important;
+          fill: $dark !important;
         }
       }
 
       &[disabled] {
         background: $dark-gray-4 !important;
-        color: $dark-gray-3 !important;
+        color: $dark-gray-2 !important;
         border-color: transparent !important;
 
         svg {
           * {
-            fill: $dark-gray-3 !important;
+            fill: $dark-gray-2 !important;
           }
         }
       }
@@ -568,12 +576,13 @@
       }
 
       &--transparent {
-        border-color: $dark-gray-3 !important;
-        background: $dark-gray-5 !important;
+        border-color: $dark-gray-4 !important;
+        background: $dark-gray-6 !important;
+        color: $white !important;
 
         &:hover {
-          border-color: $dark-gray-3 !important;
-          background-color: $dark-gray-4 !important;
+          border-color: $dark-gray-4 !important;
+          background-color: $dark-gray-5 !important;
         }
       }
     }

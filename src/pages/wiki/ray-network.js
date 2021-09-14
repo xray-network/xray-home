@@ -28,17 +28,17 @@ const Page = () => {
       </h5>
       <p>
         <span className="ray__ticker">XRAY</span> token is a payment token for
-        those services, such as premium Ray NFT marketplace placement, Ray
+        those services, such as premium RayNFT marketplace placement, Ray
         KickStart placement, tokens minting, will be used as a governance token,
-        yield farming in Ray Swap, and B2B service based on Atala PRISM.
+        yield farming in RaySwap, and B2B service based on Atala PRISM.
       </p>
       <div className="ray__line my-4" />
 
       <h5>
-        <strong>What is the Ray Swap?</strong>
+        <strong>What is the RaySwap?</strong>
       </h5>
       <p>
-        Ray Swap is a decentralized finance protocol that is used to exchange
+        RaySwap is a decentralized finance protocol that is used to exchange
         cryptocurrencies. The protocol facilitates automated transactions
         between cryptocurrency tokens on the Cardano blockchain through the use
         of smart contracts.
@@ -46,10 +46,10 @@ const Page = () => {
       <div className="ray__line my-4" />
 
       <h5>
-        <strong>What is the Ray KickStart?</strong>
+        <strong>What is the RayKickstart?</strong>
       </h5>
       <p>
-        Ray KickStart exists to help bring creative projects to life through
+        RayKickstart exists to help bring creative projects to life through
         tokenization. It allows you to create and fund your projects in minutes.
         A crypto-home for services, products, film, music, art, theater, games,
         comics, design, photography, and more.
@@ -57,10 +57,10 @@ const Page = () => {
       <div className="ray__line my-4" />
 
       <h5>
-        <strong>What is the Ray NFT Marketplace?</strong>
+        <strong>What is the RayNFT Marketplace?</strong>
       </h5>
       <p>
-        Ray NFT is a decentralized non-fungible token (NFT) marketplace for
+        RayNFT is a decentralized non-fungible token (NFT) marketplace for
         buying, selling, and trading NFTs.
       </p>
     </LayoutWiki>

@@ -9,7 +9,6 @@ import {
   SVGMoon,
   SVGCardano,
   SVGBarChart,
-  SVGDiamond,
   SVGRocket,
   SVGZap,
   SVGDonutChart,
@@ -49,12 +48,11 @@ const config = [
         url: "/xray/governance/",
         icon: <SVGShieldCheck />,
       },
-      {
-        title: "XDIAMOND",
-        url: "/xray/xdiamond/",
-        icon: <SVGDiamond />,
-      },
     ],
+  },
+  {
+    title: "XDIAMOND",
+    url: "/xdiamond/",
   },
   {
     title: "Stake",
@@ -76,8 +74,8 @@ const config = [
         icon: <SVGPercent />,
       },
       {
-        title: "Track & Withdraw",
-        url: "/stake/track/",
+        title: "RayStake App",
+        url: "https://stake.rraayy.com",
         icon: <SVGBarChart />,
       },
     ],
@@ -107,8 +105,8 @@ const config = [
     url: "/data/",
   },
   {
-    title: "Tokens List",
-    url: "/tokens-list/",
+    title: "Cardano List",
+    url: "/cardano-list/",
   },
   {
     title: "Wiki",
@@ -207,9 +205,10 @@ const stake = [
     icon: <SVGPercent />,
   },
   {
-    title: "Track & Withdraw",
-    url: "/stake/track/",
+    title: "RayStake App",
+    url: "https://stake.rraayy.com",
     icon: <SVGBarChart />,
+    external: true,
   },
 ]
 
@@ -233,11 +232,6 @@ const xray = [
     title: "Governance",
     url: "/xray/governance/",
     icon: <SVGShieldCheck />,
-  },
-  {
-    title: "XDIAMOND",
-    url: "/xray/xdiamond/",
-    icon: <SVGDiamond />,
   },
 ]
 
@@ -264,18 +258,37 @@ const Menu = () => {
       <div className={style.submenu}>
         {items.map((item, index) => {
           return (
-            <Link
-              key={index}
-              to={item.url}
-              className={style.submenuLink}
-              activeClassName={style.submenuLinkActive}
-            >
-              <span className="ray__icon me-2">{item.icon}</span>
-              <span className={style.submenuLinkWidth}>
-                <span>{item.title}</span>
-                <span>{item.title}</span>
-              </span>
-            </Link>
+            <>
+              {!item.external && (
+                <Link
+                  key={index}
+                  to={item.url}
+                  className={style.submenuLink}
+                  activeClassName={style.submenuLinkActive}
+                >
+                  <span className="ray__icon me-2">{item.icon}</span>
+                  <span className={style.submenuLinkWidth}>
+                    <span>{item.title}</span>
+                    <span>{item.title}</span>
+                  </span>
+                </Link>
+              )}
+              {item.external && (
+                <a
+                  key={index}
+                  href={item.url}
+                  className={style.submenuLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="ray__icon me-2">{item.icon}</span>
+                  <span className={style.submenuLinkWidth}>
+                    <span>{item.title}</span>
+                    <span>{item.title}</span>
+                  </span>
+                </a>
+              )}
+            </>
           )
         })}
       </div>
@@ -309,10 +322,10 @@ const Menu = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="pe-2">Ray Wallet</span>
-              <span className="ray__icon">
+              <span className="ray__icon pe-2">
                 <SVGWallet />
               </span>
+              <span>RayWallet</span>
             </a>
           </span>
           <span
@@ -342,7 +355,7 @@ const Menu = () => {
             aria-label="Open Menu"
           />
         </div>
-        <div className="max-width-1000">
+        <div style={{ maxWidth: 1300 }}>
           {config.map((item, index) => {
             const isActive =
               location.pathname === "/"
@@ -398,16 +411,11 @@ const Menu = () => {
                             )}
                             {!subItem.external && (
                               <Link to={subItem.url} className={style.mItem}>
-                                <div className={style.mTitle}>
+                                <div className={`${style.mTitle} ${subItem.url === location.pathname && style.mTitleActive}`}>
                                   <span className="ray__icon ray__icon--inline me-2">
                                     {subItem.icon}
                                   </span>
-                                  {subItem.url === location.pathname && (
-                                    <strong>{subItem.title}</strong>
-                                  )}
-                                  {subItem.url !== location.pathname && (
-                                    <span>{subItem.title}</span>
-                                  )}
+                                  <span>{subItem.title}</span>
                                 </div>
                               </Link>
                             )}

@@ -78,9 +78,7 @@
     height: 100%;
     display: block;
     padding: rem(25) rem(30);
-    border-radius: 8px;
     color: $text !important;
-    font-size: rem(16);
     position: relative;
     min-height: rem(160);
     @include transition-middle();
@@ -98,9 +96,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: rem(7);
+      width: rem(9);
       height: 100%;
-      border-radius: 20px;
       background: $primary;
       opacity: 1;
       @include transition-middle();
@@ -139,7 +136,7 @@
 
     &Title {
       color: $dark !important;
-      font-size: rem(21);
+      font-size: rem(24);
       margin-bottom: rem(10);
       font-weight: 700;
       @include transition-middle();

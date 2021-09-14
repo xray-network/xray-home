@@ -8,7 +8,7 @@ import XrayGovernanceEvents from "@/components/XrayGovernanceEvents"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="Governance Wallets" />
+      <Helmet title="XRAY Governance" />
       <XrayGovernance />
       <XrayGovernanceWallets />
       <XrayGovernanceEvents />

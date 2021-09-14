@@ -16,16 +16,14 @@ const STORED_SETTINGS = (storedSettings) => {
 
 const initialState = {
   ...STORED_SETTINGS({
-    theme: "default",
+    theme: "dark",
     cookiesViewed: false,
   }),
-  Cardano: undefined,
-  networkSlot: 0,
-  networkBlock: 0,
-  networkEpoch: 0,
-  networkEpochStartedAt: undefined,
-  rate: 0,
   megaMenu: false,
+  networkState: {},
+  history: {},
+  prices: {},
+  pools: {},
 }
 
 export default function settingsReducer(state = initialState, action) {

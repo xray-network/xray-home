@@ -8,7 +8,7 @@
 .slider {
   position: relative;
   z-index: 1;
-  max-width: rem(1180);
+  max-width: rem(1380);
   margin: 0 auto;
 }
 
@@ -16,7 +16,7 @@
   display: block;
   width: rem(200);
   height: rem(365);
-  background: $white;
+  border: 1px solid $border;
   border-radius: 10px;
   padding: rem(15) rem(20);
   color: $dark;
@@ -24,7 +24,7 @@
   font-weight: 700;
 
   &Outer {
-    width: rem(220);
+    width: rem(225);
     padding-right: rem(20);
   }
 
@@ -76,12 +76,13 @@
 // dark theme
 [data-theme="dark"] {
   .item {
-    background: $dark-gray-6;
+    border-color: transparent;
+    background: $dark-gray-5;
     color: $white;
 
     &Collection {
       border-color: darken($dark-gray-3, 15%);
-      background: $dark-gray-4;
+      background: $dark-gray-5;
       color: $dark-gray-2;
     }
   }

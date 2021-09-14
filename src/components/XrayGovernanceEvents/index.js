@@ -32,6 +32,13 @@ const columns = [
 
 const data = [
   {
+    token: 'XRAY',
+    type: 'mint',
+    date: '09/07/2021',
+    amount: 10000000,
+    description: '10,000,000 were sent to ISPO CeFi Distribution Wallet.'
+  },
+  {
     token: 'XDIAMOND',
     type: 'mint',
     date: '08/15/2021',

@@ -1,33 +1,14 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { useSelector } from "react-redux"
 import { Line } from "react-chartjs-2"
 import { format } from "@/utils"
 
-const StakeTotal = ({ callback = () => { } }) => {
+const ChartSchedule = () => {
   const theme = useSelector((state) => state.settings.theme)
-  const isLight = theme === "default"
-  const [rewards, setRewards] = useState({
-    currentEpoch: 0,
-    distributed: [],
-    totalAccrued: 0,
-    totalUndelivered: 0,
-  })
-  const { distributed } = rewards
+  const history = useSelector((state) => state.settings.history)
 
-  const fetchData = () => {
-    // fetch(`http://localhost:8080/ispo/state/`)
-    fetch(`https://api-mainnet-helper.rraayy.com/ispo/state/`)
-      .then((response) => response.json())
-      .then((data) => {
-        setRewards(data)
-        callback(data)
-      })
-  }
-
-  useEffect(() => {
-    fetchData()
-    // eslint-disable-next-line
-  }, [])
+  const distributed = history?.distributionHistory || []
+  const isLight = theme === 'default'
 
   const chartData = {
     labels: distributed.map((epoch) => epoch.epoch),
@@ -35,7 +16,7 @@ const StakeTotal = ({ callback = () => { } }) => {
       {
         type: "line",
         label: "Max Rewards",
-        data: distributed.map((epoch) => epoch.maxRewards),
+        data: distributed.map((epoch) => epoch.max),
         fill: true,
         radius: 0,
         backgroundColor: ["rgba(54, 162, 235, 0.1)"],
@@ -46,7 +27,7 @@ const StakeTotal = ({ callback = () => { } }) => {
       {
         type: "bar",
         label: "Epoch Rewards Distributed",
-        data: distributed.map((epoch) => epoch.xray),
+        data: distributed.map((epoch) => epoch.accrued),
         fill: true,
         stepped: "before",
         radius: 0,
@@ -55,19 +36,6 @@ const StakeTotal = ({ callback = () => { } }) => {
         borderColor: ["#355aeb"],
         postfix: "XRAY",
       },
-      // {
-      //   type: "bar",
-      //   label: "Snapshot",
-      //   hidden: true,
-      //   maxBarThickness: 5,
-      //   data: distributed.map((epoch) => epoch.total / 1000000),
-      //   radius: 0,
-      //   width: 2,
-      //   backgroundColor: ["#355aeb"],
-      //   hoverBackgroundColor: ["#355aeb"],
-      //   borderColor: ["#355aeb"],
-      //   postfix: "ADA",
-      // },
     ],
   }
 
@@ -81,7 +49,7 @@ const StakeTotal = ({ callback = () => { } }) => {
     scales: {
       x: {
         grid: {
-          color: isLight ? "#e4e9f0" : "#232236",
+          color: isLight ? "#e4e9f0" : "#2e2e46",
         },
         ticks: {
           autoSkip: true,
@@ -90,7 +58,7 @@ const StakeTotal = ({ callback = () => { } }) => {
       },
       y: {
         grid: {
-          color: isLight ? "#e4e9f0" : "#232236",
+          color: isLight ? "#e4e9f0" : "#2e2e46",
         },
         ticks: {
           color: isLight ? "#8484AD" : "#4f4f7a",
@@ -121,7 +89,7 @@ const StakeTotal = ({ callback = () => { } }) => {
             datasetIndex === 1 &&
               arr.push(
                 `Active Stake Snapshot: ${format(
-                  distributed[tooltipItem.dataIndex].total / 1000000,
+                  distributed[tooltipItem.dataIndex].snapshot / 1000000,
                   6
                 )} ADA`
               )
@@ -135,38 +103,39 @@ const StakeTotal = ({ callback = () => { } }) => {
   return (
     <div>
       <div className="row mb-4">
-        <div className="col-12 col-sm-4 mb-4">
+        <div className="col-12 col-sm-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
-              {format(rewards.totalAccrued)}{" "}
+              {format(history?.lastSynced?.accrued || 0)}
               <span className="ray__ticker">XRAY</span>
             </div>
-            <div>Total Distributed</div>
+            <div>XRAY Payouts</div>
           </div>
         </div>
         <div className="col-12 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
-              {format(rewards.totalUndelivered)}{" "}
+              {format(history?.lastSynced?.max || 0)}{" "}
               <span className="ray__ticker">XRAY</span>
             </div>
-            <div>Undelivered</div>
+            <div>XRAY Epoch Limit</div>
           </div>
         </div>
         <div className="col-12 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
-              {format(rewards.currentEpoch)}
+              {format(history?.lastSynced?.max || 0)}{" "}
+              <span className="ray__ticker">XRAY</span>
             </div>
-            <div>Current Epoch</div>
+            <div>XRAY Epoch Limit</div>
           </div>
         </div>
       </div>
-      <div className="mb-5">
+      <div>
         <Line data={chartData} options={options} height={300} />
       </div>
     </div>
   )
 }
 
-export default StakeTotal
+export default React.memo(ChartSchedule)

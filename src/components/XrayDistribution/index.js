@@ -8,7 +8,8 @@ import { SVGLink } from "@/svg"
 import * as style from "./style.module.scss"
 
 const XrayDistribution = () => {
-  const rate = useSelector((state) => state.settings.rate)
+  const pools = useSelector((state) => state.settings.pools)
+  const rate = pools?.nextRate
 
   return (
     <div className="ray__block">
@@ -41,8 +42,8 @@ const XrayDistribution = () => {
           <div className="pt-4">
             <p>
               Stake ADA in Ray pools and get <strong>~5% ROI</strong> with extra
-              rewards each epoch <strong className="ray__ticker">1 XRAY</strong> per
-              each <strong className="ray__ticker">{rate / 1000000} ADA</strong> staked.{' '}
+              rewards each epoch 1 <strong className="ray__ticker">XRAY</strong> per{' '}
+              {rate / 1000000} <strong className="ray__ticker">ADA</strong> staked.{' '}
               <Link
                 to="/stake/pools/"
                 target="_blank"
@@ -51,7 +52,7 @@ const XrayDistribution = () => {
                 Pools list.
               </Link>
               <br />
-              Use Ray Wallet, Yoroi, Adalite or Daedalus to delegate.
+              Use RayWallet, Yoroi, Adalite or Daedalus to delegate.
               <br />
               Please do
               not use exchanges or centralized wallets, your rewards may be
@@ -124,12 +125,17 @@ const XrayDistribution = () => {
             </ul>
             <StakeTotal />
             <div className={style.controls}>
-              <Link
-                to="/xray/governance/"
+              <a
+                href="https://stake.rraayy.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="ray__btn ray__btn--round me-3 mb-3"
               >
-                Track / Withdraw Rewards
-              </Link>
+                <span className="me-2">Track / Withdraw Rewards</span>
+                <span className="ray__icon">
+                  <SVGLink />
+                </span>
+              </a>
               <a
                 href="https://app.raywallet.io/#/stake"
                 target="_blank"
@@ -167,7 +173,7 @@ const XrayDistribution = () => {
           <div className="pt-4">
             <p className="mb-5">
               Support for liquidity providers. To be announced after the release
-              of Ray Swap.
+              of RaySwap.
             </p>
             <div className={style.controls}>
               <Button className="ray__btn ray__btn--round" disabled>
@@ -199,7 +205,7 @@ const XrayDistribution = () => {
           <div className="pt-4">
             <p>
               IDE token distribution with vesting period and buy back option. To
-              be announced after the release of Ray Kickstart.
+              be announced after the release of RayKickstart.
             </p>
             <ul className="mb-5">
               <li>ADA/XRAY pair</li>

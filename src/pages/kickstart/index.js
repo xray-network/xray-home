@@ -8,7 +8,7 @@ import Community from "@/components/Community"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="Ray Kickstart" />
+      <Helmet title="RayKickstart" />
       <Kickstart />
       <Solutions />
       <Community />

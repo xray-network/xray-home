@@ -74,17 +74,17 @@ const dev = [
   },
   {
     status: "completed",
-    title: "Ray Wallet",
+    title: "RayWallet",
     date: "Q2 2021",
   },
   {
     status: "completed",
-    title: "Ray Wallet Stake",
+    title: "RayWallet Stake",
     date: "Q2 2021",
   },
   {
     status: "completed",
-    title: "Ray Wallet Rewards",
+    title: "RayWallet Rewards",
     date: "Q2 2021",
   },
   {
@@ -94,7 +94,7 @@ const dev = [
   },
   {
     status: "completed",
-    title: "Ray Wallet Native Tokens",
+    title: "Ray allet Native Tokens",
     date: "Q2 2021",
   },
   {
@@ -108,28 +108,28 @@ const dev = [
     date: "Q3 2021",
   },
   {
-    status: "active",
+    status: "completed",
     title: "XRAY Rewards Withdrawal",
     date: "Q3 2021",
   },
   {
-    status: "active",
+    status: "completed",
     title: "XDIAMOND & Redeemer",
     date: "Q3 2021",
   },
   {
-    status: "active",
-    title: "Whitepaper",
+    status: "completed",
+    title: "RayStake App",
     date: "Q3 2021",
   },
   {
     status: "active",
-    title: "Ray Wallet V2",
+    title: "RayWallet V2",
     date: "Q3 2021",
   },
   {
     status: "active",
-    title: "Chrome Extension",
+    title: "RayWallet V2 Chrome Extension",
     date: "Q3 2021",
   },
   {
@@ -139,22 +139,27 @@ const dev = [
   },
   {
     status: "active",
+    title: "Whitepaper",
+    date: "Q3 2021",
+  },
+  {
+    status: "active",
     title: "Cardano-Web3.js",
     date: "Q3 2021",
   },
   {
     status: "active",
-    title: "Ray Swap",
+    title: "RaySwap",
     date: "Q4 2021",
   },
   {
     status: "active",
-    title: "Ray NFT",
+    title: "RayNFT",
     date: "Q4 2021",
   },
   {
     status: "pending",
-    title: "Ray Kickstart",
+    title: "RayKickstart",
     date: "Q1 2022",
   },
   {
@@ -164,12 +169,17 @@ const dev = [
   },
   {
     status: "pending",
-    title: "Ray Graph",
+    title: "dApps Mainnet Release",
     date: "Q1 2022",
   },
   {
     status: "pending",
-    title: "Ray Data",
+    title: "RayGraph",
+    date: "Q1 2022",
+  },
+  {
+    status: "pending",
+    title: "RayData",
     date: "2022",
   },
   {
@@ -182,32 +192,32 @@ const dev = [
 const apps = [
   {
     status: "pending",
-    title: "Ray Stake iOS",
+    title: "RayStake iOS",
     date: "Q4 2021",
   },
   {
     status: "pending",
-    title: "Ray Stake Android",
+    title: "RayStake Android",
     date: "Q4 2021",
   },
   {
     status: "pending",
-    title: "Ray Wallet Windows",
+    title: "RayWallet Windows",
     date: "Q4 2021",
   },
   {
     status: "pending",
-    title: "Ray Wallet macOS",
+    title: "RayWallet macOS",
     date: "Q4 2021",
   },
   {
     status: "pending",
-    title: "Ray Wallet iOS",
+    title: "RayWallet iOS",
     date: "Q4 2021",
   },
   {
     status: "pending",
-    title: "Ray Wallet Android",
+    title: "RayWallet Android",
     date: "Q4 2021",
   },
 ]
@@ -403,7 +413,6 @@ const Roadmap = () => {
       <div className="ray__table">
         <Table
           loading={loading}
-          size="small"
           dataSource={dataSource}
           columns={columns}
           pagination={false}

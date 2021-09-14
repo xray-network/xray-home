@@ -1,18 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
 import { useSelector } from "react-redux"
-import { SVGCardano } from "@/svg"
+import { SVGCardano, SVGLink } from "@/svg"
 // import * as style from "./style.module.scss"
 
 const Promo = () => {
-  const rate = useSelector((state) => state.settings.rate)
+  const pools = useSelector((state) => state.settings.pools)
+  const rate = pools?.nextRate
 
   return (
     <div className="ray__block">
       <div className="ray__promo">
-        <div className="max-width-1000">
+        <div>
           <h1 className="ray__promo__text" data-aos="fade-up" data-aos-delay="0">
-            Hello, we’re Ray Network! An advanced DeFi ecosystem for{" "}
+            Hello, we’re Ray Network!<br /> An advanced DeFi ecosystem for{" "}
             <span className="text-nowrap">
               <span className="ray__promo__cardano">
                 <SVGCardano />
@@ -32,8 +33,8 @@ const Promo = () => {
           </p>
           <p className="mb-5">
             Stake ADA in Ray pools and get <strong>~5% ROI</strong> with extra
-            rewards each epoch <strong className="ray__ticker">1 XRAY</strong>{" "}
-            per each <strong className="ray__ticker">{rate / 1000000} ADA</strong> staked.
+            rewards each epoch 1 <strong className="ray__ticker">XRAY</strong>{" "}
+            per {rate / 1000000} <strong className="ray__ticker">ADA</strong> staked.
           </p>
         </div>
         <div data-aos="fade-up" data-aos-delay="600">
@@ -49,7 +50,18 @@ const Promo = () => {
           >
             XDIAMOND
           </Link>
-          <Link
+          <a
+            href="https://stake.rraayy.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ray__btn ray__btn--round me-3 mb-3"
+          >
+            <span className="me-2">RayStake App</span>
+            <span className="ray__icon">
+              <SVGLink />
+            </span>
+          </a>
+          {/* <Link
             to="/stake/calculator/"
             className="ray__btn ray__btn--round me-3 mb-3"
           >
@@ -60,7 +72,7 @@ const Promo = () => {
             className="ray__btn ray__btn--round me-3 mb-3"
           >
             Stake Pools
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

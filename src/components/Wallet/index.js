@@ -70,13 +70,13 @@ const items = [
 
 const Wallet = () => {
   return (
-    <div className="overflow-hidden">
+    <div className={style.wallet}>
       <div className="ray__block mb-0">
         <Heading id="wallet">
-          <strong>Ray Wallet</strong>, lightning-fast Cardano payments
+          <strong>RayWallet</strong>, lightning-fast Cardano payments
         </Heading>
         <p>
-          Ray Wallet is a web light wallet for Cardano. Light wallets don't need
+          RayWallet is a web light wallet for Cardano. Light wallets don't need
           to download or synchronize the blockchain. This means that once you
           open the wallet, you can send or verify the transaction receipts right
           away.
@@ -110,7 +110,7 @@ const Wallet = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <span className="me-2">Ray Wallet Web</span>
+              <span className="me-2">RayWallet Web</span>
               <span className="ray__icon">
                 <SVGInternet />
               </span>

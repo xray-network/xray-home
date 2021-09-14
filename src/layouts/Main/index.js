@@ -15,15 +15,8 @@ const MainLayout = ({ children }) => {
       <Helmet titleTemplate="%s | Ray Network" title="Cardano Ecosystem">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap"
-          as="style"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="preload" href="/resources/font/circular.css" as="style" />
+        <link href="/resources/font/circular.css" rel="stylesheet" />
         <meta property="og:url" content="https://rraayy.com" />
         <meta
           name="description"

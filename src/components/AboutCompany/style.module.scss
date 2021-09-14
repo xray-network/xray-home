@@ -3,7 +3,7 @@
 .quote {
   padding: rem(40) rem(40) rem(40) rem(80);
   border-radius: rem(12);
-  background: $white;
+  background: $gray-1;
   margin-top: rem(40);
   margin-bottom: rem(30);
   position: relative;
@@ -19,7 +19,7 @@
     bottom: -10px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 10px solid $white;
+    border-top: 10px solid $gray-1;
   }
 
   div:first-child {
@@ -27,7 +27,7 @@
     left: rem(20);
     top: rem(20);
     line-height: 1;
-    color: $gray-3;
+    color: $gray-4;
     font-size: rem(90);
     font-family: Arial;
   }
@@ -54,10 +54,10 @@
 // dark theme
 [data-theme="dark"] {
   .quote {
-    background: $dark-gray-4;
+    background: $dark;
 
     &:before {
-      border-top-color: $dark-gray-4;
+      border-top-color: $dark;
     }
 
     div:first-child {

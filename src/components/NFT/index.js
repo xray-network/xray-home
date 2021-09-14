@@ -24,16 +24,16 @@ const Nft = () => {
   return (
     <div className="ray__block">
       <Heading id="nft">
-        <strong>Ray NFT</strong>, Cardano NFT Marketplace
+        <strong>RayNFT</strong>, Cardano NFT Marketplace
       </Heading>
       <p>
-        Ray NFT is a decentralized marketplace for digital goods, including
+        RayNFT is a decentralized marketplace for digital goods, including
         collectibles, gaming items, digital art, and other digital assets that
-        are backed by a blockchain. On Ray NFT, you can buy, sell, and trade any
+        are backed by a blockchain. On RayNFT, you can buy, sell, and trade any
         of these items with anyone in the world.
       </p>
       <p className="mb-5">
-        Trading on on Ray NFT takes place through a smart contract, meaning that
+        Trading on on RayNFT takes place through a smart contract, meaning that
         no central authority ever holds custody of your items.
       </p>
       <h5 className="mb-5">
@@ -54,7 +54,7 @@ const Nft = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span className="me-2">Ray NFT</span>
+            <span className="me-2">RayNFT</span>
             <span className="ray__icon">
               <SVGLink />
             </span>

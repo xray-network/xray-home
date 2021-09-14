@@ -6,7 +6,7 @@ import { format } from "@/utils"
 import * as style from "./style.module.scss"
 
 const XrayCalculator = () => {
-  const rate = useSelector((state) => state.settings.rate)
+  const pools = useSelector((state) => state.settings.pools)
   const [amount, setAmount] = useState(undefined)
   const [totalAda, setTotalAda] = useState(0)
   const [totalRay, setTotalRay] = useState(0)
@@ -14,6 +14,8 @@ const XrayCalculator = () => {
     btc: 0,
     ada: 0,
   })
+
+  const rate = pools?.nextRate
 
   useEffect(() => {
     fetchPrices()

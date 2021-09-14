@@ -8,10 +8,10 @@ const Swap = () => {
   return (
     <div className="ray__block">
       <Heading id="swap">
-        <strong>Ray Swap</strong>, Cardano DEX
+        <strong>RaySwap</strong>, Cardano DEX
       </Heading>
       <p>
-        Ray Swap is an automated liquidity protocol for creating liquidity and
+        RaySwap is an automated liquidity protocol for creating liquidity and
         trading native tokens on Cardano. It eliminates trusted intermediaries
         and unnecessary forms of rent extraction, allowing for fast, efficient
         trading. Where it makes tradeoffs decentralization, censorship
@@ -41,7 +41,7 @@ const Swap = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span className="me-2">Ray Swap</span>
+            <span className="me-2">RaySwap</span>
             <span className="ray__icon">
               <SVGLink />
             </span>

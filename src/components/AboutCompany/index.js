@@ -32,7 +32,7 @@ const AboutCompany = () => {
         who are ready to take on their assigned tasks. The result is the already
         working{" "}
         <a href="http://raywallet.io" target="_blank" rel="noopener noreferrer">
-          Ray Wallet
+          RayWallet
         </a>{" "}
         and{" "}
         <a href="http://minterr.io" target="_blank" rel="noopener noreferrer">
@@ -58,7 +58,7 @@ const AboutCompany = () => {
       <div className={style.quote}>
         <div>"</div>
         <div>
-          We have experience integrating Ethereum into our clients' products, so
+          We have experience integrating Ethereum blockchain solutions into our clients' products, so
           we have something to compare Cardano with. We believe that IOG team
           will solve all their tasks and Cardano eUTXO model will become the
           best blockchain technology in the near future!

@@ -1,5 +1,10 @@
 @import "@/styles/mixins";
 
+.wallet {
+  overflow: hidden;
+  margin-bottom: rem(120);
+}
+
 .items {
   display: flex;
   flex-wrap: wrap;
@@ -43,7 +48,7 @@
     margin-top: rem(60);
     position: relative;
     height: 35vw;
-    max-height: 340px !important;
+    max-height: 420px !important;
 
     img {
       width: 60%;

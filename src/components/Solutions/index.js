@@ -11,42 +11,37 @@ const items = [
     url: "/xray/",
   },
   {
-    title: "Ray Wallet",
+    title: "RayWallet",
     descr: "A lightweight Cardano multiplatform and multifunctional wallet",
     url: "/wallet/",
   },
   {
-    title: "Ray Stake",
-    descr: "Stake solution, earn ~5% ROI in ADA with XRAYs on top",
+    title: "RayStake",
+    descr: "Stake solution, earn ~5% ROI in ADA with XRAY on top",
     url: "/stake/",
   },
   {
-    title: "Ray Rewards",
-    descr: "Get additional XRAY rewards for ADA staking and other activities",
-    url: "/rewards/",
-  },
-  {
-    title: "Ray Swap",
+    title: "RaySwap",
     descr: "Automated liquidity protocol, AMM DEX",
     url: "/swap/",
   },
   {
-    title: "Ray Kickstart",
+    title: "RayKickstart",
     descr: "Decentralised fundraising",
     url: "/kickstart/",
   },
   {
-    title: "Ray NFT ",
+    title: "RayNFT ",
     descr: "NFT marketplace with advanced features",
     url: "/nft/",
   },
   {
-    title: "Ray Graph",
+    title: "RayGraph",
     descr: "Cardano blockhain graphql indexers",
     url: "/graph/",
   },
   {
-    title: "Ray Data",
+    title: "RayData",
     descr: "B2B data storage and authorization solution",
     url: "/data/",
   },
@@ -56,8 +51,8 @@ const items = [
     url: "/wiki/",
   },
   {
-    title: "Tokens List",
-    descr: "Cardano native token list curated by Ray",
+    title: "Cardano List",
+    descr: "Cardano tokens & projects list curated by Ray",
     url: "/tokens-list/",
   },
   {
@@ -70,38 +65,36 @@ const items = [
 
 const Solutions = () => {
   return (
-    <div className={style.outer}>
-      <div className="ray__block mb-0">
-        <Heading id="solutions">
-          <strong>Ray Network</strong> solutions
-        </Heading>
-        <div className="row">
-          {items.map((item, key) => {
-            return (
-              <div key={key} className="col-md-4 col-sm-6 col-12">
-                <div className={style.item}>
-                  <Link
-                    to={item.url}
-                    className={style.itemInner}
-                    activeClassName={style.itemInnerActive}
-                    partiallyActive
-                    target={item.external ? "_blank" : ""}
-                  >
-                    {item.external && (
-                      <span className={style.itemInnerExternal}>
-                        <span className="ray__icon">
-                          <SVGOpen />
-                        </span>
+    <div className="ray__block">
+      <Heading id="solutions">
+        <strong>Ray Network</strong> solutions
+      </Heading>
+      <div className="row">
+        {items.map((item, key) => {
+          return (
+            <div key={key} className="col-md-4 col-sm-6 col-12">
+              <div className={style.item}>
+                <Link
+                  to={item.url}
+                  className={style.itemInner}
+                  activeClassName={style.itemInnerActive}
+                  partiallyActive
+                  target={item.external ? "_blank" : ""}
+                >
+                  {item.external && (
+                    <span className={style.itemInnerExternal}>
+                      <span className="ray__icon">
+                        <SVGOpen />
                       </span>
-                    )}
-                    <div className={style.itemInnerTitle}>{item.title}</div>
-                    <div>{item.descr}</div>
-                  </Link>
-                </div>
+                    </span>
+                  )}
+                  <div className={style.itemInnerTitle}>{item.title}</div>
+                  <div>{item.descr}</div>
+                </Link>
               </div>
-            )
-          })}
-        </div>
+            </div>
+          )
+        })}
       </div>
     </div>
   )

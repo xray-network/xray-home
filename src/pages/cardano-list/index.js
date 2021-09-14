@@ -8,7 +8,7 @@ import Community from "@/components/Community"
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="Tokens List" />
+      <Helmet title="Cardano List" />
       <TokensList />
       <Solutions />
       <Community />

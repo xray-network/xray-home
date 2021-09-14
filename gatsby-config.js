@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
-        "data-theme": "default",
+        "data-theme": "dark",
       },
     },
   ],

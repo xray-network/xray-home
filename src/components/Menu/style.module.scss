@@ -2,7 +2,7 @@
 
 .links {
   &Container {
-    margin-right: rem(20);
+    margin-right: rem(25);
     position: relative;
     display: inline-block;
 
@@ -48,18 +48,15 @@
 
       > span:last-child {
         opacity: 0;
-        font-weight: 700;
       }
     }
 
     &Active {
-      font-weight: 700;
       color: $blue;
     }
 
     &Disabled {
-      color: $dark !important;
-      opacity: 0.4;
+      opacity: 0.3;
     }
 
     &:hover {
@@ -148,6 +145,21 @@
 
   &Title {
     margin-bottom: rem(5);
+
+    &:hover,
+    &:active,
+    &:focus,
+    &Active {
+      color: $blue;
+
+      :global(.ray__icon) {
+        svg {
+          * {
+            fill: $blue !important;
+          }
+        }
+      }
+    }
   }
 
   &Description {
@@ -160,17 +172,17 @@
   display: flex;
   align-items: center;
   padding: rem(15) 0;
-  height: rem(65);
+  height: rem(85);
 
   &Logo {
     display: flex;
     align-items: center;
-    font-size: rem(18);
+    font-size: rem(21);
     color: $dark !important;
 
     svg {
       margin-right: rem(10);
-      height: rem(30) !important;
+      height: rem(38) !important;
       width: auto !important;
     }
 
@@ -269,7 +281,6 @@
     @media (max-width: $sm-max-width) {
       border: 2px solid $dark;
       margin-right: rem(15);
-      font-weight: 700;
       // font-size: rem(18);
       border-radius: 20px;
       padding: 0 rem(10);
@@ -284,7 +295,6 @@
 
       span:first-child {
         opacity: 0;
-        font-weight: 700;
       }
 
       span:last-child {
@@ -301,17 +311,15 @@
 
     &Active {
       color: $blue !important;
-      font-weight: 700;
+
+      svg {
+        * {
+          fill: $primary !important;
+        }
+      }
 
       @media (max-width: $sm-max-width) {
-        font-weight: 700;
         border-color: $primary;
-
-        svg {
-          * {
-            fill: $primary;
-          }
-        }
       }
     }
   }
@@ -324,45 +332,82 @@
       :global(.ray__icon) {
         svg {
           * {
-            fill: $blue-light;
+            fill: $white;
+          }
+        }
+      }
+
+      .mTitle {
+        color: $white;
+  
+        &:hover,
+        &:active,
+        &:focus,
+        &Active {
+          color: $success;
+
+          :global(.ray__icon) {
+            svg {
+              * {
+                fill: $success !important;
+              }
+            }
           }
         }
       }
     }
 
+
     &Inner {
-      background: lighten($dark-gray-5, 4%);
+      background: lighten($dark-gray-5, 5%);
 
       &:before {
-        background: lighten($dark-gray-5, 4%);
+        background: lighten($dark-gray-5, 5%);
       }
     }
   }
 
   .links {
     &Link {
+      color: $white;
+
+      &:hover,
+      &:focus,
+      &:active,
       &Active {
-        color: $white;
+        color: $success;
       }
 
       &Disabled {
-        color: $blue !important;
-        opacity: 0.6;
+        color: $dark-gray-3 !important;
+        opacity: 1;
       }
     }
   }
 
   .submenu {
     &Link {
-      border-color: $primary;
+      border-color: $white;
+      color: $white;
 
+      svg {
+        * {
+          fill: $white !important;
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:active,
       &Active {
-        color: $white !important;
-        border-color: $white;
+        color: $success !important;
+        border-color: $success;
 
-        svg {
-          * {
-            fill: $white;
+        :global(.ray__icon) {
+          svg {
+            * {
+              fill: $success !important;
+            }
           }
         }
       }

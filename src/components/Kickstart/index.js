@@ -8,10 +8,10 @@ const Kickstart = () => {
   return (
     <div className="ray__block">
       <Heading id="kickstart">
-        <strong>Ray Kickstart</strong>, Cardano IDO platform
+        <strong>RayKickstart</strong>, Cardano IDO platform
       </Heading>
       <p>
-        Ray KickStart exists to help bring creative projects to life through
+        RayKickstart exists to help bring creative projects to life through
         tokenization. It allows you to create and fund your projects in minutes.
         A crypto-home for services, products, film, music, art, theater, games,
         comics, design, photography, and more.
@@ -36,7 +36,7 @@ const Kickstart = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span className="me-2">Ray Kickstart</span>
+            <span className="me-2">RayKickstart</span>
             <span className="ray__icon">
               <SVGLink />
             </span>

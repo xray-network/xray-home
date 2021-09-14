@@ -8,10 +8,10 @@ const Kickstart = () => {
   return (
     <div className="ray__block">
       <Heading id="graph">
-        <strong>Ray Graph</strong>, GraphQL API provisioning
+        <strong>RayGraph</strong>, GraphQL API provisioning
       </Heading>
       <p>
-        Any dAPP needs to get historical blockchain data, so Ray Graph is ready
+        Any dAPP needs to get historical blockchain data, so RayGraph is ready
         to let you deploy graphql-based APIs to access historical data and
         websockets to directly access node ledger state. It uses automated
         scalable deploys to Cloudflare infrastructure.
@@ -36,7 +36,7 @@ const Kickstart = () => {
         <Tooltip title="soon" className="me-3 mb-2">
           <span className="d-inline-block">
             <Button className="ray__btn ray__btn--round" href="/" disabled>
-              <span>Ray Graph</span>
+              <span>RayGraph</span>
               <span className="ray__icon ms-2">
                 <SVGLink />
               </span>

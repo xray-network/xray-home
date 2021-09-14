@@ -12,7 +12,7 @@ const XrayIntroducing = () => {
       <h5 className="mb-5">
         <strong>What is Ray Network and XRAY token?</strong>
       </h5>
-      <p>
+      <p className="mb-5">
         <a href="https://rraayy.com" target="_blank" rel="noopener noreferrer">
           Ray Network
         </a>{" "}
@@ -25,45 +25,16 @@ const XrayIntroducing = () => {
         Ray Network ecosystem. This is well positioned for community-led growth,
         development, and self-sustainability token.
       </p>
-      <p className="mb-5">
-        Ticker:{" "}
-        <strong className="bolder text-active">
-          <span className="ray__ticker">XRAY</span>
-        </strong>
-        <br />
-        Policy ID:{" "}
-        <strong className="text-active">
-          <span className="text-break">
-            ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd
-          </span>
-        </strong>
-        <br />
-        Fingerprint:{" "}
-        <strong className="text-active">
-          <span className="text-break">asset14y0dxsz9s9nd2lefkqvuu7edqlsg5p70r3wyxa</span>
-        </strong>
-        <br />
-        More info:{" "}
-        <strong className="text-active">
-          <a
-            href="https://cardanoscan.io/token/a91ed340458166d57f29b019ce7b2d07e08a07cf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View in Explorer
-          </a>
-        </strong>
-      </p>
       <h5 className="mb-5">
         <strong>What is the utility of the XRAY token?</strong>
       </h5>
       <p className="mb-5">
         When most services are fully launched, the token will be used as payment
-        for those services, such as premium Ray NFT marketplace placement, Ray
+        for those services, such as premium RayNFT marketplace placement, Ray
         KickStart placement, tokens minting, will be used as a governance token,
         and yield farming in{" "}
         <a href="https://rayswap.org" target="_blank" rel="noopener noreferrer">
-          Ray Swap
+          RaySwap
         </a>
         . Later we will announce our B2B solution based on{" "}
         <a

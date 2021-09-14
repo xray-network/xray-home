@@ -1,7 +1,6 @@
 import React from "react"
 import { useSelector } from "react-redux"
 import Heading from "@/components/Heading"
-import * as style from "./style.module.scss"
 
 const Data = () => {
   const theme = useSelector((state) => state.settings.theme)
@@ -9,11 +8,11 @@ const Data = () => {
   return (
     <div className="ray__block">
       <Heading id="data">
-        <strong>Ray Data</strong>, on-chain storage with access roles
+        <strong>RayData</strong>, on-chain storage with access roles
       </Heading>
       <div className="mb-5">
         <p>
-          Ray Data is a protocol that standardizes information written in a
+          RayData is a protocol that standardizes information written in a
           blockchain. The basic model is containers that are created by users,
           with write or read access allowed by the creator.
         </p>
@@ -41,7 +40,7 @@ const Data = () => {
           .
         </p>
       </div>
-      <div className={style.img}>
+      <div>
         {theme === "default" && (
           <img
             src="/resources/images/scheme.png"
