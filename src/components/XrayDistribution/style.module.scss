@@ -1,7 +1,6 @@
 @import "@/styles/mixins";
 
 .controls {
-  display: flex;
   padding-top: rem(40);
   border-top: 1px solid $border;
 }
@@ -22,6 +21,7 @@
       bottom: 0;
       left: 0;
       width: rem(9);
+      border-radius: 20px;
       background: $dark;
     }
 
@@ -57,8 +57,8 @@
   }
 
   &Active {
-    background: $dark !important;
-    color: $pastel-1;
+    background: $success !important;
+    color: $white;
   }
 }
 

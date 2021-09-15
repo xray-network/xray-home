@@ -25,5 +25,5 @@ import "@/styles/style.scss"
 
 import AOS from "aos"
 import store from "@/redux/provider"
-AOS.init({ duration: 1000 })
+AOS.init({ duration: 1000, once: true })
 export const wrapRootElement = store

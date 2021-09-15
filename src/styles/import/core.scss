@@ -12,6 +12,9 @@ html {
   @media (max-width: $lg-max-width) {
     font-size: 16px;
   }
+  @media (max-width: $sm-max-width) {
+    font-size: 15px;
+  }
 }
 
 body {

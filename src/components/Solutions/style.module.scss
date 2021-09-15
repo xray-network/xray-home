@@ -81,6 +81,7 @@
     color: $text !important;
     position: relative;
     min-height: rem(160);
+    border-radius: 13px;
     @include transition-middle();
 
     position: relative;
@@ -97,6 +98,7 @@
       top: 0;
       left: 0;
       width: rem(9);
+      border-radius: 20px;
       height: 100%;
       background: $primary;
       opacity: 1;
@@ -178,7 +180,7 @@
   .item {
     &Inner {
       color: $dark-gray-2 !important;
-      background: $dark-gray-5;
+      // background: $dark-gray-5;
 
       &Title {
         color: $white !important;

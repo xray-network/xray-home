@@ -50,17 +50,17 @@
   display: flex;
   align-items: center;
   padding: rem(15) 0;
-  height: rem(65);
+  height: rem(85);
 
   &Logo {
     display: flex;
     align-items: center;
-    font-size: rem(18);
+    font-size: rem(21);
     color: $dark !important;
 
     svg {
       margin-right: rem(10);
-      height: rem(30) !important;
+      height: rem(38) !important;
       width: auto !important;
     }
 
@@ -134,10 +134,6 @@
 }
 
 .footer {
-  &Top {
-    padding-top: rem(50);
-  }
-
   &Lists {
     :global(.ray__icon) {
       svg {
@@ -187,7 +183,7 @@
   &App {
     width: rem(40);
     height: rem(40);
-    background: $dark;
+    background: $dark-gray-5;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -209,15 +205,10 @@
 // dark theme
 [data-theme="dark"] {
   .fixed {
-    background: $dark-gray-5;
+    background: $dark-gray-6;
   }
 
   .menu {
-    display: flex;
-    align-items: center;
-    padding: rem(15) 0;
-    height: rem(65);
-
     &Logo {
       color: $white !important;
     }

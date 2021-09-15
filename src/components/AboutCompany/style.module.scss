@@ -31,6 +31,10 @@
     font-size: rem(90);
     font-family: Arial;
   }
+
+  @media (max-width: $sm-max-width) {
+    padding: rem(70) rem(20) rem(20);
+  }
 }
 
 .ceo {
@@ -54,10 +58,10 @@
 // dark theme
 [data-theme="dark"] {
   .quote {
-    background: $dark;
+    background: $dark-gray-5;
 
     &:before {
-      border-top-color: $dark;
+      border-top-color: $dark-gray-5;
     }
 
     div:first-child {

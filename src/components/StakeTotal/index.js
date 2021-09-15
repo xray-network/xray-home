@@ -102,8 +102,8 @@ const ChartSchedule = () => {
 
   return (
     <div>
-      <div className="row mb-4">
-        <div className="col-12 col-sm-4">
+      <div className="row">
+        <div className="col-6 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
               {format(history?.lastSynced?.accrued || 0)}
@@ -112,7 +112,7 @@ const ChartSchedule = () => {
             <div>XRAY Payouts</div>
           </div>
         </div>
-        <div className="col-12 col-sm-4 mb-4">
+        <div className="col-6 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
               {format(history?.lastSynced?.max || 0)}{" "}
@@ -121,7 +121,7 @@ const ChartSchedule = () => {
             <div>XRAY Epoch Limit</div>
           </div>
         </div>
-        <div className="col-12 col-sm-4 mb-4">
+        <div className="col-6 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
               {format(history?.lastSynced?.max || 0)}{" "}

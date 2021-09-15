@@ -103,7 +103,7 @@ const XrayTokenomics = () => {
               >
                 <Tooltip title="Copy to clipboard">
                   <span className="link">
-                    <span className="me-2 word-break">{saleAddress}</span>
+                    <span className="me-2 text-break">{saleAddress}</span>
                     <span className="ray__icon ray__icon--16 ray__icon--inline">
                       <SVGFiles />
                     </span>
@@ -148,7 +148,7 @@ const XrayTokenomics = () => {
               >
                 <Tooltip title="Copy to clipboard">
                   <span className="link">
-                    <span className="me-2 word-break">{redeemAddress}</span>
+                    <span className="me-2 text-break">{redeemAddress}</span>
                     <span className="ray__icon ray__icon--16 ray__icon--inline">
                       <SVGFiles />
                     </span>

@@ -151,7 +151,7 @@ const XrayDistribution = () => {
               </span>
               <span className="ray__ticker">ADA</span>
             </div>
-            <div>Next Rewards</div>
+            <div>Active Stake Snapshot</div>
           </div>
         </div>
         <div className="col-12 col-sm-4 mb-4">
@@ -163,7 +163,7 @@ const XrayDistribution = () => {
                 format="D[d] HH[h] mm[m] ss[s]"
               />
             </div>
-            <div>Active Stake Snapshot</div>
+            <div>Next Rewards</div>
           </div>
         </div>
       </div>

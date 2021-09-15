@@ -7,38 +7,19 @@ import * as style from "./style.module.scss"
 
 const XrayCalculator = () => {
   const pools = useSelector((state) => state.settings.pools)
+  const prices = useSelector((state) => state.settings.prices)
   const [amount, setAmount] = useState(undefined)
   const [totalAda, setTotalAda] = useState(0)
   const [totalRay, setTotalRay] = useState(0)
-  const [prices, setPrices] = useState({
-    btc: 0,
-    ada: 0,
-  })
 
   const rate = pools?.nextRate
-
-  useEffect(() => {
-    fetchPrices()
-    // eslint-disable-next-line
-  }, [])
 
   useEffect(() => {
     setTotalAda(amount * 0.05 || 0)
     setTotalRay((amount / (rate / 1000000)) * 73 || 0)
   }, [amount, rate])
 
-  const fetchPrices = () => {
-    fetch(
-      `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,cardano&vs_currencies=USD`
-    )
-      .then((res) => res.json())
-      .then((result) => {
-        setPrices({
-          btc: result.bitcoin.usd,
-          ada: result.cardano.usd,
-        })
-      })
-  }
+  console.log(prices)
 
   return (
     <div className="ray__block">
@@ -55,7 +36,7 @@ const XrayCalculator = () => {
         <div className="col-12 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
-              {format(prices.ada, 2) || 0}$
+              {format(prices?.cardano?.usd, 2) || 0}$
             </div>
             <div>ADA Price</div>
           </div>
@@ -63,7 +44,7 @@ const XrayCalculator = () => {
         <div className="col-12 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
-              {format(prices.btc, 2) || 0}$
+              {format(prices?.bitcoin?.usd, 2) || 0}$
             </div>
             <div>BTC Price</div>
           </div>
@@ -102,7 +83,7 @@ const XrayCalculator = () => {
                     {format(totalAda, 2)}{" "}
                     <span className="ray__ticker">ADA</span>
                   </strong>{" "}
-                  <sup>{format(totalAda * prices.ada, 2)}$</sup>
+                  <sup>{format(totalAda * prices?.cardano?.usd, 2)}$</sup>
                 </li>
                 <li>
                   Month Returns:{" "}
@@ -110,7 +91,7 @@ const XrayCalculator = () => {
                     {format(totalAda / 12, 2)}{" "}
                     <span className="ray__ticker">ADA</span>
                   </strong>{" "}
-                  <sup>{format((totalAda / 12) * prices.ada, 2)}$</sup>
+                  <sup>{format((totalAda / 12) * prices?.cardano?.usd, 2)}$</sup>
                 </li>
                 <li>
                   Epoch Returns:{" "}
@@ -118,7 +99,7 @@ const XrayCalculator = () => {
                     {format(totalAda / 73, 2)}{" "}
                     <span className="ray__ticker">ADA</span>
                   </strong>{" "}
-                  <sup>{format((totalAda / 73) * prices.ada, 2)}$</sup>
+                  <sup>{format((totalAda / 73) * prices?.cardano?.usd, 2)}$</sup>
                 </li>
               </ul>
             </div>

@@ -94,23 +94,11 @@ const MegaMenu = () => {
             aria-label="Close Menu"
           />
         </div>
-        <div className="ray__line" />
+        <div className="ray__line mt-0" />
       </div>
-      <div className="ray__block pt-5 mb-0">
-        <div className="ray__left" data-aos="fade-up" data-aos-delay="0">
-          <h1>
-            <strong>
-              Welcome to Ray Network!{" "}
-              <span role="img" aria-label="">
-                👋
-              </span>
-              <br />
-              Our Cardano ecosystem is waiting for you!
-            </strong>
-          </h1>
-        </div>
+      <div className="ray__block pt-3 mb-0">
         <div className="mb-5">
-          <div className={style.footerTop}>
+          <div>
             <div className="row">
               <div className="col-12 col-sm-8 mb-3">
                 <div className={`${style.footerLists} row`}>
