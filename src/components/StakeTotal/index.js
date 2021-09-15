@@ -124,10 +124,9 @@ const ChartSchedule = () => {
         <div className="col-6 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
-              {format(history?.lastSynced?.max || 0)}{" "}
-              <span className="ray__ticker">XRAY</span>
+              {format(history?.lastSynced?.epoch || 0)}
             </div>
-            <div>XRAY Epoch Limit</div>
+            <div>Current Epoch</div>
           </div>
         </div>
       </div>

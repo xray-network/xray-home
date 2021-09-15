@@ -3,6 +3,7 @@
 .line {
   background: $success;
   color: $dark;
+  margin-top: rem(-20);
 
   :global(.ray__block) {
     display: flex;
@@ -51,4 +52,7 @@
 
 // dark theme
 [data-theme="dark"] {
+  .item {
+    border-color: $dark;
+  }
 }

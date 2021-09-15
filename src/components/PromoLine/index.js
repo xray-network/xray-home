@@ -19,7 +19,7 @@ const Promo = () => {
           <div className={style.itemTitle}>Staked with RayStake</div>
         </div>
         <div className={style.item}>
-          <div className={style.itemValue}>{format(history?.totalAccrued / 1e6, 2)}m</div>
+          <div className={style.itemValue}>{format((history?.totalAccrued || 0) / 1e6, 2)}m</div>
           <div className={style.itemTitle}>XRAY Tokens Distributed</div>
         </div>
         <div className={style.item}>
