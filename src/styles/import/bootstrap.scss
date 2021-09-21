@@ -37,6 +37,10 @@
     color: $danger !important;
   }
 
+  &-active {
+    color: $dark;
+  }
+
   &-muted {
     color: $gray-6 !important;
 
@@ -117,6 +121,10 @@
   .text {
     &-muted {
       color: $dark-gray-2 !important;
+    }
+
+    &-active {
+      color: $white;
     }
   }
 

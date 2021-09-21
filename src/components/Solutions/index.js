@@ -53,7 +53,7 @@ const items = [
   {
     title: "Cardano List",
     descr: "Cardano tokens & projects list curated by Ray",
-    url: "/tokens-list/",
+    url: "/cardano-list/",
   },
   {
     title: "Cardano-Web3.js",

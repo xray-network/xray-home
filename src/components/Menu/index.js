@@ -77,6 +77,7 @@ const config = [
         title: "RayStake App",
         url: "https://stake.rraayy.com",
         icon: <SVGBarChart />,
+        external: true,
       },
     ],
   },

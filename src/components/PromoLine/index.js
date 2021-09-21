@@ -9,8 +9,6 @@ const Promo = () => {
   const history = useSelector((state) => state.settings.history)
   const totalLiveStake = (pools?.totalLiveStake || 0) * (prices?.cardano?.usd || 0)
 
-  console.log(history)
-
   return (
     <div className={style.line}>
       <div className="ray__block">

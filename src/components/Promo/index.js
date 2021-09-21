@@ -45,7 +45,7 @@ const Promo = () => {
             XRAY Fair Launch
           </Link>
           <Link
-            to="/xray/xdiamond/"
+            to="/xdiamond/"
             className="ray__btn ray__btn--round me-3 mb-3"
           >
             XDIAMOND

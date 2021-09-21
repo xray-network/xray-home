@@ -24,7 +24,6 @@ const XrayPools = () => {
       </p>
       <div className="row">
       {pools?.pools?.map((pool, index) => {
-          console.log(pool)
           const isSaturated = pool.total_stake > 60000000 * 1000000
           return (
             <div className="col-12 col-md-6 col-lg-4" key={index}>

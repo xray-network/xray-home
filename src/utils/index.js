@@ -13,6 +13,7 @@ export const format = (x, precision = 0) => {
           .toFixed(precision)
           .toString()
           .replace("0.", ".")
+          .replace("1.", ".")
     : parseInt(x)
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",")

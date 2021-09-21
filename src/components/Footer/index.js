@@ -16,9 +16,8 @@ import {
 import * as style from "./style.module.scss"
 
 const Footer = () => {
-  const networkEpoch = useSelector((state) => state.settings.networkEpoch)
-  const networkBlock = useSelector((state) => state.settings.networkBlock)
-  const networkSlot = useSelector((state) => state.settings.networkSlot)
+  const networkState = useSelector((state) => state.settings.networkState)
+  console.log(networkState)
 
   return (
     <div className={style.outer}>
@@ -461,8 +460,8 @@ const Footer = () => {
             </p>
             <p className="mb-2 text-muted">
               <span className="me-2 text-capitalize">
-                Cardano Mainnet Status: Epoch {networkEpoch}, Block{" "}
-                {networkBlock}, Slot {networkSlot}
+                Cardano Mainnet Status: Epoch {networkState?.currentEpoch?.number || 0}, Block{" "}
+                {networkState?.tip?.number || 0}, Slot {networkState?.tip?.slotNo || 0}
               </span>
             </p>
             <p className="mb-0 text-muted">

@@ -94,7 +94,7 @@ const dev = [
   },
   {
     status: "completed",
-    title: "Ray allet Native Tokens",
+    title: "RayWallet Native Tokens",
     date: "Q2 2021",
   },
   {
