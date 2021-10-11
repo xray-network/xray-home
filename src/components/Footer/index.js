@@ -100,18 +100,18 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="https://github.com/ray-network/cardano-web3.js"
+                          href="https://cardanolist.io"
                           className="text-muted"
                         >
-                          CardanoWeb3.js
+                          CardanoList.io
                         </a>
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/cardano-list/"
+                          href="https://github.com/ray-network/cardano-web3.js"
                           className="text-muted"
                         >
-                          Cardano List
+                          CardanoWeb3.js
                         </a>
                       </li>
                     </ul>
@@ -379,7 +379,7 @@ const Footer = () => {
                       <div>
                         <Tooltip title="Web Version">
                           <a
-                            href="https://rraayy.com/stake/track/"
+                            href="https://rraayy.com/stake/"
                             className={style.footerApp}
                           >
                             <span className="ray__icon ray__icon--22">
@@ -389,7 +389,7 @@ const Footer = () => {
                         </Tooltip>
                         <Tooltip title="iOS App">
                           <a
-                            href="https://rraayy.com/stake/track/"
+                            href="https://rraayy.com/stake/"
                             className={style.footerApp}
                           >
                             <span className="ray__icon ray__icon--22">
@@ -399,7 +399,7 @@ const Footer = () => {
                         </Tooltip>
                         <Tooltip title="Android App">
                           <a
-                            href="https://rraayy.com/stake/track/"
+                            href="https://rraayy.com/stake/"
                             className={style.footerApp}
                           >
                             <span className="ray__icon ray__icon--22">

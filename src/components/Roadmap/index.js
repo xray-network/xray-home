@@ -123,29 +123,29 @@ const dev = [
     date: "Q3 2021",
   },
   {
-    status: "active",
-    title: "RayWallet V2",
-    date: "Q3 2021",
+    status: "completed",
+    title: "CardanoList.io",
+    date: "Q4 2021",
   },
   {
     status: "active",
-    title: "RayWallet V2 Chrome Extension",
-    date: "Q3 2021",
+    title: "RayWallet V2",
+    date: "Q4 2021",
   },
   {
     status: "active",
     title: "Hardware Wallets Support",
-    date: "Q3 2021",
+    date: "Q4 2021",
   },
   {
     status: "active",
     title: "Whitepaper",
-    date: "Q3 2021",
+    date: "Q4 2021",
   },
   {
     status: "active",
     title: "Cardano-Web3.js",
-    date: "Q3 2021",
+    date: "Q4 2021",
   },
   {
     status: "active",
@@ -186,6 +186,19 @@ const dev = [
     status: "pending",
     title: "Ergo Support",
     date: "2022",
+  },
+]
+
+const chrome = [
+  {
+    status: "active",
+    title: "RayWallet V2",
+    date: "Q4 2021",
+  },
+  {
+    status: "pending",
+    title: "RayStake",
+    date: "Q4 2021",
   },
 ]
 
@@ -230,11 +243,15 @@ const repos = [
     branch: "main",
   },
   {
-    id: "docs",
-    branch: "master",
+    id: "ray-wallet",
+    branch: "dev",
   },
   {
     id: "minterr",
+    branch: "main",
+  },
+  {
+    id: "cardanolist",
     branch: "main",
   },
   {
@@ -242,33 +259,33 @@ const repos = [
     branch: "dev",
   },
   {
-    id: "ray-wallet",
-    branch: "dev",
-  },
-  {
-    id: "ray-cordova-wrapper",
-    branch: "dev",
-  },
-  {
-    id: "ray-swap-contracts",
-    branch: "dev",
-  },
-  {
-    id: "ray-kickstart-contracts",
-    branch: "dev",
-  },
-  {
-    id: "ray-nft-contracts",
-    branch: "dev",
-  },
-  {
-    id: "cloudflare-workers",
-    branch: "dev",
-  },
-  {
-    id: "cardano-verified-tokens-list",
+    id: "cardano-verified",
     branch: "main",
   },
+  {
+    id: "docs",
+    branch: "master",
+  },
+  // {
+  //   id: "ray-cordova-wrapper",
+  //   branch: "dev",
+  // },
+  // {
+  //   id: "ray-swap-contracts",
+  //   branch: "dev",
+  // },
+  // {
+  //   id: "ray-kickstart-contracts",
+  //   branch: "dev",
+  // },
+  // {
+  //   id: "ray-nft-contracts",
+  //   branch: "dev",
+  // },
+  // {
+  //   id: "cloudflare-workers",
+  //   branch: "dev",
+  // },
 ]
 
 const Roadmap = () => {
@@ -369,6 +386,37 @@ const Roadmap = () => {
         </h5>
         <div>
           {apps.map((item, index) => {
+            return (
+              <Tooltip
+                key={index}
+                title={<div className="text-capitalize">{item.status}</div>}
+              >
+                <div
+                  className={classnames({
+                    [style.item]: true,
+                    [style.itemActive]: item.status === "active",
+                    [style.itemCompleted]: item.status === "completed",
+                  })}
+                >
+                  <span className={style.itemIcon}>
+                    {item.status === "completed" && (
+                      <i className="fe fe-check-circle" />
+                    )}
+                  </span>
+                  <span className={style.itemDate}>{item.date}</span>
+                  <span className={style.itemTitle}>{item.title}</span>
+                </div>
+              </Tooltip>
+            )
+          })}
+        </div>
+      </div>
+      <div className="mb-5">
+        <h5 className="mb-5">
+          <strong>Chrome Extensions</strong>
+        </h5>
+        <div>
+          {chrome.map((item, index) => {
             return (
               <Tooltip
                 key={index}

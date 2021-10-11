@@ -51,9 +51,16 @@ const items = [
     url: "/wiki/",
   },
   {
-    title: "Cardano List",
+    title: "Minterr.io",
+    descr: "Cardano NFT Explorer & Minter by Ray Network",
+    url: "https://minterr.io",
+    external: true,
+  },
+  {
+    title: "CardanoList.io",
     descr: "Cardano tokens & projects list curated by Ray",
-    url: "/cardano-list/",
+    url: "https://cardanolist.io",
+    external: true,
   },
   {
     title: "Cardano-Web3.js",

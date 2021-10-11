@@ -106,10 +106,6 @@ const config = [
     url: "/data/",
   },
   {
-    title: "Cardano List",
-    url: "/cardano-list/",
-  },
-  {
     title: "Wiki",
     url: "/wiki/",
   },
@@ -120,6 +116,17 @@ const config = [
   {
     title: "Roadmap & Updates",
     url: "/roadmap/",
+  },
+  {
+    title: "Status",
+    url: "https://status.rraayy.com",
+    status: true,
+    external: true,
+  },
+  {
+    title: "CardanoList.io",
+    url: "https://cardanolist.io",
+    external: true,
   },
   {
     title: "Minterr.io",
@@ -169,12 +176,6 @@ const config = [
   {
     title: "Docs",
     url: "https://docs.rraayy.com",
-    external: true,
-  },
-  {
-    title: "Status",
-    url: "https://status.rraayy.com",
-    status: true,
     external: true,
   },
   {
