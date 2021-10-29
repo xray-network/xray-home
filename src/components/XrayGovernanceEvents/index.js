@@ -43,7 +43,7 @@ const data = [
     type: 'mint',
     date: '08/15/2021',
     amount: 31000,
-    description: '31,000 XDIAMOND NFTs were minted. 16,000 were sent to ISPO CeFi Distribution Wallet for covering Early Delegator Bonus, 10,000 to XDIAMOND Sale Wallet, and 5,000 to Development & Marketing Fund Wallet.'
+    description: '31,000 XDIAMOND NFTs were minted. 16,000 were sent to ISPO CeFi Distribution Wallet for covering Early Delegator Bonus, 10,000 to XDIAMOND Community Wallet, and 5,000 to Development & Marketing Fund Wallet.'
   },
   {
     token: 'XRAY',

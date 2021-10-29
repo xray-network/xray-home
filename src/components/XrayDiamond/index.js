@@ -9,7 +9,7 @@ import * as style from "./style.module.scss"
 
 const XrayTokenomics = () => {
   const theme = useSelector((state) => state.settings.theme)
-  const [xdRemaining, setXdRemaining] = useState(0)
+  // const [xdRemaining, setXdRemaining] = useState(0)
   const [xdRedeemed, setXRedeemed] = useState(0)
   
   const saleAddress = "addr1q9sl4qydrgmtf922ypdffu5x2zxeg7jpk9ryzazq0d03d5hqeaa9yhkregmcvp89pujgdcfcuextw0wkh2lczvhqz8jqk6rg3k"
@@ -23,7 +23,7 @@ const XrayTokenomics = () => {
       const xd = item.summary.assetBalances.filter((asset) => asset.asset.fingerprint === 'asset1y7lphaaxkvjw5hl2kpq37nvlvg09qfqsh4qyme')[0] || {}
       paymentAddressesResults[item.address] = xd.quantity || 0
     })
-    setXdRemaining(paymentAddressesResults[saleAddress] || 0)
+    // setXdRemaining(paymentAddressesResults[saleAddress] || 0)
     setXRedeemed(paymentAddressesResults[redeemAddress] || 0)
   }
 
@@ -78,7 +78,7 @@ const XrayTokenomics = () => {
               </strong>
               <br />
               Distribution:{" "}
-              16,000 to early delegators, 10,000 for sale, 5,000 for further incentives
+              16,000 to early delegators, 10,000 for the community, 5,000 for further incentives
               <br />
               More info:{" "}
               <strong className="text-active">
@@ -96,51 +96,6 @@ const XrayTokenomics = () => {
             <div className={style.diamond}>
               <img src="/resources/XDIAMOND.png" alt="XDIAMOND" />
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="ray__left ray__left--dark mb-5 position-relative">
-        <h5 className="mb-4">
-          <strong>
-            Purchase <span className="ray__ticker me-3">XDIAMOND</span>
-            Remaining: {xdRemaining} from 10000
-          </strong>
-        </h5>
-        <div className={style.redeem}>
-          <div className={style.redeemQr}>
-            <QRCode
-              value={saleAddress}
-              size={400}
-              bgColor={theme === "default" ? "#fff" : "#000"}
-              fgColor={theme === "default" ? "#000" : "#fff"}
-            />
-          </div>
-          <div className={style.redeemInfo}>
-            <p>
-              Send any amount divisible by 15{" "}
-              <span className="ray__ticker">ADA</span> plus 2  <span className="ray__ticker">ADA</span>on top to the address below.
-              That 2 <span className="ray__ticker">ADA</span> minus the transaction fee will be returned to
-              your wallet with <span className="ray__ticker">XDIAMOND</span> tokens at the rate shown below.
-            </p>
-            <p>
-              Current rate is 1 <span className="ray__ticker">XDIAMOND</span> =
-              15 <span className="ray__ticker">ADA</span>
-            </p>
-            <p className="mb-4 mb-md-0">
-              <CopyToClipboard
-                text={saleAddress}
-                onCopy={() => message.success("Copied to clipboard")}
-              >
-                <Tooltip title="Copy to clipboard">
-                  <span className="link">
-                    <span className="me-2 text-break">{saleAddress}</span>
-                    <span className="ray__icon ray__icon--16 ray__icon--inline">
-                      <SVGFiles />
-                    </span>
-                  </span>
-                </Tooltip>
-              </CopyToClipboard>
-            </p>
           </div>
         </div>
       </div>

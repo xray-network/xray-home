@@ -28,15 +28,6 @@ const XrayTokenomics = () => {
         </a>
       </div>
       <div className="ray__left ray__left--dark mb-4">
-        <h5 className="mb-3"><strong>XDIAMOND Sale Wallet</strong></h5>
-        <p className="mb-3">
-          Storage wallet for distribution <span className="ray__ticker">XDIAMOND</span> sale
-        </p>
-        <a className="text-break" href="https://cardanoscan.io/address/addr1q9sl4qydrgmtf922ypdffu5x2zxeg7jpk9ryzazq0d03d5hqeaa9yhkregmcvp89pujgdcfcuextw0wkh2lczvhqz8jqk6rg3k">
-          addr1q9sl4qydrgmtf922ypdffu5x2zxeg7jpk9ryzazq0d03d5hqeaa9yhkregmcvp89pujgdcfcuextw0wkh2lczvhqz8jqk6rg3k
-        </a>
-      </div>
-      <div className="ray__left ray__left--dark mb-4">
         <h5 className="mb-3"><strong>XDIAMOND Collateral Wallet</strong></h5>
         <p className="mb-3">
           Collateral wallet with <span className="ray__ticker">XRAY</span> for redeeming <span className="ray__ticker">XDIAMOND</span> with rate 1 <span className="ray__ticker">XDIAMOND</span> = 100 <span className="ray__ticker">XRAY</span>

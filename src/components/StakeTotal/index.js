@@ -106,19 +106,19 @@ const ChartSchedule = () => {
         <div className="col-6 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
-              {format(history?.lastSynced?.accrued || 0)}
+              {format(history?.totalAccrued || 0)}
               <span className="ray__ticker">XRAY</span>
             </div>
-            <div>XRAY Payouts</div>
+            <div>Total Distributed</div>
           </div>
         </div>
         <div className="col-6 col-sm-4 mb-4">
           <div className="ray__left ray__left--dark">
             <div className="ray__card__value">
-              {format(history?.lastSynced?.max || 0)}{" "}
+              {format(history?.totalUndelivered || 0)}{" "}
               <span className="ray__ticker">XRAY</span>
             </div>
-            <div>XRAY Epoch Limit</div>
+            <div>Undelivered</div>
           </div>
         </div>
         <div className="col-6 col-sm-4 mb-4">
