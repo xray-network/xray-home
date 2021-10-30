@@ -425,13 +425,17 @@
 
     &__text {
       font-size: rem(72);
-      font-weight: 700;
+      font-weight: 900;
       display: block;
       padding-bottom: rem(10);
       margin-bottom: rem(35);
       position: relative;
       padding-left: rem(50);
       line-height: 1.1;
+
+      .ray__ticker {
+        font-weight: 900;
+      }
 
       @media (max-width: $md-max-width) {
         padding-left: rem(25);

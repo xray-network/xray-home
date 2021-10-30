@@ -179,6 +179,11 @@ const config = [
     external: true,
   },
   {
+    title: "Github",
+    url: "https://github.com/ray-network",
+    external: true,
+  },
+  {
     title: "Whitepaper",
     url: "/whitepaper/",
     disabled: true,

@@ -20,7 +20,7 @@ const Promo = () => {
               </span>{" "}
               Cardano
             </span>{" "}
-            blockchain platform.
+            blockchain platform
           </h1>
         </div>
         <div data-aos="fade-up" data-aos-delay="300">
