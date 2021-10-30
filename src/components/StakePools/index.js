@@ -71,6 +71,19 @@ const XrayPools = () => {
                 <div className="row">
                   <div className="col-6">
                     <div className={style.poolItem}>
+                      <div className={style.poolLabel}>Live Stake</div>
+                      <div className={style.poolValue}>
+                        <strong>
+                          {formatValue(
+                            format(pool.total_stake / 1000000),
+                            <sup> ADA</sup>
+                          )}
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className={style.poolItem}>
                       <div className={style.poolLabel}>Saturation</div>
                       <div className={style.poolValue}>
                         <strong>
@@ -102,19 +115,6 @@ const XrayPools = () => {
                       <div className={style.poolLabel}>Delegators</div>
                       <div className={style.poolValue}>
                         <strong>{formatValue(pool.delegators)}</strong>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className={style.poolItem}>
-                      <div className={style.poolLabel}>Live Stake</div>
-                      <div className={style.poolValue}>
-                        <strong>
-                          {formatValue(
-                            format(pool.total_stake / 1000000),
-                            <sup> ADA</sup>
-                          )}
-                        </strong>
                       </div>
                     </div>
                   </div>
