@@ -34,6 +34,13 @@ const data = [
   {
     token: 'XRAY',
     type: 'mint',
+    date: '12/01/2021',
+    amount: 10000000,
+    description: '10,000,000 were sent to ISPO CeFi Distribution Wallet.'
+  },
+  {
+    token: 'XRAY',
+    type: 'mint',
     date: '09/07/2021',
     amount: 10000000,
     description: '10,000,000 were sent to ISPO CeFi Distribution Wallet.'
