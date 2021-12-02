@@ -113,14 +113,14 @@ const XrayTokenomics = () => {
         </h5>
         <div className={`${style.supply} ${style.supplyLarge}`}>
           <strong className="bolder">
-            23,538,200{" "}
+            33,538,200{" "}
             <sup>
               <span className="ray__ticker">XRAY</span>
             </sup>
           </strong>
         </div>
         <div className="ray__progress mb-4">
-          <div style={{ width: `${23.6 / 406 * 100}%` }} />
+          <div style={{ width: `${33.6 / 406 * 100}%` }} />
         </div>
         <h5 className="mb-1">
           <strong>
@@ -182,14 +182,14 @@ const XrayTokenomics = () => {
             </h5>
             <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                21,538,200{" "}
+                31,538,200{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
             </div>
             <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${21.5 / 101 * 100}%` }} />
+              <div style={{ width: `${31.5 / 101 * 100}%` }} />
             </div>
             <div>
               <strong>Max Allocation</strong>
