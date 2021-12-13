@@ -1,6 +1,5 @@
 import React from "react"
 import AliceCarousel from "react-alice-carousel"
-import { Button } from "antd"
 import Heading from "@/components/Heading"
 import { SVGLink } from "@/svg"
 import * as style from "./style.module.scss"

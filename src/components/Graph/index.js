@@ -1,5 +1,4 @@
 import React from "react"
-import { Button } from "antd"
 import Heading from "@/components/Heading"
 import { SVGLink } from "@/svg"
 // import style from "./style.module.scss"
