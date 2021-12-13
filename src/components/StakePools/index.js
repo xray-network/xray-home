@@ -20,7 +20,7 @@ const XrayPools = () => {
         another) to delegate to Ray pools. XRAY rewards will accrue to virtual
         balance automatically after the end of the epoch. Track or withdraw XRAY
         rewards here{" "}
-        <a href="https://stake.rraayy.com" target="_blank" rel="noopener noreferrer">Stake &rarr; Track & Withdraw</a>
+        <a href="https://raystake.io" target="_blank" rel="noopener noreferrer">Stake &rarr; Track & Withdraw</a>
       </p>
       <div className="row">
       {pools?.pools?.map((pool, index) => {

@@ -1,17 +1,16 @@
 import React from "react"
-import { Button } from "antd"
 import Heading from "@/components/Heading"
 import { SVGLink } from "@/svg"
 // import style from "./style.module.scss"
 
-const Kickstart = () => {
+const Pad = () => {
   return (
     <div className="ray__block">
       <Heading id="kickstart">
-        <strong>RayKickstart</strong>, Cardano IDO platform
+        <strong>RayPad</strong>, Cardano IDO platform
       </Heading>
       <p>
-        RayKickstart exists to help bring creative projects to life through
+        RayPad exists to help bring creative projects to life through
         tokenization. It allows you to create and fund your projects in minutes.
         A crypto-home for services, products, film, music, art, theater, games,
         comics, design, photography, and more.
@@ -30,22 +29,22 @@ const Kickstart = () => {
       </p>
       <div className="mt-4 pt-3">
         <span className="d-inline-block me-3 mb-2">
-          <Button
+          <a
             className="ray__btn ray__btn--round"
-            href="https://app.raywallet.io/#/nft"
+            href="https://raypad.io"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span className="me-2">RayKickstart</span>
+            <span className="me-2">RayPad</span>
             <span className="ray__icon">
               <SVGLink />
             </span>
-          </Button>
+          </a>
         </span>
         <span className="d-inline-block">
           <a
             className="ray__btn ray__btn--round ray__btn--transparent"
-            href="https://docs.rraayy.com/smart-contracts/ray-kickstart"
+            href="https://docs.raynetwork.com/smart-contracts/raypad"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -57,4 +56,4 @@ const Kickstart = () => {
   )
 }
 
-export default Kickstart
+export default Pad

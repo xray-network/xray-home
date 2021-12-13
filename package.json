@@ -1,8 +1,8 @@
 {
-  "name": "ray-home",
-  "version": "0.2.0",
+  "name": "raynetwork-io",
+  "version": "1.0.0",
   "private": true,
-  "description": "Ray Network Homepage App",
+  "description": "Ray Network Homepage",
   "license": "MIT",
   "author": "Ray Network",
   "keywords": [
@@ -23,10 +23,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ray-network/ray-home"
+    "url": "https://github.com/ray-network/raynetwork-io"
   },
   "bugs": {
-    "url": "https://github.com/ray-network/ray-home/issues"
+    "url": "https://github.com/ray-network/raynetwork-io/issues"
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",

@@ -1,15 +1,15 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import Kickstart from "@/components/Kickstart"
+import Minterr from "@/components/Minterr"
 import Solutions from "@/components/Solutions"
 import Community from "@/components/Community"
 
 const Page = () => {
   return (
     <MainLayout>
-      <Helmet title="RayKickstart" />
-      <Kickstart />
+      <Helmet title="Minterr" />
+      <Minterr />
       <Solutions />
       <Community />
     </MainLayout>

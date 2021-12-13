@@ -51,7 +51,7 @@ const Promo = () => {
             XDIAMOND
           </Link>
           <a
-            href="https://stake.rraayy.com"
+            href="https://raystake.io"
             target="_blank"
             rel="noopener noreferrer"
             className="ray__btn ray__btn--round me-3 mb-3"

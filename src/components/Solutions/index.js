@@ -26,14 +26,14 @@ const items = [
     url: "/swap/",
   },
   {
-    title: "RayKickstart",
+    title: "RayPad",
     descr: "Decentralised fundraising",
-    url: "/kickstart/",
+    url: "/pad/",
   },
   {
-    title: "RayNFT ",
-    descr: "NFT marketplace with advanced features",
-    url: "/nft/",
+    title: "Minterr",
+    descr: "Cardano NFT Explorer & Minter by Ray Network",
+    url: "/minterr/",
   },
   {
     title: "RayGraph",
@@ -51,9 +51,9 @@ const items = [
     url: "/wiki/",
   },
   {
-    title: "Minterr.io",
-    descr: "Cardano NFT Explorer & Minter by Ray Network",
-    url: "https://minterr.io",
+    title: "RayStart.io",
+    descr: "Start Page of the Ray Network Ecosystem",
+    url: "https://raystart.io",
     external: true,
   },
   {

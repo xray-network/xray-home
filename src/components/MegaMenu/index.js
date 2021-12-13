@@ -118,7 +118,7 @@ const MegaMenu = () => {
                     <ul className="list-unstyled mb-4">
                       <li>
                         <a
-                          href="https://rraayy.com/wallet/"
+                          href="https://raywallet.io"
                           className="text-muted"
                         >
                           RayWallet
@@ -126,7 +126,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/stake/"
+                          href="https://raystake.io"
                           className="text-muted"
                         >
                           RayStake
@@ -134,7 +134,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/swap/"
+                          href="https://rayswap.io"
                           className="text-muted"
                         >
                           RaySwap
@@ -142,23 +142,23 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/kickstart/"
+                          href="https://raypad.io"
                           className="text-muted"
                         >
-                          RayKickstart
+                          RayPad
                         </a>
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/nft/"
+                          href="https://minterr.io"
                           className="text-muted"
                         >
-                          RayNFT
+                          Minterr
                         </a>
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/graph/"
+                          href="https://raygraph.io"
                           className="text-muted"
                         >
                           RayGraph
@@ -166,15 +166,10 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/data/"
+                          href="https://raydata.io"
                           className="text-muted"
                         >
                           RayData
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://minterr.io/" className="text-muted">
-                          Minterr.io
                         </a>
                       </li>
                       <li>
@@ -211,7 +206,7 @@ const MegaMenu = () => {
                     <ul className="list-unstyled mb-5">
                       <li>
                         <a
-                          href="https://rraayy.com/xray/"
+                          href="https://raynetwork.io/xray/"
                           className="text-muted"
                         >
                           XRAY Token
@@ -219,7 +214,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/xdiamond/"
+                          href="https://raynetwork.io/xdiamond/"
                           className="text-muted"
                         >
                           XDIAMOND
@@ -227,7 +222,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/roadmap/"
+                          href="https://raynetwork.io/roadmap/"
                           className="text-muted"
                         >
                           Roadmap & Updates
@@ -235,7 +230,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/wiki/"
+                          href="https://raynetwork.io/wiki/"
                           className="text-muted"
                         >
                           Wiki
@@ -243,7 +238,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://status.rraayy.com/"
+                          href="https://status.raynetwork.io/"
                           className="text-muted"
                         >
                           Status
@@ -251,7 +246,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/about/"
+                          href="https://raynetwork.io/about/"
                           className="text-muted"
                         >
                           About
@@ -259,7 +254,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/whitepaper/"
+                          href="https://raynetwork.io/whitepaper/"
                           className="text-muted"
                         >
                           Whitepaper
@@ -267,7 +262,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://docs.rraayy.com/"
+                          href="https://docs.raynetwork.io/"
                           className="text-muted"
                         >
                           Docs
@@ -275,7 +270,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/audit/"
+                          href="https://raynetwork.io/audit/"
                           className="text-muted"
                         >
                           Audit
@@ -283,7 +278,7 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://rraayy.com/terms-of-use/"
+                          href="https://raynetwork.io/terms-of-use/"
                           className="text-muted"
                         >
                           Terms of Use
@@ -406,7 +401,7 @@ const MegaMenu = () => {
                       </Tooltip>
                       <Tooltip title="Chrome Extension">
                         <a
-                          href="https://rraayy.com/wallet/"
+                          href="https://raywallet.io"
                           className={style.footerApp}
                         >
                           <span className="ray__icon ray__icon--22">
@@ -416,7 +411,7 @@ const MegaMenu = () => {
                       </Tooltip>
                       <Tooltip title="macOS App">
                         <a
-                          href="https://rraayy.com/wallet/"
+                          href="https://raywallet.io"
                           className={style.footerApp}
                         >
                           <span className="ray__icon ray__icon--22">
@@ -426,7 +421,7 @@ const MegaMenu = () => {
                       </Tooltip>
                       <Tooltip title="Windows App">
                         <a
-                          href="https://rraayy.com/wallet/"
+                          href="https://raywallet.io"
                           className={style.footerApp}
                         >
                           <span className="ray__icon ray__icon--22">
@@ -438,7 +433,7 @@ const MegaMenu = () => {
                     <div>
                       <Tooltip title="iOS App">
                         <a
-                          href="https://rraayy.com/wallet/"
+                          href="https://raywallet.io"
                           className={style.footerApp}
                         >
                           <span className="ray__icon ray__icon--22">
@@ -448,7 +443,7 @@ const MegaMenu = () => {
                       </Tooltip>
                       <Tooltip title="Android App">
                         <a
-                          href="https://rraayy.com/wallet/"
+                          href="https://raywallet.io"
                           className={style.footerApp}
                         >
                           <span className="ray__icon ray__icon--22">
@@ -469,7 +464,7 @@ const MegaMenu = () => {
                     <div>
                       <Tooltip title="Web Version">
                         <a
-                          href="https://rraayy.com/stake/"
+                          href="https://raystake.io"
                           className={style.footerApp}
                         >
                           <span className="ray__icon ray__icon--22">
@@ -479,7 +474,7 @@ const MegaMenu = () => {
                       </Tooltip>
                       <Tooltip title="iOS App">
                         <a
-                          href="https://rraayy.com/stake/"
+                          href="https://raystake.io"
                           className={style.footerApp}
                         >
                           <span className="ray__icon ray__icon--22">
@@ -489,7 +484,7 @@ const MegaMenu = () => {
                       </Tooltip>
                       <Tooltip title="Android App">
                         <a
-                          href="https://rraayy.com/stake/"
+                          href="https://raystake.io"
                           className={style.footerApp}
                         >
                           <span className="ray__icon ray__icon--22">

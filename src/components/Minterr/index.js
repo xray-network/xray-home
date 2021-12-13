@@ -20,20 +20,20 @@ const items = [
   "12.png",
 ]
 
-const Nft = () => {
+const Minterr = () => {
   return (
     <div className="ray__block">
       <Heading id="nft">
-        <strong>RayNFT</strong>, Cardano NFT Marketplace
+        <strong>Minterr</strong>, Cardano NFT Marketplace / Explorer / Minter
       </Heading>
       <p>
-        RayNFT is a decentralized marketplace for digital goods, including
+        Minterr is a decentralized marketplace for digital goods, including
         collectibles, gaming items, digital art, and other digital assets that
-        are backed by a blockchain. On RayNFT, you can buy, sell, and trade any
+        are backed by a blockchain. On Minterr, you can buy, sell, and trade any
         of these items with anyone in the world.
       </p>
       <p className="mb-5">
-        Trading on on RayNFT takes place through a smart contract, meaning that
+        Trading on on Minterr takes place through a smart contract, meaning that
         no central authority ever holds custody of your items.
       </p>
       <h5 className="mb-5">
@@ -48,22 +48,22 @@ const Nft = () => {
       </p>
       <div className="mt-4 pt-3 mb-5">
         <span className="d-inline-block me-3 mb-2">
-          <Button
+          <a
             className="ray__btn ray__btn--round"
-            href="https://app.raywallet.io/#/nft"
+            href="https://minterr.io"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span className="me-2">RayNFT</span>
+            <span className="me-2">Minterr</span>
             <span className="ray__icon">
               <SVGLink />
             </span>
-          </Button>
+          </a>
         </span>
         <span className="d-inline-block">
           <a
             className="ray__btn ray__btn--round ray__btn--transparent"
-            href="https://docs.rraayy.com/smart-contracts/ray-nft"
+            href="https://docs.raynetwork.io/smart-contracts/minterr"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -155,4 +155,4 @@ const Nft = () => {
   )
 }
 
-export default Nft
+export default Minterr

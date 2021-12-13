@@ -1,9 +1,9 @@
-name = "ray-home"
+name = "raynetwork-io"
 type = "webpack"
 account_id = "792461088a4c863230f3faee467094b1"
 # workers_dev = true
-route = "rraayy.com/*"
-zone_id = "d2b7b0704a9d26e0725937654b59f6f0"
+route = "raynetwork.io/*"
+zone_id = "55735576058a638a71d3c8f08122703d"
 
 [site]
 bucket = "../public"

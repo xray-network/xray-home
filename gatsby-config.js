@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://minterr.org",
+    siteUrl: "https://raynetwork.io",
     title: "Ray Network - Cardano Ecosystem",
   },
   plugins: [

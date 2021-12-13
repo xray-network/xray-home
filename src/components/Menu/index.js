@@ -75,7 +75,7 @@ const config = [
       },
       {
         title: "RayStake App",
-        url: "https://stake.rraayy.com",
+        url: "https://raystake.io",
         icon: <SVGBarChart />,
         external: true,
       },
@@ -90,12 +90,12 @@ const config = [
     url: "/swap/",
   },
   {
-    title: "Kickstart",
-    url: "/kickstart/",
+    title: "Pad",
+    url: "/pad/",
   },
   {
-    title: "NFT",
-    url: "/nft/",
+    title: "Minterr",
+    url: "/minterr/",
   },
   {
     title: "Graph",
@@ -119,18 +119,13 @@ const config = [
   },
   {
     title: "Status",
-    url: "https://status.rraayy.com",
+    url: "https://status.raynetwork.io",
     status: true,
     external: true,
   },
   {
-    title: "CardanoList.io",
+    title: "CardanoList",
     url: "https://cardanolist.io",
-    external: true,
-  },
-  {
-    title: "Minterr.io",
-    url: "https://minterr.io",
     external: true,
   },
   {
@@ -175,7 +170,7 @@ const config = [
   },
   {
     title: "Docs",
-    url: "https://docs.rraayy.com",
+    url: "https://docs.raynetwork.io",
     external: true,
   },
   {
@@ -213,7 +208,7 @@ const stake = [
   },
   {
     title: "RayStake App",
-    url: "https://stake.rraayy.com",
+    url: "https://raystake.io",
     icon: <SVGBarChart />,
     external: true,
   },

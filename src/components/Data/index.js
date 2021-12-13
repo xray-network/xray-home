@@ -1,5 +1,6 @@
 import React from "react"
 import { useSelector } from "react-redux"
+import { SVGLink } from "@/svg"
 import Heading from "@/components/Heading"
 
 const Data = () => {
@@ -10,7 +11,7 @@ const Data = () => {
       <Heading id="data">
         <strong>RayData</strong>, on-chain storage with access roles
       </Heading>
-      <div className="mb-5">
+      <div>
         <p>
           RayData is a protocol that standardizes information written in a
           blockchain. The basic model is containers that are created by users,
@@ -39,6 +40,31 @@ const Data = () => {
           </a>
           .
         </p>
+      </div>
+      <div className="mt-4 pt-3 mb-5">
+        <span className="d-inline-block me-3 mb-2">
+          <a
+            className="ray__btn ray__btn--round"
+            href="https://raydata.io"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span className="me-2">RayData</span>
+            <span className="ray__icon">
+              <SVGLink />
+            </span>
+          </a>
+        </span>
+        <span className="d-inline-block">
+          <a
+            className="ray__btn ray__btn--round ray__btn--transparent"
+            href="https://docs.raynetwork.com/services/raydata"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <span>SDK / Documentation</span>
+          </a>
+        </span>
       </div>
       <div>
         {theme === "default" && (

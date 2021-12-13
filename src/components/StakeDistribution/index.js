@@ -34,7 +34,7 @@ const XrayDistribution = () => {
         <span className="d-inline-block me-3 mb-2">
           <a
             className="ray__btn ray__btn--round"
-            href="https://stake.rraayy.com"
+            href="https://raystake.io"
             target="_blank"
             rel="noopener noreferrer"
           >

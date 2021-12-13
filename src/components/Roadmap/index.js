@@ -154,12 +154,12 @@ const dev = [
   },
   {
     status: "active",
-    title: "RayNFT",
+    title: "Minterr",
     date: "Q4 2021",
   },
   {
     status: "pending",
-    title: "RayKickstart",
+    title: "RayPad",
     date: "Q1 2022",
   },
   {

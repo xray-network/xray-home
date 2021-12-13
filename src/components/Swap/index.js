@@ -37,7 +37,7 @@ const Swap = () => {
         <span className="d-inline-block me-3 mb-2">
           <Button
             className="ray__btn ray__btn--round"
-            href="https://app.raywallet.io/#/swap"
+            href="https://rayswap.io"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -50,7 +50,7 @@ const Swap = () => {
         <span className="d-inline-block">
           <a
             className="ray__btn ray__btn--round ray__btn--transparent"
-            href="https://docs.rraayy.com/smart-contracts/ray-swap"
+            href="https://docs.raynetwork.io/smart-contracts/rayswap"
             target="_blank"
             rel="noreferrer noopener"
           >

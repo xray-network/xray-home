@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Tooltip } from "antd"
+import { Button } from "antd"
 import Heading from "@/components/Heading"
 import { SVGLink } from "@/svg"
 // import style from "./style.module.scss"
@@ -33,20 +33,23 @@ const Kickstart = () => {
         easier to evolve APIs over time, and enables powerful developer tools.
       </p>
       <div className="mt-4 pt-3">
-        <Tooltip title="soon" className="me-3 mb-2">
-          <span className="d-inline-block">
-            <Button className="ray__btn ray__btn--round" href="/" disabled>
-              <span>RayGraph</span>
-              <span className="ray__icon ms-2">
-                <SVGLink />
-              </span>
-            </Button>
-          </span>
-        </Tooltip>
+        <span className="d-inline-block mb-3 me-3">
+          <a
+            className="ray__btn ray__btn--round"
+            href="https://raygraph.io"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span>RayGraph</span>
+            <span className="ray__icon ms-2">
+              <SVGLink />
+            </span>
+          </a>
+        </span>
         <span className="d-inline-block">
           <a
             className="ray__btn ray__btn--round ray__btn--transparent"
-            href="https://docs.rraayy.com/services/ray-graph"
+            href="https://docs.raynetwork.com/services/raygraph"
             target="_blank"
             rel="noreferrer noopener"
           >

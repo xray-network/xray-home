@@ -126,7 +126,7 @@ const XrayDistribution = () => {
             <StakeTotal />
             <div className={style.controls}>
               <a
-                href="https://stake.rraayy.com"
+                href="https://raystake.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ray__btn ray__btn--round me-3 mb-3"
@@ -205,7 +205,7 @@ const XrayDistribution = () => {
           <div className="pt-4">
             <p>
               IDE token distribution with vesting period and buy back option. To
-              be announced after the release of RayKickstart.
+              be announced after the release of RayPad.
             </p>
             <ul className="mb-5">
               <li>ADA/XRAY pair</li>

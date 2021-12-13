@@ -16,7 +16,7 @@ const MainLayout = ({ children }) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
-        <meta property="og:url" content="https://rraayy.com" />
+        <meta property="og:url" content="https://raynetwork.io" />
         <meta
           name="description"
           content="Advanced Ecosystem for Cardano Blockchain Platform. All about ADA finances (DeFi) in one place."

@@ -28,7 +28,7 @@ const Page = () => {
       </h5>
       <p>
         <span className="ray__ticker">XRAY</span> token is a payment token for
-        those services, such as premium RayNFT marketplace placement, Ray
+        those services, such as premium Minterr marketplace placement, Ray
         KickStart placement, tokens minting, will be used as a governance token,
         yield farming in RaySwap, and B2B service based on Atala PRISM.
       </p>
@@ -46,10 +46,10 @@ const Page = () => {
       <div className="ray__line my-4" />
 
       <h5>
-        <strong>What is the RayKickstart?</strong>
+        <strong>What is the RayPad?</strong>
       </h5>
       <p>
-        RayKickstart exists to help bring creative projects to life through
+        RayPad exists to help bring creative projects to life through
         tokenization. It allows you to create and fund your projects in minutes.
         A crypto-home for services, products, film, music, art, theater, games,
         comics, design, photography, and more.
@@ -57,10 +57,10 @@ const Page = () => {
       <div className="ray__line my-4" />
 
       <h5>
-        <strong>What is the RayNFT Marketplace?</strong>
+        <strong>What is the Minterr?</strong>
       </h5>
       <p>
-        RayNFT is a decentralized non-fungible token (NFT) marketplace for
+        Minterr is a decentralized non-fungible token (NFT) marketplace for
         buying, selling, and trading NFTs.
       </p>
     </LayoutWiki>

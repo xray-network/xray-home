@@ -87,7 +87,7 @@ const Page = () => {
         </p>
         <p>
           Go to the{" "}
-          <a href="https://stake.rraayy.com/track/" target="_blank" rel="noopener noreferrer">RayStake &rarr; Track & Withdraw</a>{" "}
+          <a href="https://raystake.io/track/" target="_blank" rel="noopener noreferrer">RayStake &rarr; Track & Withdraw</a>{" "}
           section and enter your address or stake key.
           To withdraw your <span className="ray__ticker ray__ticker__sm">XRAY</span> rewards follow instructions under the QR section.
         </p>

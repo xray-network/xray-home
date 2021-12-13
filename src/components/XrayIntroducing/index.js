@@ -13,7 +13,7 @@ const XrayIntroducing = () => {
         <strong>What is Ray Network and XRAY token?</strong>
       </h5>
       <p className="mb-5">
-        <a href="https://rraayy.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://raynetwork.io" target="_blank" rel="noopener noreferrer">
           Ray Network
         </a>{" "}
         is an advanced ecosystem for the{" "}
@@ -30,7 +30,7 @@ const XrayIntroducing = () => {
       </h5>
       <p className="mb-5">
         When most services are fully launched, the token will be used as payment
-        for those services, such as premium RayNFT marketplace placement, Ray
+        for those services, such as premium Minterr marketplace placement, Ray
         KickStart placement, tokens minting, will be used as a governance token,
         and yield farming in{" "}
         <a href="https://rayswap.org" target="_blank" rel="noopener noreferrer">

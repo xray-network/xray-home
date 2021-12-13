@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Tooltip } from "antd"
+import { Button } from "antd"
 import Heading from "@/components/Heading"
 import {
   SVGInternet,
@@ -104,7 +104,7 @@ const Wallet = () => {
         </div>
         <div className="mt-4 pt-3">
           <span className="d-inline-block me-3 mb-3">
-            <Button
+            <a
               className="ray__btn ray__btn--round"
               href="https://raywallet.io"
               rel="noopener noreferrer"
@@ -114,60 +114,75 @@ const Wallet = () => {
               <span className="ray__icon">
                 <SVGInternet />
               </span>
-            </Button>
+            </a>
           </span>
-          <Tooltip title="soon" className="me-3 mb-3">
-            <span className="d-inline-block">
-              <Button className="ray__btn ray__btn--round" href="/" disabled>
-                <span className="me-2">Chrome Extension</span>
-                <span className="ray__icon">
-                  <SVGChrome />
-                </span>
-              </Button>
-            </span>
-          </Tooltip>
+          <span className="d-inline-block me-3 mb-3">
+            <a
+              className="ray__btn ray__btn--round"
+              href="https://raywallet.io"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span className="me-2">Chrome Extension</span>
+              <span className="ray__icon">
+                <SVGChrome />
+              </span>
+            </a>
+          </span>
         </div>
         <div className="d-sm-flex">
-          <Tooltip title="soon" className="me-3 mb-3">
-            <span className="d-inline-block">
-              <Button className="ray__btn ray__btn--round" href="/" disabled>
-                <span className="me-2">Windows</span>
-                <span className="ray__icon">
-                  <SVGCategory />
-                </span>
-              </Button>
-            </span>
-          </Tooltip>
-          <Tooltip title="soon" className="me-3 mb-3">
-            <span className="d-inline-block">
-              <Button className="ray__btn ray__btn--round" href="/" disabled>
-                <span className="me-2">macOS</span>
-                <span className="ray__icon">
-                  <SVGApple />
-                </span>
-              </Button>
-            </span>
-          </Tooltip>
-          <Tooltip title="soon" className="me-3 mb-3">
-            <span className="d-inline-block">
-              <Button className="ray__btn ray__btn--round" href="/" disabled>
-                <span className="me-2">iOS</span>
-                <span className="ray__icon">
-                  <SVGApple />
-                </span>
-              </Button>
-            </span>
-          </Tooltip>
-          <Tooltip title="soon" className="me-3 mb-3">
-            <span className="d-inline-block">
-              <Button className="ray__btn ray__btn--round" href="/" disabled>
-                <span className="me-2">Android</span>
-                <span className="ray__icon">
-                  <SVGAndroid />
-                </span>
-              </Button>
-            </span>
-          </Tooltip>
+          <span className="d-inline-block me-3 mb-3">
+            <a
+              className="ray__btn ray__btn--round"
+              href="https://raywallet.io"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span className="me-2">Windows</span>
+              <span className="ray__icon">
+                <SVGCategory />
+              </span>
+            </a>
+          </span>
+          <span className="d-inline-block me-3 mb-3">
+            <a
+              className="ray__btn ray__btn--round"
+              href="https://raywallet.io"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span className="me-2">macOS</span>
+              <span className="ray__icon">
+                <SVGApple />
+              </span>
+            </a>
+          </span>
+          <span className="d-inline-block me-3 mb-3">
+            <a
+              className="ray__btn ray__btn--round"
+              href="https://raywallet.io"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span className="me-2">iOS</span>
+              <span className="ray__icon">
+                <SVGApple />
+              </span>
+            </a>
+          </span>
+          <span className="d-inline-block me-3 mb-3">
+            <a
+              className="ray__btn ray__btn--round"
+              href="https://raywallet.io"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span className="me-2">Android</span>
+              <span className="ray__icon">
+                <SVGAndroid />
+              </span>
+            </a>
+          </span>
         </div>
         <div className={style.images}>
           <div className={style.imagesContainer}>
