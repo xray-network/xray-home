@@ -139,27 +139,27 @@ const dev = [
   },
   {
     status: "active",
-    title: "Whitepaper",
-    date: "Q4 2021",
-  },
-  {
-    status: "active",
     title: "Cardano-Web3.js",
     date: "Q4 2021",
   },
   {
     status: "active",
+    title: "Whitepaper",
+    date: "Q1 2022",
+  },
+  {
+    status: "active",
     title: "RaySwap",
-    date: "Q4 2021",
+    date: "Q1 2022",
+  },
+  {
+    status: "active",
+    title: "RayPad",
+    date: "Q1 2022",
   },
   {
     status: "active",
     title: "Minterr",
-    date: "Q4 2021",
-  },
-  {
-    status: "pending",
-    title: "RayPad",
     date: "Q1 2022",
   },
   {
@@ -175,7 +175,7 @@ const dev = [
   {
     status: "pending",
     title: "RayGraph",
-    date: "Q1 2022",
+    date: "Q2 2022",
   },
   {
     status: "pending",
@@ -192,7 +192,7 @@ const dev = [
 const chrome = [
   {
     status: "active",
-    title: "RayWallet V2",
+    title: "RayWallet V2 / DApp Connector",
     date: "Q4 2021",
   },
   {
@@ -204,34 +204,34 @@ const chrome = [
 
 const apps = [
   {
-    status: "pending",
-    title: "RayStake iOS",
-    date: "Q4 2021",
-  },
-  {
-    status: "pending",
-    title: "RayStake Android",
-    date: "Q4 2021",
-  },
-  {
-    status: "pending",
+    status: "active",
     title: "RayWallet Windows",
     date: "Q4 2021",
   },
   {
-    status: "pending",
+    status: "active",
     title: "RayWallet macOS",
     date: "Q4 2021",
   },
   {
-    status: "pending",
+    status: "active",
     title: "RayWallet iOS",
     date: "Q4 2021",
   },
   {
-    status: "pending",
+    status: "active",
     title: "RayWallet Android",
     date: "Q4 2021",
+  },
+  {
+    status: "pending",
+    title: "RayStake iOS",
+    date: "Q1 2022",
+  },
+  {
+    status: "pending",
+    title: "RayStake Android",
+    date: "Q1 2022",
   },
 ]
 
