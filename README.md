@@ -1,5 +1,5 @@
 ### Ray Network Homepage ###
-https://rraayy.com
+https://raynetwork.io
 
 ### Gatsby Documentation ###
 Please read documentation here https://www.gatsbyjs.com/docs/
