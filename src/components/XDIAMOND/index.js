@@ -55,7 +55,7 @@ const Xdiamond = () => {
               <img src="/resources/images/XDIAMOND.png" alt="XDIAMOND" />
             </div>
           </div>
-          <p data-aos="fade-up" data-aos-delay="400">
+          <p>
             <span className="ray__ticker">XDIAMOND</span> is a Cardano
             collectible NFT token for marketing and community incentives. You
             can get it for participation in marketing activities and giveaways,
@@ -105,11 +105,7 @@ const Xdiamond = () => {
             </a>
           </div>
         </div>
-        <div
-          className="col-12 col-md-4 d-none d-md-block"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
+        <div className="col-12 col-md-4 d-none d-md-block">
           <div className={style.diamond}>
             <img src="/resources/images/XDIAMOND.png" alt="XDIAMOND" />
           </div>
