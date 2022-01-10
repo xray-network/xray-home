@@ -105,7 +105,7 @@ const Ecosystem = () => {
                     className={style.itemInner}
                     activeClassName={style.itemInnerActive}
                     partiallyActive
-                    >
+                  >
                     <div className={style.itemInnerTitle}>{item.title}</div>
                     <div>{item.descr}</div>
                   </Link>

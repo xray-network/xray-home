@@ -14,11 +14,12 @@ const Team = () => {
         working{" "}
         <a href="http://raywallet.io" target="_blank" rel="noopener noreferrer">
           RayWallet
-        </a>,{" "}
+        </a>
+        ,{" "}
         <a href="http://raystake.io" target="_blank" rel="noopener noreferrer">
           RayStake
-        </a>,{" "}
-        and{" "}
+        </a>
+        , and{" "}
         <a href="http://minterr.io" target="_blank" rel="noopener noreferrer">
           Minterr.io
         </a>
@@ -36,19 +37,18 @@ const Team = () => {
       <p>
         We believe that a small group of professionals is ready to solve big
         problems. An example of this could be Uniswap, when several people made
-        the world's # 1 distributed token trading exchange.
-        We have a lot of work ahead of us, finding the best professionals in the
-        crypto industry who would be ready to make the largest DeFi platform for
-        Cardano. We believe that these goals are achievable and we are on the
-        way to it!
+        the world's # 1 distributed token trading exchange. We have a lot of
+        work ahead of us, finding the best professionals in the crypto industry
+        who would be ready to make the largest DeFi platform for Cardano. We
+        believe that these goals are achievable and we are on the way to it!
       </p>
       <div className={style.quote}>
         <div>"</div>
         <div>
-          We have experience integrating Ethereum blockchain solutions into our clients' products, so
-          we have something to compare Cardano with. We believe that IOG team
-          will solve all their tasks and Cardano eUTXO model will become the
-          best blockchain technology in the near future!
+          We have experience integrating Ethereum blockchain solutions into our
+          clients' products, so we have something to compare Cardano with. We
+          believe that IOG team will solve all their tasks and Cardano eUTXO
+          model will become the best blockchain technology in the near future!
         </div>
       </div>
       <div className={style.team}>
@@ -93,9 +93,7 @@ const Team = () => {
           </div>
         </div>
         <div className={style.teammate}>
-          <div className={style.teammateImage}>
-            +5
-          </div>
+          <div className={style.teammateImage}>+5</div>
           <div>
             <div>
               <strong>Full-Stack Developers</strong>

@@ -4,7 +4,7 @@
   padding: rem(70) rem(100);
   border: rem(8) solid $gray-1;
   border-radius: rem(40);
-  transition: border-color .3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
 
   &:hover {
     border-color: $dark;

@@ -108,9 +108,7 @@ const XrayTokenomics = () => {
       </div>
       <div className="ray__left ray__left--dark">
         <h5 className="mb-0">
-          <strong>
-            Circulating Supply
-          </strong>
+          <strong>Circulating Supply</strong>
         </h5>
         <div className={`${style.supply} ${style.supplyLarge}`}>
           <strong className="bolder">
@@ -121,12 +119,10 @@ const XrayTokenomics = () => {
           </strong>
         </div>
         <div className="ray__progress mb-4">
-          <div style={{ width: `${33.6 / 406 * 100}%` }} />
+          <div style={{ width: `${(33.6 / 406) * 100}%` }} />
         </div>
         <h5 className="mb-1">
-          <strong>
-            Max Supply
-          </strong>
+          <strong>Max Supply</strong>
         </h5>
         <div className={`${style.supply} mb-5`}>
           <strong className="bolder">
@@ -190,7 +186,7 @@ const XrayTokenomics = () => {
               </strong>
             </div>
             <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${31.5 / 101 * 100}%` }} />
+              <div style={{ width: `${(31.5 / 101) * 100}%` }} />
             </div>
             <div>
               <strong>Max Allocation</strong>
@@ -255,7 +251,8 @@ const XrayTokenomics = () => {
           <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>
-                Development & Marketing Fund <span className="text-shade">14%</span>
+                Development & Marketing Fund{" "}
+                <span className="text-shade">14%</span>
               </strong>
             </h5>
             <div className={`${style.supply} mb-1`}>
@@ -267,7 +264,7 @@ const XrayTokenomics = () => {
               </strong>
             </div>
             <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${2 / 56 * 100}%` }} />
+              <div style={{ width: `${(2 / 56) * 100}%` }} />
             </div>
             <div>
               <strong>Max Allocation</strong>

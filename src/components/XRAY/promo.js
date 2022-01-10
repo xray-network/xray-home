@@ -7,12 +7,14 @@ const XrayPromo = () => {
     <div className="ray__block">
       <div className="ray__left ray__left--dark mb-5">
         <h1 className="max-width-700">
-          <strong className="bolder">Send, Stake, Earn, Swap, Fund, Bid? XRAY.</strong>
+          <strong className="bolder">
+            Send, Stake, Earn, Swap, Fund, Bid? XRAY.
+          </strong>
         </h1>
       </div>
       <p>
-        Ray Network token - XRAY - is a Cardano based cryptocurrency token for
-        a fuelling the Ray platform. Ray is a highly functional open source
+        Ray Network token - XRAY - is a Cardano based cryptocurrency token for a
+        fuelling the Ray platform. Ray is a highly functional open source
         project that banks on blockchain technology’s permissionless nature to
         provide decentralized finance (DeFi) solutions and other services.
       </p>
@@ -31,7 +33,9 @@ const XrayPromo = () => {
         <br />
         Fingerprint:{" "}
         <strong className="text-active">
-          <span className="text-break">asset14y0dxsz9s9nd2lefkqvuu7edqlsg5p70r3wyxa</span>
+          <span className="text-break">
+            asset14y0dxsz9s9nd2lefkqvuu7edqlsg5p70r3wyxa
+          </span>
         </strong>
       </p>
       <div className="d-block d-md-flex">

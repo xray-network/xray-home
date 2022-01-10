@@ -6,7 +6,8 @@ const Whitepaper = () => {
     <div className="ray__block">
       <div className="ray__title">Ray Network Audit</div>
       <div className="ray__title__descr">
-        <strong>Audit</strong>, learn reports and analysis from third-party companies
+        <strong>Audit</strong>, learn reports and analysis from third-party
+        companies
       </div>
       <div className={style.error}>
         <div className="row">

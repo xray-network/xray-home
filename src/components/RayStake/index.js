@@ -10,7 +10,8 @@ const RayStake = () => {
     <div className="ray__block">
       <div className="ray__title">RayStake</div>
       <div className="ray__title__descr">
-        <strong>RayStake</strong>, Cardano / NEAR Protocol / Solana staking solutions & XRAY ISPO
+        <strong>RayStake</strong>, Cardano / NEAR Protocol / Solana staking
+        solutions & XRAY ISPO
       </div>
       <p>
         Ray Network provides Cardano staking services on high-performance
@@ -20,8 +21,9 @@ const RayStake = () => {
       </p>
       <p className="mb-5">
         Stake ADA in Ray pools and get <strong>~4.5% ROI</strong> with extra
-        rewards 1 <strong className="ray__ticker">XRAY</strong> each epoch for every{" "}
-        {rate / 1000000} <strong className="ray__ticker">ADA</strong> you staked.
+        rewards 1 <strong className="ray__ticker">XRAY</strong> each epoch for
+        every {rate / 1000000} <strong className="ray__ticker">ADA</strong> you
+        staked.
       </p>
       <div className="mt-4 pt-3">
         <span className="d-inline-block me-3 mb-2">

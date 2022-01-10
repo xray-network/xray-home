@@ -6,7 +6,8 @@ const Whitepaper = () => {
     <div className="ray__block">
       <div className="ray__title">Ray Network Whitepaper</div>
       <div className="ray__title__descr">
-        <strong>Whitepaper</strong>, learn about the Ray Network’s core concepts: Ecosystem, Technologies, and more
+        <strong>Whitepaper</strong>, learn about the Ray Network’s core
+        concepts: Ecosystem, Technologies, and more
       </div>
       <div className={style.error}>
         <div className="row">

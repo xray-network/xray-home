@@ -63,11 +63,7 @@ const RayData = () => {
         </span>
       </div>
       <div className={style.image}>
-        <img
-          src="/resources/images/scheme.png"
-          alt=""
-          className="img-fluid"
-        />
+        <img src="/resources/images/scheme.png" alt="" className="img-fluid" />
       </div>
     </div>
   )

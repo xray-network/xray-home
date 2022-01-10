@@ -12,7 +12,11 @@ const XrayIntroducing = () => {
         <strong>What is Ray Network and XRAY token?</strong>
       </h5>
       <p className="mb-5">
-        <a href="https://raynetwork.io" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://raynetwork.io"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Ray Network
         </a>{" "}
         is an advanced ecosystem for the{" "}
@@ -29,8 +33,8 @@ const XrayIntroducing = () => {
       </h5>
       <p className="mb-5">
         When most services are fully launched, the token will be used as payment
-        for those services, such as premium Minterr marketplace placement, RayPad
-        placement, tokens minting, will be used as a governance token,
+        for those services, such as premium Minterr marketplace placement,
+        RayPad placement, tokens minting, will be used as a governance token,
         and yield farming in{" "}
         <a href="https://rayswap.io" target="_blank" rel="noopener noreferrer">
           RaySwap
@@ -49,8 +53,7 @@ const XrayIntroducing = () => {
         <strong>Open Source</strong>
       </h5>
       <p className="mb-5">
-        We are fully open source and publish the code under the MIT
-        license.{" "}
+        We are fully open source and publish the code under the MIT license.{" "}
         <a
           href="https://github.com/ray-network"
           target="_blank"

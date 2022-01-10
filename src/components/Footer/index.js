@@ -234,7 +234,8 @@ const Footer = () => {
                           </li>
                           <li>
                             <a href="https://t.me/RayNetworkChannel">
-                              Telegram Announcements <i className="ri ri-arrow_up ri-ext" />
+                              Telegram Announcements{" "}
+                              <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>

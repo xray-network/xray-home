@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { useDispatch } from "react-redux"
 import * as style from "./style.module.scss"
 import { SVGRay } from "@/svg"
-import { ecosystem, xray, developers } from '@/config'
+import { ecosystem, xray, developers } from "@/config"
 
 const Menu = () => {
   const location = useLocation()
@@ -31,13 +31,25 @@ const Menu = () => {
             </Link>
           </div>
           <div className={style.menuItems}>
-            <Link to="/ecosystem/" className={isEcosystem ? style.linkActive : ''} activeClassName={style.linkActive}>
+            <Link
+              to="/ecosystem/"
+              className={isEcosystem ? style.linkActive : ""}
+              activeClassName={style.linkActive}
+            >
               Ecosystem
             </Link>
-            <Link to="/xray/" className={isXRAY ? style.linkActive : ''} activeClassName={style.linkActive}>
+            <Link
+              to="/xray/"
+              className={isXRAY ? style.linkActive : ""}
+              activeClassName={style.linkActive}
+            >
               XRAY
             </Link>
-            <Link to="/developers/" className={isDevelopers ? style.linkActive : ''} activeClassName={style.linkActive}>
+            <Link
+              to="/developers/"
+              className={isDevelopers ? style.linkActive : ""}
+              activeClassName={style.linkActive}
+            >
               Developers
             </Link>
             <Link to="/community/" activeClassName={style.linkActive}>

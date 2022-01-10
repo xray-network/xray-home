@@ -119,13 +119,13 @@
     h1 {
       font-size: rem(52);
     }
-  
+
     @media (max-width: $lg-max-width) {
       h1 {
         font-size: rem(48);
       }
     }
-  
+
     @media (max-width: $md-max-width) {
       padding-left: rem(25);
 

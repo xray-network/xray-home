@@ -1,14 +1,16 @@
 import React from "react"
 import * as style from "./style.module.scss"
 import { Link } from "gatsby"
-import { developers } from '@/config'
+import { developers } from "@/config"
 
 const Developers = () => {
   return (
     <div className="ray__block">
       <div className="ray__title">Build Ray Network</div>
       <div className="ray__title__descr mb-5">
-        Dive into the world of <strong>DeFi apps, integrations, and developer tooling</strong> built on top of the <strong>Ray Network</strong>
+        Dive into the world of{" "}
+        <strong>DeFi apps, integrations, and developer tooling</strong> built on
+        top of the <strong>Ray Network</strong>
       </div>
       <div className="row">
         {developers.map((item, index) => {
@@ -35,7 +37,7 @@ const Developers = () => {
                     className={style.itemInner}
                     activeClassName={style.itemInnerActive}
                     partiallyActive
-                    >
+                  >
                     <div className={style.itemInnerTitle}>{item.title}</div>
                     <div>{item.descr}</div>
                   </Link>

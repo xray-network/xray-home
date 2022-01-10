@@ -213,9 +213,9 @@ const Terms = () => {
       <p>
         The Organization retains all right, title, and interest in and to all of
         the Organization&apos;s brands, logos, and trademarks, including, but
-        not limited to, Ray Network, RayWallet, RaySwap, Minterr,
-        , and variations of the wording of the
-        aforementioned brands, logos, and trademarks.
+        not limited to, Ray Network, RayWallet, RaySwap, Minterr, , and
+        variations of the wording of the aforementioned brands, logos, and
+        trademarks.
       </p>
       <h5>10. Warnings</h5>
       <p>

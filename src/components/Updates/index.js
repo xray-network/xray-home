@@ -8,10 +8,7 @@ const columns = [
     dataIndex: "repo",
     key: "repo",
     render: (record) => (
-      <a
-        href={record.html_url}
-        className="ray__link"
-      >
+      <a href={record.html_url} className="ray__link">
         {record.name}
       </a>
     ),
@@ -30,7 +27,7 @@ const columns = [
     title: "Visibility",
     dataIndex: "repo",
     key: "repo",
-    render: (record) => record.private ? 'Private' : 'Public'
+    render: (record) => (record.private ? "Private" : "Public"),
   },
   {
     title: "Message",
@@ -53,7 +50,7 @@ const Updates = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('https://api-distr-wallet.raynet.work/git')
+    fetch("https://api-distr-wallet.raynet.work/git")
       .then((res) => res.json())
       .then((result) => {
         setDataSource(result?.commits || [])
@@ -88,7 +85,11 @@ const Updates = () => {
           loading={loading}
           dataSource={dataSource}
           columns={columns}
-          pagination={{ defaultPageSize: 50, showSizeChanger: false, position: ['bottomLeft', 'topLeft']}}
+          pagination={{
+            defaultPageSize: 50,
+            showSizeChanger: false,
+            position: ["bottomLeft", "topLeft"],
+          }}
         />
       </div>
     </div>

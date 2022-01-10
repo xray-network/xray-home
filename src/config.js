@@ -99,7 +99,8 @@ export const developers = [
   },
   {
     title: "Whitepaper",
-    descr: "Learn about the Ray Network’s core concepts: Ecosystem, Technologies, and more",
+    descr:
+      "Learn about the Ray Network’s core concepts: Ecosystem, Technologies, and more",
     url: "/whitepaper/",
   },
   {

@@ -64,26 +64,27 @@ const RayWallet = () => {
         <strong>RayWallet</strong>, lightning-fast Cardano payments
       </div>
       <p>
-        RayWallet is the most functional, lightweight, open-source non-custodial Cardano
-        wallet with unique DeFi features and built-in dApps integrations.
-        It's a whole Cardano DeFi ecosystem in one app - available for desktop and mobile.
+        RayWallet is the most functional, lightweight, open-source non-custodial
+        Cardano wallet with unique DeFi features and built-in dApps
+        integrations. It's a whole Cardano DeFi ecosystem in one app - available
+        for desktop and mobile.
       </p>
       <p>
-        RayWallet is a web light wallet for Cardano. Light wallets don't need
-        to download or synchronize the blockchain. This means that once you
-        open the wallet, you can send or verify the transaction receipts right
-        away.
+        RayWallet is a web light wallet for Cardano. Light wallets don't need to
+        download or synchronize the blockchain. This means that once you open
+        the wallet, you can send or verify the transaction receipts right away.
       </p>
       <p>
-        Ray Network token - XRAY - is a Cardano based cryptocurrency token for
-        a fuelling the Ray Network platform. Ray Network is a highly functional open source
-        project that banks on blockchain technology’s permissionless nature to
-        provide decentralized finance (DeFi) solutions and other services.
+        Ray Network token - XRAY - is a Cardano based cryptocurrency token for a
+        fuelling the Ray Network platform. Ray Network is a highly functional
+        open source project that banks on blockchain technology’s permissionless
+        nature to provide decentralized finance (DeFi) solutions and other
+        services.
       </p>
       <p className="mb-5">
         The XRAY token will provide holders with discounted fees on the
-        platform, and it also serves as a governance token, giving owners a
-        say in future development.
+        platform, and it also serves as a governance token, giving owners a say
+        in future development.
       </p>
       <div className={style.items}>
         {items.map((item, index) => {

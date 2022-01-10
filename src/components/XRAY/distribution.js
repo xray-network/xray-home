@@ -70,14 +70,16 @@ const XrayDistribution = () => {
       tooltip: {
         callbacks: {
           title: (tooltipItem) =>
-            `Epoch ${tooltipItem[0].label} (for Epoch ${parseInt(tooltipItem[0].label) - 2
+            `Epoch ${tooltipItem[0].label} (for Epoch ${
+              parseInt(tooltipItem[0].label) - 2
             })`,
           label: (tooltipItem) => {
             const { datasetIndex } = tooltipItem
             const ds = chartData.datasets[datasetIndex]
             const arr = []
             arr.push(
-              `${ds.label}: ${format(ds.data[tooltipItem.dataIndex])} ${ds.postfix
+              `${ds.label}: ${format(ds.data[tooltipItem.dataIndex])} ${
+                ds.postfix
               }`
             )
             datasetIndex === 1 &&
@@ -132,9 +134,10 @@ const XrayDistribution = () => {
           </div>
           <div className="pt-4">
             <p>
-              Stake ADA in Ray pools and get <strong>~4.5% ROI</strong> with extra
-              rewards each epoch 1 <strong className="ray__ticker">XRAY</strong> per{' '}
-              {rate / 1000000} <strong className="ray__ticker">ADA</strong> staked.{' '}
+              Stake ADA in Ray pools and get <strong>~4.5% ROI</strong> with
+              extra rewards each epoch 1{" "}
+              <strong className="ray__ticker">XRAY</strong> per {rate / 1000000}{" "}
+              <strong className="ray__ticker">ADA</strong> staked.{" "}
             </p>
             <ul className="mb-5">
               <li>~4.5% ROI in ADA per epoch</li>
@@ -177,8 +180,11 @@ const XrayDistribution = () => {
                 </Popover>
               </li>
               <li>
-                <strike>1,538,200 <span className="ray__ticker">XRAY</span> to early
-                  delegators;</strike> End. {" "}
+                <strike>
+                  1,538,200 <span className="ray__ticker">XRAY</span> to early
+                  delegators;
+                </strike>{" "}
+                End.{" "}
                 <Popover
                   content={
                     <div className="ray__info">
@@ -224,8 +230,7 @@ const XrayDistribution = () => {
                 <div className="col-6 col-sm-4 mb-4">
                   <div className="ray__left ray__left--dark">
                     <div className="ray__card__value">
-                      {rate / 1000000}{" "}
-                      <span className="ray__ticker">ADA</span>
+                      {rate / 1000000} <span className="ray__ticker">ADA</span>
                     </div>
                     <div>Live XRAY Mining Rate</div>
                   </div>
