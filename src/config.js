@@ -31,7 +31,7 @@ export const ecosystem = [
   },
   {
     title: "Minterr.io",
-    descr: "Cardano NFT Explorer & Minter by Ray Network",
+    descr: "Cardano NFT Marketplace, Minter, and Explorer",
     url: "https://minterr.io",
     external: true,
   },
