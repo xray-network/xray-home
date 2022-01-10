@@ -53,7 +53,7 @@ const Cookies = () => {
           e.preventDefault()
           setCookiesHidden(true)
         }}
-        className="ray__button ray__button--small"
+        className="ray__btn ray__btn--round"
       >
         Got it
       </a>

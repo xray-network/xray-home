@@ -1,0 +1,41 @@
+@import "@/styles/mixins";
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem(30);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-right: rem(30);
+  margin-bottom: rem(20);
+  white-space: nowrap;
+
+  span {
+    font-weight: 700;
+    color: $black;
+  }
+
+  &Icon {
+    width: rem(54);
+    height: rem(54);
+    margin-right: rem(10);
+    background: $white;
+    border-radius: 60px;
+    font-size: rem(21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px -3px rgba(0, 0, 10, 0.15);
+    transition: background .3s ease-in-out, color .3s ease-in-out;
+  }
+
+  &:hover {
+    .itemIcon {
+      background: $dark;
+      color: $white;
+    }
+  }
+}

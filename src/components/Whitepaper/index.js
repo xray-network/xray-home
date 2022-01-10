@@ -1,16 +1,37 @@
 import React from "react"
-import Soon from "@/components/Soon"
-import Heading from "@/components/Heading"
+import * as style from "./style.module.scss"
 
-const Whitepapert = () => {
+const Whitepaper = () => {
   return (
     <div className="ray__block">
-      <Heading id="whitepaper">
-        <strong>Ray Network Whitepaper</strong>
-      </Heading>
-      <Soon />
+      <div className="ray__title">Ray Network Whitepaper</div>
+      <div className="ray__title__descr">
+        <strong>Whitepaper</strong>, learn about the Ray Network’s core concepts: Ecosystem, Technologies, and more
+      </div>
+      <div className={style.error}>
+        <div className="row">
+          <div className="col-lg-12 text-center">
+            <div className={style.description}>
+              <h1 className={style.title}>Soon</h1>
+              <p className="mb-4">
+                Our team is working tirelessly to make this page come alive
+                soon!
+              </p>
+            </div>
+          </div>
+          <div className="col-lg-12">
+            <div className={style.pig}>
+              <img
+                src="/resources/pig.svg"
+                title="Ray Piglet"
+                alt="Ray Piglet"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
 
-export default Whitepapert
+export default Whitepaper

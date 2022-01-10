@@ -1,5 +1,4 @@
 import React from "react"
-import Heading from "@/components/Heading"
 import { Popover } from "antd"
 import classnames from "classnames"
 import network from "./network"
@@ -8,9 +7,11 @@ import * as style from "./style.module.scss"
 const Map = () => {
   return (
     <div className="ray__block">
-      <Heading id="map">
-        <strong>Ray Network</strong> relays map
-      </Heading>
+      <div className="ray__title">Infrastructre Map</div>
+      <div className="ray__title__descr">
+        <strong>Secure</strong> Infrastructure. <strong>Low latency</strong>{" "}
+        blockchain access for all Ray Network services
+      </div>
       <div className={style.map}>
         <div className={style.img}>
           <div className={style.relays}>
@@ -21,7 +22,7 @@ const Map = () => {
                     key={index}
                     title={
                       <div>
-                        <strong>{relay.name}</strong>{" "}
+                        <strong className="me-1">{relay.name}</strong>{" "}
                         {relay.tags.map((tag, index) => {
                           return (
                             <span

@@ -1,0 +1,16 @@
+@import "@/styles/mixins";
+
+.container {
+  background: $dark;
+  border-bottom: 1px solid $dark-border;
+  padding: rem(10) 0;
+
+  a {
+    color: $success;
+
+    &:hover,
+    &:focus {
+      color: lighten($success, 10%);
+    }
+  }
+}

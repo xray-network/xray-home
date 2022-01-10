@@ -18,7 +18,7 @@
     width: rem(9);
     border-radius: 20px;
 
-    background: $primary;
+    background: $dark;
   }
 
   .itemLabel {
@@ -140,18 +140,5 @@
   100% {
     transform: scale(5);
     opacity: 0;
-  }
-}
-
-// dark theme
-[data-theme="dark"] {
-  .map {
-    background: $dark-gray-6;
-
-    .img {
-      img {
-        opacity: 1;
-      }
-    }
   }
 }

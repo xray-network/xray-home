@@ -1,81 +1,102 @@
 import React from "react"
 import * as style from "./style.module.scss"
-import { IMGTwitter, IMGReddit, IMGDiscord, IMGTelegram } from "@/svg"
+import {
+  SVGTwitter,
+  SVGTelegram,
+  SVGDiscord,
+  SVGReddit,
+} from "@/svg"
+
+const community = [
+  {
+    title: '@RayNetwork',
+    icon: <SVGTwitter />,
+    url: 'https://twitter.com/RayNetwork',
+    type: 'Twitter',
+  },
+  {
+    title: '@RayWallet ',
+    icon: <SVGTwitter />,
+    url: 'https://twitter.com/RayWallet',
+    type: 'Twitter',
+  },
+  {
+    title: '@MinterrApp ',
+    icon: <SVGTwitter />,
+    url: 'https://twitter.com/MinterrApp',
+    type: 'Twitter',
+  },
+  {
+    title: '@CardanoList ',
+    icon: <SVGTwitter />,
+    url: 'https://twitter.com/CardanoList',
+    type: 'Twitter',
+  },
+  {
+    title: '@PigzMetaverse ',
+    icon: <SVGTwitter />,
+    url: 'https://twitter.com/PigzMetaverse',
+    type: 'Twitter',
+  },
+  {
+    title: 'Reddit',
+    icon: <SVGReddit />,
+    url: 'https://www.reddit.com/r/RayNetwork',
+    type: 'Reddit',
+  },
+  {
+    title: 'Telegram Chat',
+    icon: <SVGTelegram />,
+    url: 'https://t.me/RayNetwork',
+    type: 'Telegram',
+  },
+  {
+    title: 'Telegram Announcements',
+    icon: <SVGTelegram />,
+    url: 'https://t.me/RayNetworkChannel',
+    type: 'Telegram',
+  },
+  {
+    title: 'Ray Network Discord',
+    icon: <SVGDiscord />,
+    url: 'https://discord.gg/WhZmm46APN',
+    type: 'Discord',
+  },
+  {
+    title: 'Minterr.io Discord',
+    icon: <SVGDiscord />,
+    url: 'https://discord.gg/dDVXcthYWn',
+    type: 'Discord',
+  },
+]
 
 const Community = () => {
-  const items = [
-    {
-      title: "Twitter",
-      url: "https://twitter.com/RayNetwork",
-      image: <IMGTwitter />,
-      descr: (
-        <span>
-          <strong>Follow</strong> @RayWallet for updates and news
-        </span>
-      ),
-    },
-    {
-      title: "Discord",
-      url: "https://discord.gg/WhZmm46APN",
-      image: <IMGDiscord />,
-      descr: (
-        <span>
-          <strong>Communicate</strong> with the Discord community
-        </span>
-      ),
-    },
-    {
-      title: "Reddit",
-      url: "https://www.reddit.com/r/RayNetwork",
-      image: <IMGReddit />,
-      descr: (
-        <span>
-          <strong>Join</strong> Ray Network community on Reddit
-        </span>
-      ),
-    },
-    {
-      title: "Telegram Chat",
-      url: "https://t.me/RayNetwork",
-      image: <IMGTelegram />,
-      descr: (
-        <span>
-          <strong>Chat</strong> in the realtime with the community
-        </span>
-      ),
-    },
-    {
-      title: "Telegram",
-      url: "https://t.me/RayNetworkChannel",
-      image: <IMGTelegram />,
-      descr: (
-        <span>
-          <strong>Read</strong> announcements on Telegram
-        </span>
-      ),
-    },
-  ]
-
   return (
-    <div className="ray__block">
-      <h2 className="text-center">Join a global community</h2>
-      <h4 className="mb-5 text-center">
-        Learn more about Ray Network, chat with the team, others in the
-        community
-      </h4>
+    <div className="ray__block pt-5">
+      <div className="ray__title">Join the Conversation</div>
+      <div className="ray__title__descr">
+        The Ray Network community is an ecosystem of <strong>users, developers, designers, and educators</strong>
+      </div>
       <div className="row">
-        {items.map((item, index) => {
+        {community.map((item, index) => {
           return (
-            <div key={index} className="col-12 col-sm-6 col-md-4 mb-4">
+            <div key={index} className="col-12 col-md-6">
               <a
                 href={item.url}
-                className={style.item}
                 target="_blank"
                 rel="noopener noreferrer"
+                className={style.item}
               >
-                <div className={style.itemImage}>{item.image}</div>
-                <div className={style.itemTitle}>{item.title}</div>
-                <div className={style.itemDescr}>{item.descr}</div>
+                <i className={`ri ri-ext ri-arrow_up ${style.itemExt}`} />
+                <div className="d-flex align-items-center">
+                  <span>
+                    {item.icon}
+                  </span>
+                  <span className={style.itemTitle}>
+                    <small>{item.type}</small>
+                    {item.title}
+                  </span>
+                </div>
               </a>
             </div>
           )

@@ -1,56 +1,58 @@
 @import "@/styles/mixins";
 
 .item {
-  padding: rem(20) rem(20) rem(30);
-  border: 1px solid $border;
-  border-radius: 12px;
   display: block;
-  height: 100%;
-  text-align: center;
-  @include transition-middle();
+  border: 1px solid $border;
+  border-radius: rem(20);
+  margin-bottom: rem(20);
+  position: relative;
+  padding: rem(20);
 
-  &:hover {
-    border-color: $primary;
-  }
-
-  &Image {
-    height: rem(70);
-    svg {
-      width: rem(60);
-    }
+  &Ext {
+    position: absolute;
+    top: 50%;
+    margin-top: rem(-12);
+    right: rem(30);
+    color: $dark;
+    font-size: rem(24);
   }
 
   &Title {
-    margin-bottom: rem(10);
     font-weight: 700;
+    font-size: rem(21);
+    color: $dark;
+
+    small {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: rem(12);
+      opacity: .6;
+    }
   }
 
-  &Descr {
-    color: $text;
-    font-size: rem(14);
-  }
-}
+  &:hover {
+    border-color: $dark;
+    background: $dark;
 
-// dark theme
-[data-theme="dark"] {
-  .item {
-    background: $dark-gray-5;
-    border-color: transparent;
-
-    &:hover {
-      border-color: $primary;
+    svg {
+      fill: $white;
     }
 
-    &Image {
-      svg {
-        path {
-          fill: $white;
-        }
+    .item {
+      &Ext {
+        color: $white;
+      }
+
+      &Title {
+        color: $white;
       }
     }
+  }
 
-    &Descr {
-      color: $dark-gray-2;
-    }
+  svg {
+    width: rem(40);
+    height: rem(40);
+    margin-right: rem(20);
   }
 }

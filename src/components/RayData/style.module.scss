@@ -1,0 +1,24 @@
+@import "@/styles/mixins";
+
+.image {
+  padding: rem(70) rem(100);
+  border: rem(8) solid $gray-1;
+  border-radius: rem(40);
+  transition: border-color .3s ease-in-out;
+
+  &:hover {
+    border-color: $dark;
+  }
+
+  @media (max-width: $lg-max-width) {
+    padding: rem(30) rem(40);
+  }
+
+  @media (max-width: $md-max-width) {
+    padding: rem(10) rem(15);
+  }
+}
+
+// dark theme
+[data-theme="dark"] {
+}

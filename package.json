@@ -21,25 +21,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "build-deploy": "yarn build && cd .cloudflare/ && wrangler publish"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ray-network/raynetwork-io"
-  },
-  "bugs": {
-    "url": "https://github.com/ray-network/raynetwork-io/issues"
-  },
   "dependencies": {
-    "@ant-design/icons": "^4.6.2",
-    "@emurgo/cardano-serialization-lib-browser": "^7.1.0",
     "antd": "^4.16.8",
     "aos": "^2.3.4",
     "axios": "^0.21.1",
-    "bech32": "^2.0.0",
-    "bignumber.js": "^9.0.1",
-    "bip39-light": "^1.0.7",
     "bootstrap": "^5.0.2",
     "chart.js": "^3.5.0",
-    "crypto-browserify": "^3.12.0",
     "gatsby": "^3.9.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-google-analytics": "^3.10.0",
@@ -59,14 +46,9 @@
     "react": "^17.0.1",
     "react-alice-carousel": "^2.5.1",
     "react-chartjs-2": "^3.0.4",
-    "react-confetti": "^6.0.1",
     "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^17.0.1",
-    "react-flip-move": "^3.0.4",
     "react-helmet": "^6.1.0",
-    "react-in-viewport": "^1.0.0-alpha.17",
-    "react-json-view-ssr": "^1.19.1",
-    "react-lazy-load-image-component": "^1.5.1",
     "react-redux": "^7.2.4",
     "redux-saga": "^1.1.3",
     "sharethis-reactjs": "^1.6.0",

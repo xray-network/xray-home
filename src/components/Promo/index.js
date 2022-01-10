@@ -1,78 +1,76 @@
 import React from "react"
 import { Link } from "gatsby"
-import { useSelector } from "react-redux"
-import { SVGCardano, SVGLink } from "@/svg"
-// import * as style from "./style.module.scss"
+import { SVGGithub } from "@/svg"
+import * as style from "./style.module.scss"
 
 const Promo = () => {
-  const pools = useSelector((state) => state.settings.pools)
-  const rate = pools?.nextRate
-
   return (
-    <div className="ray__block">
-      <div className="ray__promo">
-        <div>
-          <h1 className="ray__promo__text" data-aos="fade-up" data-aos-delay="0">
-            Hello, we’re Ray Network!<br /> An advanced DeFi ecosystem for{" "}
-            <span className="text-nowrap">
-              <span className="ray__promo__cardano">
-                <SVGCardano />
-              </span>{" "}
-              Cardano
-            </span>{" "}
-            blockchain platform
-          </h1>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="300">
-          <p>
-            We provide the whole range of blockchain solutions for Cardano: from
-            DeFi exchange, API provisioning, light wallets, minting tools &
-            explorers, to different SDKs that open the blockchain world to
-            thousands of crypto-enthusiasts from all over the world. It's all
-            about ADA DeFi finances in one place!
-          </p>
-          <p className="mb-5">
-            Stake ADA in Ray pools and get <strong>~5% ROI</strong> with extra
-            rewards each epoch 1 <strong className="ray__ticker">XRAY</strong>{" "}
-            per {rate / 1000000} <strong className="ray__ticker">ADA</strong> staked.
-          </p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="600">
-          <Link
-            to="/xray/distribution/"
-            className="ray__btn ray__btn--round me-3 mb-3"
-          >
-            XRAY Fair Launch
-          </Link>
-          <Link
-            to="/xdiamond/"
-            className="ray__btn ray__btn--round me-3 mb-3"
-          >
-            XDIAMOND
-          </Link>
-          <a
-            href="https://raystake.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ray__btn ray__btn--round me-3 mb-3"
-          >
-            <span className="me-2">RayStake App</span>
-            <span className="ray__icon">
-              <SVGLink />
-            </span>
-          </a>
-          {/* <Link
-            to="/stake/calculator/"
-            className="ray__btn ray__btn--round me-3 mb-3"
-          >
-            Stake Calculator
-          </Link>
-          <Link
-            to="/stake/pools/"
-            className="ray__btn ray__btn--round me-3 mb-3"
-          >
-            Stake Pools
-          </Link> */}
+    <div className={style.container}>
+      <div className={style.containerInner}>
+        <div
+          className={style.containerInnerBg}
+          style={{ backgroundImage: "url(/resources/banners/lines.jpg)" }}
+        />
+        <div className={style.containerInnerFade} />
+        <div className="ray__block mb-0">
+          <div className={style.promo}>
+            <div className={style.promoInner}>
+              <div className="ray__title ray__title--inverse">
+                Cardano DeFi Platform
+              </div>
+              <h1>
+                An advanced DeFi ecosystem for Cardano blockchain platform
+              </h1>
+              <p>
+                We provide the whole range of blockchain solutions for Cardano:
+                from DeFi exchanges, API provisioning systems, light wallets,
+                minting tools & explorers, to different SDKs that open the
+                blockchain world to thousands of crypto-enthusiasts from all
+                over the world
+              </p>
+              <div>
+                <Link
+                  to="/ecosystem/"
+                  className="ray__btn ray__btn--white  ray__btn--round me-3 mb-3"
+                >
+                  Ecosystem
+                </Link>
+                <Link
+                  to="/xray/"
+                  className="ray__btn ray__btn--white  ray__btn--round me-3 mb-3"
+                >
+                  XRAY Token
+                </Link>
+                <Link
+                  to="/developers/"
+                  className="ray__btn ray__btn--white  ray__btn--round me-3 mb-3"
+                >
+                  Developers
+                </Link>
+                <Link
+                  to="/community/"
+                  className="ray__btn ray__btn--white ray__btn--round me-3 mb-3"
+                >
+                  Community
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className={style.info}>
+            <div>
+              It's all about ADA DeFi finances in one place. Fully Open Sourced.
+              Built on Cardano.{" "}
+            </div>
+            <div className="ms-4">
+              <a
+                href="https://github.com/ray-network"
+                className="ray__btn ray__btn--transparentDark ray__btn--round"
+              >
+                <SVGGithub className="me-1" />
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

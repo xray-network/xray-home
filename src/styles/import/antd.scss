@@ -1,6 +1,10 @@
 @import "@/styles/mixins";
 
 .ant {
+  &-collapse {
+    font-size: rem(16);
+  }
+
   &-result {
     &-success .ant-result-icon > .anticon {
       color: $success;
@@ -209,210 +213,46 @@
   }
 
   &-modal {
-    &-mask {
-      background: rgba($pastel-1, 0.8) !important;
+    @media (max-width: $sm-max-width) {
+      top: 0 !important;
     }
 
-    &-close-x {
-      color: $gray-5;
-
-      &:hover {
-        color: $gray-3;
-      }
+    &-mask {
+      background: rgba($pastel-1, 0.9);
     }
 
     &-content {
-      border-radius: 12px !important;
-      box-shadow: none;
-    }
-
-    &-header {
-      background: transparent !important;
+      border-radius: rem(10);
+      box-shadow: $shadow-light;
     }
 
     &-body {
-      font-size: rem(16) !important;
-      color: $black;
+      font-size: rem(15);
+
+      @media (max-width: $sm-max-width) {
+        padding: rem(20) !important;
+      }
+    }
+
+    &-header {
+      background: none;
+      color: inherit;
+
+      @media (max-width: $sm-max-width) {
+        padding: rem(15) rem(20) !important;
+      }
     }
 
     &-title {
-      color: $black !important;
-    }
-  }
-}
-
-// dark theme
-[data-theme="dark"] {
-  .ant {
-    &-form {
-      color: $dark-gray-2;
-
-      &-item {
-        color: $dark-gray-2;
-      }
+      color: inherit;
+      font-weight: 700;
     }
 
-    &-input {
-      background: $dark-gray-5 !important;
-      border-color: $dark-gray-3;
-      color: $white;
+    &-footer {
+      background: none;
 
-      &-clear-icon {
-        color: $dark-gray-2 !important;
-
-        &:hover {
-          color: $dark-gray-3 !important;
-        }
-      }
-
-      &-affix-wrapper {
-        background: $dark-gray-5 !important;
-        border-color: $dark-gray-3;
-
-        &-disabled {
-          opacity: 0.5;
-        }
-      }
-
-      &-number {
-        background: $dark-gray-5 !important;
-        border-color: $dark-gray-3;
-        color: $white;
-        font-size: rem(14);
-
-        @at-root {
-          [data-theme="dark"] {
-            .ant-form-item-has-error {
-              .ant-input-number {
-                border-color: $ant-red;
-              }
-            }
-          }
-        }
-
-        &:hover {
-          border-color: $ant-blue;
-        }
-
-        input {
-          background: transparent !important;
-          color: $white;
-        }
-
-        &-handler {
-          background: $dark-gray-4;
-          border-color: $dark-gray-3;
-
-          svg {
-            * {
-              fill: $dark-gray-2;
-            }
-          }
-        }
-      }
-    }
-
-    &-radio-wrapper,
-    &-checkbox-wrapper {
-      color: $white;
-    }
-
-    &-modal {
-      &-content {
-        background: $dark-gray-5 !important;
-      }
-
-      &-header {
-        border-color: darken($dark-gray-3, 15%);
-      }
-
-      &-body {
-        color: $dark-gray-2 !important;
-      }
-
-      &-title {
-        color: $dark-gray-2 !important;
-      }
-
-      &-mask {
-        background: rgba($dark-gray-6, 0.9) !important;
-      }
-    }
-
-    &-message {
-      &-notice {
-        &-content {
-          color: $white;
-          background: $dark-gray-4;
-        }
-      }
-    }
-
-    &-upload {
-      background: transparent !important;
-      border-color: $dark-gray-3;
-      color: $white;
-
-      &-text-icon .anticon {
-        color: $dark-gray-2;
-      }
-
-      &-list {
-        color: $white;
-        &-item {
-          &-info .anticon-loading .anticon,
-          &-card-actions .anticon {
-            color: $dark-gray-2;
-          }
-        }
-      }
-    }
-
-    &-alert {
-      background: $dark-gray-4;
-      border-color: $dark-gray-3;
-      color: $white;
-
-      &-message {
-        color: $white;
-      }
-    }
-
-    &-table {
-      color: $dark-gray-2;
-
-      td,
-      th {
-        border-bottom-color: $dark-border;
-      }
-
-      &-thead {
-        > tr > th {
-          background: transparent !important;
-          color: $dark-gray-2;
-
-          &.ant-table-column-has-sorters {
-            &:hover {
-              background: darken($dark-gray-3, 17%) !important;
-            }
-          }
-        }
-      }
-
-      &-row {
-        &:hover {
-          > td {
-            background: $dark-gray-4 !important;
-          }
-        }
-      }
-    }
-
-    &-spin {
-      &-container {
-        &:after {
-          background: $dark-gray-4;
-        }
+      @media (max-width: $sm-max-width) {
+        padding: rem(15) rem(20) !important;
       }
     }
   }

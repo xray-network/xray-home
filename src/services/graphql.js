@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const client = axios.create({
-  baseURL: 'https://api-mainnet-graphql.raynet.work/',
+  baseURL: "https://api-mainnet-graphql.raynet.work/",
 })
 
 export const getNetworkInfo = async () => {

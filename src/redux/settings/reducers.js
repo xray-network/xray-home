@@ -3,12 +3,8 @@ import actions from "./actions"
 
 const STORED_SETTINGS = (storedSettings) => {
   const settings = {}
-  const skip = ["modalEncrypt"]
   Object.keys(storedSettings).forEach((key) => {
-    if (skip.includes(key)) {
-      return
-    }
-    const item = store.get(`app.settings.${key}`)
+    const item = store.get(`ray.wallet.settings.${key}`)
     settings[key] = typeof item !== "undefined" ? item : storedSettings[key]
   })
   return settings
@@ -16,7 +12,7 @@ const STORED_SETTINGS = (storedSettings) => {
 
 const initialState = {
   ...STORED_SETTINGS({
-    theme: "dark",
+    theme: "default",
     cookiesViewed: false,
   }),
   megaMenu: false,
@@ -24,6 +20,7 @@ const initialState = {
   history: {},
   prices: {},
   pools: {},
+  modalInstall: "",
 }
 
 export default function settingsReducer(state = initialState, action) {

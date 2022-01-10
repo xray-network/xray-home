@@ -16,7 +16,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Ray Network - Cardano Ecosystem`,
-        icon: `static/resources/favicon.svg`,
+        icon: `static/favicon.svg`,
       },
     },
     {
@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
-        "data-theme": "dark",
+        "data-theme": "default",
       },
     },
   ],

@@ -2,24 +2,22 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
 import Promo from "@/components/Promo"
-import PromoLine from "@/components/PromoLine"
-import About from "@/components/About"
-import Solutions from "@/components/Solutions"
+import Stats from "@/components/Stats"
+import PromoISPO from "@/components/PromoISPO"
+import Ecosystem from "@/components/Ecosystem"
+import About from "@/components/About/about"
 import Map from "@/components/Map"
-import Community from "@/components/Community"
-import BannerISPO from "@/components/BannerISPO"
 
 const Page = () => {
   return (
     <MainLayout>
       <Helmet title="Cardano Ecosystem" />
       <Promo />
-      <PromoLine />
-      <BannerISPO />
-      <Solutions />
+      <Stats />
+      <PromoISPO />
+      <Ecosystem />
       <About />
       <Map />
-      <Community />
     </MainLayout>
   )
 }

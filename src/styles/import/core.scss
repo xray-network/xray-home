@@ -8,12 +8,12 @@ body {
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   @media (max-width: $lg-max-width) {
-    font-size: 16px;
+    font-size: 14px;
   }
-  @media (max-width: $sm-max-width) {
-    font-size: 15px;
+  @media (max-width: 375px) {
+    font-size: 13px;
   }
 }
 
@@ -22,7 +22,6 @@ body {
   color: $text;
   overflow-x: hidden;
   position: relative;
-  background: $pastel-1;
 
   * {
     font-variant: normal !important;
@@ -150,45 +149,5 @@ code {
   [data-aos="fade-up"] {
     opacity: 1 !important;
     transform: none !important;
-  }
-}
-
-// dark theme
-[data-theme="dark"] {
-  body {
-    background: $dark;
-    color: $dark-gray-2;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $white;
-  }
-
-  a,
-  .link {
-    color: $blue-light;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $white;
-    }
-
-    &--dashed {
-      border-bottom: 1px dashed $primary;
-    }
-  }
-
-  ::placeholder {
-    color: $dark-gray-3 !important;
-  }
-
-  code {
-    background: $dark-gray-3;
   }
 }

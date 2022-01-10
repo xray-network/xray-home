@@ -13,11 +13,11 @@ export async function fetchRawUrl(url) {
 }
 
 export async function getPools() {
-  return distrClient.get('/pools')
+  return distrClient.get("/pools")
 }
 
 export async function getHistory() {
-  return distrClient.get('/ispo/history')
+  return distrClient.get("/ispo/history")
 }
 
 export async function getKeyHistory(search) {

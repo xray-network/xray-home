@@ -18,7 +18,7 @@ const Page404 = () => {
           <div className="col-lg-12">
             <div className={style.pig}>
               <img
-                src="/resources/images/pig.svg"
+                src="/resources/pig.svg"
                 title="Ray Piglet"
                 alt="Ray Piglet"
               />

@@ -1,10 +1,64 @@
 @import "@/styles/mixins";
 
+.ri {
+  &-ext {
+    &:before {
+      transform: rotate(45deg) !important;
+      display: inline-block;
+      font-size: 90%;
+    }
+  }
+
+  &-sm {
+    &:before {
+      font-size: 90%;
+    }
+  }
+}
+
 .ray {
+  &__title {
+    font-weight: 700;
+    position: relative;
+    margin-bottom: rem(40);
+
+    &:after {
+      display: block;
+      content: "";
+      width: rem(18);
+      height: 3px;
+      background: $dark;
+      position: absolute;
+      bottom: rem(-10);
+      left: 0;
+    }
+
+    &--center {
+      text-align: center;
+
+      &:after {
+        left: 50%;
+        margin-left: rem(-9);
+      }
+    }
+
+    &--inverse {
+      &::after {
+        background: $white;
+      }
+    }
+
+    &__descr {
+      margin: rem(-10) 0 rem(40);
+      font-size: rem(32);
+      max-width: rem(800);
+    }
+  }
+
   &__progress {
     height: rem(14);
     border-radius: 10px;
-    background: $gray-3;
+    background: $gray-2;
 
     &--small {
       height: rem(12);
@@ -62,8 +116,22 @@
     padding-left: rem(50);
     position: relative;
 
+    h1 {
+      font-size: rem(52);
+    }
+  
+    @media (max-width: $lg-max-width) {
+      h1 {
+        font-size: rem(48);
+      }
+    }
+  
     @media (max-width: $md-max-width) {
       padding-left: rem(25);
+
+      h1 {
+        font-size: rem(42);
+      }
     }
 
     &:before {
@@ -103,73 +171,14 @@
     }
   }
 
-  &__icon {
-    display: flex !important;
-    align-items: center;
-
-    svg {
-      height: rem(18) !important;
-      width: auto !important;
-
-      * {
-        fill: $dark;
-      }
-    }
-
-    &--inline {
-      display: inline-flex !important;
-    }
-
-    &--14 {
-      svg {
-        height: rem(14) !important;
-      }
-    }
-
-    &--16 {
-      svg {
-        height: rem(16) !important;
-      }
-    }
-
-    &--22 {
-      svg {
-        height: rem(22) !important;
-      }
-    }
-
-    &--24 {
-      svg {
-        height: rem(24) !important;
-      }
-    }
-
-    &--32 {
-      svg {
-        height: rem(32) !important;
-      }
-    }
-
-    @at-root {
-      a:not(.ray__btn),
-      .cursor-pointer {
-        &:hover {
-          .ray__icon {
-            svg {
-              * {
-                fill: $blue;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
   &__block {
-    max-width: rem(1380);
+    max-width: rem(1670);
     margin: 0 auto rem(90);
-    padding: 0 rem(25);
+    padding: 0 rem(70);
+
+    @media (max-width: $xl-max-width) {
+      padding: 0 rem(25);
+    }
 
     @media (max-width: $sm-max-width) {
       padding: 0 rem(15);
@@ -239,6 +248,12 @@
       padding: rem(5) rem(15);
       border-radius: 15px;
     }
+
+    &--inverse {
+      background: $dark;
+      color: $white;
+      border-color: $dark;
+    }
   }
 
   &__btn {
@@ -252,19 +267,16 @@
     background: $dark;
     height: rem(38);
     border: 1px solid transparent;
-    font-size: rem(18);
+    font-size: rem(16);
     text-align: center;
     font-weight: 700;
     border-radius: rem(8);
     border: 1px solid transparent !important;
+    position: relative;
     @include transition-slow();
 
     svg {
-      height: rem(18) !important;
-      width: auto !important;
-      * {
-        fill: $white;
-      }
+      height: rem(18);
     }
 
     &:hover,
@@ -280,14 +292,6 @@
       border: 1px solid $border !important;
       color: $gray-4 !important;
 
-      .ray__icon {
-        svg {
-          * {
-            fill: $gray-5;
-          }
-        }
-      }
-
       &:hover,
       &:focus,
       &:active {
@@ -296,7 +300,7 @@
     }
 
     &--round {
-      border-radius: rem(13);
+      border-radius: rem(50);
     }
 
     &--small {
@@ -311,21 +315,12 @@
       @media (max-width: $md-max-width) {
         height: rem(40);
       }
-
-      svg {
-        height: rem(16) !important;
-      }
     }
 
     &--large {
       padding: 0 rem(40);
       font-size: rem(18);
       height: rem(42) !important;
-
-      svg {
-        position: relative;
-        top: rem(-1);
-      }
     }
 
     &--extra {
@@ -348,12 +343,6 @@
     &--white {
       background: $white;
       color: $dark;
-      
-      svg {
-        * {
-          fill: $dark;
-        }
-      }
 
       &:hover,
       &:focus,
@@ -386,233 +375,23 @@
       &:hover {
         border-color: $primary !important;
         color: $primary !important;
-
-        svg {
-          * {
-            fill: $primary;
-          }
-        }
       }
+    }
+
+    &--transparentDark {
+      color: $white !important;
+      background: transparent !important;
+      border-color: $dark-border !important;
 
       svg {
         * {
-          fill: $dark;
-        }
-      }
-    }
-  }
-
-  &__promo {
-    margin: 0 0 rem(80);
-    font-size: rem(21);
-
-    h5 {
-      line-height: 1.5;
-      font-weight: normal;
-    }
-    
-    @media (max-width: $lg-max-width) {
-      h1 {
-        font-size: rem(48);
-      }
-    }
-
-    @media (max-width: $md-max-width) {
-      h1 {
-        font-size: rem(42);
-      }
-    }
-
-    &__text {
-      font-size: rem(72);
-      font-weight: 900;
-      display: block;
-      padding-bottom: rem(10);
-      margin-bottom: rem(35);
-      position: relative;
-      padding-left: rem(50);
-      line-height: 1.1;
-
-      .ray__ticker {
-        font-weight: 900;
-      }
-
-      @media (max-width: $md-max-width) {
-        padding-left: rem(25);
-      }
-
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: rem(15);
-        bottom: rem(20);
-        left: 0;
-        width: rem(9);
-        border-radius: 20px;
-        background: $primary;
-      }
-
-      @media (max-width: 820px) {
-        font-size: rem(54);
-      }
-    }
-
-    &__cardano {
-      display: inline-block;
-      width: rem(60);
-      height: rem(40);
-      position: relative;
-      top: rem(-5);
-
-      svg {
-        height: rem(60);
-        width: rem(60);
-
-        g {
-          fill: $blue;
+          stroke: $white;
         }
       }
 
-      @media (max-width: 820px) {
-        width: rem(60);
-        height: rem(40);
-
-        svg {
-          top: rem(-13);
-          left: 0;
-          height: rem(60);
-          width: rem(60);
-        }
-      }
-    }
-  }
-}
-
-// dark theme
-[data-theme="dark"] {
-  .cursor-pointer {
-    &:hover {
-      .ray__icon {
-        svg {
-          * {
-            fill: $white !important;
-          }
-        }
-      }
-    }
-  }
-
-  .ray {
-    &__progress {
-      background: $dark-gray-4;
-    }
-
-    &__card {
-      color: $white;
-      background: transparent;
-      border: 1px solid $dark-border;
-
-      &__value {
-        color: $white;
-      }
-    }
-
-    &__left {
-      &:before {
-        background: $primary;
-      }
-      
-      &--gray {
-        &:before {
-          background: $dark-gray-4;
-        }
-      }
-    }
-
-    &__icon {
-      svg {
-        * {
-          fill: $blue-light;
-        }
-      }
-    }
-
-    &__line {
-      background: $dark-gray-4;
-      margin: rem(25) 0;
-    }
-
-    &__ticker {
-      border: 1px solid $dark-gray-3;
-    }
-
-    &__box {
-      &--bg {
-        background: $dark-gray-5;
-      }
-    }
-
-    &__btn {
-      color: $dark !important;
-      background: $white;
-
-      svg {
-        height: rem(18) !important;
-        width: auto !important;
-        * {
-          fill: $dark !important;
-        }
-      }
-
-      &[disabled] {
-        background: $dark-gray-4 !important;
-        color: $dark-gray-2 !important;
-        border-color: transparent !important;
-
-        svg {
-          * {
-            fill: $dark-gray-2 !important;
-          }
-        }
-      }
-
-      &--white {
-        color: $dark !important;
-        
-        svg {
-          * {
-            fill: $dark !important;
-          }
-        }
-
-        &[disabled] {
-          background: transparent !important;
-          border-color: rgba($border, 0.2) !important;
-          color: $dark-gray-1 !important;
-        }
-      }
-
-      &--transparent {
-        border-color: $dark-gray-4 !important;
-        background: $dark-gray-6 !important;
+      &:hover {
+        border-color: $white !important;
         color: $white !important;
-
-        &:hover {
-          border-color: $dark-gray-4 !important;
-          background-color: $dark-gray-5 !important;
-        }
-      }
-    }
-
-    &__point {
-      border: 2px solid $dark-gray-2;
-      background: $dark-gray-2;
-      color: $dark;
-
-      &--outline {
-        background: transparent;
-        color: $dark-gray-2;
       }
     }
   }

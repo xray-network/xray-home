@@ -1,17 +1,19 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import MainLayout from "@/layouts/Main"
-import XrayGovernance from "@/components/XrayGovernance"
-import XrayGovernanceWallets from "@/components/XrayGovernanceWallets"
-import XrayGovernanceEvents from "@/components/XrayGovernanceEvents"
+import Submenu from "@/components/Submenu"
+import XrayGovernance from "@/components/XRAY/governance"
+import XrayWallets from "@/components/XRAY/wallets"
+import XrayEvents from "@/components/XRAY/events"
 
 const Page = () => {
   return (
     <MainLayout>
       <Helmet title="XRAY Governance" />
+      <Submenu type="xray" />
       <XrayGovernance />
-      <XrayGovernanceWallets />
-      <XrayGovernanceEvents />
+      <XrayWallets />
+      <XrayEvents />
     </MainLayout>
   )
 }

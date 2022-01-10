@@ -6,7 +6,7 @@ import { getPrices } from "@/services/coingecko"
 import { getPools, getHistory } from "@/services/distr"
 
 export function* CHANGE_SETTING({ payload: { setting, value } }) {
-  yield store.set(`app.settings.${setting}`, value)
+  yield store.set(`ray.wallet.settings.${setting}`, value)
   yield put({
     type: "settings/SET_STATE",
     payload: {
@@ -17,7 +17,7 @@ export function* CHANGE_SETTING({ payload: { setting, value } }) {
 
 export function* SWITCH_MEGA_MENU() {
   const megaMenu = yield select((state) => state.settings.megaMenu)
-  if (global.document) {
+  if (global?.document) {
     global.document
       .getElementsByTagName("body")[0]
       .classList.toggle("overflow-hidden")
@@ -26,27 +26,6 @@ export function* SWITCH_MEGA_MENU() {
     type: "settings/SET_STATE",
     payload: {
       megaMenu: !megaMenu,
-    },
-  })
-}
-
-export function* CHANGE_THEME({ theme }) {
-  if (global.document) {
-    global.document
-      .querySelector("html")
-      .setAttribute("data-disable-transitions", "true")
-    global.document.querySelector("html").setAttribute("data-theme", theme)
-    setTimeout(() => {
-      global.document
-        .querySelector("html")
-        .removeAttribute("data-disable-transitions")
-    }, 500)
-  }
-  yield put({
-    type: "settings/CHANGE_SETTING",
-    payload: {
-      setting: "theme",
-      value: theme,
     },
   })
 }
@@ -100,8 +79,6 @@ export function* FETCH_HISTORY() {
 }
 
 export function* SETUP() {
-  const theme = yield select((state) => state.settings.theme)
-  yield call(CHANGE_THEME, { theme })
   yield call(FETCH_NETWORK_STATE)
   yield call(FETCH_HISTORY)
   yield call(FETCH_PRICES)
@@ -112,7 +89,6 @@ export default function* rootSaga() {
   yield all([
     takeEvery(actions.CHANGE_SETTING, CHANGE_SETTING),
     takeEvery(actions.SWITCH_MEGA_MENU, SWITCH_MEGA_MENU),
-    takeEvery(actions.CHANGE_THEME, CHANGE_THEME),
     takeEvery(actions.FETCH_NETWORK_STATE, FETCH_NETWORK_STATE),
     takeEvery(actions.FETCH_HISTORY, FETCH_HISTORY),
     takeEvery(actions.FETCH_PRICES, FETCH_PRICES),

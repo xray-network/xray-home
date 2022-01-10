@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useSelector } from "react-redux"
+import Head from "@/components/Head"
 import Menu from "@/components/Menu"
 import MegaMenu from "@/components/MegaMenu"
 import Footer from "@/components/Footer"
@@ -13,9 +14,16 @@ const MainLayout = ({ children }) => {
   return (
     <div className={style.layout}>
       <Helmet titleTemplate="%s | Ray Network" title="Cardano Ecosystem">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="/resources/font/satoshi.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="/resources/font/ray-icons.css"
+        />
         <meta property="og:url" content="https://raynetwork.io" />
         <meta
           name="description"
@@ -23,6 +31,7 @@ const MainLayout = ({ children }) => {
         />
       </Helmet>
       <div>
+        <Head />
         <Menu />
         {megaMenuVisible && <MegaMenu />}
         {children}

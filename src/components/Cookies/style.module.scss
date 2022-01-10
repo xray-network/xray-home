@@ -10,7 +10,8 @@
   border-radius: 15px;
   background: $white;
   transform: translateX(-450px);
-  box-shadow: rgba(0,0,0, 0.01) 0px 0px 1px, rgba(0,0,0, 0.04) 0px 4px 8px, rgba(0,0,0, 0.04) 0px 16px 24px, rgba(0,0,0, 0.01) 0px 24px 32px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 4px 8px,
+    rgba(0, 0, 0, 0.04) 0px 16px 24px, rgba(0, 0, 0, 0.01) 0px 24px 32px;
   @include transition-slow();
 
   @media (max-width: $sm-max-width) {
@@ -24,12 +25,4 @@
 
 .description {
   font-size: rem(16);
-}
-
-// dark theme
-[data-theme="dark"] {
-  .cookies {
-    background: $dark-gray-5;
-    color: $white;
-  }
 }

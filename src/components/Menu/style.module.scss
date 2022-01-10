@@ -1,444 +1,132 @@
 @import "@/styles/mixins";
 
-.links {
-  &Container {
-    margin-right: rem(25);
-    position: relative;
-    display: inline-block;
-
-    &:hover,
-    &:focus {
-      .mContainer {
-        transform: none;
-        opacity: 1;
-        pointer-events: all;
-      }
-    }
-  }
-
-  &Link {
-    margin-bottom: rem(10);
-    display: inline-block;
-    color: $dark;
-
-    @media (max-width: $sm-max-width) {
-      font-size: rem(18);
-    }
-
-    &Status {
-      display: inline-block;
-      width: rem(8);
-      height: rem(8);
-      border-radius: 10px;
-      background: $success;
-      margin-right: rem(7);
-      position: relative;
-      top: -1px;
-    }
-
-    &Container {
-      position: relative;
-
-      > span:first-child {
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        top: 0;
-      }
-
-      > span:last-child {
-        opacity: 0;
-      }
-    }
-
-    &Active {
-      color: $blue;
-    }
-
-    &Disabled {
-      opacity: 0.3;
-    }
-
-    &:hover {
-      color: $blue;
-    }
-
-    &Title {
-      white-space: nowrap;
-    }
-  }
-}
-
-.m {
-  &Container {
-    // width: rem(200);
-    position: absolute;
-    font-weight: normal;
-    color: $dark;
-    z-index: 20;
-    top: calc(100% - 5px);
-    left: rem(-20);
-    padding-top: rem(5);
-    opacity: 0;
-    pointer-events: none;
-    transition-duration: 0.25s;
-    transform: perspective(50em) rotateX(-15deg);
-    transform-origin: 50% -50px;
-  }
-
-  &Inner {
-    box-shadow: 0 20px 100px -20px rgba(50, 50, 93, 0.25),
-      0 20px 60px -30px rgba(0, 0, 0, 0.3),
-      0 -18px 60px -10px rgba(0, 0, 0, 0.025);
-    background: $white;
-    padding: rem(20) rem(30) rem(15) rem(25);
-    border-radius: 15px;
-    position: relative;
-
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 40px;
-      border-radius: 4px 0 0 0;
-      top: -6px;
-      margin: 0 0 0 -6px;
-      width: 12px;
-      height: 12px;
-      background: $white;
-      box-shadow: -3px -3px 5px rgba(82, 95, 127, 0.02);
-      transform: rotate(45deg);
-    }
-  }
-
-  &Item {
-    display: block;
-    white-space: nowrap;
-    margin-bottom: rem(10);
-    position: relative;
-    color: $dark;
-    @include transition-middle();
-
-    :global(.ray__icon) {
-      position: relative;
-      top: rem(4);
-      margin-left: rem(-5);
-      width: rem(20);
-      @include transition-fast();
-
-      svg {
-        * {
-          fill: $dark;
-        }
-      }
-    }
-
-    &:last-child {
-      margin-bottom: rem(0);
-    }
-  }
-
-  &Block {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &Title {
-    margin-bottom: rem(5);
-
-    &:hover,
-    &:active,
-    &:focus,
-    &Active {
-      color: $blue;
-
-      :global(.ray__icon) {
-        svg {
-          * {
-            fill: $blue !important;
-          }
-        }
-      }
-    }
-  }
-
-  &Description {
-    font-size: rem(14);
-    color: $gray-6;
-  }
+.container {
+  background: $dark;
+  padding: rem(20) 0;
+  position: sticky;
+  z-index: 5;
+  top: 0;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  padding: rem(15) 0;
-  height: rem(85);
 
   &Logo {
-    display: flex;
-    align-items: center;
-    font-size: rem(21);
-    color: $dark !important;
-
-    svg {
-      margin-right: rem(10);
-      height: rem(38) !important;
-      width: auto !important;
-    }
-
-    @media (max-width: $md-max-width) {
-      height: rem(40) !important;
-      font-size: rem(21);
-    }
+    width: rem(250);
   }
 
-  &Cardano {
-    position: relative;
-    top: -2px;
-    svg {
-      width: auto !important;
-      height: rem(18);
-      * {
-        fill: $blue;
+  &Items {
+    margin: 0 auto;
+    white-space: nowrap;
+
+    a {
+      margin: 0 rem(12);
+      color: $white;
+      display: inline-block;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        display: none;
+        content: "";
+        width: rem(18);
+        height: 3px;
+        left: 50%;
+        bottom: rem(-7);
+        margin-left: rem(-9);
+        background: $white;
+      }
+
+      &.linkActive,
+      &:hover,
+      &:focus {
+        color: $gray-3;
+
+        &:after {
+          display: block;
+          background: $gray-3;
+        }
       }
     }
   }
 
-  &Switch {
-    svg {
-      width: rem(24) !important;
-      height: rem(24) !important;
-    }
+  &Buttons {
+    width: rem(250);
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   @media (max-width: $md-max-width) {
-    &Switch {
-      svg {
-        width: rem(26) !important;
-        height: rem(26) !important;
-      }
+    &Items {
+      display: none;
+    }
+
+    &Buttons {
+      margin-left: auto;
     }
   }
+}
 
-  &Icon {
-    height: rem(20);
-    width: rem(21);
-    position: relative;
-    cursor: pointer;
+.logo {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: rem(36);
+    height: rem(36);
     margin-right: rem(10);
+  }
 
-    @media (max-width: $md-max-width) {
-      &:before {
-        top: rem(5) !important;
-      }
+  span {
+    font-weight: 900;
+    font-size: rem(18);
+    color: $white;
+  }
+}
 
-      &:after {
-        top: rem(14) !important;
-      }
-    }
+.switchIcon {
+  height: rem(20);
+  width: rem(21);
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: rem(20);
+  user-select: none;
 
-    &:after,
+  @media (max-width: $md-max-width) {
     &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: rem(6);
-      height: 2px;
-      width: 100%;
-      border-radius: 3px;
-      background: $dark;
-      @include transition-fast();
+      top: rem(5) !important;
     }
 
     &:after {
-      top: rem(13);
-    }
-
-    &:hover {
-      &:after,
-      &:before {
-        background: $blue;
-      }
-    }
-  }
-}
-
-.submenu {
-  display: flex;
-  flex-wrap: wrap;
-
-  @media (max-width: $sm-max-width) {
-    padding-top: rem(20);
-  }
-
-  &Link {
-    display: flex;
-    margin-right: rem(20);
-    margin-bottom: rem(10);
-    white-space: nowrap;
-    color: $dark;
-
-    @media (max-width: $sm-max-width) {
-      border: 2px solid $dark;
-      margin-right: rem(15);
-      // font-size: rem(18);
-      border-radius: 20px;
-      padding: 0 rem(10);
-
-      &:hover {
-        border-color: $primary;
-      }
-    }
-
-    &Width {
-      position: relative;
-
-      span:first-child {
-        opacity: 0;
-      }
-
-      span:last-child {
-        position: absolute;
-        left: 0;
-        right: 0;
-        text-align: center;
-      }
-    }
-
-    &:last-child {
-      margin-right: rem(0);
-    }
-
-    &Active {
-      color: $blue !important;
-
-      svg {
-        * {
-          fill: $primary !important;
-        }
-      }
-
-      @media (max-width: $sm-max-width) {
-        border-color: $primary;
-      }
-    }
-  }
-}
-
-// dark theme
-[data-theme="dark"] {
-  .m {
-    &Container {
-      :global(.ray__icon) {
-        svg {
-          * {
-            fill: $white;
-          }
-        }
-      }
-
-      .mTitle {
-        color: $white;
-  
-        &:hover,
-        &:active,
-        &:focus,
-        &Active {
-          color: $success;
-
-          :global(.ray__icon) {
-            svg {
-              * {
-                fill: $success !important;
-              }
-            }
-          }
-        }
-      }
-    }
-
-
-    &Inner {
-      background: lighten($dark-gray-5, 5%);
-
-      &:before {
-        background: lighten($dark-gray-5, 5%);
-      }
+      top: rem(14) !important;
     }
   }
 
-  .links {
-    &Link {
-      color: $white;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &Active {
-        color: $success;
-      }
-
-      &Disabled {
-        color: $dark-gray-3 !important;
-        opacity: 1;
-      }
-    }
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: rem(6);
+    height: 2px;
+    width: 100%;
+    border-radius: 3px;
+    background: $white;
+    @include transition-fast();
   }
 
-  .submenu {
-    &Link {
-      border-color: $white;
-      color: $white;
-
-      svg {
-        * {
-          fill: $white !important;
-        }
-      }
-
-      &:hover,
-      &:focus,
-      &:active,
-      &Active {
-        color: $success !important;
-        border-color: $success;
-
-        :global(.ray__icon) {
-          svg {
-            * {
-              fill: $success !important;
-            }
-          }
-        }
-      }
-    }
+  &:after {
+    top: rem(13);
   }
 
-  .menu {
-    &Cardano {
-      svg {
-        * {
-          fill: $blue-light;
-        }
-      }
-    }
-
-    &Logo {
-      color: $white !important;
-    }
-
-    &Icon {
-      &:after,
-      &:before {
-        background: $blue-light;
-      }
-
-      &:hover {
-        &:after,
-        &:before {
-          background: $white;
-        }
-      }
+  &:hover {
+    &:after,
+    &:before {
+      background: $gray-3;
     }
   }
 }

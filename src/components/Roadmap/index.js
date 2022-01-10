@@ -1,66 +1,8 @@
-import React, { useEffect, useState } from "react"
-import Heading from "@/components/Heading"
+import React from "react"
 import { Tooltip } from "antd"
 import classnames from "classnames"
-import { format } from "date-fns"
-import { Table } from "antd"
 
 import * as style from "./style.module.scss"
-
-const columns = [
-  {
-    title: "Repository",
-    dataIndex: "repo",
-    key: "repo",
-    sorter: (a, b) => ("" + a.repo).localeCompare(b.repo),
-    render: (record) => (
-      <a
-        href={`https://github.com/ray-network/${record}`}
-        className="ray__link"
-      >
-        {record}
-      </a>
-    ),
-  },
-  {
-    title: "Commit",
-    dataIndex: "sha",
-    key: "sha",
-    render: (record, records) => (
-      <a href={records.url} className="ray__link">
-        {record.substring(0, 7)}
-      </a>
-    ),
-  },
-  {
-    title: "Branch",
-    dataIndex: "branch",
-    key: "branch",
-    sorter: (a, b) => ("" + a.branch).localeCompare(b.author),
-  },
-  {
-    title: "Message",
-    dataIndex: "message",
-    key: "message",
-    render: (record) => <span className="text-wrap">{record}</span>,
-  },
-  // {
-  //   title: 'Author',
-  //   dataIndex: 'author',
-  //   key: 'author',
-  //   sorter: (a, b) => ('' + a.author).localeCompare(b.author),
-  // },
-  {
-    title: "Date",
-    dataIndex: "date",
-    key: "date",
-    sorter: (a, b) => new Date(a.date) - new Date(b.date),
-    render: (record) => {
-      return format(new Date(record), "MM/dd/yyyy HH:mm")
-    },
-  },
-]
-
 const dev = [
   {
     status: "completed",
@@ -128,19 +70,19 @@ const dev = [
     date: "Q4 2021",
   },
   {
-    status: "active",
+    status: "completed",
     title: "RayWallet V2",
-    date: "Q4 2021",
+    date: "Q1 2022",
   },
   {
     status: "active",
     title: "Hardware Wallets Support",
-    date: "Q4 2021",
+    date: "Q1 2022",
   },
   {
     status: "active",
     title: "Cardano-Web3.js",
-    date: "Q4 2021",
+    date: "Q1 2022",
   },
   {
     status: "active",
@@ -159,7 +101,7 @@ const dev = [
   },
   {
     status: "active",
-    title: "Minterr",
+    title: "Minterr.io",
     date: "Q1 2022",
   },
   {
@@ -179,6 +121,11 @@ const dev = [
   },
   {
     status: "pending",
+    title: "Ray Foundation",
+    date: "Q3-Q4 2022",
+  },
+  {
+    status: "pending",
     title: "RayData",
     date: "2022",
   },
@@ -192,7 +139,7 @@ const dev = [
 const chrome = [
   {
     status: "active",
-    title: "RayWallet V2 / DApp Connector",
+    title: "RayWallet + DApp Connector",
     date: "Q4 2021",
   },
   {
@@ -204,148 +151,44 @@ const chrome = [
 
 const apps = [
   {
-    status: "active",
-    title: "RayWallet Windows",
+    status: "completed",
+    title: "RayWallet PWA Windows",
     date: "Q4 2021",
   },
   {
-    status: "active",
-    title: "RayWallet macOS",
+    status: "completed",
+    title: "RayWallet PWA macOS",
     date: "Q4 2021",
   },
   {
-    status: "active",
-    title: "RayWallet iOS",
+    status: "completed",
+    title: "RayWallet PWA iOS",
     date: "Q4 2021",
   },
   {
-    status: "active",
-    title: "RayWallet Android",
+    status: "completed",
+    title: "RayWallet PWA Android",
     date: "Q4 2021",
   },
   {
     status: "pending",
-    title: "RayStake iOS",
+    title: "RayStake PWA iOS",
     date: "Q1 2022",
   },
   {
     status: "pending",
-    title: "RayStake Android",
+    title: "RayStake PWA Android",
     date: "Q1 2022",
   },
-]
-
-let fetchedData = []
-
-const repos = [
-  {
-    id: "ray-home",
-    branch: "main",
-  },
-  {
-    id: "ray-wallet",
-    branch: "dev",
-  },
-  {
-    id: "minterr",
-    branch: "main",
-  },
-  {
-    id: "cardanolist",
-    branch: "main",
-  },
-  {
-    id: "cardano-web3.js",
-    branch: "dev",
-  },
-  {
-    id: "cardano-verified",
-    branch: "main",
-  },
-  {
-    id: "docs",
-    branch: "master",
-  },
-  // {
-  //   id: "ray-cordova-wrapper",
-  //   branch: "dev",
-  // },
-  // {
-  //   id: "ray-swap-contracts",
-  //   branch: "dev",
-  // },
-  // {
-  //   id: "ray-kickstart-contracts",
-  //   branch: "dev",
-  // },
-  // {
-  //   id: "ray-nft-contracts",
-  //   branch: "dev",
-  // },
-  // {
-  //   id: "cloudflare-workers",
-  //   branch: "dev",
-  // },
 ]
 
 const Roadmap = () => {
-  const [dataSource, setDataSource] = useState([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    fetchedData = []
-    Promise.all(
-      repos.map((repo) => {
-        return fetch(
-          `https://api.github.com/repos/ray-network/${repo.id}/commits?sha=${repo.branch}&page=1&per_page=50`
-        )
-          .then((res) => res.json())
-          .then((result) => {
-            if (Array.isArray(result)) {
-              fetchedData.push({
-                repo: repo.id,
-                branch: repo.branch,
-                data: result,
-              })
-            }
-          })
-      })
-    ).then(() => {
-      setLoading(false)
-      formatData()
-    })
-    // eslint-disable-next-line
-  }, [])
-
-  const formatData = async () => {
-    let normalizedData = []
-    fetchedData.forEach((repo) => {
-      if (Array.isArray(repo.data)) {
-        repo.data.forEach((item) => {
-          let commit = {}
-          commit.repo = repo.repo
-          commit.branch = repo.branch
-          commit.sha = item.sha
-          commit.author = item.commit.author.name
-          commit.author_avatar = item.committer.avatar_url
-          commit.message = item.commit.message
-          commit.url = item.html_url
-          commit.date = item.commit.author.date
-          normalizedData.push(commit)
-        })
-      }
-    })
-    normalizedData.sort((a, b) => {
-      return new Date(b.date) - new Date(a.date)
-    })
-    setDataSource(normalizedData)
-  }
-
   return (
     <div className="ray__block">
-      <Heading id="roadmap">
+      <div className="ray__title">Development Information</div>
+      <div className="ray__title__descr">
         <strong>Development</strong> Roadmap
-      </Heading>
+      </div>
       <div className="mb-3">
         <h5 className="mb-5">
           <strong>Ray Ecosystem</strong>
@@ -441,30 +284,6 @@ const Roadmap = () => {
             )
           })}
         </div>
-      </div>
-      <Heading id="updates">
-        <strong>Development</strong> Activity
-      </Heading>
-      <div className="mb-5">
-        <p>
-          Tracking development activity of the Ray Github repositories —{" "}
-          <a
-            href="https://github.com/ray-network/"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="ray__link"
-          >
-            https://github.com/ray-network/
-          </a>
-        </p>
-      </div>
-      <div className="ray__table">
-        <Table
-          loading={loading}
-          dataSource={dataSource}
-          columns={columns}
-          pagination={false}
-        />
       </div>
     </div>
   )

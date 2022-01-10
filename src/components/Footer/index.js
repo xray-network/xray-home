@@ -1,23 +1,40 @@
-import React from "react"
+import React, { useState } from "react"
 import { useSelector } from "react-redux"
-import { Input, Tooltip } from "antd"
-import {
-  SVGRay,
-  SVGCardano,
-  SVGWallet,
-  SVGTwitter,
-  SVGAtSign,
-  SVGChrome,
-  SVGApple,
-  SVGCategory,
-  SVGAndroid,
-  SVGInternet,
-} from "@/svg"
+import { Input, message, Tooltip } from "antd"
+import { SVGRay, SVGCardano } from "@/svg"
 import * as style from "./style.module.scss"
 
 const Footer = () => {
   const networkState = useSelector((state) => state.settings.networkState)
-  console.log(networkState)
+  const [email, setEmail] = useState()
+  const [loading, setLoading] = useState(false)
+
+  const subscribe = async () => {
+    const validEmail = String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+
+    if (validEmail) {
+      let formData = new FormData()
+      formData.append("EMAIL", email)
+      setLoading(true)
+      await fetch(
+        "https://raynetwork.us20.list-manage.com/subscribe/post?u=630230660ec54c50b0c34762c&id=844a6bbde0",
+        {
+          method: "post",
+          mode: "no-cors",
+          body: formData,
+        }
+      )
+      setLoading(false)
+      setEmail()
+      message.success("You have successfully subscribed!")
+    } else {
+      message.error("Please enter a valid email address.")
+    }
+  }
 
   return (
     <div className={style.outer}>
@@ -25,180 +42,134 @@ const Footer = () => {
         <div className="pb-5">
           <div className={style.footerTop}>
             <div className="row">
-              <div className="col-12 col-sm-8 mb-3">
+              <div className="col-12 col-md-8 mb-3">
                 <div className={`${style.footerLists} row`}>
                   <div className="col-6 col-sm-4 ">
                     <div className="d-flex mb-4">
-                      <span className="ray__icon me-2 mb-1 mb-sm-0">
-                        <SVGWallet />
-                      </span>
                       <h6 className="mb-0">
-                        <strong>Cardano Solutions</strong>
+                        <strong>Ecosystem</strong>
                       </h6>
                     </div>
                     <ul className="list-unstyled mb-4">
                       <li>
-                        <a
-                          href="https://raywallet.io"
-                          className="text-muted"
-                        >
-                          RayWallet
+                        <a href="https://raywallet.io">
+                          RayWallet <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://raystake.io"
-                          className="text-muted"
-                        >
-                          RayStake
+                        <a href="https://raystake.io">
+                          RayStake <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://rayswap.io"
-                          className="text-muted"
-                        >
-                          RaySwap
+                        <a href="https://rayswap.io">
+                          RaySwap <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://raypad.io"
-                          className="text-muted"
-                        >
-                          RayPad
+                        <a href="https://raypad.io">
+                          RayPad <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://minterr.io"
-                          className="text-muted"
-                        >
-                          Minterr.io
+                        <a href="https://raygraph.io">
+                          RayGraph <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://raygraph.io"
-                          className="text-muted"
-                        >
-                          RayGraph
+                        <a href="https://raydata.io">
+                          RayData <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://raydata.io"
-                          className="text-muted"
-                        >
-                          RayData
+                        <a href="https://minterr.io">
+                          Minterr.io <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://cardanolist.io"
-                          className="text-muted"
-                        >
-                          CardanoList.io
+                        <a href="https://cardanolist.io">
+                          CardanoList.io <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://github.com/ray-network/cardano-web3.js"
-                          className="text-muted"
-                        >
-                          CardanoWeb3.js
+                        <a href="https://pigz.io">
+                          Pigz.io Metaverse{" "}
+                          <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://github.com/ray-network/cardano-web3.js">
+                          CardanoWeb3.js <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://ray.foundation">
+                          Ray Foundation <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://raystart.io">
+                          RayStart <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                     </ul>
                   </div>
                   <div className="col-6 col-sm-4">
                     <div className="d-flex mb-4">
-                      <span className="ray__icon me-2 mb-1 mb-sm-0">
-                        <SVGAtSign />
-                      </span>
                       <h6 className="mb-0">
                         <strong>Information</strong>
                       </h6>
                     </div>
                     <ul className="list-unstyled mb-5">
                       <li>
-                        <a
-                          href="https://raynetwork.io/xray/"
-                          className="text-muted"
-                        >
-                          XRAY Token
+                        <a href="https://raynetwork.io/ecosystem/">Ecosystem</a>
+                      </li>
+                      <li>
+                        <a href="https://raynetwork.io/xray/">XRAY Token</a>
+                      </li>
+                      <li>
+                        <a href="https://raynetwork.io/xdiamond/">
+                          XDIAMOND NFT
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://raynetwork.io/xdiamond/"
-                          className="text-muted"
-                        >
-                          XDIAMOND
+                        <a href="https://raynetwork.io/developers/">
+                          Developers
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://raynetwork.io/roadmap/"
-                          className="text-muted"
-                        >
+                        <a href="https://raynetwork.io/community/">Community</a>
+                      </li>
+                      <li>
+                        <a href="https://raynetwork.io/roadmap/">
                           Roadmap & Updates
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://raynetwork.io/wiki/"
-                          className="text-muted"
-                        >
-                          Wiki
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://status.raynetwork.io/"
-                          className="text-muted"
-                        >
-                          Status
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://raynetwork.io/about/"
-                          className="text-muted"
-                        >
-                          About
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://raynetwork.io/whitepaper/"
-                          className="text-muted"
-                        >
+                        <a href="https://raynetwork.io/whitepaper/">
                           Whitepaper
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="https://docs.raynetwork.io/"
-                          className="text-muted"
-                        >
-                          Docs
-                        </a>
+                        <a href="https://raynetwork.io/audit/">Audit</a>
                       </li>
                       <li>
-                        <a
-                          href="https://raynetwork.io/audit/"
-                          className="text-muted"
-                        >
-                          Audit
-                        </a>
+                        <a href="https://raynetwork.io/about/">About</a>
                       </li>
                       <li>
-                        <a
-                          href="https://raynetwork.io/terms-of-use/"
-                          className="text-muted"
-                        >
+                        <a href="https://raynetwork.io/terms-of-use/">
                           Terms of Use
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://status.raynetwork.io/">
+                          <span className={style.dot} />
+                          Status <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://docs.raynetwork.io/">
+                          Documentation <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                     </ul>
@@ -207,80 +178,75 @@ const Footer = () => {
                     <div className="row">
                       <div className="col-6 col-sm-12">
                         <div className="d-flex mb-4">
-                          <span className="ray__icon me-2 mb-1 mb-sm-0">
-                            <SVGTwitter />
-                          </span>
                           <h6 className="mb-0">
-                            <strong>Ray Network</strong>
+                            <strong>Twitter</strong>
                           </h6>
                         </div>
                         <ul className="list-unstyled mb-5">
                           <li>
-                            <a
-                              href="https://twitter.com/RayNetwork"
-                              className="text-muted"
-                            >
-                              Twitter
+                            <a href="https://twitter.com/RayNetwork">
+                              @RayNetwork{" "}
+                              <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a
-                              href="https://t.me/RayNetwork"
-                              className="text-muted"
-                            >
-                              Telegram Chat
+                            <a href="https://twitter.com/RayWallet">
+                              @RayWallet <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a
-                              href="https://t.me/RayNetworkChannel"
-                              className="text-muted"
-                            >
-                              Telegram
+                            <a href="https://twitter.com/MinterrApp">
+                              @MinterrApp{" "}
+                              <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a
-                              href="https://discord.gg/WhZmm46APN"
-                              className="text-muted"
-                            >
-                              Discord
+                            <a href="https://twitter.com/CardanoList">
+                              @CardanoList{" "}
+                              <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a
-                              href="https://www.reddit.com/r/RayNetwork"
-                              className="text-muted"
-                            >
-                              Reddit
+                            <a href="https://twitter.com/PigzMetaverse">
+                              @PigzMetaverse{" "}
+                              <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                         </ul>
                       </div>
                       <div className="col-6 col-sm-12">
                         <div className="d-flex mb-4">
-                          <span className="ray__icon me-2 mb-1 mb-sm-0">
-                            <SVGTwitter />
-                          </span>
                           <h6 className="mb-0">
-                            <strong>Minterr.io</strong>
+                            <strong>Socials</strong>
                           </h6>
                         </div>
                         <ul className="list-unstyled mb-4">
                           <li>
-                            <a
-                              href="https://twitter.com/MinterrApp"
-                              className="text-muted"
-                            >
-                              Twitter
+                            <a href="https://www.reddit.com/r/RayNetwork">
+                              Reddit <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a
-                              href="https://discord.gg/dDVXcthYWn"
-                              className="text-muted"
-                            >
-                              Discord
+                            <a href="https://t.me/RayNetwork">
+                              Telegram Chat{" "}
+                              <i className="ri ri-arrow_up ri-ext" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://t.me/RayNetworkChannel">
+                              Telegram Announcements <i className="ri ri-arrow_up ri-ext" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://discord.gg/WhZmm46APN">
+                              Ray Network Discord{" "}
+                              <i className="ri ri-arrow_up ri-ext" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://discord.gg/dDVXcthYWn">
+                              Minterr.io Discord{" "}
+                              <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                         </ul>
@@ -289,82 +255,67 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-4">
+              <div className="col-12 col-md-4">
                 <div className="row">
-                  <div className="col-6 col-sm-12">
+                  <div className="col-6 col-md-12">
                     <div className="mb-3">
                       <h6 className="mb-0">
                         <strong>RayWallet Apps</strong>
                       </h6>
                     </div>
                     <div className="mb-4">
-                      <div>
-                        <Tooltip title="Web Version">
-                          <a
-                            href="https://raywallet.io"
-                            className={style.footerApp}
-                          >
-                            <span className="ray__icon ray__icon--22">
-                              <SVGInternet />
-                            </span>
-                          </a>
-                        </Tooltip>
-                        <Tooltip title="Chrome Extension">
-                          <a
-                            href="https://raywallet.io"
-                            className={style.footerApp}
-                          >
-                            <span className="ray__icon ray__icon--22">
-                              <SVGChrome />
-                            </span>
-                          </a>
-                        </Tooltip>
-                        <Tooltip title="macOS App">
-                          <a
-                            href="https://raywallet.io"
-                            className={style.footerApp}
-                          >
-                            <span className="ray__icon ray__icon--22">
-                              <SVGApple />
-                            </span>
-                          </a>
-                        </Tooltip>
-                        <Tooltip title="Windows App">
-                          <a
-                            href="https://raywallet.io"
-                            className={style.footerApp}
-                          >
-                            <span className="ray__icon ray__icon--22">
-                              <SVGCategory />
-                            </span>
-                          </a>
-                        </Tooltip>
-                      </div>
-                      <div>
-                        <Tooltip title="iOS App">
-                          <a
-                            href="https://raywallet.io"
-                            className={style.footerApp}
-                          >
-                            <span className="ray__icon ray__icon--22">
-                              <SVGApple />
-                            </span>
-                          </a>
-                        </Tooltip>
-                        <Tooltip title="Android App">
-                          <a
-                            href="https://raywallet.io"
-                            className={style.footerApp}
-                          >
-                            <span className="ray__icon ray__icon--22">
-                              <SVGAndroid />
-                            </span>
-                          </a>
-                        </Tooltip>
-                      </div>
+                      <Tooltip title="Web Version">
+                        <a
+                          href="https://raywallet.io/"
+                          className={style.footerApp}
+                        >
+                          <i className="ri ri-internet" />
+                        </a>
+                      </Tooltip>
+                      <Tooltip title="Chrome Extension">
+                        <a
+                          href="https://raywallet.io/"
+                          className={style.footerApp}
+                        >
+                          <i className="ri ri-chrome" />
+                        </a>
+                      </Tooltip>
+                      <Tooltip title="macOS App">
+                        <a
+                          href="https://raywallet.io/"
+                          className={style.footerApp}
+                        >
+                          <i className="ri ri-apple" />
+                        </a>
+                      </Tooltip>
+                      <Tooltip title="Windows App">
+                        <a
+                          href="https://raywallet.io/"
+                          className={style.footerApp}
+                        >
+                          <i className="ri ri-category" />
+                        </a>
+                      </Tooltip>
+                      <br className="d-none d-sm-block" />
+                      <Tooltip title="iOS App">
+                        <a
+                          href="https://raywallet.io/"
+                          className={style.footerApp}
+                        >
+                          <i className="ri ri-apple" />
+                        </a>
+                      </Tooltip>
+                      <Tooltip title="Android App">
+                        <a
+                          href="https://raywallet.io/"
+                          className={style.footerApp}
+                        >
+                          <i className="ri ri-android" />
+                        </a>
+                      </Tooltip>
                     </div>
                   </div>
-                  <div className="col-6 col-sm-12">
+                  <div className="col-6 col-md-12">
                     <div className="mb-3">
                       <h6 className="mb-0">
                         <strong>RayStake Apps</strong>
@@ -374,32 +325,26 @@ const Footer = () => {
                       <div>
                         <Tooltip title="Web Version">
                           <a
-                            href="https://raystake.io"
+                            href="https://raystake.io/"
                             className={style.footerApp}
                           >
-                            <span className="ray__icon ray__icon--22">
-                              <SVGInternet />
-                            </span>
+                            <i className="ri ri-internet" />
                           </a>
                         </Tooltip>
                         <Tooltip title="iOS App">
                           <a
-                            href="https://raystake.io"
+                            href="https://raystake.io/"
                             className={style.footerApp}
                           >
-                            <span className="ray__icon ray__icon--22">
-                              <SVGApple />
-                            </span>
+                            <i className="ri ri-apple" />
                           </a>
                         </Tooltip>
                         <Tooltip title="Android App">
                           <a
-                            href="https://raystake.io"
+                            href="https://raystake.io/"
                             className={style.footerApp}
                           >
-                            <span className="ray__icon ray__icon--22">
-                              <SVGAndroid />
-                            </span>
+                            <i className="ri ri-android" />
                           </a>
                         </Tooltip>
                       </div>
@@ -408,7 +353,7 @@ const Footer = () => {
                 </div>
                 <div className="mb-3">
                   <h6 className="mb-0">
-                    <strong>Newsletters</strong>
+                    <strong>Newsletter</strong>
                   </h6>
                 </div>
                 <div className="mb-4">
@@ -417,7 +362,11 @@ const Footer = () => {
                     allowClear
                     enterButton="Subscribe"
                     size="large"
-                    onSearch={() => { }}
+                    value={email}
+                    type="email"
+                    onSearch={() => subscribe()}
+                    onChange={(e) => setEmail(e.target.value)}
+                    loading={loading}
                   />
                 </div>
               </div>
@@ -438,7 +387,8 @@ const Footer = () => {
               </a>
             </div>
             <p className="mb-2 text-muted">
-              Advanced Ecosystem for Cardano Blockchain Platform.{" "}
+              {new Date().getFullYear()} &copy; Ray Foundation DAO | Advanced
+              Ecosystem for Cardano Blockchain Platform.{" "}
               <span>
                 <span>Powered with</span>{" "}
                 <a
@@ -455,13 +405,13 @@ const Footer = () => {
             </p>
             <p className="mb-2 text-muted">
               <span className="me-2 text-capitalize">
-                Cardano Mainnet Status: Epoch {networkState?.currentEpoch?.number || 0}, Block{" "}
-                {networkState?.tip?.number || 0}, Slot {networkState?.tip?.slotNo || 0}
+                <span className={style.status} />
+                Cardano Mainnet: Epoch {networkState?.currentEpoch?.number || 0}
+                , Block {networkState?.tip?.number || 0}, Slot{" "}
+                {networkState?.tip?.slotNo || 0}
               </span>
             </p>
-            <p className="mb-0 text-muted">
-              {new Date().getFullYear()} &copy; Ray Labs DAO
-            </p>
+            <p className="mb-0 text-muted"></p>
           </div>
         </div>
       </div>

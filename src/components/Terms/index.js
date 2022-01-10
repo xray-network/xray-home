@@ -1,10 +1,12 @@
 import React from "react"
-import Heading from "@/components/Heading"
 
 const Terms = () => {
   return (
     <div className="ray__block">
-      <Heading id="terms">Terms of Service Agreement</Heading>
+      <div className="ray__title">Legal Information</div>
+      <div className="ray__title__descr">
+        <strong>Terms of Service Agreement</strong>
+      </div>
       <p>
         THIS TERMS OF SERVICE AGREEMENT (&quot;Agreement&quot;) is made between
         Ray Network, Decentralized Autonomus Organization
