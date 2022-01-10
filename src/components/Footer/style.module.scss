@@ -4,17 +4,6 @@
   background: $white;
 }
 
-.status {
-  display: inline-block;
-  width: rem(9);
-  height: rem(9);
-  border-radius: 10px;
-  background: $success;
-  margin-right: rem(8);
-  position: relative;
-  top: -1px;
-}
-
 .footer {
   &Lists {
     a {
@@ -99,4 +88,16 @@
   border-radius: 20px;
   background: $success;
   margin-right: rem(7);
+}
+
+
+.status {
+  display: inline-block;
+  width: rem(10);
+  height: rem(10);
+  border-radius: 10px;
+  background: $success;
+  margin-right: rem(8);
+  position: relative;
+  top: -1px;
 }

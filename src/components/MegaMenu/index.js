@@ -62,80 +62,6 @@ const MegaMenu = () => {
                   >
                     <div className="d-flex mb-4">
                       <h6 className="mb-0">
-                        <strong>Ecosystem</strong>
-                      </h6>
-                    </div>
-                    <ul className="list-unstyled mb-4">
-                      <li>
-                        <a href="https://raywallet.io">
-                          RayWallet <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://raystake.io">
-                          RayStake <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://rayswap.io">
-                          RaySwap <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://raypad.io">
-                          RayPad <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://raygraph.io">
-                          RayGraph <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://raydata.io">
-                          RayData <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://minterr.io">
-                          Minterr.io <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://cardanolist.io">
-                          CardanoList.io <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://pigz.io">
-                          Pigz.io Metaverse{" "}
-                          <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/ray-network/cardano-web3.js">
-                          CardanoWeb3.js <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://ray.foundation">
-                          Ray Foundation <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://raystart.io">
-                          RayStart <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div
-                    className="col-6 col-sm-4"
-                    data-aos="fade-up"
-                    data-aos-delay="400"
-                  >
-                    <div className="d-flex mb-4">
-                      <h6 className="mb-0">
                         <strong>Information</strong>
                       </h6>
                     </div>
@@ -192,6 +118,80 @@ const MegaMenu = () => {
                       <li>
                         <a href="https://raynetwork.io/terms-of-use/">
                           Terms of Use
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className="col-6 col-sm-4"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    <div className="d-flex mb-4">
+                      <h6 className="mb-0">
+                        <strong>Ecosystem</strong>
+                      </h6>
+                    </div>
+                    <ul className="list-unstyled mb-4">
+                      <li>
+                        <a href="https://raystart.io">
+                          RayStart <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://raywallet.io">
+                          RayWallet <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://raystake.io">
+                          RayStake <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://rayswap.io">
+                          RaySwap <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://raypad.io">
+                          RayPad <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://raygraph.io">
+                          RayGraph <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://raydata.io">
+                          RayData <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://minterr.io">
+                          Minterr.io <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://cardanolist.io">
+                          CardanoList.io <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://pigz.io">
+                          Pigz.io Metaverse{" "}
+                          <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://github.com/ray-network/cardano-web3.js">
+                          CardanoWeb3.js <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://ray.foundation">
+                          Ray Foundation <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                     </ul>

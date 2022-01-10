@@ -30,6 +30,12 @@ export const ecosystem = [
     url: "/data/",
   },
   {
+    title: "RayStart",
+    descr: "Start Page of the Ray Network Ecosystem",
+    url: "https://raystart.io",
+    external: true,
+  },
+  {
     title: "Minterr.io",
     descr: "Cardano NFT Marketplace, Minter, and Explorer",
     url: "https://minterr.io",
@@ -58,12 +64,6 @@ export const ecosystem = [
     descr:
       "We exist to enable community-driven innovation to benefit people around the world",
     url: "https://ray.foundation",
-    external: true,
-  },
-  {
-    title: "RayStart",
-    descr: "Start Page of the Ray Network Ecosystem",
-    url: "https://raystart.io",
     external: true,
   },
 ]

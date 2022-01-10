@@ -19,6 +19,10 @@ const Team = () => {
         <a href="http://raystake.io" target="_blank" rel="noopener noreferrer">
           RayStake
         </a>
+        ,{" "}
+        <a href="http://cardanolist.io" target="_blank" rel="noopener noreferrer">
+          CardanoList.io
+        </a>
         , and{" "}
         <a href="http://minterr.io" target="_blank" rel="noopener noreferrer">
           Minterr.io
