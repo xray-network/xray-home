@@ -86,9 +86,6 @@ const MegaMenu = () => {
                         <a href="https://raynetwork.io/community/">Community</a>
                       </li>
                       <li>
-                        <a href="https://raynetwork.io/wiki/">Wiki</a>
-                      </li>
-                      <li>
                         <a href="https://raynetwork.io/roadmap/">
                           Roadmap & Updates
                         </a>

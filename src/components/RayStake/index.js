@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { useSelector } from "react-redux"
 
 const RayStake = () => {
@@ -36,14 +35,6 @@ const RayStake = () => {
             <span className="me-2">RayStake</span>
             <i className="ri ri-ext ri-arrow_up" />
           </a>
-        </span>
-        <span className="d-inline-block me-3 mb-2">
-          <Link
-            className="ray__btn ray__btn--round ray__btn--transparent"
-            to="/wiki/stake-delegators/"
-          >
-            Wiki
-          </Link>
         </span>
       </div>
     </div>
