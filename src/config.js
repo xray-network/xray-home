@@ -11,7 +11,7 @@ export const ecosystem = [
   },
   {
     title: "RaySwap",
-    descr: "Automated liquidity protocol, AMM DEX",
+    descr: "Cardano DEX Aggregator & AMM DEX",
     url: "/swap/",
   },
   {

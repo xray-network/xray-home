@@ -6,8 +6,11 @@ const RaySwap = () => {
     <div className="ray__block">
       <div className="ray__title">RaySwap</div>
       <div className="ray__title__descr">
-        <strong>RaySwap</strong>, Cardano Automated Market Maker DEX
+        <strong>RaySwap</strong>, Cardano DEX Aggregator & AMM DEX
       </div>
+      <p>
+        RaySwap is an aggregator of AMM / OrderBook exchanges for Cardano. The best prices and automatic search for the most beneficial offers from almost all exchanges for Cardano.
+      </p>
       <p>
         RaySwap is an automated liquidity protocol for creating liquidity and
         trading native tokens on Cardano. It eliminates trusted intermediaries
