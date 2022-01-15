@@ -79,8 +79,12 @@
         left: 0;
       }
 
-      @media (max-width: $lg-max-width) {
+      @media (max-width: $xxl-max-width) {
         font-size: rem(64);
+      }
+
+      @media (max-width: $lg-max-width) {
+        font-size: rem(52);
       }
 
       @media (max-width: $md-max-width) {
