@@ -5,12 +5,13 @@ const Runner = ({ children }) => {
 
   setInterval(() => {
     dispatch({ type: "settings/FETCH_NETWORK_STATE" })
-  }, 60 * 1000)
+  }, 1 * 60 * 1000)
 
   setInterval(() => {
     dispatch({ type: "settings/FETCH_PRICES" })
     dispatch({ type: "settings/FETCH_POOLS" })
-  }, 300 * 1000)
+    dispatch({ type: "settings/FETCH_HISTORY" })
+  }, 5 * 60 * 1000)
 
   return children
 }

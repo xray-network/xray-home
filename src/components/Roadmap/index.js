@@ -21,12 +21,7 @@ const dev = [
   },
   {
     status: "completed",
-    title: "RayWallet Stake",
-    date: "Q2 2021",
-  },
-  {
-    status: "completed",
-    title: "RayWallet Rewards",
+    title: "RayWallet Staking",
     date: "Q2 2021",
   },
   {
@@ -41,6 +36,11 @@ const dev = [
   },
   {
     status: "completed",
+    title: "Cardano Fund Winner",
+    date: "Q3 2021",
+  },
+  {
+    status: "completed",
     title: "Minterr.io",
     date: "Q3 2021",
   },
@@ -51,17 +51,17 @@ const dev = [
   },
   {
     status: "completed",
-    title: "XRAY Rewards Withdrawal",
-    date: "Q3 2021",
-  },
-  {
-    status: "completed",
-    title: "XDIAMOND & Redeemer",
+    title: "XDIAMOND NFTs",
     date: "Q3 2021",
   },
   {
     status: "completed",
     title: "RayStake App",
+    date: "Q3 2021",
+  },
+  {
+    status: "completed",
+    title: "RayStake Withdrawals",
     date: "Q3 2021",
   },
   {
@@ -75,54 +75,59 @@ const dev = [
     date: "Q1 2022",
   },
   {
-    status: "active",
-    title: "Hardware Wallets Support",
-    date: "Q1 2022",
+    status: "completed",
+    title: "RayStake LP / XRAY",
+    date: "Q2 2022",
   },
   {
     status: "active",
-    title: "Cardano-Web3.js",
-    date: "Q1 2022",
+    title: "RayWallet V3 + DApps Hub",
+    date: "Q2 2022",
+  },
+  {
+    status: "active",
+    title: "RayWallet HW Wallets",
+    date: "Q2 2022",
+  },
+  {
+    status: "active",
+    title: "CardanoWeb3.js",
+    date: "Q2 2022",
   },
   {
     status: "active",
     title: "Whitepaper",
-    date: "Q1 2022",
+    date: "Q2 2022",
   },
   {
     status: "active",
     title: "RaySwap",
-    date: "Q1 2022",
+    date: "Q2 2022",
   },
   {
     status: "active",
     title: "RayPad",
-    date: "Q1 2022",
-  },
-  {
-    status: "active",
-    title: "Minterr.io",
-    date: "Q1 2022",
+    date: "Q3 2022",
   },
   {
     status: "pending",
-    title: "Smart Contracts Audit",
-    date: "Q1 2022",
+    title: "Minterr.io Update",
+    date: "Q3 2022",
   },
   {
     status: "pending",
-    title: "dApps Mainnet Release",
-    date: "Q1 2022",
-  },
-  {
-    status: "pending",
-    title: "RayGraph",
-    date: "Q2 2022",
+    title: "CardanoList.io Update",
+    date: "Q3 2022",
   },
   {
     status: "pending",
     title: "Ray Foundation",
     date: "Q3-Q4 2022",
+  },
+  {
+    status: "pending",
+    title: "RayGraph",
+    date: "2022",
   },
   {
     status: "pending",
@@ -136,49 +141,26 @@ const dev = [
   },
 ]
 
-const chrome = [
-  {
-    status: "active",
-    title: "RayWallet + DApp Connector",
-    date: "Q4 2021",
-  },
-  {
-    status: "pending",
-    title: "RayStake",
-    date: "Q4 2021",
-  },
-]
-
 const apps = [
   {
     status: "completed",
-    title: "RayWallet PWA Windows",
+    title: "RayWallet PWA",
     date: "Q4 2021",
   },
   {
     status: "completed",
-    title: "RayWallet PWA macOS",
-    date: "Q4 2021",
+    title: "RayStake PWA",
+    date: "Q2 2022",
   },
   {
-    status: "completed",
-    title: "RayWallet PWA iOS",
-    date: "Q4 2021",
+    status: "active",
+    title: "RayWallet Chrome Extension",
+    date: "Q2 2022",
   },
   {
-    status: "completed",
-    title: "RayWallet PWA Android",
-    date: "Q4 2021",
-  },
-  {
-    status: "pending",
-    title: "RayStake PWA iOS",
-    date: "Q1 2022",
-  },
-  {
-    status: "pending",
-    title: "RayStake PWA Android",
-    date: "Q1 2022",
+    status: "active",
+    title: "RayWallet DApp Connector",
+    date: "Q2 2022",
   },
 ]
 
@@ -229,37 +211,6 @@ const Roadmap = () => {
         </h5>
         <div>
           {apps.map((item, index) => {
-            return (
-              <Tooltip
-                key={index}
-                title={<div className="text-capitalize">{item.status}</div>}
-              >
-                <div
-                  className={classnames({
-                    [style.item]: true,
-                    [style.itemActive]: item.status === "active",
-                    [style.itemCompleted]: item.status === "completed",
-                  })}
-                >
-                  <span className={style.itemIcon}>
-                    {item.status === "completed" && (
-                      <i className="fe fe-check-circle" />
-                    )}
-                  </span>
-                  <span className={style.itemDate}>{item.date}</span>
-                  <span className={style.itemTitle}>{item.title}</span>
-                </div>
-              </Tooltip>
-            )
-          })}
-        </div>
-      </div>
-      <div className="mb-5">
-        <h5 className="mb-5">
-          <strong>Chrome Extensions</strong>
-        </h5>
-        <div>
-          {chrome.map((item, index) => {
             return (
               <Tooltip
                 key={index}

@@ -37,6 +37,13 @@ const data = [
   {
     token: "XRAY",
     type: "mint",
+    date: "01/20/2022",
+    amount: 11000000,
+    description: "10,000,000 were sent to ISPO CeFi Distribution Wallet and 1,000,000 to Development & Marketing Fund Wallet for providing SundaeSwap liquidity.",
+  },
+  {
+    token: "XRAY",
+    type: "mint",
     date: "12/01/2021",
     amount: 10000000,
     description: "10,000,000 were sent to ISPO CeFi Distribution Wallet.",

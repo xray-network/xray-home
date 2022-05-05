@@ -18,6 +18,7 @@ const initialState = {
   megaMenu: false,
   networkState: {},
   history: {},
+  stakeHistory: {},
   prices: {},
   pools: {},
   modalInstall: "",

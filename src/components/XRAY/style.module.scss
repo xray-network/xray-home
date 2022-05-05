@@ -82,26 +82,13 @@
 .point {
   height: rem(60);
   width: rem(60);
-  background: $dark;
-  color: $pastel-1;
+  color: $dark;
   border-radius: 80px;
-  // position: absolute;
-  // top: rem(2);
-  // left: rem(-4);
-  margin-right: rem(20);
+  margin-left: rem(20);
   font-weight: 900;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: rem(36);
-
-  @media (max-width: 480px) {
-    position: static;
-    margin-bottom: rem(20);
-  }
-
-  &Active {
-    background: $success !important;
-    color: $white;
-  }
+  border: 5px solid $dark;
 }

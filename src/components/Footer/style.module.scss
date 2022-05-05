@@ -5,6 +5,10 @@
 }
 
 .footer {
+  &Bottom {
+    font-size: rem(14);
+  }
+
   &Lists {
     a {
       color: $gray-5;

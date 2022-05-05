@@ -12,8 +12,9 @@
 }
 
 .container {
-  padding: rem(20) 0;
+  padding: rem(25) 0;
   margin-bottom: rem(40);
+  border-bottom: 1px solid $border;
 }
 
 .menu {
@@ -39,9 +40,9 @@
   align-items: center;
 
   svg {
-    width: rem(36);
-    height: rem(36);
-    margin-right: rem(10);
+    width: rem(38);
+    height: rem(38);
+    margin-right: rem(13);
   }
 
   span {
@@ -95,31 +96,49 @@
     display: none;
   }
 
-  img {
+  a {
     position: absolute;
     right: rem(130);
     top: rem(0);
-    height: rem(530);
     border-radius: rem(40);
     box-shadow: $shadow-ant;
     border: rem(8) solid $white;
     background: $white;
-    transition: transform 0.3s ease-in-out, border-color 0.5s ease-in-out;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, border-color 0.3s ease-in-out;
 
     @media (max-width: $sm-max-width) {
       transform: none !important;
       border-color: $white !important;
     }
 
+    :global(.ray__btn) {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease-in-out;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: rem(-10) 0 0 rem(-55);
+    }
+
     &:hover {
       transform: translateY(-10px);
       border-color: $dark;
       background: $dark;
+
+      :global(.ray__btn) {
+        opacity: 1;
+      }
     }
 
     &:last-child {
       right: 0;
       top: rem(-100);
+    }
+
+    img {
+      max-height: rem(530);
     }
   }
 
@@ -129,7 +148,7 @@
   }
 
   @media (max-width: $sm-max-width) {
-    img {
+    a {
       right: auto;
       left: 0;
 
@@ -183,7 +202,9 @@
     color: $white;
     font-size: rem(18);
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       background: $dark-gray-4;
       color: $white;
     }
@@ -197,4 +218,70 @@
   border-radius: 20px;
   background: $success;
   margin-right: rem(7);
+}
+
+// dark theme
+[data-theme="dark"] {
+  .fixed {
+    background: $dark;
+  }
+
+  .container {
+    border-bottom: 1px solid $dark-border;
+  }
+
+  .logo {
+    span {
+      color: $white;
+    }
+  }
+
+  .wallets {
+    a {
+      border-color: $dark-gray-4;
+
+      &:hover {
+        border-color: $white;
+      }
+    }
+  }
+
+  .switchIcon {
+    &:after,
+    &:before {
+      background: $white;
+    }
+
+    &:hover {
+      &:after,
+      &:before {
+        background: $gray-2;
+      }
+    }
+  }
+
+  .footer {
+    &Lists {
+      a {
+        color: $gray-5;
+
+        &:hover,
+        &:focus {
+          color: $white;
+        }
+      }
+    }
+
+    &App {
+      background: $white;
+      color: $dark;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: $gray-2;
+        color: $dark;
+      }
+    }
+  }
 }

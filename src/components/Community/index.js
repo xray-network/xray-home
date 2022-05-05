@@ -1,6 +1,6 @@
 import React from "react"
 import * as style from "./style.module.scss"
-import { SVGTwitter, SVGTelegram, SVGDiscord, SVGReddit } from "@/svg"
+import { SVGTwitter, SVGTelegram, SVGDiscord, SVGReddit, SVGMedium } from "@/svg"
 
 const community = [
   {
@@ -62,6 +62,12 @@ const community = [
     icon: <SVGDiscord />,
     url: "https://discord.gg/dDVXcthYWn",
     type: "Discord",
+  },
+  {
+    title: "Medium Blog",
+    icon: <SVGMedium />,
+    url: "https://raynetwork.medium.com",
+    type: "Medium",
   },
 ]
 

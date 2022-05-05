@@ -7,6 +7,7 @@ import SVGTwitter from "../static/resources/social/twitter.svg"
 import SVGTelegram from "../static/resources/social/telegram.svg"
 import SVGDiscord from "../static/resources/social/discord.svg"
 import SVGReddit from "../static/resources/social/reddit.svg"
+import SVGMedium from "../static/resources/social/medium.svg"
 
 export {
   SVGMinterr,
@@ -17,4 +18,5 @@ export {
   SVGTelegram,
   SVGDiscord,
   SVGReddit,
+  SVGMedium,
 }

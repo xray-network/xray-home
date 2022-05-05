@@ -13,13 +13,13 @@ const XrayTokenomics = () => {
   const percentage = {
     delegators: 0.25,
     providers: 0.33,
-    investors: 0.2,
+    reserve: 0.2,
     development: 0.14,
     founders: 0.08,
   }
   const delegators = parseInt(total * percentage.delegators)
   const providers = parseInt(total * percentage.providers)
-  const investors = parseInt(total * percentage.investors)
+  const reserve = parseInt(total * percentage.reserve)
   const development = parseInt(total * percentage.development)
   const founders = parseInt(total * percentage.founders)
 
@@ -49,15 +49,15 @@ const XrayTokenomics = () => {
 
   const distributionData = {
     labels: [
-      "Stake Delegators",
-      "Liquidity Providers",
-      "Investors",
+      "ADA Staking & XRAY ISPO Program",
+      "LP / XRAY Staking Program",
+      "Reserve & Buyback Round",
       "Development & Marketing Fund",
       "Founders",
     ],
     datasets: [
       {
-        data: [delegators, providers, investors, development, founders],
+        data: [delegators, providers, reserve, development, founders],
         ...colors,
         borderWidth: 1,
         rotation: -120,
@@ -112,14 +112,14 @@ const XrayTokenomics = () => {
         </h5>
         <div className={`${style.supply} ${style.supplyLarge}`}>
           <strong className="bolder">
-            33,538,200{" "}
+            44,538,200{" "}
             <sup>
               <span className="ray__ticker">XRAY</span>
             </sup>
           </strong>
         </div>
         <div className="ray__progress mb-4">
-          <div style={{ width: `${(33.6 / 406) * 100}%` }} />
+          <div style={{ width: `${(44.6 / 406) * 100}%` }} />
         </div>
         <h5 className="mb-1">
           <strong>Max Supply</strong>
@@ -142,7 +142,7 @@ const XrayTokenomics = () => {
             <span className="badge badge-token">235,568,624 XRAY</span>
           </li>
           <li>
-            20.00% to investors with vesting periods{" "}
+            20.00% to reserve & buyback program with vesting periods{" "}
             <span className="badge badge-token">81,230,560 XRAY</span>
           </li>
           <li>
@@ -174,19 +174,19 @@ const XrayTokenomics = () => {
           <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>
-                Stake Delegators <span className="text-shade">25%</span>
+                ADA Staking & XRAY ISPO Program <span className="text-shade">25%</span>
               </strong>
             </h5>
             <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                31,538,200{" "}
+                41,538,200{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
             </div>
             <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${(31.5 / 101) * 100}%` }} />
+              <div style={{ width: `${(41.5 / 101) * 100}%` }} />
             </div>
             <div>
               <strong>Max Allocation</strong>
@@ -199,7 +199,7 @@ const XrayTokenomics = () => {
           <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>
-                Liquidity Providers <span className="text-shade">33%</span>
+                LP / XRAY Staking Program <span className="text-shade">33%</span>
               </strong>
             </h5>
             <div className={`${style.supply} mb-1`}>
@@ -224,7 +224,7 @@ const XrayTokenomics = () => {
           <div className="ray__left ray__left--dark">
             <h5 className="mb-1">
               <strong>
-                Investors Round <span className="text-shade">20%</span>
+                Reserve & Buyback Round <span className="text-shade">20%</span>
               </strong>
             </h5>
             <div className={`${style.supply} mb-1`}>
@@ -257,14 +257,14 @@ const XrayTokenomics = () => {
             </h5>
             <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                2,000,000{" "}
+                3,000,000{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
             </div>
             <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${(2 / 56) * 100}%` }} />
+              <div style={{ width: `${(3 / 56) * 100}%` }} />
             </div>
             <div>
               <strong>Max Allocation</strong>

@@ -92,88 +92,148 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="https://status.raynetwork.io/">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://status.raynetwork.io/"
+                        >
                           <span className={style.dot} />
                           Status <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://docs.raynetwork.io/">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://docs.raynetwork.io/"
+                        >
                           Documentation <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://github.com/ray-network/">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://github.com/ray-network/"
+                        >
                           GitHub <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                     </ul>
                   </div>
                   <div className="col-6 col-sm-4 ">
-                    <div className="d-flex mb-4">
+                  <div className="d-flex mb-4">
                       <h6 className="mb-0">
                         <strong>Ecosystem</strong>
                       </h6>
                     </div>
                     <ul className="list-unstyled mb-4">
                       <li>
-                        <a href="https://raystart.io">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://raystart.io"
+                        >
                           RayStart <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://raywallet.io">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://raywallet.io"
+                        >
                           RayWallet <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://raystake.io">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://raystake.io"
+                        >
                           RayStake <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://rayswap.io">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://rayswap.io"
+                        >
                           RaySwap <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://raypad.io">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://raypad.io"
+                        >
                           RayPad <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://raygraph.io">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://raygraph.io"
+                        >
                           RayGraph <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://raydata.io">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://raydata.io"
+                        >
                           RayData <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://minterr.io">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://minterr.io"
+                        >
                           Minterr.io <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://cardanolist.io">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://cardanolist.io"
+                        >
                           CardanoList.io <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://pigz.io">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://pigz.io"
+                        >
                           Pigz.io Metaverse{" "}
                           <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://github.com/ray-network/cardano-web3.js">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://github.com/ray-network/cardano-web3.js"
+                        >
                           CardanoWeb3.js <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://ray.foundation">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://ray.foundation"
+                        >
                           Ray Foundation <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
@@ -182,37 +242,57 @@ const Footer = () => {
                   <div className="col-12 col-sm-4">
                     <div className="row">
                       <div className="col-6 col-sm-12">
-                        <div className="d-flex mb-4">
+                      <div className="d-flex mb-4">
                           <h6 className="mb-0">
                             <strong>Twitter</strong>
                           </h6>
                         </div>
                         <ul className="list-unstyled mb-5">
                           <li>
-                            <a href="https://twitter.com/RayNetwork">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://twitter.com/RayNetwork"
+                            >
                               @RayNetwork{" "}
                               <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a href="https://twitter.com/RayWallet">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://twitter.com/RayWallet"
+                            >
                               @RayWallet <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a href="https://twitter.com/MinterrApp">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://twitter.com/MinterrApp"
+                            >
                               @MinterrApp{" "}
                               <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a href="https://twitter.com/CardanoList">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://twitter.com/CardanoList"
+                            >
                               @CardanoList{" "}
                               <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a href="https://twitter.com/PigzMetaverse">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://twitter.com/PigzMetaverse"
+                            >
                               @PigzMetaverse{" "}
                               <i className="ri ri-arrow_up ri-ext" />
                             </a>
@@ -220,38 +300,68 @@ const Footer = () => {
                         </ul>
                       </div>
                       <div className="col-6 col-sm-12">
-                        <div className="d-flex mb-4">
+                      <div className="d-flex mb-4">
                           <h6 className="mb-0">
                             <strong>Socials</strong>
                           </h6>
                         </div>
                         <ul className="list-unstyled mb-4">
                           <li>
-                            <a href="https://www.reddit.com/r/RayNetwork">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://www.reddit.com/r/RayNetwork"
+                            >
                               Reddit <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a href="https://t.me/RayNetwork">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://t.me/RayNetwork"
+                            >
                               Telegram Chat{" "}
                               <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a href="https://t.me/RayNetworkChannel">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://t.me/RayNetworkChannel"
+                            >
                               Telegram Announcements{" "}
                               <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a href="https://discord.gg/WhZmm46APN">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://discord.gg/WhZmm46APN"
+                            >
                               Ray Network Discord{" "}
                               <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
                           <li>
-                            <a href="https://discord.gg/dDVXcthYWn">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://discord.gg/dDVXcthYWn"
+                            >
                               Minterr.io Discord{" "}
+                              <i className="ri ri-arrow_up ri-ext" />
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://raynetwork.medium.com/"
+                            >
+                              Medium Blog{" "}
                               <i className="ri ri-arrow_up ri-ext" />
                             </a>
                           </li>
@@ -265,13 +375,16 @@ const Footer = () => {
                 <div className="row">
                   <div className="col-6 col-md-12">
                     <div className="mb-3">
-                      <h6 className="mb-0">
+                      <h6 className="mb-2">
                         <strong>RayWallet Apps</strong>
                       </h6>
+                    <small className="text-muted">A lightweight wallet with DApps Hub. All Cardano DeFi in one app.</small>
                     </div>
                     <div className="mb-4">
                       <Tooltip title="Web Version">
                         <a
+                          target="_blank"
+                          rel="noopener noreferrer"
                           href="https://raywallet.io/"
                           className={style.footerApp}
                         >
@@ -280,6 +393,8 @@ const Footer = () => {
                       </Tooltip>
                       <Tooltip title="Chrome Extension">
                         <a
+                          target="_blank"
+                          rel="noopener noreferrer"
                           href="https://raywallet.io/"
                           className={style.footerApp}
                         >
@@ -288,6 +403,8 @@ const Footer = () => {
                       </Tooltip>
                       <Tooltip title="macOS App">
                         <a
+                          target="_blank"
+                          rel="noopener noreferrer"
                           href="https://raywallet.io/"
                           className={style.footerApp}
                         >
@@ -296,15 +413,18 @@ const Footer = () => {
                       </Tooltip>
                       <Tooltip title="Windows App">
                         <a
+                          target="_blank"
+                          rel="noopener noreferrer"
                           href="https://raywallet.io/"
                           className={style.footerApp}
                         >
                           <i className="ri ri-category" />
                         </a>
                       </Tooltip>
-                      <br className="d-none d-sm-block" />
                       <Tooltip title="iOS App">
                         <a
+                          target="_blank"
+                          rel="noopener noreferrer"
                           href="https://raywallet.io/"
                           className={style.footerApp}
                         >
@@ -313,6 +433,8 @@ const Footer = () => {
                       </Tooltip>
                       <Tooltip title="Android App">
                         <a
+                          target="_blank"
+                          rel="noopener noreferrer"
                           href="https://raywallet.io/"
                           className={style.footerApp}
                         >
@@ -323,22 +445,47 @@ const Footer = () => {
                   </div>
                   <div className="col-6 col-md-12">
                     <div className="mb-3">
-                      <h6 className="mb-0">
+                      <h6 className="mb-2">
                         <strong>RayStake Apps</strong>
                       </h6>
+                      <small className="text-muted">Advanced staking for Cardano and other blockchains.</small>
                     </div>
                     <div className="mb-4">
                       <div>
                         <Tooltip title="Web Version">
                           <a
+                            target="_blank"
+                            rel="noopener noreferrer"
                             href="https://raystake.io/"
                             className={style.footerApp}
                           >
                             <i className="ri ri-internet" />
                           </a>
                         </Tooltip>
+                        <Tooltip title="macOS App">
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://raystake.io/"
+                            className={style.footerApp}
+                          >
+                            <i className="ri ri-apple" />
+                          </a>
+                        </Tooltip>
+                        <Tooltip title="Windows App">
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://raystake.io/"
+                            className={style.footerApp}
+                          >
+                            <i className="ri ri-category" />
+                          </a>
+                        </Tooltip>
                         <Tooltip title="iOS App">
                           <a
+                            target="_blank"
+                            rel="noopener noreferrer"
                             href="https://raystake.io/"
                             className={style.footerApp}
                           >
@@ -347,6 +494,8 @@ const Footer = () => {
                         </Tooltip>
                         <Tooltip title="Android App">
                           <a
+                            target="_blank"
+                            rel="noopener noreferrer"
                             href="https://raystake.io/"
                             className={style.footerApp}
                           >
@@ -378,7 +527,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className={style.footerBottom}>
             <div className="mb-2">
               <a
                 className={style.footerRay}
@@ -392,7 +541,7 @@ const Footer = () => {
                 </span>
               </a>
             </div>
-            <p className="mb-2 text-muted">
+            <p className="mb-2">
               {new Date().getFullYear()} &copy; Ray Foundation DAO | Advanced
               Ecosystem for Cardano Blockchain Platform.{" "}
               <span>
@@ -409,7 +558,7 @@ const Footer = () => {
                 </a>
               </span>
             </p>
-            <p className="mb-2 text-muted">
+            <p className="mb-2">
               <span className="me-2 text-capitalize">
                 <span className={style.status} />
                 Cardano Mainnet: Epoch {networkState?.currentEpoch?.number || 0}

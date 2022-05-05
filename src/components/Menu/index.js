@@ -59,7 +59,7 @@ const Menu = () => {
           <div className={style.menuButtons}>
             <a
               href="https://raywallet.io"
-              className="ant-btn ray__btn ray__btn--white ray__btn--round"
+              className="ant-btn ray__btn ray__btn--white ray__btn--round me-1"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -67,13 +67,14 @@ const Menu = () => {
               <span>RayWallet</span>
             </a>
             <span
-              className={style.switchIcon}
+              className="ant-btn ray__btn ray__btn--icon ray__btn--round px-3"
               onClick={switchMegaMenu}
               onKeyPress={switchMegaMenu}
               role="button"
               tabIndex="0"
-              aria-label="RayWallet"
-            />
+            >
+              <i className="ri ri-menu" />
+            </span>
           </div>
         </div>
       </div>

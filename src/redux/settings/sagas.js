@@ -4,6 +4,7 @@ import actions from "./actions"
 import { getNetworkInfo } from "@/services/graphql"
 import { getPrices } from "@/services/coingecko"
 import { getPools, getHistory } from "@/services/distr"
+import { getStakeHistory } from "@/services/tokens"
 
 export function* CHANGE_SETTING({ payload: { setting, value } }) {
   yield store.set(`ray.wallet.settings.${setting}`, value)
@@ -68,12 +69,21 @@ export function* FETCH_POOLS() {
 
 export function* FETCH_HISTORY() {
   const history = yield call(getHistory)
+  const stakeHisotry = yield call(getStakeHistory)
 
   yield put({
     type: "settings/CHANGE_SETTING",
     payload: {
       setting: "history",
       value: history?.data || {},
+    },
+  })
+
+  yield put({
+    type: "settings/CHANGE_SETTING",
+    payload: {
+      setting: "stakeHistory",
+      value: stakeHisotry?.data || {},
     },
   })
 }

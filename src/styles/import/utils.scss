@@ -17,6 +17,38 @@
 }
 
 .ray {
+  &__menu {
+    display: inline-block;
+    padding: rem(2) rem(15);
+    margin: 0 rem(15) rem(15) 0;
+    border-radius: rem(100);
+    font-weight: 700;
+    color: $dark;
+    border: 1px solid $border;
+    font-size: rem(18);
+
+    &--disabled {
+      opacity: 0.4;
+    }
+
+    &--active,
+    &:hover,
+    &:focus,
+    &:active {
+      background: $dark;
+      color: $white;
+      border-color: $dark;
+    }
+
+    @media (max-width: $sm-max-width) {
+      padding: rem(5) rem(15);
+      margin: 0 0 rem(15) 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   &__title {
     font-weight: 700;
     position: relative;
