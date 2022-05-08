@@ -24,7 +24,7 @@ const XrayDistribution = () => {
             <div className="flex-grow-1">
               <h3 className="mb-0">
                 <span className="me-3">
-                  <strong className="bolder">XRAY ISPO</strong>
+                  <strong className="bolder">ADA Staking & XRAY ISPO</strong>
                 </span>
               </h3>
               <div className="text-active">
@@ -77,12 +77,12 @@ const XrayDistribution = () => {
             </div>
             <div className={style.controls}>
               <a
-                href="https://raystake.io/cardano/pools/"
+                href="https://raystake.io/cardano/faq/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ray__btn ray__btn--round me-3 mb-3"
               >
-                <span className="me-2">Pools</span>
+                <span className="me-2">FAQ</span>
                 <i className="ri ri-ext ri-arrow_up" />
               </a>
               <a
@@ -95,12 +95,12 @@ const XrayDistribution = () => {
                 <i className="ri ri-ext ri-arrow_up" />
               </a>
               <a
-                href="https://raystake.io/cardano/faq/"
+                href="https://raystake.io/cardano/pools/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ray__btn ray__btn--round me-3 mb-3"
               >
-                <span className="me-2">FAQ</span>
+                <span className="me-2">Pools</span>
                 <i className="ri ri-ext ri-arrow_up" />
               </a>
             </div>
@@ -129,7 +129,12 @@ const XrayDistribution = () => {
             </div>
           </div>
           <div className="mb-4">
-            Your XRAY tokens will earn a 20% base APY that can be boosted up to 76% by holding XDIAMOND NFTs. Holding XRAY/ADA LP tokens from participating exchanges (SundaeSwap, Minswap, Wingriders, RaySwap, and ErgoDex) will earn you a 100% base APY. Boost your 100% base APY by up to 280% when holding XDIAMOND NFTs for a max APY of 380%. Stage 1 will continue until 75,000,000 XRAY have been distrubuted.
+            <p>The first stage has high APY, as it is an kind of initial token distribution program: </p>
+            <ul>
+              <li><strong>XRAY Tokens Staking</strong>: Your XRAY tokens will earn a 20% base APY that can be boosted up to 76% by holding XDIAMOND NFTs.</li>
+              <li><strong>LP Tokens Staking</strong>: Holding XRAY/ADA LP tokens from participating exchanges (SundaeSwap, Minswap, Wingriders, RaySwap, and ErgoDex) will earn you a 100% base APY that can be boosted up to 380% by holding XDIAMOND NFTs.</li>
+            </ul>
+            <p>The second stage would be classic Yield Farming (DApp) with moderate interest rate.</p>
           </div>
           <div className="pt-4">
             <div className="mb-5">
@@ -159,21 +164,21 @@ const XrayDistribution = () => {
             </div>
             <div className={style.controls}>
               <a
-                href="https://raystake.io/cardano/calculator"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ray__btn ray__btn--round me-3 mb-3"
-              >
-                <span className="me-2">Calculator</span>
-                <i className="ri ri-ext ri-arrow_up" />
-              </a>
-              <a
                 href="https://raystake.io/cardano/faq/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ray__btn ray__btn--round me-3 mb-3"
               >
                 <span className="me-2">FAQ</span>
+                <i className="ri ri-ext ri-arrow_up" />
+              </a>
+              <a
+                href="https://raystake.io/cardano/calculator"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ray__btn ray__btn--round me-3 mb-3"
+              >
+                <span className="me-2">Calculator</span>
                 <i className="ri ri-ext ri-arrow_up" />
               </a>
             </div>
