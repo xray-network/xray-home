@@ -129,12 +129,12 @@ const XrayDistribution = () => {
             </div>
           </div>
           <div className="mb-4">
-            <p>The first stage has high APY, as it is an kind of initial token distribution program: </p>
+            <p>The first stage has high APY, as it is an kind of initial token distribution program. Total will be distributed 83,884,503 XRAY: </p>
             <ul>
               <li><strong>XRAY Tokens Staking</strong>: Your XRAY tokens will earn a 20% base APY that can be boosted up to 76% by holding XDIAMOND NFTs.</li>
               <li><strong>LP Tokens Staking</strong>: Holding XRAY/ADA LP tokens from participating exchanges (SundaeSwap, Minswap, Wingriders, RaySwap, and ErgoDex) will earn you a 100% base APY that can be boosted up to 380% by holding XDIAMOND NFTs.</li>
             </ul>
-            <p>The second stage would be classic Yield Farming (DApp) with moderate interest rate.</p>
+            <p>The second stage would be classic Yield Farming (DApp) with moderate interest rate. Total will be distributed 50,145,921 XRAY.</p>
           </div>
           <div className="pt-4">
             <div className="mb-5">
