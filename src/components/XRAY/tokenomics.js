@@ -9,19 +9,37 @@ const XrayTokenomics = () => {
   const theme = useSelector((state) => state.settings.theme)
   const isLight = theme === "default"
 
-  const total = 406152800
   const percentage = {
-    delegators: 0.25,
-    providers: 0.33,
+    ispo: 0.25,
+    stake: 0.33,
     reserve: 0.2,
     development: 0.14,
     founders: 0.08,
   }
-  const delegators = parseInt(total * percentage.delegators)
-  const providers = parseInt(total * percentage.providers)
-  const reserve = parseInt(total * percentage.reserve)
-  const development = parseInt(total * percentage.development)
-  const founders = parseInt(total * percentage.founders)
+  const total = 406152800
+  const distributed = {
+    ispo: {
+      total: 51538200,
+      max: parseInt(total * percentage.ispo),
+    },
+    stake: {
+      total: 10000000,
+      max: parseInt(total * percentage.stake),
+    },
+    reserve: {
+      total: 0,
+      max: parseInt(total * percentage.reserve),
+    },
+    development: {
+      total: 3000000,
+      max: parseInt(total * percentage.development),
+    },
+    founders: {
+      total: 0,
+      max: parseInt(total * percentage.founders),
+    },
+  }
+  const totalDistributed = Object.keys(distributed).reduce((accum, key) => accum + distributed[key].total, 0)
 
   const colors = {
     backgroundColor: [
@@ -57,7 +75,7 @@ const XrayTokenomics = () => {
     ],
     datasets: [
       {
-        data: [delegators, providers, reserve, development, founders],
+        data: [distributed.ispo.max, distributed.stake.max, distributed.reserve.max, distributed.development.max, distributed.founders.max],
         ...colors,
         borderWidth: 1,
         rotation: -120,
@@ -112,21 +130,21 @@ const XrayTokenomics = () => {
         </h5>
         <div className={`${style.supply} ${style.supplyLarge}`}>
           <strong className="bolder">
-            44,538,200{" "}
+            {format(totalDistributed)}{" "}
             <sup>
               <span className="ray__ticker">XRAY</span>
             </sup>
           </strong>
         </div>
         <div className="ray__progress mb-4">
-          <div style={{ width: `${(44.6 / 406) * 100}%` }} />
+          <div style={{ width: `${totalDistributed / total * 100}%` }} />
         </div>
         <h5 className="mb-1">
           <strong>Max Supply</strong>
         </h5>
         <div className={`${style.supply} mb-5`}>
           <strong className="bolder">
-            406,152,800{" "}
+            {format(total)}{" "}
             <sup>
               <span className="ray__ticker">XRAY</span>
             </sup>
@@ -179,20 +197,20 @@ const XrayTokenomics = () => {
             </h5>
             <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                41,538,200{" "}
+                {format(distributed.ispo.total)}{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
             </div>
             <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${(41.5 / 101) * 100}%` }} />
+              <div style={{ width: `${distributed.ispo.total / distributed.ispo.max * 100}%` }} />
             </div>
             <div>
               <strong>Max Allocation</strong>
             </div>
             <div className="mb-5">
-              <strong>101,538,200</strong>{" "}
+              <strong>{format(distributed.ispo.max)}</strong>{" "}
               <span className="ray__ticker">XRAY</span>
             </div>
           </div>
@@ -204,20 +222,20 @@ const XrayTokenomics = () => {
             </h5>
             <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                0{" "}
+                {format(distributed.stake.total)}{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
             </div>
             <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: 0 }} />
+              <div style={{ width: `${distributed.stake.total / distributed.stake.max * 100}%` }} />
             </div>
             <div>
               <strong>Max Allocation</strong>
             </div>
             <div className="mb-5">
-              <strong>134,030,424</strong>{" "}
+              <strong>{format(distributed.stake.max)}</strong>{" "}
               <span className="ray__ticker">XRAY</span>
             </div>
           </div>
@@ -229,20 +247,20 @@ const XrayTokenomics = () => {
             </h5>
             <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                0{" "}
+                {format(distributed.reserve.total)}{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
             </div>
             <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: 0 }} />
+              <div style={{ width: `${distributed.reserve.total / distributed.reserve.max * 100}%` }} />
             </div>
             <div>
               <strong>Max Allocation</strong>
             </div>
             <div className="mb-5">
-              <strong>81,230,560</strong>{" "}
+              <strong>{format(distributed.reserve.max)}</strong>{" "}
               <span className="ray__ticker">XRAY</span>
             </div>
           </div>
@@ -257,20 +275,20 @@ const XrayTokenomics = () => {
             </h5>
             <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                3,000,000{" "}
+                {format(distributed.development.total)}{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
             </div>
             <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${(3 / 56) * 100}%` }} />
+              <div style={{ width: `${distributed.development.total / distributed.development.max * 100}%` }} />
             </div>
             <div>
               <strong>Max Allocation</strong>
             </div>
             <div className="mb-5">
-              <strong>56,861,392</strong>{" "}
+              <strong>{format(distributed.development.max)}</strong>{" "}
               <span className="ray__ticker">XRAY</span>
             </div>
           </div>
@@ -282,20 +300,20 @@ const XrayTokenomics = () => {
             </h5>
             <div className={`${style.supply} mb-1`}>
               <strong className="bolder">
-                0{" "}
+                {format(distributed.founders.total)}{" "}
                 <sup>
                   <span className="ray__ticker">XRAY</span>
                 </sup>
               </strong>
             </div>
             <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: 0 }} />
+              <div style={{ width: `${distributed.founders.total / distributed.founders.max * 100}%` }} />
             </div>
             <div>
               <strong>Max Allocation</strong>
             </div>
             <div className="mb-5">
-              <strong>32,492,224</strong>{" "}
+              <strong>{format(distributed.founders.max)}</strong>{" "}
               <span className="ray__ticker">XRAY</span>
             </div>
           </div>

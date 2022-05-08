@@ -10,10 +10,10 @@ const XrayWallets = () => {
       </div>
       <div className="ray__left ray__left--dark mb-4">
         <h5 className="mb-3">
-          <strong>ISPO CeFi Distribution Wallet</strong>
+          <strong>XRAY ISPO CeFi Distribution Wallet</strong>
         </h5>
         <p className="mb-3">
-          Used to withdraw rewards from the Delegators Distribution Program
+          Used to withdraw rewards from the ADA Staking & XRAY ISPO Program
           (CeFi). Soon to be replaced by a smart contract
         </p>
         <a
@@ -21,6 +21,21 @@ const XrayWallets = () => {
           href="https://cardanoscan.io/address/addr1q9gfz2dpdvev0yvnph2jgdh5ugwrfq0mnm5gzl972q0gxpvxdtxynggtwq540uzww6p66ezxkwa7w9snynphc36kuqesxk56gx"
         >
           addr1q9gfz2dpdvev0yvnph2jgdh5ugwrfq0mnm5gzl972q0gxpvxdtxynggtwq540uzww6p66ezxkwa7w9snynphc36kuqesxk56gx
+        </a>
+      </div>
+      <div className="ray__left ray__left--dark mb-4">
+        <h5 className="mb-3">
+          <strong>LP / XRAY Staking CeFi Distribution Wallet</strong>
+        </h5>
+        <p className="mb-3">
+          Used to withdraw rewards from the LP / XRAY Staking Program
+          (CeFi). Soon to be replaced by a smart contract
+        </p>
+        <a
+          className="text-break"
+          href="https://cardanoscan.io/address/addr1qyna4qh9gvjzytxupg77kjugfmm04hye69uv0chsdp72fxcxzxk683qqmdujykfnel975q2zywyk8jrrwkk5fs5m7w8qh6c2xj"
+        >
+          addr1qyna4qh9gvjzytxupg77kjugfmm04hye69uv0chsdp72fxcxzxk683qqmdujykfnel975q2zywyk8jrrwkk5fs5m7w8qh6c2xj
         </a>
       </div>
       <div className="ray__left ray__left--dark mb-4">

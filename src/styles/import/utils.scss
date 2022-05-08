@@ -91,6 +91,7 @@
     height: rem(14);
     border-radius: 10px;
     background: $gray-2;
+    overflow: hidden;
 
     &--small {
       height: rem(12);
