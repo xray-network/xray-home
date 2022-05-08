@@ -35,7 +35,7 @@ const BannerISPO = () => {
               <span className="ray__ticker">ADA</span> rewards stay with you.
             </p>
             <p className="mb-5">
-              LP / XRAY Staking: Earn up to 380% — you have to keep the tokens from the table below in your wallet. RayStake takes a snapshot every 2000 blocks and accrue XRAY tokens to your balance.
+              LP / XRAY Staking: Earn up to 380% — you have to keep DEX LP's or XRAY tokens in your wallet. RayStake takes a snapshot every 2000 blocks and accrue XRAY tokens to your balance.
             </p>
             <div>
               <a
