@@ -59,9 +59,12 @@ const Xdiamond = () => {
             <span className="ray__ticker">XDIAMOND</span> is a Cardano
             collectible NFT token for marketing and community incentives. You
             can get it for participation in marketing activities and giveaways,
-            keep an eye on Ray Network social media. Can be redeemed for an{" "}
-            <span className="ray__ticker">XRAY</span>!
+            keep an eye on Ray Network social media.
           </p>
+          <ul>
+            <li>Can be redeemed for an <span className="ray__ticker">XRAY</span>. Read about the details below</li>
+            <li>Used as a booster in RayStake. <a href="https://raystake.io/cardano/faq/" target="_blank" rel="noopener noreferrer">Read the FAQ &rarr;</a></li>
+          </ul>
           <p className="mb-5">
             Ticker:{" "}
             <strong className="bolder text-active">
