@@ -69,8 +69,8 @@ const Menu = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="ri ri-wallet me-2" />
-              <span>RayWallet</span>
+              <i className="ri ri-wallet me-0 me-sm-2" />
+              <span className="d-none d-sm-inline">RayWallet</span>
             </a>
             <span
               className="ant-btn ray__btn ray__btn--icon ray__btn--round px-3"

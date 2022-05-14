@@ -37,12 +37,12 @@ const BannerISPO = () => {
             <p className="mb-5">
               LP / XRAY Staking: Earn up to 380% — you have to keep DEX LP's or XRAY tokens in your wallet. RayStake takes a snapshot every 2000 blocks and accrue XRAY tokens to your balance.
             </p>
-            <div>
+            <div className="me-5 pe-5">
               <a
                 href="https://raystake.io/cardano/calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ray__btn ray__btn--large ray__btn--round ray__btn--white me-3"
+                className="ray__btn ray__btn--large ray__btn--round ray__btn--white me-3 mb-3 mb-sm-0"
               >
                 <span className="me-2">Calculator</span>
                 <i className="ri ri-sm ri-arrow_forward" />
