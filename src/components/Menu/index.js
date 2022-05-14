@@ -32,6 +32,12 @@ const Menu = () => {
           </div>
           <div className={style.menuItems}>
             <Link
+              to="/start/"
+              activeClassName={style.linkActive}
+            >
+              Start
+            </Link>
+            <Link
               to="/ecosystem/"
               className={isEcosystem ? style.linkActive : ""}
               activeClassName={style.linkActive}

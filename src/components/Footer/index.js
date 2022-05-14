@@ -52,6 +52,9 @@ const Footer = () => {
                     </div>
                     <ul className="list-unstyled mb-5">
                       <li>
+                        <a href="https://raynetwork.io/start/">Getting Started</a>
+                      </li>
+                      <li>
                         <a href="https://raynetwork.io/ecosystem/">Ecosystem</a>
                       </li>
                       <li>
@@ -128,15 +131,6 @@ const Footer = () => {
                       </h6>
                     </div>
                     <ul className="list-unstyled mb-4">
-                      <li>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://raystart.io"
-                        >
-                          RayStart <i className="ri ri-arrow_up ri-ext" />
-                        </a>
-                      </li>
                       <li>
                         <a
                           target="_blank"

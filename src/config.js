@@ -6,7 +6,7 @@ export const ecosystem = [
   },
   {
     title: "RayStake",
-    descr: "Stake solution for Cardano, NEAR, Solana blockchains",
+    descr: "Advanced stake solution for Cardano",
     url: "/stake/",
   },
   {
@@ -28,12 +28,6 @@ export const ecosystem = [
     title: "RayData",
     descr: "B2B data storage and authorization solution",
     url: "/data/",
-  },
-  {
-    title: "RayStart",
-    descr: "Start Page of the Ray Network Ecosystem",
-    url: "https://raystart.io",
-    external: true,
   },
   {
     title: "Minterr.io",
@@ -119,9 +113,21 @@ export const developers = [
     url: "/terms-of-use/",
   },
   {
+    title: "Documentation",
+    descr: "Tools & Smart Contracts Docs",
+    url: "https://docs.raynetwork.io/",
+    external: true,
+  },
+  {
     title: "CardanoWeb3.js",
     descr: "Javascript Cardano Web3 provider",
     url: "https://github.com/ray-network/cardano-web3.js",
+    external: true,
+  },
+  {
+    title: "GitHub",
+    descr: "Ray Network development vault",
+    url: "https://docs.raynetwork.io/",
     external: true,
   },
   {
@@ -131,10 +137,40 @@ export const developers = [
     external: true,
     dot: true,
   },
+]
+
+export const todo = [
   {
-    title: "Documentation",
-    descr: "Tools & Smart Contracts Docs",
-    url: "https://docs.raynetwork.io/",
+    title: "XRAY Distribution",
+    descr: "Check how XRAY tokens are distributed and participate in Fair Launch token offering programs",
+    url: "/xray/distribution/",
+  },
+  {
+    title: "Explore Ecosystem",
+    descr: "Explore all products that are or will be available on the Ray Network",
+    url: "/ecosystem/",
+  },
+  {
+    title: "Join Community",
+    descr: "Join a community of users, developers, designers, and teachers",
+    url: "/community/",
+  },
+  {
+    title: "RayWallet",
+    descr: "Use our fastest lightweight Cardano wallet with the DApp Hub and HW keys support",
+    url: "https://raywallet.io",
+    external: true,
+  },
+  {
+    title: "RayStake",
+    descr: "Stake ADA / XRAY / LP Tokens and get XRAY rewards with APY up to 380% or participate in XRAY ISPO",
+    url: "https://raystake.io",
+    external: true,
+  },
+  {
+    title: "Minterr.io",
+    descr: "Let's mint a Cardano token, creator. Absolutely free of charge!",
+    url: "https://minterr.io",
     external: true,
   },
 ]

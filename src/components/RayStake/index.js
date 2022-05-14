@@ -9,8 +9,8 @@ const RayStake = () => {
     <div className="ray__block">
       <div className="ray__title">RayStake</div>
       <div className="ray__title__descr">
-        <strong>RayStake</strong>, Cardano / NEAR Protocol / Solana staking
-        solutions & XRAY ISPO
+        <strong>RayStake</strong>, an advanced staking
+        solution for Cardano & XRAY ISPO
       </div>
       <p>
         Ray Network provides Cardano staking services on high-performance

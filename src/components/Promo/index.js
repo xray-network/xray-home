@@ -30,28 +30,16 @@ const Promo = () => {
               </p>
               <div>
                 <Link
-                  to="/ecosystem/"
+                  to="/start/"
                   className="ray__btn ray__btn--white  ray__btn--round me-3 mb-3"
                 >
-                  Ecosystem
+                  Getting Started
                 </Link>
                 <Link
                   to="/xray/"
                   className="ray__btn ray__btn--white  ray__btn--round me-3 mb-3"
                 >
                   XRAY Token
-                </Link>
-                <Link
-                  to="/developers/"
-                  className="ray__btn ray__btn--white  ray__btn--round me-3 mb-3"
-                >
-                  Developers
-                </Link>
-                <Link
-                  to="/community/"
-                  className="ray__btn ray__btn--white ray__btn--round me-3 mb-3"
-                >
-                  Community
                 </Link>
               </div>
             </div>

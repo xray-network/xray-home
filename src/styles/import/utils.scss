@@ -304,7 +304,7 @@
     text-align: center;
     font-weight: 700;
     border-radius: rem(8);
-    border: 1px solid transparent !important;
+    border: 3px solid transparent !important;
     position: relative;
     @include transition-slow();
 
@@ -315,9 +315,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: $white;
-      background: lighten($dark, 10%);
-      transform: translateY(-3px);
+      color: $dark;
+      border: 3px solid $dark !important;
+      background: $white;
     }
 
     &[disabled] {
@@ -380,8 +380,9 @@
       &:hover,
       &:focus,
       &:active {
-        color: $dark;
-        background: $gray-2;
+        color: $white;
+        background: $dark;
+        border: 3px solid $white !important;
       }
     }
 

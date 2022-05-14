@@ -98,7 +98,7 @@ const Xdiamond = () => {
           </p>
           <div className="d-block d-md-flex">
             <a
-              href="https://minterr.io/explorer/search/?asset=asset1y7lphaaxkvjw5hl2kpq37nvlvg09qfqsh4qyme"
+              href="https://cardanoscan.io/token/asset1y7lphaaxkvjw5hl2kpq37nvlvg09qfqsh4qyme"
               target="_blank"
               rel="noopener noreferrer"
               className="ray__btn ray__btn--round me-3 mb-3"

@@ -40,7 +40,7 @@ const XrayPromo = () => {
       </p>
       <div className="d-block d-md-flex">
         <a
-          href="https://cardanoscan.io/token/ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd58524159"
+          href="https://cardanoscan.io/token/asset14y0dxsz9s9nd2lefkqvuu7edqlsg5p70r3wyxa"
           target="_blank"
           rel="noopener noreferrer"
           className="ray__btn ray__btn--round me-3 mb-3"

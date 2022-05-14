@@ -16,7 +16,7 @@ const XrayDistribution = () => {
     <div className="ray__block">
       <div className="ray__title">XRAY Distribution</div>
       <div className="ray__title__descr">
-        <strong>XRAY</strong> token distribution
+        <strong>Active XRAY</strong> token distribution programs
       </div>
       <div className={style.itemOuter}>
         <div className={style.item}>
@@ -27,7 +27,7 @@ const XrayDistribution = () => {
                   <strong className="bolder">ADA Staking & XRAY ISPO</strong>
                 </span>
               </h3>
-              <div className="text-active">
+              <div className="text-active text-muted">
                 Distribution: 100,000,000{" "}
                 <span className="ray__ticker">XRAY</span> + Early Delegators
                 Bonus: 15,382 <span className="ray__ticker">XDIAMOND</span>
@@ -38,7 +38,7 @@ const XrayDistribution = () => {
             </div>
           </div>
           <div className="mb-4">
-            Stake ADA to earn 4.4% ADA and XRAY rewards based upon the Live Mining Rate every epoch (5 days). The program will continue until Epoch 500.
+            Stake ADA in Ray pools (0% fee) to earn 4.4% ADA and XRAY rewards based upon the Live Mining Rate every epoch (5 days). The program will continue until Epoch 500.
           </div>
           <div className="pt-4">
             <div className="mb-5">
@@ -115,13 +115,12 @@ const XrayDistribution = () => {
             <div className="flex-grow-1">
               <h3 className="mb-0">
                 <span className="me-3">
-                  <strong className="bolder">LP / XRAY Staking — Stage 1</strong>
+                  <strong className="bolder">LP / XRAY Staking (Stage 1)</strong>
                 </span>
               </h3>
-              <div className="text-active">
-                Stage 1: 75,000,000 <span className="ray__ticker">XRAY</span> +
-                Early LP Providers Bonus: 8,884,503 <span className="ray__ticker">XRAY</span> / 
-                Stage 2: 50,145,921 <span className="ray__ticker">XRAY</span>
+              <div className="text-active text-muted">
+                Distribution: 75,000,000 <span className="ray__ticker">XRAY</span> +
+                Early LP Providers Bonus: 8,884,503 <span className="ray__ticker">XRAY</span>
               </div>
             </div>
             <div>
@@ -129,12 +128,11 @@ const XrayDistribution = () => {
             </div>
           </div>
           <div className="mb-4">
-            <p>The first stage has high APY, as it is an kind of initial token distribution program. Total will be distributed 83,884,503 XRAY: </p>
+            <p>The first stage has high APY, as it is an kind of initial token distribution program. You do not have to give up custody of your assets in order to use RayStake. They earn you APY while remaining in your wallet. RayWallet is our recommendation, but any Cardano wallet will work. The program will continue until 83,884,503 XRAY are distibuted:</p>
             <ul>
               <li><strong>XRAY Tokens Staking</strong>: Your XRAY tokens will earn a 20% base APY that can be boosted up to 76% by holding XDIAMOND NFTs.</li>
               <li><strong>LP Tokens Staking</strong>: Holding XRAY/ADA LP tokens from participating exchanges (SundaeSwap, Minswap, Wingriders, RaySwap, and ErgoDex) will earn you a 100% base APY that can be boosted up to 380% by holding XDIAMOND NFTs.</li>
             </ul>
-            <p>The second stage would be classic Yield Farming (DApp) with moderate interest rate. Total will be distributed 50,145,921 XRAY.</p>
           </div>
           <div className="pt-4">
             <div className="mb-5">
@@ -187,6 +185,50 @@ const XrayDistribution = () => {
       </div>
 
 
+      <div className="ray__title__descr">
+        <strong>Upcoming</strong> programs
+      </div>
+
+
+      <div className={style.itemOuter}>
+        <div className={style.item}>
+          <div className="mb-4 d-flex">
+            <div className="flex-grow-1">
+              <h3 className="mb-0">
+                <span className="me-3">
+                  <strong className="bolder">LP / XRAY Staking (Stage 2)</strong>
+                </span>
+                <span className="badge badge-token align-middle">SOON</span>
+              </h3>
+              <div className="text-active text-muted">
+                Distribution: 50,145,921 <span className="ray__ticker">XRAY</span>
+              </div>
+            </div>
+            <div>
+              <div className={style.point}>3</div>
+            </div>
+          </div>
+          <div className="mb-5">
+            <p>
+              The second stage of RayStake would be classic Yield Farming (DApp) with moderate interest rate. The program will continue until 50,145,921 XRAY are distibuted.
+            </p>
+          </div>
+          <div>
+            <div className={style.controls}>
+              <Button className="ray__btn ray__btn--round me-3 mb-3" disabled>
+                <span className="me-2">FAQ</span>
+                <i className="ri ri-ext ri-arrow_up" />
+              </Button>
+              <Button className="ray__btn ray__btn--round me-3 mb-3" disabled>
+                <span className="me-2">Calculator</span>
+                <i className="ri ri-ext ri-arrow_up" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div className={style.itemOuter}>
         <div className={style.item}>
           <div className="mb-4 d-flex">
@@ -197,12 +239,12 @@ const XrayDistribution = () => {
                 </span>
                 <span className="badge badge-token align-middle">SOON</span>
               </h3>
-              <div className="text-active">
+              <div className="text-active text-muted">
                 Distribution: 81,230,560 <span className="ray__ticker">XRAY</span>
               </div>
             </div>
             <div>
-              <div className={style.point}>3</div>
+              <div className={style.point}>4</div>
             </div>
           </div>
           <div className="mb-5">
