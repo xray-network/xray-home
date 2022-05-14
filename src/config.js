@@ -142,12 +142,12 @@ export const developers = [
 export const todo = [
   {
     title: "XRAY Distribution",
-    descr: "Check how XRAY tokens are distributed and participate in Fair Launch token offering programs",
+    descr: "See how XRAY tokens are distributed. Participate in our fair launch token offering!",
     url: "/xray/distribution/",
   },
   {
     title: "Explore Ecosystem",
-    descr: "Explore all products that are or will be available on the Ray Network",
+    descr: "Explore current and future projects on the Ray Network",
     url: "/ecosystem/",
   },
   {
@@ -157,19 +157,19 @@ export const todo = [
   },
   {
     title: "RayWallet",
-    descr: "Use our fastest lightweight Cardano wallet with the DApp Hub and HW keys support",
+    descr: "Use our fast lightweight wallet with DApps Hub and hardware key support",
     url: "https://raywallet.io",
     external: true,
   },
   {
     title: "RayStake",
-    descr: "Stake ADA / XRAY / LP Tokens and get XRAY rewards with APY up to 380% or participate in XRAY ISPO",
+    descr: "Participate in our ISPO, and also earn XRAY rewards from staking ADA, XRAY, and LP tokens",
     url: "https://raystake.io",
     external: true,
   },
   {
     title: "Minterr.io",
-    descr: "Let's mint a Cardano token, creator. Absolutely free of charge!",
+    descr: "Mint your own Cardano Native token for FREE!",
     url: "https://minterr.io",
     external: true,
   },

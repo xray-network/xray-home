@@ -272,12 +272,12 @@ const RayData = () => {
           <div className="col-6 col-md-6">
             <div className="mb-4">
               <h6><strong>XRAY</strong></h6>
-              <div className="text-muted mb-3">XRAY is a governance token that powers Ray Network ecosystem. This is well positioned for community-led growth, development, and self-sustainability token.</div>
+              <div className="text-muted mb-3">XRAY is the governance token that powers Ray Network. It facilitates community led growth and sustainable tokenomics.</div>
               <div>
                 {marketDex.map((item) => {
                   return (
                     <a className={style.market} href={item.url} target="_blank" rel="noopener noreferrer">
-                      <span><img src={item.img} /></span>
+                      <span><img src={item.img} alt={item.title} /></span>
                       <span>{item.title}</span>
                     </a>
                   )
@@ -288,11 +288,11 @@ const RayData = () => {
           <div className="col-6 col-md-6">
             <div className="mb-4">
               <h6><strong>XDIAMOND</strong></h6>
-              <div className="text-muted mb-3">XDIAMOND is a Cardano collectible NFT token for marketing and community incentives. Can be redeemed for an XRAY or used as a booster in RayStake.</div>
+              <div className="text-muted mb-3">XDIAMOND is an NFT in the Ray Network ecosystem. Can be redeemed for 100 XRAY or used as an APY booster in RayStake.</div>
               {marketNft.map((item) => {
                 return (
                   <a className={style.market} href={item.url} target="_blank" rel="noopener noreferrer">
-                    <span><img src={item.img} /></span>
+                    <span><img src={item.img} alt={item.title} /></span>
                     <span>{item.title}</span>
                   </a>
                 )

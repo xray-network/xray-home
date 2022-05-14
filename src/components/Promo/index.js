@@ -36,11 +36,19 @@ const Promo = () => {
                   Getting Started
                 </Link>
                 <Link
-                  to="/xray/"
+                  to="/xray/distribution/"
                   className="ray__btn ray__btn--white  ray__btn--round me-3 mb-3"
                 >
-                  XRAY Token
+                  XRAY Distribution
                 </Link>
+                <a
+                  href="https://exchange.sundaeswap.finance/#/swap?swap_from=ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd.58524159&swap_to=cardano.ada"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ray__btn ray__btn--white  ray__btn--round me-3 mb-3"
+                >
+                  Get $XRAY
+                </a>
               </div>
             </div>
           </div>

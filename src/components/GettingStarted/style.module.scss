@@ -80,23 +80,24 @@
   margin: 0 rem(20) rem(10) 0;
   align-items: center;
   justify-content: center;
+  font-size: rem(18);
 
   &:hover {
     color: $dark;
   }
 
   > span:first-child {
-    width: rem(51);
-    height: rem(51);
+    width: rem(60);
+    height: rem(60);
     overflow: hidden;
     margin-right: rem(10);
-    padding: rem(8);
+    padding: rem(10);
     border-radius: rem(50);
     background: $gray-1;
 
     img {
-      width: rem(35);
-      height: rem(35);
+      width: rem(40);
+      height: rem(40);
     }
   }
 
