@@ -438,7 +438,7 @@ const MegaMenu = () => {
                     <h6 className="mb-2">
                       <strong>RayWallet Apps</strong>
                     </h6>
-                    <small className="text-muted">A lightweight wallet with DApps Hub. All Cardano DeFi in one app.</small>
+                    <small className="text-muted">A lightweight wallet with DApps Hub. All Cardano DeFi in one app</small>
                   </div>
                   <div className="mb-4">
                     <Tooltip title="Web Version">
@@ -509,7 +509,7 @@ const MegaMenu = () => {
                     <h6 className="mb-2">
                       <strong>RayStake Apps</strong>
                     </h6>
-                    <small className="text-muted">Advanced staking for Cardano and other blockchains.</small>
+                    <small className="text-muted">Advanced staking for Cardano and other blockchains</small>
                   </div>
                   <div className="mb-4">
                     <div>
