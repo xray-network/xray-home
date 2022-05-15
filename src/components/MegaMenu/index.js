@@ -57,15 +57,15 @@ const MegaMenu = () => {
             <div className={style.menuButtons}>
               <a
                 href="https://raywallet.io"
-                className="ant-btn ray__btn ray__btn--round d-none d-md-inline-flex"
+                className="ant-btn ray__btn ray__btn--round"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="ri ri-wallet me-2" />
-                <span>RayWallet</span>
+                <i className="ri ri-wallet me-0 me-sm-2" />
+                <span className="d-none d-sm-inline">RayWallet</span>
               </a>
               <span
-                className="ant-btn ms-3 ray__btn ray__btn--transparent ray__btn--icon ray__btn--round px-3"
+                className="ant-btn ms-2 ms-md-3 ray__btn ray__btn--transparent ray__btn--icon ray__btn--round px-3"
                 onClick={switchMegaMenu}
                 onKeyPress={switchMegaMenu}
                 role="button"
