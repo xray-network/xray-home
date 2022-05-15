@@ -157,7 +157,7 @@ export const todo = [
   },
   {
     title: "RayWallet",
-    descr: "Use our fast lightweight wallet with DApps Hub and hardware key support",
+    descr: "Use our fast light wallet with DApps Hub and hardware key support",
     url: "https://raywallet.io",
     external: true,
   },

@@ -269,7 +269,7 @@ const RayData = () => {
       </div>
       <div>
         <div className="row">
-          <div className="col-6 col-md-6">
+          <div className="col-12 col-md-6">
             <div className="mb-4">
               <h6><strong>XRAY</strong></h6>
               <div className="text-muted mb-3">XRAY is the governance token that powers Ray Network. It facilitates community led growth and sustainable tokenomics.</div>
@@ -285,7 +285,7 @@ const RayData = () => {
               </div>
             </div>
           </div>
-          <div className="col-6 col-md-6">
+          <div className="col-12 col-md-6">
             <div className="mb-4">
               <h6><strong>XDIAMOND</strong></h6>
               <div className="text-muted mb-3">XDIAMOND is an NFT in the Ray Network ecosystem. Can be redeemed for 100 XRAY or used as an APY booster in RayStake.</div>
