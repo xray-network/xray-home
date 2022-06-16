@@ -11,9 +11,12 @@ import "antd/es/pagination/style/index.css"
 import "antd/es/select/style/index.css"
 import "antd/es/spin/style/index.css"
 
+import "aos/dist/aos.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "react-alice-carousel/lib/alice-carousel.css"
 import "@/styles/style.scss"
 
+import AOS from "aos"
 import store from "@/redux/provider"
+AOS.init({ duration: 1000, once: true })
 export const wrapRootElement = store
