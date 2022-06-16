@@ -39,28 +39,28 @@ const data = [
     type: "mint",
     date: "05/08/2022",
     amount: 20000000,
-    description: "10,000,000 were sent to ISPO CeFi Distribution Wallet and 10,000,000 to LP / XRAY Staking CeFi Distribution Wallet.",
+    description: "20,000,000 were sent to RayStake CeFi Distribution Wallet.",
   },
   {
     token: "XRAY",
     type: "mint",
     date: "01/20/2022",
     amount: 11000000,
-    description: "10,000,000 were sent to ISPO CeFi Distribution Wallet and 1,000,000 to Development & Marketing Fund Wallet for providing SundaeSwap liquidity.",
+    description: "10,000,000 were sent to RayStake CeFi Distribution Wallet and 1,000,000 to Development & Marketing Fund Wallet for providing SundaeSwap liquidity.",
   },
   {
     token: "XRAY",
     type: "mint",
     date: "12/01/2021",
     amount: 10000000,
-    description: "10,000,000 were sent to ISPO CeFi Distribution Wallet.",
+    description: "10,000,000 were sent to RayStake CeFi Distribution Wallet.",
   },
   {
     token: "XRAY",
     type: "mint",
     date: "09/07/2021",
     amount: 10000000,
-    description: "10,000,000 were sent to ISPO CeFi Distribution Wallet.",
+    description: "10,000,000 were sent to RayStake CeFi Distribution Wallet.",
   },
   {
     token: "XDIAMOND",
@@ -68,7 +68,7 @@ const data = [
     date: "08/15/2021",
     amount: 31000,
     description:
-      "31,000 XDIAMOND NFTs were minted. 16,000 were sent to ISPO CeFi Distribution Wallet for covering Early Delegator Bonus, 10,000 to XDIAMOND Community Wallet, and 5,000 to Development & Marketing Fund Wallet.",
+      "31,000 XDIAMOND NFTs were minted. 16,000 were sent to RayStake CeFi Distribution Wallet for covering Early Delegator Bonus, 10,000 to XDIAMOND Community Wallet, and 5,000 to Development & Marketing Fund Wallet.",
   },
   {
     token: "XRAY",
@@ -76,7 +76,7 @@ const data = [
     date: "08/15/2021",
     amount: 13538200,
     description:
-      "406,152,800 XRAY tokens were minted, and then 392,614,600 XRAY were burned to get initial supply of 13,538,200 XRAY. 10,000,000 were sent to ISPO CeFi Distribution Wallet, 3,100,000 to XDIAMOND Collateral Wallet, and 438,200 to Development & Marketing Fund Wallet.",
+      "406,152,800 XRAY tokens were minted, and then 392,614,600 XRAY were burned to get initial supply of 13,538,200 XRAY. 10,000,000 were sent to RayStake CeFi Distribution Wallet, 3,100,000 to XDIAMOND Collateral Wallet, and 438,200 to Development & Marketing Fund Wallet.",
   },
 ]
 

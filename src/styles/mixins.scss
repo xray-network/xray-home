@@ -21,11 +21,11 @@ $gray-5: #7b8199;
 $gray-6: #5a5b6e;
 
 // dark grays
-$dark-gray-1: #b8b8db;
+$dark-gray-1: #b6b6c5;
 $dark-gray-2: #828296;
 $dark-gray-3: #55556d;
 $dark-gray-4: #363647;
-$dark-gray-5: #23232d;
+$dark-gray-5: #1a1a22;
 $dark-gray-6: #0f0f14;
 
 // warm colors
@@ -67,7 +67,7 @@ $shadow-light: rgba(0, 0, 0, 0.01) 0 0 1px, rgba(0, 0, 0, 0.02) 0 4px 8px,
 
 // Convert value of rem() sass mixin function
 @function rem($px, $base: $base-font-size) {
-  @return #{floor(($px/$base) * 100) / 100}rem; // to REMs
+  @return #{calc(floor(calc($px/$base) * 100) / 100)}rem; // to REMs
   // @return #{$px}px; // to PX's
 }
 

@@ -1,25 +1,32 @@
-const webpack = require("webpack")
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+const path = require("path")
+// const webpack = require("webpack")
+// const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
   actions.setWebpackConfig({
-    plugins: [
-      new NodePolyfillPlugin(),
-      new webpack.ContextReplacementPlugin(
-        /@emurgo\/cardano-serialization-lib-browser/
-      ),
-    ],
-    experiments: {
-      asyncWebAssembly: true,
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "src"),
+        "@@": path.resolve(__dirname, "static"),
+      }
     },
-    module: {
-      rules: [
-        {
-          test: /\.wasm$/,
-          type: "webassembly/async",
-        },
-      ],
-    },
+    // plugins: [
+    //   new NodePolyfillPlugin(),
+    //   new webpack.ContextReplacementPlugin(
+    //     /@emurgo\/cardano-serialization-lib-browser/
+    //   ),
+    // ],
+    // experiments: {
+    //   asyncWebAssembly: true,
+    // },
+    // module: {
+    //   rules: [
+    //     {
+    //       test: /\.wasm$/,
+    //       type: "webassembly/async",
+    //     },
+    //   ],
+    // },
   })
 
   if (stage === "develop" || stage === 'build-javascript') {

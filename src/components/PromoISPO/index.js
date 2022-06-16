@@ -39,16 +39,16 @@ const BannerISPO = () => {
             </p>
             <div className="me-5 pe-5">
               <a
-                href="https://raystake.io/cardano/calculator/"
+                href="https://raystake.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ray__btn ray__btn--large ray__btn--round ray__btn--white me-3 mb-3 mb-sm-0"
               >
-                <span className="me-2">Calculator</span>
+                <span className="me-2">RayStake</span>
                 <i className="ri ri-sm ri-arrow_forward" />
               </a>
               <a
-                href="https://raystake.io/cardano/faq/"
+                href="https://raystake.io/faq/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ray__btn ray__btn--large ray__btn--round ray__btn--white"

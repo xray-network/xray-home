@@ -22,6 +22,8 @@ const initialState = {
   prices: {},
   pools: {},
   modalInstall: "",
+  stakeDataXrayPrice: {},
+  stakeDataKeysTotal: {},
 }
 
 export default function settingsReducer(state = initialState, action) {

@@ -77,30 +77,21 @@ const XrayDistribution = () => {
             </div>
             <div className={style.controls}>
               <a
-                href="https://raystake.io/cardano/faq/"
+                href="https://raystake.io/pools/ada"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ray__btn ray__btn--round me-3 mb-3"
+              >
+                <span className="me-2">Ray Stake · ADA & XRAY ISPO</span>
+                <i className="ri ri-ext ri-arrow_up" />
+              </a>
+              <a
+                href="https://raystake.io/faq/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ray__btn ray__btn--round me-3 mb-3"
               >
                 <span className="me-2">FAQ</span>
-                <i className="ri ri-ext ri-arrow_up" />
-              </a>
-              <a
-                href="https://raystake.io/cardano/calculator/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ray__btn ray__btn--round me-3 mb-3"
-              >
-                <span className="me-2">Calculator</span>
-                <i className="ri ri-ext ri-arrow_up" />
-              </a>
-              <a
-                href="https://raystake.io/cardano/pools/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ray__btn ray__btn--round me-3 mb-3"
-              >
-                <span className="me-2">Pools</span>
                 <i className="ri ri-ext ri-arrow_up" />
               </a>
             </div>
@@ -162,21 +153,21 @@ const XrayDistribution = () => {
             </div>
             <div className={style.controls}>
               <a
-                href="https://raystake.io/cardano/faq/"
+                href="https://raystake.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ray__btn ray__btn--round me-3 mb-3"
+              >
+                <span className="me-2">Ray Stake · Pools</span>
+                <i className="ri ri-ext ri-arrow_up" />
+              </a>
+              <a
+                href="https://raystake.io/faq/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ray__btn ray__btn--round me-3 mb-3"
               >
                 <span className="me-2">FAQ</span>
-                <i className="ri ri-ext ri-arrow_up" />
-              </a>
-              <a
-                href="https://raystake.io/cardano/calculator"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ray__btn ray__btn--round me-3 mb-3"
-              >
-                <span className="me-2">Calculator</span>
                 <i className="ri ri-ext ri-arrow_up" />
               </a>
             </div>
@@ -216,11 +207,11 @@ const XrayDistribution = () => {
           <div>
             <div className={style.controls}>
               <Button className="ray__btn ray__btn--round me-3 mb-3" disabled>
-                <span className="me-2">FAQ</span>
+                <span className="me-2">Ray Stake</span>
                 <i className="ri ri-ext ri-arrow_up" />
               </Button>
               <Button className="ray__btn ray__btn--round me-3 mb-3" disabled>
-                <span className="me-2">Calculator</span>
+                <span className="me-2">FAQ</span>
                 <i className="ri ri-ext ri-arrow_up" />
               </Button>
             </div>

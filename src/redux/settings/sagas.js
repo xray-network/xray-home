@@ -3,7 +3,7 @@ import store from "store"
 import actions from "./actions"
 import { getNetworkInfo } from "@/services/graphql"
 import { getPrices } from "@/services/coingecko"
-import { getPools, getHistory } from "@/services/distr"
+import { getPools, getHistory, getStakeXrayPrice, getStakeKeysTotal } from "@/services/distr"
 import { getStakeHistory } from "@/services/tokens"
 
 export function* CHANGE_SETTING({ payload: { setting, value } }) {
@@ -45,12 +45,28 @@ export function* FETCH_NETWORK_STATE() {
 
 export function* FETCH_PRICES() {
   const prices = yield call(getPrices)
+  const xrayPrice = yield call(getStakeXrayPrice)
+  const keysTotal = yield call(getStakeKeysTotal)
 
   yield put({
     type: "settings/CHANGE_SETTING",
     payload: {
       setting: "prices",
       value: prices?.data || {},
+    },
+  })
+  yield put({
+    type: "settings/CHANGE_SETTING",
+    payload: {
+      setting: "stakeDataXrayPrice",
+      value: xrayPrice?.data || {},
+    },
+  })
+  yield put({
+    type: "settings/CHANGE_SETTING",
+    payload: {
+      setting: "stakeDataKeysTotal",
+      value: keysTotal?.data || {},
     },
   })
 }
@@ -69,7 +85,6 @@ export function* FETCH_POOLS() {
 
 export function* FETCH_HISTORY() {
   const history = yield call(getHistory)
-  const stakeHisotry = yield call(getStakeHistory)
 
   yield put({
     type: "settings/CHANGE_SETTING",
@@ -78,6 +93,10 @@ export function* FETCH_HISTORY() {
       value: history?.data || {},
     },
   })
+}
+
+export function* FETCH_STAKE_HISTORY() {
+  const stakeHisotry = yield call(getStakeHistory)
 
   yield put({
     type: "settings/CHANGE_SETTING",
@@ -89,10 +108,13 @@ export function* FETCH_HISTORY() {
 }
 
 export function* SETUP() {
-  yield call(FETCH_NETWORK_STATE)
-  yield call(FETCH_HISTORY)
-  yield call(FETCH_PRICES)
-  yield call(FETCH_POOLS)
+  yield all([
+    call(FETCH_NETWORK_STATE),
+    call(FETCH_STAKE_HISTORY),
+    call(FETCH_POOLS),
+    call(FETCH_PRICES),
+    call(FETCH_HISTORY),
+  ])
 }
 
 export default function* rootSaga() {
@@ -101,6 +123,7 @@ export default function* rootSaga() {
     takeEvery(actions.SWITCH_MEGA_MENU, SWITCH_MEGA_MENU),
     takeEvery(actions.FETCH_NETWORK_STATE, FETCH_NETWORK_STATE),
     takeEvery(actions.FETCH_HISTORY, FETCH_HISTORY),
+    takeEvery(actions.FETCH_STAKE_HISTORY, FETCH_STAKE_HISTORY),
     takeEvery(actions.FETCH_PRICES, FETCH_PRICES),
     takeEvery(actions.FETCH_POOLS, FETCH_POOLS),
     SETUP(),

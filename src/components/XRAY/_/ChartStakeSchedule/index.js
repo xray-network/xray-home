@@ -7,7 +7,7 @@ const ChartStakeSchedule = ({ history }) => {
   const theme = useSelector((state) => state.settings.theme)
   const isLight = theme === "default"
 
-  const colors = ['#647ee6', '#355aeb']
+  const colors = ['#647ee6', '#355aeb', '#647ee6', '#355aeb']
   const emptyColor = isLight ? '#efefef' : '#787878'
   const hoverColor = isLight ? '#000' : '#fff'
 

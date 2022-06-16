@@ -17,6 +17,45 @@
 }
 
 .ray {
+  &__counter {
+    padding-top: rem(17);
+    position: relative;
+    line-height: 1;
+    color: $dark;
+
+    &:before {
+      content: "";
+      display: block;
+      height: rem(6);
+      width: rem(50);
+      background: $dark;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 100px;
+    }
+
+    &__title {
+      font-size: rem(14);
+      margin-bottom: rem(7);
+    }
+
+    &__amount {
+      font-weight: 900;
+
+      small {
+        font-size: rem(14);
+        font-weight: 400;
+      }
+    }
+
+    &--large {
+      .ray__counter__amount {
+        font-size: rem(24);
+      }
+    }
+  }
+
   &__menu {
     display: inline-block;
     padding: rem(2) rem(15);
