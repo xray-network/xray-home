@@ -37,6 +37,13 @@ const data = [
   {
     token: "XRAY",
     type: "mint",
+    date: "07/28/2022",
+    amount: 20000000,
+    description: "20,000,000 were sent to RayStake CeFi Distribution Wallet.",
+  },
+  {
+    token: "XRAY",
+    type: "mint",
     date: "05/08/2022",
     amount: 20000000,
     description: "20,000,000 were sent to RayStake CeFi Distribution Wallet.",
