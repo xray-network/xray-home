@@ -19,11 +19,11 @@ const XrayTokenomics = () => {
   const total = 406152800
   const distributed = {
     ispo: {
-      total: 51538200,
+      total: 61538200,
       max: parseInt(total * percentage.ispo),
     },
     stake: {
-      total: 10000000,
+      total: 20000000,
       max: parseInt(total * percentage.stake),
     },
     reserve: {
