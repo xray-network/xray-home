@@ -174,12 +174,6 @@ export const todo = [
 
 export const marketDex = [
   {
-    id: "sundaeswap",
-    title: "SundaeSwap",
-    img: "/resources/dex/sundaeswap.png",
-    url: "https://exchange.sundaeswap.finance/#/swap?swap_from=ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd.58524159&swap_to=cardano.ada",
-  },
-  {
     id: "minswap",
     title: "Minswap",
     img: "/resources/dex/minswap.png",
@@ -192,11 +186,18 @@ export const marketDex = [
     url: "https://app.wingriders.com/swap/ada/ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd58524159",
   },
   {
-    id: "muesliswap",
-    title: "MuesliSwap",
-    img: "/resources/dex/muesliswap.png",
-    url: "https://muesliswap.com/markets/token/ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd.XRAY",
+    id: "sundaeswap",
+    title: "SundaeSwap",
+    img: "/resources/dex/sundaeswap.png",
+    url: "",
+    // url: "https://exchange.sundaeswap.finance/#/swap?swap_from=ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd.58524159&swap_to=cardano.ada",
   },
+  // {
+  //   id: "muesliswap",
+  //   title: "MuesliSwap",
+  //   img: "/resources/dex/muesliswap.png",
+  //   url: "https://muesliswap.com/markets/token/ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd.XRAY",
+  // },
 ]
 
 export const marketNft = [

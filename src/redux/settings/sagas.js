@@ -1,7 +1,7 @@
 import { all, takeEvery, put, call, select } from "redux-saga/effects"
 import store from "store"
 import actions from "./actions"
-import { isSSR} from "@/utils"
+import { isSSR } from "@/utils"
 import { getNetworkInfo } from "@/services/graphql"
 import { getPrices } from "@/services/coingecko"
 import { getPricesXRAY, getStage1ISPO, getStage1Stake } from "@/services/raygraph"
@@ -86,11 +86,7 @@ export function* FETCH_STAGE1_HISTORY() {
 
 export function* SETUP() {
   if (!isSSR) {
-    yield all([
-      call(FETCH_NETWORK_STATE),
-      call(FETCH_PRICES),
-      call(FETCH_STAGE1_HISTORY)
-    ])
+    yield all([call(FETCH_NETWORK_STATE), call(FETCH_PRICES), call(FETCH_STAGE1_HISTORY)])
   }
 }
 

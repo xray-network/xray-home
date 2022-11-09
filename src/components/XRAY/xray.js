@@ -200,21 +200,6 @@ const Xray = () => {
         <div className="mb-5 pb-4">
           <div className="ray__left ray__left--dark mb-4">
             <h5 className="mb-3">
-              <strong>RayStake CeFi Distribution Wallet</strong>
-            </h5>
-            <p className="mb-3">
-              Used to withdraw rewards from the RayStake (ADA Staking & XRAY ISPO Program, LP Tokens Staking). Soon to
-              be replaced by a smart contract
-            </p>
-            <a
-              className="text-break"
-              href="https://cardanoscan.io/address/addr1q9gfz2dpdvev0yvnph2jgdh5ugwrfq0mnm5gzl972q0gxpvxdtxynggtwq540uzww6p66ezxkwa7w9snynphc36kuqesxk56gx"
-            >
-              addr1q9gfz2dpdvev0yvnph2jgdh5ugwrfq0mnm5gzl972q0gxpvxdtxynggtwq540uzww6p66ezxkwa7w9snynphc36kuqesxk56gx
-            </a>
-          </div>
-          <div className="ray__left ray__left--dark mb-0">
-            <h5 className="mb-3">
               <strong>Development & Marketing Fund Wallet</strong>
             </h5>
             <p className="mb-3">Used to store development & marketing funds</p>
@@ -223,6 +208,32 @@ const Xray = () => {
               href="https://cardanoscan.io/address/addr1qx6ndpw2uma2qytf2zynvv4crqdwkmck0a2r4vm20gwkzercd5kvnadmwssrwpce6x4c2rm7t6aj3rlkfh2f775fu7fqsdyray"
             >
               addr1qx6ndpw2uma2qytf2zynvv4crqdwkmck0a2r4vm20gwkzercd5kvnadmwssrwpce6x4c2rm7t6aj3rlkfh2f775fu7fqsdyray
+            </a>
+          </div>
+
+          <div className="ray__left ray__left--dark mb-4">
+            <h5 className="mb-3">
+              <strong>Swap Address</strong>
+            </h5>
+            <p className="mb-3">Used to replace the old XRAY token with the new one</p>
+            <a
+              className="text-break"
+              href="https://cardanoscan.io/address/addr1qxshzse6lcxkqed7wj9gw4xtxp3wqgs5mr5ewxxrj8emgpc6924cwznwmzrhz70uxyvzpj5q74xt9fzaznga7wnjmuwstu5wze"
+            >
+              addr1qxshzse6lcxkqed7wj9gw4xtxp3wqgs5mr5ewxxrj8emgpc6924cwznwmzrhz70uxyvzpj5q74xt9fzaznga7wnjmuwstu5wze
+            </a>
+          </div>
+
+          <div className="ray__left ray__left--dark mb-0">
+            <h5 className="mb-3">
+              <strong>Drop Address</strong>
+            </h5>
+            <p className="mb-3">Used for Stage 1 drop event</p>
+            <a
+              className="text-break"
+              href="https://cardanoscan.io/address/addr1qy8fgfs92f3twmn8x0fxr45m94fsuuxv8n80lzqdufn6my5am59ekrrzefssysc57dzegtzyy9wczjjpsm9qhnhus84q6cud42"
+            >
+              addr1qy8fgfs92f3twmn8x0fxr45m94fsuuxv8n80lzqdufn6my5am59ekrrzefssysc57dzegtzyy9wczjjpsm9qhnhus84q6cud42
             </a>
           </div>
         </div>

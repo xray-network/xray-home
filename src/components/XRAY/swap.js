@@ -1,11 +1,36 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import QRCode from "qrcode.react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import { message, Tooltip } from "antd"
-import Soon from "@/components/Soon"
+import { getAddressesBalance } from "@/services/graphql"
 import * as style from "./style.module.scss"
+import { format } from "@/utils"
 
 const XraySwap = () => {
+  const [swapped, setSwapped] = useState(0)
+  const [stats, setStats] = useState({})
+  const toSwap = 97914504
+
+  useEffect(() => {
+    loadData()
+  }, [])
+
+  const loadData = async () => {
+    const getSwapped = await getAddressesBalance(
+      "addr1qxshzse6lcxkqed7wj9gw4xtxp3wqgs5mr5ewxxrj8emgpc6924cwznwmzrhz70uxyvzpj5q74xt9fzaznga7wnjmuwstu5wze"
+    )
+    const getStats = await (await fetch("https://api-swap.raygraph.io/orders/stats")).json()
+    const oldXray = getSwapped?.data?.data?.paymentAddresses?.[0]?.summary?.assetBalances?.find(
+      (item) => item?.asset?.fingerprint === "asset14y0dxsz9s9nd2lefkqvuu7edqlsg5p70r3wyxa"
+    )
+    if (oldXray) {
+      setSwapped(oldXray?.quantity)
+    }
+    if (getStats) {
+      setStats(getStats[0])
+    }
+  }
+
   return (
     <div>
       <div className="ray__block mb-5 pb-2">
@@ -40,7 +65,9 @@ const XraySwap = () => {
               <div className="row">
                 <div className="col-12 col-md-6">
                   <div className="ray__title">
-                    <span className="me-2">Total Swapped — 0.000% of 97,914,504 XRAY</span>
+                    <span className="me-2">
+                      Total Swapped — {parseFloat((swapped / toSwap) * 100).toFixed(3)}% of {format(toSwap)} XRAY
+                    </span>
                     <Tooltip title="In Stage 1, 97,914,504 XRAY were withdrawn by users and are to be exchanged for new XRAY">
                       <span>
                         <i className="ri ri-info cursor-pointer" />
@@ -48,7 +75,7 @@ const XraySwap = () => {
                     </Tooltip>
                   </div>
                   <div className="ray__price">
-                    0 <span>XRAY</span>
+                    {format(swapped)} <span>XRAY</span>
                   </div>
                   <div className="ray__title">Instructions</div>
                   <ol className="ps-3 max-width-600 mb-5">
@@ -61,35 +88,48 @@ const XraySwap = () => {
                       <strong>
                         <u>asset14y0dxsz9s9nd2lefkqvuu7edqlsg5p70r3wyxa</u>
                       </strong>{" "}
-                      and in ~15 minutes you will receive back new XRAY token with fingerprint{" "}
+                      (policyID: ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd) to the swap address and in
+                      ~10 minutes you will receive back 1.5 ADA and new XRAY token with fingerprint{" "}
                       <strong>
                         <u>asset1zwa4chw9xm7xwk7g46ef94qsj28hmnd7qffhgx</u>
-                      </strong>
+                      </strong>{" "}
+                      (policyID: 86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c143)
                     </li>
                   </ol>
                 </div>
                 <div className="col-12 col-md-6">
                   <div className="ray__title">Swap Address</div>
                   <div>
-                    <Soon text="To be updated within 48 hours of the end of Stage 1. Final accrual of rewards in progress..." />
-                    {/* <div className={style.qr}>
-                      <QRCode
-                        value="addr1q9j55y5p7lyq3esn7xwrae5k9ez30639dj3ct7pp6fjkavvhuchtelm0kpr4pfvht57xcx4qd80tr3q9gg4s9h3d22uqjxm9p9"
-                        size={400}
-                        bgColor="#fff"
-                        fgColor="#000"
-                      />
+                    <div className="d-flex w-100">
+                      <div className={style.qr}>
+                        <QRCode
+                          value="addr1qxshzse6lcxkqed7wj9gw4xtxp3wqgs5mr5ewxxrj8emgpc6924cwznwmzrhz70uxyvzpj5q74xt9fzaznga7wnjmuwstu5wze"
+                          size={400}
+                          bgColor="#fff"
+                          fgColor="#000"
+                        />
+                      </div>
+                      <div className="w-100">
+                        <ul className="list-unstyled ms-4">
+                          <li>Processed Txs: {format(stats?.total || 0)}</li>
+                          <li>Processing Txs: {format(stats?.processing || 0)}</li>
+                          <li>In queue Txs: {format(stats?.pending || 0)}</li>
+                        </ul>
+                      </div>
                     </div>
                     <CopyToClipboard
-                      text="addr1q9j55y5p7lyq3esn7xwrae5k9ez30639dj3ct7pp6fjkavvhuchtelm0kpr4pfvht57xcx4qd80tr3q9gg4s9h3d22uqjxm9p9"
+                      text="addr1qxshzse6lcxkqed7wj9gw4xtxp3wqgs5mr5ewxxrj8emgpc6924cwznwmzrhz70uxyvzpj5q74xt9fzaznga7wnjmuwstu5wze"
                       onCopy={() => message.success("Copied to clipboard")}
                     >
                       <Tooltip title="Copy to clipboard">
-                        <div className="font-size-21 cursor-pointer text-break">
-                          <strong>addr1q9j55y5p7lyq3esn7xwrae5k9ez30639dj3ct7pp6fjkavvhuchtelm0kpr4pfvht57xcx4qd80tr3q9gg4s9h3d22uqjxm9p9 <i className="ri ri-copy text-muted" /></strong>
+                        <div className="font-size-21 cursor-pointer text-break text-primary">
+                          <strong>
+                            addr1qxshzse6lcxkqed7wj9gw4xtxp3wqgs5mr5ewxxrj8emgpc6924cwznwmzrhz70uxyvzpj5q74xt9fzaznga7wnjmuwstu5wze{" "}
+                            <i className="ri ri-copy text-muted" />
+                          </strong>
                         </div>
                       </Tooltip>
-                    </CopyToClipboard> */}
+                    </CopyToClipboard>
                   </div>
                 </div>
               </div>
@@ -124,7 +164,8 @@ const XraySwap = () => {
                       <strong>
                         <u>asset14y0dxsz9s9nd2lefkqvu7edqlsg5p70r3wyxa</u>
                       </strong>{" "}
-                      and exchange the old token for the new one using the instructions from{" "}
+                      (policyID: ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd) and exchange the old token
+                      for the new one using the instructions from{" "}
                       <strong>
                         <u>Step 1</u>
                       </strong>
@@ -134,23 +175,39 @@ const XraySwap = () => {
                       <strong>
                         <u>asset1zwa4chw9xm7xwk7g46ef94qsj28hmnd7qffhgx</u>
                       </strong>{" "}
-                      to pools from the adjacent list
+                      (policyID: 86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c143) to pools from the adjacent
+                      list
                     </li>
                   </ol>
                 </div>
                 <div className="col-12 col-md-6">
                   <div className="ray__title">Links to New DEX Pools</div>
                   <div>
-                    <Soon text="To be updated shortly. DEX pools are establishing..." />
-                    {/* <div className="font-size-21 mb-3">
-                      <a href="https://minswap.org" target="_blank" rel="noopener noreferrer"><strong>Minswap &rarr;</strong></a>
+                    <div className="font-size-21 mb-3">
+                      <a
+                        href="https://app.minswap.org/swap?currencySymbolA=&tokenNameA=&currencySymbolB=86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c143&tokenNameB=58524159"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <strong>Minswap &rarr;</strong>
+                      </a>
                     </div>
                     <div className="font-size-21 mb-3">
-                      <a href="https://minswap.org" target="_blank" rel="noopener noreferrer"><strong>Sundaeswap &rarr;</strong></a>
+                      <a
+                        href="https://app.wingriders.com/pools/af9a1bab395e1b177cbb94e073e25d04898275297d3183b368669e4bda97dc30?tvlTimeSpan=1_month&transactions=all"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <strong>Wingriders &rarr;</strong>
+                      </a>
                     </div>
                     <div className="font-size-21 mb-3">
-                      <a href="https://minswap.org" target="_blank" rel="noopener noreferrer"><strong>Wingriders &rarr;</strong></a>
-                    </div> */}
+                      <a target="_blank" rel="noopener noreferrer">
+                        <strong>
+                          Sundaeswap <sup>SOON</sup> &rarr;
+                        </strong>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1,7 +1,6 @@
 import React from "react"
 import { useSelector } from "react-redux"
 import { Link } from "gatsby"
-import Soon from "@/components/Soon"
 import { marketDex, marketNft } from "@/config"
 
 const WhereToBuy = () => {
@@ -24,17 +23,35 @@ const WhereToBuy = () => {
                   sustainable tokenomics.
                 </div>
                 <div>
-                  <Soon text="To be updated shortly. DEX and CEX pools are establishing..." />
-                  {/* {marketDex.map((item, index) => {
-                    return (
-                      <a key={index} className="ray__info w-100" href={item.url} target="_blank" rel="noopener noreferrer">
+                  {marketDex.map((item, index) => {
+                    return item.url ? (
+                      <a
+                        key={index}
+                        className="ray__info w-100"
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <div className="ray__info__texture" />
                         <div className="ray__info__dot" />
-                        <div className="ray__info__icon"><img src={item.img} alt={item.title} /></div>
-                        <div className="ray__info__title">{item.title}</div>
+                        <div className="ray__info__icon">
+                          <img src={item.img} alt={item.title} />
+                        </div>
+                        <div className="ray__info__title">{item.title} &rarr;</div>
                       </a>
+                    ) : (
+                      <span key={index} className="ray__info w-100">
+                        <div className="ray__info__texture" />
+                        <div className="ray__info__dot" />
+                        <div className="ray__info__icon">
+                          <img src={item.img} alt={item.title} />
+                        </div>
+                        <div className="ray__info__title">
+                          {item.title} <sup>SOON</sup> &rarr;
+                        </div>
+                      </span>
                     )
-                  })} */}
+                  })}
                 </div>
               </div>
             </div>
@@ -60,7 +77,7 @@ const WhereToBuy = () => {
                       <div className="ray__info__icon">
                         <img src={item.img} alt={item.title} />
                       </div>
-                      <div className="ray__info__title">{item.title}</div>
+                      <div className="ray__info__title">{item.title} &rarr;</div>
                     </a>
                   )
                 })}
