@@ -1,5 +1,8 @@
 import React from "react"
 
+export const isSSR = typeof window === "undefined"
+export const isError = (e) => e instanceof Error
+
 export const truncate = (x) => {
   return x ? `${x.substring(0, 8)}...${x.slice(-8)}` : ""
 }
