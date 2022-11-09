@@ -1,79 +1,41 @@
 @import "@/styles/mixins";
 
-.mobileMenu {
-  margin-top: rem(30);
-  margin-bottom: rem(30);
-  padding-bottom: rem(15);
-  border-bottom: 1px solid $border;
-
-  a {
-    display: inline-block;
-    margin: 0 rem(20) 0 0;
-    font-weight: bold;
-    color: $dark;
-    padding-bottom: rem(5);
-    overflow: hidden;
-    position: relative;
-
-    &::before {
-      content: "";
-      display: block;
-      height: 3px;
-      width: 100%;
-      background: $blue;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transform: translateX(-101%);
-      transition: transform 0.2s ease-in-out;
-    }
-
-    &.linkMobileActive,
-    &:hover {
-      color: $blue;
-
-      &::before {
-        transform: translateX(0%);
-      }
-    }
-  }
-}
-
 .menu {
-  margin-top: rem(30);
-  margin-bottom: rem(50);
+  margin-bottom: rem(80);
   padding-bottom: rem(15);
   border-bottom: 1px solid $border;
 
   a {
     display: inline-block;
-    margin: 0 rem(20) 0 0;
     font-weight: bold;
     color: $dark;
-    padding-bottom: rem(5);
+    margin-right: rem(10);
+    padding: rem(1) rem(9);
+    border-radius: rem(100);
     overflow: hidden;
     position: relative;
 
-    &::before {
-      content: "";
-      display: block;
-      height: 3px;
-      width: 100%;
-      background: $blue;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transform: translateX(-101%);
-      transition: transform 0.2s ease-in-out;
-    }
+    // &::before {
+    //   content: "";
+    //   display: block;
+    //   height: 3px;
+    //   width: 100%;
+    //   background: $blue;
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   transform: translateX(-101%);
+    //   transition: transform 0.2s ease-in-out;
+    // }
 
     &.linkActive,
     &:hover {
-      color: $blue;
+      color: $white;
+      background: $dark;
 
-      &::before {
-        transform: translateX(0%);
-      }
+      // &::before {
+      //   transform: translateX(0%);
+      // }
     }
   }
 }

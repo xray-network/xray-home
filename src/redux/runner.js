@@ -9,9 +9,6 @@ const Runner = ({ children }) => {
 
   setInterval(() => {
     dispatch({ type: "settings/FETCH_PRICES" })
-    dispatch({ type: "settings/FETCH_POOLS" })
-    dispatch({ type: "settings/FETCH_STAKE_HISTORY" })
-    dispatch({ type: "settings/FETCH_HISTORY" })
   }, 5 * 60 * 1000)
 
   return children

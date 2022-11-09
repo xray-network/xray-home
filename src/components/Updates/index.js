@@ -69,12 +69,7 @@ const Updates = () => {
       <div className="mb-5">
         <p>
           Tracking development activity of the Ray Github repositories —{" "}
-          <a
-            href="https://github.com/ray-network/"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="ray__link"
-          >
+          <a href="https://github.com/ray-network/" rel="noopener noreferrer" target="_blank" className="ray__link">
             https://github.com/ray-network/
           </a>
         </p>

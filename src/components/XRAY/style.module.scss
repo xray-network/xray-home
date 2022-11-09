@@ -1,5 +1,73 @@
 @import "@/styles/mixins";
 
+.menu {
+  margin-left: rem(-20);
+  margin-bottom: rem(50);
+
+  a {
+    display: inline-block;
+    padding: rem(6) rem(20);
+    border-radius: rem(100);
+    margin-right: rem(5);
+    color: $primary;
+
+    &.menuActive {
+      font-weight: 900;
+      background: $dark;
+      color: $white !important;
+
+      span {
+        border-color: transparent;
+      }
+    }
+  }
+
+  @media (max-width: $lg-max-width) {
+    margin-left: 0;
+
+    a {
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.breakdown {
+  display: flex;
+
+  &Blue {
+    background: $primary !important;
+  }
+
+  &Red {
+    background: $danger !important;
+  }
+
+  div {
+    height: rem(80);
+    padding: rem(15);
+    background: $success;
+    margin-right: rem(20);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.qr {
+  width: rem(160);
+  flex-shrink: 0;
+  margin-right: rem(30);
+  margin-bottom: rem(20);
+
+  canvas {
+    width: rem(160) !important;
+    height: rem(160) !important;
+  }
+}
+
 .supply {
   color: $black;
   font-size: rem(36);

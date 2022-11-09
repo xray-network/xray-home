@@ -6,10 +6,10 @@ const Head = () => {
   return (
     <div className={style.container}>
       <div className="ray__block text-center mb-0">
-        <Link to="/xray/distribution/">
+        <Link to="/xray/swap-event/">
           <strong>
-            <i className="ri ri-activity" />{" "}
-            RayStake is LIVE: Take part in the FREE tokens distribution with XRAY ISPO and LP / XRAY Staking programs. Read more &rarr;
+            <span className="badge rounded-pill badge-success me-1">NEW</span> From November 1 to December 31, the old
+            XRAY token will be exchanged for a new one. Read more &rarr;
           </strong>
         </Link>
       </div>

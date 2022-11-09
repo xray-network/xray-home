@@ -1,16 +1,17 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import MainLayout from "@/layouts/Main"
 import Submenu from "@/components/Submenu"
 import Xdiamond from "@/components/XDIAMOND"
+import Ecosystem from "@/components/Ecosystem"
 
 const Page = () => {
   return (
-    <MainLayout>
-      <Helmet title="XDIAMOND NFT" />
+    <div>
+      <Helmet title="XDIAMOND sNFT" />
       <Submenu type="xray" />
       <Xdiamond />
-    </MainLayout>
+      <Ecosystem />
+    </div>
   )
 }
 

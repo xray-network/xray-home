@@ -3,85 +3,86 @@ export const ecosystem = [
     title: "RayWallet",
     descr: "A lightweight Cardano multiplatform and multifunctional wallet",
     url: "/wallet/",
+    letter: "WL",
   },
   {
     title: "RayStake",
     descr: "Advanced stake solution for Cardano",
     url: "/stake/",
+    letter: "ST",
   },
   {
     title: "RaySwap",
     descr: "Cardano DEX Aggregator & AMM DEX",
     url: "/swap/",
+    letter: "SW",
   },
   {
     title: "RayPad",
     descr: "Decentralised fundraising",
     url: "/pad/",
+    letter: "PD",
   },
   {
     title: "RayGraph",
     descr: "Cardano blockhain graphql indexers",
     url: "/graph/",
+    letter: "GR",
   },
   {
     title: "RayData",
     descr: "B2B data storage and authorization solution",
     url: "/data/",
+    letter: "DT",
   },
   {
     title: "Minterr.io",
     descr: "Cardano NFT Marketplace, Minter, and Explorer",
-    url: "https://minterr.io",
-    external: true,
+    url: "/minterr/",
+    letter: "MR",
   },
   {
     title: "CardanoList.io",
     descr: "Cardano tokens & projects list curated by Ray Network",
-    url: "https://cardanolist.io",
-    external: true,
+    url: "/cardanolist/",
+    letter: "CL",
   },
   {
     title: "Pigz.io Metaverse",
     descr: "Drive the meta universe by owning unique NFT tokens",
-    url: "https://pigz.io",
-    external: true,
+    url: "/pigz/",
+    letter: "PZ",
   },
   {
     title: "CardanoWeb3.js",
     descr: "JavaScript SDK for Cardano blockchain",
-    url: "https://github.com/ray-network/cardano-web3.js",
-    external: true,
+    url: "/cardano-web3-js/",
+    letter: "W3",
   },
   {
     title: "Ray Foundation",
-    descr:
-      "We exist to enable community-driven innovation to benefit people around the world",
-    url: "https://ray.foundation",
-    external: true,
+    descr: "We exist to enable community-driven innovation to benefit people around the world",
+    url: "/ray-foundation/",
+    letter: "FN",
   },
 ]
 
 export const xray = [
   {
-    title: "Introducing",
+    title: "XRAY Token",
     url: "/xray/",
+  },
+  {
+    title: "XDIAMOND sNFT",
+    url: "/xdiamond/",
   },
   {
     title: "Tokenomics",
     url: "/xray/tokenomics/",
   },
   {
-    title: "Distribution",
-    url: "/xray/distribution/",
-  },
-  {
-    title: "Governance",
-    url: "/xray/governance/",
-  },
-  {
-    title: "XDIAMOND NFT",
-    url: "/xdiamond/",
+    title: "Swap Event",
+    url: "/xray/swap-event/",
   },
 ]
 
@@ -93,8 +94,7 @@ export const developers = [
   },
   {
     title: "Whitepaper",
-    descr:
-      "Learn about the Ray Network’s core concepts: Ecosystem, Technologies, and more",
+    descr: "Learn about the Ray Network’s core concepts: Ecosystem, Technologies, and more",
     url: "/whitepaper/",
   },
   {
@@ -113,7 +113,7 @@ export const developers = [
     url: "/terms-of-use/",
   },
   {
-    title: "Documentation",
+    title: "Docs",
     descr: "Tools & Smart Contracts Docs",
     url: "https://docs.raynetwork.io/",
     external: true,
@@ -141,9 +141,9 @@ export const developers = [
 
 export const todo = [
   {
-    title: "XRAY Distribution",
-    descr: "See how XRAY tokens are distributed. Participate in our fair launch token offering!",
-    url: "/xray/distribution/",
+    title: "XRAY Token",
+    descr: "Learn how XRAY tokens are distributed and what utility functions are implemented with it",
+    url: "/xray/",
   },
   {
     title: "Explore Ecosystem",
@@ -158,19 +158,64 @@ export const todo = [
   {
     title: "RayWallet",
     descr: "Use our fast light wallet with DApps Hub and hardware key support",
-    url: "https://raywallet.io",
-    external: true,
+    url: "/wallet/",
   },
   {
     title: "RayStake",
-    descr: "Participate in our ISPO, and also earn XRAY rewards from staking ADA, XRAY, and LP tokens",
-    url: "https://raystake.io",
-    external: true,
+    descr: "Earn XRAY rewards from staking ADA, XRAY, LP and other tokens",
+    url: "/stake/",
   },
   {
     title: "Minterr.io",
-    descr: "Mint your own Cardano Native token for FREE!",
-    url: "https://minterr.io",
-    external: true,
+    descr: "Mint your own Cardano Native token for FREE. Your Cardano NFT center",
+    url: "/minterr/",
+  },
+]
+
+export const marketDex = [
+  {
+    id: "sundaeswap",
+    title: "SundaeSwap",
+    img: "/resources/dex/sundaeswap.png",
+    url: "https://exchange.sundaeswap.finance/#/swap?swap_from=ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd.58524159&swap_to=cardano.ada",
+  },
+  {
+    id: "minswap",
+    title: "Minswap",
+    img: "/resources/dex/minswap.png",
+    url: "https://app.minswap.org/swap?currencySymbolA=&tokenNameA=&currencySymbolB=ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd&tokenNameB=58524159",
+  },
+  {
+    id: "wingriders",
+    title: "Wingriders",
+    img: "/resources/dex/wingriders.png",
+    url: "https://app.wingriders.com/swap/ada/ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd58524159",
+  },
+  {
+    id: "muesliswap",
+    title: "MuesliSwap",
+    img: "/resources/dex/muesliswap.png",
+    url: "https://muesliswap.com/markets/token/ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd.XRAY",
+  },
+]
+
+export const marketNft = [
+  {
+    id: "sundaeswap",
+    title: "SundaeSwap",
+    img: "/resources/dex/sundaeswap.png",
+    url: "https://exchange.sundaeswap.finance/#/swap?swap_from=b6798a74fb7441ef5f7af1ff4ea6150bbb7aaeb0aca0113e558592f6.584449414d4f4e44&swap_to=cardano.ada",
+  },
+  {
+    id: "cnftio",
+    title: "CNFT.IO",
+    img: "/resources/dex/cnftio.png",
+    url: "https://cnft.io/explore?search=b6798a74fb7441ef5f7af1ff4ea6150bbb7aaeb0aca0113e558592f6",
+  },
+  {
+    id: "jpegstore",
+    title: "Jpeg.store",
+    img: "/resources/dex/jpegstore.png",
+    url: "https://www.jpg.store/collection/b6798a74fb7441ef5f7af1ff4ea6150bbb7aaeb0aca0113e558592f6",
   },
 ]

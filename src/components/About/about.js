@@ -33,25 +33,18 @@ const About = () => {
     <div className="ray__block">
       <div className="ray__title">About Ray Network</div>
       <div className="ray__title__descr">
-        <strong>Ray Network</strong> is a public good <strong>owned</strong> and{" "}
-        <strong>governed</strong> by XRAY token holders
+        <strong>Ray Network</strong> is a public good <strong>owned</strong> and <strong>governed</strong> by XRAY token
+        holders
       </div>
       <p className="mb-5">
         Ray Network is an advanced{" "}
-        <a
-          href="https://github.com/ray-network"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ray__link"
-        >
+        <a href="https://github.com/ray-network" target="_blank" rel="noopener noreferrer" className="ray__link">
           open source
         </a>{" "}
-        ecosystem for the Cardano blockchain platform. It includes a light
-        wallet with many features such as: sending and receiving funds, defi
-        swap, NFT marketplace, staking center and others. Our services increase
-        blockchain use adoption; they empowers regular users, developers,
-        creators, liquidity providers and traders to participate in a financial
-        marketplace that is open and accessible to all.
+        ecosystem for the Cardano blockchain platform. It includes a light wallet with many features such as: sending
+        and receiving funds, defi swap, NFT marketplace, staking center and others. Our services increase blockchain use
+        adoption; they empowers regular users, developers, creators, liquidity providers and traders to participate in a
+        financial marketplace that is open and accessible to all.
       </p>
       <div className="row">
         {items.map((item, index) => (

@@ -3,8 +3,7 @@ import store from "store"
 import actions from "./actions"
 import { getNetworkInfo } from "@/services/graphql"
 import { getPrices } from "@/services/coingecko"
-import { getPools, getHistory, getStakeXrayPrice, getStakeKeysTotal } from "@/services/distr"
-import { getStakeHistory } from "@/services/tokens"
+import { getPricesXRAY, getStage1ISPO, getStage1Stake } from "@/services/raygraph"
 
 export function* CHANGE_SETTING({ payload: { setting, value } }) {
   yield store.set(`ray.wallet.settings.${setting}`, value)
@@ -19,9 +18,7 @@ export function* CHANGE_SETTING({ payload: { setting, value } }) {
 export function* SWITCH_MEGA_MENU() {
   const megaMenu = yield select((state) => state.settings.megaMenu)
   if (global?.document) {
-    global.document
-      .getElementsByTagName("body")[0]
-      .classList.toggle("overflow-hidden")
+    global.document.getElementsByTagName("body")[0].classList.toggle("overflow-hidden")
   }
   yield put({
     type: "settings/SET_STATE",
@@ -45,8 +42,7 @@ export function* FETCH_NETWORK_STATE() {
 
 export function* FETCH_PRICES() {
   const prices = yield call(getPrices)
-  const xrayPrice = yield call(getStakeXrayPrice)
-  const keysTotal = yield call(getStakeKeysTotal)
+  const pricesXRAY = yield call(getPricesXRAY)
 
   yield put({
     type: "settings/CHANGE_SETTING",
@@ -58,62 +54,40 @@ export function* FETCH_PRICES() {
   yield put({
     type: "settings/CHANGE_SETTING",
     payload: {
-      setting: "stakeDataXrayPrice",
-      value: xrayPrice?.data || {},
-    },
-  })
-  yield put({
-    type: "settings/CHANGE_SETTING",
-    payload: {
-      setting: "stakeDataKeysTotal",
-      value: keysTotal?.data || {},
+      setting: "pricesXRAY",
+      value: pricesXRAY?.data || {},
     },
   })
 }
 
-export function* FETCH_POOLS() {
-  const pools = yield call(getPools)
+export function* FETCH_STAGE1_HISTORY() {
+  const ispoHistory = yield call(getStage1ISPO)
+  const stakeHistory = yield call(getStage1Stake)
 
-  yield put({
-    type: "settings/CHANGE_SETTING",
-    payload: {
-      setting: "pools",
-      value: pools?.data || {},
-    },
-  })
-}
+  if (ispoHistory?.data) {
+    yield put({
+      type: "settings/SET_STATE",
+      payload: {
+        ispoHistory: ispoHistory?.data || {},
+      },
+    })
+  }
 
-export function* FETCH_HISTORY() {
-  const history = yield call(getHistory)
-
-  yield put({
-    type: "settings/CHANGE_SETTING",
-    payload: {
-      setting: "history",
-      value: history?.data || {},
-    },
-  })
-}
-
-export function* FETCH_STAKE_HISTORY() {
-  const stakeHisotry = yield call(getStakeHistory)
-
-  yield put({
-    type: "settings/CHANGE_SETTING",
-    payload: {
-      setting: "stakeHistory",
-      value: stakeHisotry?.data || {},
-    },
-  })
+  if (stakeHistory?.data) {
+    yield put({
+      type: "settings/SET_STATE",
+      payload: {
+        stakeHistory: stakeHistory?.data || {},
+      },
+    })
+  }
 }
 
 export function* SETUP() {
   yield all([
     call(FETCH_NETWORK_STATE),
-    call(FETCH_STAKE_HISTORY),
-    call(FETCH_POOLS),
     call(FETCH_PRICES),
-    call(FETCH_HISTORY),
+    call(FETCH_STAGE1_HISTORY)
   ])
 }
 
@@ -122,10 +96,8 @@ export default function* rootSaga() {
     takeEvery(actions.CHANGE_SETTING, CHANGE_SETTING),
     takeEvery(actions.SWITCH_MEGA_MENU, SWITCH_MEGA_MENU),
     takeEvery(actions.FETCH_NETWORK_STATE, FETCH_NETWORK_STATE),
-    takeEvery(actions.FETCH_HISTORY, FETCH_HISTORY),
-    takeEvery(actions.FETCH_STAKE_HISTORY, FETCH_STAKE_HISTORY),
     takeEvery(actions.FETCH_PRICES, FETCH_PRICES),
-    takeEvery(actions.FETCH_POOLS, FETCH_POOLS),
+    takeEvery(actions.FETCH_STAGE1_HISTORY, FETCH_STAGE1_HISTORY),
     SETUP(),
   ])
 }

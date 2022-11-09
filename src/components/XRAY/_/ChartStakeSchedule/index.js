@@ -7,9 +7,9 @@ const ChartStakeSchedule = ({ history }) => {
   const theme = useSelector((state) => state.settings.theme)
   const isLight = theme === "default"
 
-  const colors = ['#647ee6', '#355aeb', '#647ee6', '#355aeb']
-  const emptyColor = isLight ? '#efefef' : '#787878'
-  const hoverColor = isLight ? '#000' : '#fff'
+  const colors = ["#647ee6", "#355aeb", "#647ee6", "#355aeb"]
+  const emptyColor = isLight ? "#efefef" : "#787878"
+  const hoverColor = isLight ? "#000" : "#fff"
 
   const firstBlock = history[0]?.history[0]?.blockNumber || 0
   const historyLength = history[0]?.history?.length || 0
@@ -17,20 +17,22 @@ const ChartStakeSchedule = ({ history }) => {
 
   const step = 2000
   const labels = range(firstBlock, lastBlock + step, step)
-  const datasets = history?.map((asset, index) => {
-    return {
-      type: "bar",
-      label: asset?.name,
-      data: labels.map((block) => {
-        return asset?.history?.filter((a) => a.blockNumber === block)[0]?.total
-      }) || [],
-      fill: true,
-      stepped: "before",
-      radius: 0,
-      backgroundColor: [colors[index] || emptyColor],
-      hoverBackgroundColor: [hoverColor],
-    }
-  }) || []
+  const datasets =
+    history?.map((asset, index) => {
+      return {
+        type: "bar",
+        label: asset?.name,
+        data:
+          labels.map((block) => {
+            return asset?.history?.filter((a) => a.blockNumber === block)[0]?.total
+          }) || [],
+        fill: true,
+        stepped: "before",
+        radius: 0,
+        backgroundColor: [colors[index] || emptyColor],
+        hoverBackgroundColor: [hoverColor],
+      }
+    }) || []
 
   const chartData = {
     labels: labels || [],
@@ -39,6 +41,7 @@ const ChartStakeSchedule = ({ history }) => {
 
   const options = {
     responsive: true,
+    animation: false,
     maintainAspectRatio: false,
     interaction: {
       intersect: true,
@@ -49,14 +52,13 @@ const ChartStakeSchedule = ({ history }) => {
         stacked: true,
       },
       y: {
-        stacked: true
-      }
+        stacked: true,
+      },
     },
     plugins: {
       tooltip: {
         callbacks: {
-          title: (tooltipItem) =>
-            `Block ${tooltipItem[0].label} Snapshot`,
+          title: (tooltipItem) => `Block ${tooltipItem[0].label} Snapshot`,
           label: (tooltipItem) => {
             return [`${tooltipItem.dataset.label} Rewards: ${tooltipItem.formattedValue} XRAY`]
           },

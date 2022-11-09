@@ -1,16 +1,15 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import MainLayout from "@/layouts/Main"
 import Submenu from "@/components/Submenu"
 import Ecosystem from "@/components/Ecosystem"
 
 const Page = () => {
   return (
-    <MainLayout>
+    <div>
       <Helmet title="Ecosystem" />
       <Submenu type="ecosystem" />
       <Ecosystem />
-    </MainLayout>
+    </div>
   )
 }
 

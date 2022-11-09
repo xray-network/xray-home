@@ -2,6 +2,7 @@
 
 .outer {
   background: $white;
+  border-top: 1px solid $border;
 }
 
 .footer {
@@ -23,7 +24,6 @@
   &Top {
     margin-bottom: rem(60);
     padding-top: rem(80);
-    border-top: 1px solid $border;
     border-bottom: 1px solid $border;
   }
 
@@ -93,7 +93,6 @@
   background: $success;
   margin-right: rem(7);
 }
-
 
 .status {
   display: inline-block;

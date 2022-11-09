@@ -8,9 +8,8 @@ const Developers = () => {
     <div className="ray__block">
       <div className="ray__title">Build Ray Network</div>
       <div className="ray__title__descr mb-5">
-        Dive into the world of{" "}
-        <strong>DeFi apps, integrations, and developer tooling</strong> built on
-        top of the <strong>Ray Network</strong>
+        Dive into the world of <strong>DeFi apps, integrations, and developer tooling</strong> built on top of the{" "}
+        <strong>Ray Network</strong>
       </div>
       <div className="row">
         {developers.map((item, index) => {
@@ -18,12 +17,7 @@ const Developers = () => {
             <div key={index} className="col-md-4 col-sm-6 col-12">
               <div className={style.item}>
                 {item.external && (
-                  <a
-                    href={item.url}
-                    className={style.itemInner}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={item.url} className={style.itemInner} target="_blank" rel="noopener noreferrer">
                     <span className={style.itemInnerExternal}>
                       <i className="ri ri-ext ri-arrow_up" />
                     </span>

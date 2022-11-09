@@ -76,19 +76,13 @@ const Community = () => {
     <div className="ray__block pt-5">
       <div className="ray__title">Join the Conversation</div>
       <div className="ray__title__descr">
-        The Ray Network community is an ecosystem of{" "}
-        <strong>users, developers, designers, and educators</strong>
+        The Ray Network community is an ecosystem of <strong>users, developers, designers, and educators</strong>
       </div>
       <div className="row">
         {community.map((item, index) => {
           return (
             <div key={index} className="col-12 col-md-6">
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={style.item}
-              >
+              <a href={item.url} target="_blank" rel="noopener noreferrer" className={style.item}>
                 <i className={`ri ri-ext ri-arrow_up ${style.itemExt}`} />
                 <div className="d-flex align-items-center">
                   <span>{item.icon}</span>

@@ -1,12 +1,12 @@
 @import "@/styles/mixins";
 
 .container {
-  background: $dark;
-  border-bottom: 1px solid $dark-border;
+  background: $white;
+  border-bottom: 1px solid $border;
   padding: rem(10) 0;
 
   a {
-    color: $success;
+    color: $dark;
 
     &:hover,
     &:focus {

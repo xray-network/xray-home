@@ -14,16 +14,8 @@ const MainLayout = ({ children }) => {
   return (
     <div className={style.layout}>
       <Helmet titleTemplate="%s | Ray Network" title="Cardano Ecosystem">
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="/resources/font/satoshi.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="/resources/font/ray-icons.css"
-        />
+        <link rel="stylesheet" type="text/css" href="/resources/font/satoshi.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/font/ray-icons.css" />
         <meta property="og:url" content="https://raynetwork.io" />
         <meta
           name="description"

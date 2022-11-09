@@ -1,0 +1,20 @@
+@import "@/styles/mixins";
+
+.soon {
+  border: 1px dashed $border;
+  padding: rem(30);
+  border-radius: rem(20);
+  margin-bottom: rem(50);
+  background: $white;
+
+  h4 {
+    font-size: rem(24);
+    font-weight: 700;
+
+    :global(.ri) {
+      font-size: rem(27);
+      position: relative;
+      top: rem(2);
+    }
+  }
+}

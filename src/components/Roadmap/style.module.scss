@@ -10,11 +10,11 @@
   display: inline-block;
   margin: 0 rem(20) rem(20) 0;
   color: $dark-gray-2;
-  border-radius: 8px;
-  border: 1px solid $border;
+  border-radius: rem(12);
   padding: rem(12) rem(20) rem(8);
   position: relative;
   overflow: hidden;
+  background: $gray-1;
 
   &Completed {
     background: $success !important;
@@ -29,16 +29,11 @@
 
   &Active {
     color: $dark;
-    background: $white;
+    background: $gray-1;
 
     &:before {
       content: "";
-      background: linear-gradient(
-        90deg,
-        rgba($gray-1, 0) 25%,
-        rgba($gray-1, 1) 37%,
-        rgba($gray-1, 0) 63%
-      );
+      background: linear-gradient(90deg, rgba($gray-1, 0) 25%, rgba($white, 1) 37%, rgba($gray-1, 0) 63%);
       animation: active 1s ease infinite;
       background-size: 400% 100%;
       position: absolute;
@@ -72,6 +67,7 @@
     display: block;
     position: relative;
     z-index: 2;
+    font-weight: 700;
   }
 
   &Icon {
@@ -103,12 +99,7 @@
 
       &:before {
         content: "";
-        background: linear-gradient(
-          90deg,
-          rgba($gray-1, 0) 25%,
-          rgba($gray-1, 0.1) 37%,
-          rgba($gray-1, 0) 63%
-        );
+        background: linear-gradient(90deg, rgba($gray-1, 0) 25%, rgba($gray-1, 0.1) 37%, rgba($gray-1, 0) 63%);
         animation: active 1s ease infinite;
         background-size: 400% 100%;
         position: absolute;

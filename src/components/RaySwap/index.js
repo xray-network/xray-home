@@ -9,30 +9,24 @@ const RaySwap = () => {
         <strong>RaySwap</strong>, Cardano DEX Aggregator & AMM DEX
       </div>
       <p>
-        RaySwap is an aggregator of AMM / OrderBook exchanges for Cardano. The best prices and automatic search for the most beneficial offers from almost all exchanges for Cardano.
+        RaySwap is an aggregator of AMM / OrderBook exchanges for Cardano. The best prices and automatic search for the
+        most beneficial offers from almost all exchanges for Cardano.
       </p>
       <p>
-        RaySwap is an automated liquidity protocol for creating liquidity and
-        trading native tokens on Cardano. It eliminates trusted intermediaries
-        and unnecessary forms of rent extraction, allowing for fast, efficient
-        trading. Where it makes tradeoffs decentralization, censorship
-        resistance, and security are prioritized.
+        RaySwap is an automated liquidity protocol for creating liquidity and trading native tokens on Cardano. It
+        eliminates trusted intermediaries and unnecessary forms of rent extraction, allowing for fast, efficient
+        trading. Where it makes tradeoffs decentralization, censorship resistance, and security are prioritized.
       </p>
-      <p className="mb-5">
-        Ray is open-source software licensed under MIT License.
-      </p>
+      <p className="mb-5">Ray is open-source software licensed under MIT License.</p>
       <h5 className="mb-5">
         <strong>How AMM swap works?</strong>
       </h5>
       <p className="mb-5">
-        Prices are determined by the amount of each token in a pool. The smart
-        contract maintains a constant using the following function:{" "}
-        <code>x*y=k</code>. In this case <code>x = token0</code>,{" "}
-        <code>y = token1</code>, <code>k = constant</code>. For each trade a
-        certain amount of tokens are removed from the pool for an amount of the
-        other token. To maintain <code>k</code>, the balances held by the smart
-        contract are adjusted during the execution of the trade, therefore
-        changing the price.
+        Prices are determined by the amount of each token in a pool. The smart contract maintains a constant using the
+        following function: <code>x*y=k</code>. In this case <code>x = token0</code>, <code>y = token1</code>,{" "}
+        <code>k = constant</code>. For each trade a certain amount of tokens are removed from the pool for an amount of
+        the other token. To maintain <code>k</code>, the balances held by the smart contract are adjusted during the
+        execution of the trade, therefore changing the price.
       </p>
       <div className="mt-4 pt-3 mb-5">
         <span className="d-inline-block me-3 mb-2">
@@ -49,7 +43,7 @@ const RaySwap = () => {
         <span className="d-inline-block">
           <a
             className="ray__btn ray__btn--round ray__btn--transparent"
-            href="https://docs.raynetwork.io/smart-contracts/rayswap"
+            href="https://docs.raynetwork.io/dapps/rayswap"
             target="_blank"
             rel="noreferrer noopener"
           >

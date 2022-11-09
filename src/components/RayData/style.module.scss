@@ -2,13 +2,8 @@
 
 .image {
   padding: rem(70) rem(100);
-  border: rem(8) solid $gray-1;
+  border: rem(8) solid $dark;
   border-radius: rem(40);
-  transition: border-color 0.3s ease-in-out;
-
-  &:hover {
-    border-color: $dark;
-  }
 
   @media (max-width: $lg-max-width) {
     padding: rem(30) rem(40);

@@ -1,0 +1,107 @@
+@import "@/styles/mixins";
+
+.item {
+  height: 100%;
+  display: block;
+  padding-bottom: rem(30);
+
+  &Inner {
+    height: 100%;
+    display: block;
+    padding: rem(25) rem(30);
+    color: $text !important;
+    position: relative;
+    min-height: rem(160);
+    border-radius: 13px;
+    @include transition-middle();
+
+    position: relative;
+    padding-left: rem(50);
+
+    @media (max-width: $md-max-width) {
+      padding-left: rem(25);
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(9);
+      border-radius: 20px;
+      height: 100%;
+      background: $dark;
+      opacity: 1;
+      @include transition-middle();
+    }
+
+    @media (max-width: 820px) {
+      min-height: auto;
+    }
+
+    &External {
+      position: absolute;
+      top: rem(20);
+      right: rem(27);
+      font-size: rem(27);
+    }
+
+    &Title {
+      color: $dark !important;
+      font-size: rem(24);
+      margin-bottom: rem(10);
+      font-weight: 900;
+      @include transition-middle();
+    }
+
+    &Active,
+    &:hover {
+      background: $dark;
+      color: $white !important;
+
+      &:before {
+        opacity: 0;
+      }
+
+      .itemInnerTitle {
+        color: $white !important;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.market {
+  display: inline-flex;
+  margin: 0 rem(20) rem(10) 0;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(18);
+
+  &:hover {
+    color: $dark;
+  }
+
+  > span:first-child {
+    width: rem(60);
+    height: rem(60);
+    overflow: hidden;
+    margin-right: rem(10);
+    padding: rem(10);
+    border-radius: rem(50);
+    background: $gray-1;
+
+    img {
+      width: rem(40);
+      height: rem(40);
+    }
+  }
+
+  > span:last-child {
+    font-weight: bold;
+  }
+}

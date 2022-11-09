@@ -1,6 +1,6 @@
 {
   "name": "raynetwork-home",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "Ray Network Homepage",
   "author": "Ray Network",
@@ -12,10 +12,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ray-network/raystake-app"
+    "url": "https://github.com/ray-network/raynetwork-home"
   },
   "bugs": {
-    "url": "https://github.com/ray-network/raystake-app/issues"
+    "url": "https://github.com/ray-network/raynetwork-home/issues"
   },
   "scripts": {
     "develop": "gatsby develop",
@@ -46,7 +46,6 @@
     "gatsby-plugin-react-svg": "^3.1.0",
     "gatsby-plugin-sass": "^5.16.0",
     "gatsby-plugin-sitemap": "^5.16.0",
-    "gatsby-plugin-yandex-metrika": "^2.5.0",
     "prettier": "^2.5.1",
     "qrcode.react": "^1.0.1",
     "react": "^17.0.1",

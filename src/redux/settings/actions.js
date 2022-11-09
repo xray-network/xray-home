@@ -4,10 +4,8 @@ const actions = {
   CHANGE_THEME: "settings/CHANGE_THEME",
   SWITCH_MEGA_MENU: "settings/SWITCH_MEGA_MENU",
   FETCH_NETWORK_STATE: "settings/FETCH_NETWORK_STATE",
-  FETCH_HISTORY: "settings/FETCH_HISTORY",
-  FETCH_STAKE_HISTORY: "settings/FETCH_STAKE_HISTORY",
+  FETCH_STAGE1_HISTORY: "settings/FETCH_STAGE1_HISTORY",
   FETCH_PRICES: "settings/FETCH_PRICES",
-  FETCH_POOLS: "settings/FETCH_POOLS",
 }
 
 export default actions

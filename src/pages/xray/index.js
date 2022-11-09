@@ -1,18 +1,17 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import MainLayout from "@/layouts/Main"
 import Submenu from "@/components/Submenu"
-import XrayPromo from "@/components/XRAY/promo"
-import XrayIntroducing from "@/components/XRAY/introducing"
+import Xray from "@/components/XRAY/xray"
+import Ecosystem from "@/components/Ecosystem"
 
 const Page = () => {
   return (
-    <MainLayout>
-      <Helmet title="XRAY Introducing" />
+    <div>
+      <Helmet title="XRAY Token" />
       <Submenu type="xray" />
-      <XrayPromo />
-      <XrayIntroducing />
-    </MainLayout>
+      <Xray />
+      <Ecosystem />
+    </div>
   )
 }
 

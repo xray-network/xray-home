@@ -21,14 +21,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-yandex-metrika`,
-      options: {
-        trackingId: "70157308",
-        webvisor: true,
-        trackHash: true,
-      },
-    },
-    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
@@ -36,12 +28,12 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-html-attributes",
-      options: {
-        "data-theme": "default",
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-html-attributes",
+    //   options: {
+    //     "data-theme": "default",
+    //   },
+    // },
     // {
     //   resolve: `gatsby-plugin-offline`,
     //   options: {

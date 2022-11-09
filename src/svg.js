@@ -9,14 +9,4 @@ import SVGDiscord from "../static/resources/social/discord.svg"
 import SVGReddit from "../static/resources/social/reddit.svg"
 import SVGMedium from "../static/resources/social/medium.svg"
 
-export {
-  SVGMinterr,
-  SVGRay,
-  SVGCardano,
-  SVGGithub,
-  SVGTwitter,
-  SVGTelegram,
-  SVGDiscord,
-  SVGReddit,
-  SVGMedium,
-}
+export { SVGMinterr, SVGRay, SVGCardano, SVGGithub, SVGTwitter, SVGTelegram, SVGDiscord, SVGReddit, SVGMedium }

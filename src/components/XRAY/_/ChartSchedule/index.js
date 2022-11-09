@@ -7,7 +7,7 @@ const ChartSchedule = ({ history }) => {
   const theme = useSelector((state) => state.settings.theme)
   const distributed = history || []
   const isLight = theme === "default"
-  const hoverColor = isLight ? '#000' : '#fff'
+  const hoverColor = isLight ? "#000" : "#fff"
 
   const chartData = {
     labels: distributed.map((epoch) => epoch.epoch),
@@ -40,6 +40,7 @@ const ChartSchedule = ({ history }) => {
 
   const options = {
     responsive: true,
+    animation: false,
     maintainAspectRatio: false,
     interaction: {
       intersect: false,
@@ -67,34 +68,17 @@ const ChartSchedule = ({ history }) => {
     plugins: {
       tooltip: {
         callbacks: {
-          title: (tooltipItem) =>
-            `Epoch ${tooltipItem[0].label} (for Epoch ${
-              parseInt(tooltipItem[0].label, 10) - 2
-            })`,
+          title: (tooltipItem) => `Epoch ${tooltipItem[0].label} (for Epoch ${parseInt(tooltipItem[0].label, 10) - 2})`,
           label: (tooltipItem) => {
             const { datasetIndex } = tooltipItem
             const ds = chartData.datasets[datasetIndex]
             const arr = []
-            arr.push(
-              `${ds.label}: ${format(ds.data[tooltipItem.dataIndex])} ${
-                ds.postfix
-              }`
-            )
+            arr.push(`${ds.label}: ${format(ds.data[tooltipItem.dataIndex])} ${ds.postfix}`)
             if (datasetIndex === 1) {
-              arr.push(
-                `ADA per 1 XRAY: ${format(
-                  distributed[tooltipItem.dataIndex].rate / 1000000,
-                  6
-                )} ADA`
-              )
+              arr.push(`ADA per 1 XRAY: ${format(distributed[tooltipItem.dataIndex].rate / 1000000, 6)} ADA`)
             }
             if (datasetIndex === 1) {
-              arr.push(
-                `Active Stake Snapshot: ${format(
-                  distributed[tooltipItem.dataIndex].snapshot / 1000000,
-                  6
-                )} ADA`
-              )
+              arr.push(`Active Stake Snapshot: ${format(distributed[tooltipItem.dataIndex].snapshot / 1000000, 6)} ADA`)
             }
             return arr
           },

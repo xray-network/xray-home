@@ -6,27 +6,19 @@ const Whitepaper = () => {
     <div className="ray__block">
       <div className="ray__title">Ray Network Whitepaper</div>
       <div className="ray__title__descr">
-        <strong>Whitepaper</strong>, learn about the Ray Network’s core
-        concepts: Ecosystem, Technologies, and more
+        <strong>Whitepaper</strong>, learn about the Ray Network’s core concepts: Ecosystem, Technologies, and more
       </div>
       <div className={style.error}>
         <div className="row">
           <div className="col-lg-12 text-center">
             <div className={style.description}>
               <h1 className={style.title}>Soon</h1>
-              <p className="mb-4">
-                Our team is working tirelessly to make this page come alive
-                soon!
-              </p>
+              <p className="mb-4">Our team is working tirelessly to make this page come alive soon!</p>
             </div>
           </div>
           <div className="col-lg-12">
             <div className={style.pig}>
-              <img
-                src="/resources/pig.svg"
-                title="Ray Piglet"
-                alt="Ray Piglet"
-              />
+              <img src="/resources/pig.svg" title="Ray Piglet" alt="Ray Piglet" />
             </div>
           </div>
         </div>

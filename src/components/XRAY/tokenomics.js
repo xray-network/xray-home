@@ -1,341 +1,239 @@
-import React from "react"
-import { Doughnut } from "react-chartjs-2"
+import React, { useState } from "react"
 import { useSelector } from "react-redux"
-import { Link } from "gatsby"
+import ChartSchedule from "./_/ChartSchedule"
+import ChartStakeSchedule from "./_/ChartStakeSchedule"
 import { format } from "@/utils"
 import * as style from "./style.module.scss"
 
 const XrayTokenomics = () => {
-  const theme = useSelector((state) => state.settings.theme)
-  const isLight = theme === "default"
+  const ispoHistory = useSelector((state) => state.settings.ispoHistory)
+  const stakeHistory = useSelector((state) => state.settings.stakeHistory)
 
-  const percentage = {
-    ispo: 0.25,
-    stake: 0.33,
-    reserve: 0.2,
-    development: 0.14,
-    founders: 0.08,
-  }
-  const total = 406152800
-  const distributed = {
-    ispo: {
-      total: 61538200,
-      max: parseInt(total * percentage.ispo),
-    },
-    stake: {
-      total: 20000000,
-      max: parseInt(total * percentage.stake),
-    },
-    reserve: {
-      total: 0,
-      max: parseInt(total * percentage.reserve),
-    },
-    development: {
-      total: 3000000,
-      max: parseInt(total * percentage.development),
-    },
-    founders: {
-      total: 0,
-      max: parseInt(total * percentage.founders),
-    },
-  }
-  const totalDistributed = Object.keys(distributed).reduce((accum, key) => accum + distributed[key].total, 0)
+  const [section, setSection] = useState("ispo")
 
-  const colors = {
-    backgroundColor: [
-      "rgba(54, 162, 235, 0.6)",
-      "rgba(54, 162, 235, 0.6)",
-      "rgba(54, 162, 235, 0.6)",
-      "rgba(186, 186, 163,0.6)",
-      "rgba(255, 206, 86, 0.6)",
-    ],
-    hoverBackgroundColor: [
-      "rgba(54, 162, 235, 0.8)",
-      "rgba(54, 162, 235, 0.8)",
-      "rgba(54, 162, 235, 0.8)",
-      "rgba(186, 186, 163,0.8)",
-      "rgba(255, 206, 86, 0.8)",
-    ],
-    borderColor: [
-      "rgba(54, 162, 235, 0.6)",
-      "rgba(54, 162, 235, 0.6)",
-      "rgba(54, 162, 235, 0.6)",
-      "rgba(186, 186, 163,0.6)",
-      "rgba(255, 206, 86, 0.6)",
-    ],
-  }
-
-  const distributionData = {
-    labels: [
-      "ADA Staking & XRAY ISPO Program",
-      "LP / XRAY Staking Program",
-      "Reserve & Buyback Round",
-      "Development & Marketing Fund",
-      "Founders",
-    ],
-    datasets: [
-      {
-        data: [distributed.ispo.max, distributed.stake.max, distributed.reserve.max, distributed.development.max, distributed.founders.max],
-        ...colors,
-        borderWidth: 1,
-        rotation: -120,
-      },
-    ],
-  }
-
-  const chartOptions = (total) => {
-    return {
-      maintainAspectRatio: false,
-      legend: {
-        labels: {
-          fontColor: isLight ? "#232135" : "#fff",
-        },
-      },
-      plugins: {
-        // labels: {
-        //   render: 'value'
-        // }
-        // datalabels: {
-        //   color: isLight ? '#232135' : '#fff',
-        //   formatter: (value) => {
-        //     return parseInt(value / total * 100) + '%'
-        //   }
-        // },
-      },
-      tooltips: {
-        callbacks: {
-          title: function (tooltipItem, data) {
-            return data["labels"][tooltipItem[0]["index"]]
-          },
-          label: function (tooltipItem, data) {
-            return (
-              format(data["datasets"][0]["data"][tooltipItem["index"]]) + " RAY"
-            )
-          },
-        },
-      },
-    }
-  }
+  const stage1 = 185422703
+  const stage2 = 50145921
+  const devfund = 56861392
+  const founders = 32492224
+  const total = stage1 + stage2 + devfund + founders
 
   return (
-    <div className="ray__block">
-      <div className="ray__title">XRAY Tokenomics</div>
-      <div className="ray__title__descr mb-5">
-        <strong>Ray Network</strong> is a public good <strong>owned</strong> and{" "}
-        <strong>governed</strong> by XRAY token holders
-      </div>
-      <div className="ray__left ray__left--dark">
-        <h5 className="mb-0">
-          <strong>Circulating Supply</strong>
-        </h5>
-        <div className={`${style.supply} ${style.supplyLarge}`}>
-          <strong className="bolder">
-            {format(totalDistributed)}{" "}
-            <sup>
-              <span className="ray__ticker">XRAY</span>
-            </sup>
-          </strong>
-        </div>
-        <div className="ray__progress mb-4">
-          <div style={{ width: `${totalDistributed / total * 100}%` }} />
-        </div>
-        <h5 className="mb-1">
-          <strong>Max Supply</strong>
-        </h5>
-        <div className={`${style.supply} mb-5`}>
-          <strong className="bolder">
-            {format(total)}{" "}
-            <sup>
-              <span className="ray__ticker">XRAY</span>
-            </sup>
-          </strong>
+    <div>
+      <div className="ray__block mb-5 pb-2">
+        <div className="ray__title">XRAY Tokenomics</div>
+        <div className="ray__title__descr mb-5">
+          <strong>Ray Network</strong> is a public good <strong>owned</strong> and <strong>governed</strong> by XRAY
+          token holders
         </div>
         <p>
-          A total of 406,152,800 XRAY will be issued and will be available over
-          a 3-year period. The initial three year allocation is as follows:
+          {" "}
+          Ray Network's tokenomics is based on full value creation by the community's participation in the life of the
+          project. The initial token distribution was completely free in the ISPO and RayStake Stage 1 programs with
+          high ROI. <strong>57.07%</strong> of all tokens were distributed to participants in these programs.{" "}
+          <strong>15.43%</strong> of the tokens will be allocated to stimulate the community to provide liquidity and
+          other value creation programs. In total, the community accessed <strong>72.5%</strong> of the total capacity
+          of tokens.
         </p>
-        <ul className="mb-5">
-          <li>
-            58.00% to Ray Network community members{" "}
-            <span className="badge badge-token">235,568,624 XRAY</span>
-          </li>
-          <li>
-            20.00% to reserve & buyback program with vesting periods{" "}
-            <span className="badge badge-token">81,230,560 XRAY</span>
-          </li>
-          <li>
-            14.00% to team members and future employees with 3-year vesting{" "}
-            <span className="badge badge-token">56,681,392 XRAY</span>
-          </li>
-          <li>
-            8.00% founders and advisors{" "}
-            <span className="badge badge-token">32,492,224 XRAY</span>
-          </li>
-        </ul>
-        <div className="mb-5">
-          <Link
-            to="/xray/distribution/"
-            className="ray__btn ray__btn--round me-3 mb-3"
-          >
-            Distribution
-          </Link>
-          <Link
-            to="/xray/governance/"
-            className="ray__btn ray__btn--round me-3 mb-3"
-          >
-            Governance
-          </Link>
-        </div>
       </div>
-      <div className="row">
-        <div className="col-12 col-sm-6">
-          <div className="ray__left ray__left--dark">
-            <h5 className="mb-1">
-              <strong>
-                ADA Staking & XRAY ISPO Program <span className="text-shade">25%</span>
-              </strong>
-            </h5>
-            <div className={`${style.supply} mb-1`}>
-              <strong className="bolder">
-                {format(distributed.ispo.total)}{" "}
-                <sup>
-                  <span className="ray__ticker">XRAY</span>
-                </sup>
-              </strong>
-            </div>
-            <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${distributed.ispo.total / distributed.ispo.max * 100}%` }} />
-            </div>
-            <div>
-              <strong>Max Allocation</strong>
-            </div>
-            <div className="mb-5">
-              <strong>{format(distributed.ispo.max)}</strong>{" "}
-              <span className="ray__ticker">XRAY</span>
-            </div>
-          </div>
-          <div className="ray__left ray__left--dark">
-            <h5 className="mb-1">
-              <strong>
-                LP / XRAY Staking Program <span className="text-shade">33%</span>
-              </strong>
-            </h5>
-            <div className={`${style.supply} mb-1`}>
-              <strong className="bolder">
-                {format(distributed.stake.total)}{" "}
-                <sup>
-                  <span className="ray__ticker">XRAY</span>
-                </sup>
-              </strong>
-            </div>
-            <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${distributed.stake.total / distributed.stake.max * 100}%` }} />
-            </div>
-            <div>
-              <strong>Max Allocation</strong>
-            </div>
-            <div className="mb-5">
-              <strong>{format(distributed.stake.max)}</strong>{" "}
-              <span className="ray__ticker">XRAY</span>
-            </div>
-          </div>
-          <div className="ray__left ray__left--dark">
-            <h5 className="mb-1">
-              <strong>
-                Reserve & Buyback Round <span className="text-shade">20%</span>
-              </strong>
-            </h5>
-            <div className={`${style.supply} mb-1`}>
-              <strong className="bolder">
-                {format(distributed.reserve.total)}{" "}
-                <sup>
-                  <span className="ray__ticker">XRAY</span>
-                </sup>
-              </strong>
-            </div>
-            <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${distributed.reserve.total / distributed.reserve.max * 100}%` }} />
-            </div>
-            <div>
-              <strong>Max Allocation</strong>
-            </div>
-            <div className="mb-5">
-              <strong>{format(distributed.reserve.max)}</strong>{" "}
-              <span className="ray__ticker">XRAY</span>
-            </div>
-          </div>
-        </div>
-        <div className="col-12 col-sm-6">
-          <div className="ray__left ray__left--dark">
-            <h5 className="mb-1">
-              <strong>
-                Development & Marketing Fund{" "}
-                <span className="text-shade">14%</span>
-              </strong>
-            </h5>
-            <div className={`${style.supply} mb-1`}>
-              <strong className="bolder">
-                {format(distributed.development.total)}{" "}
-                <sup>
-                  <span className="ray__ticker">XRAY</span>
-                </sup>
-              </strong>
-            </div>
-            <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${distributed.development.total / distributed.development.max * 100}%` }} />
-            </div>
-            <div>
-              <strong>Max Allocation</strong>
-            </div>
-            <div className="mb-5">
-              <strong>{format(distributed.development.max)}</strong>{" "}
-              <span className="ray__ticker">XRAY</span>
-            </div>
-          </div>
-          <div className="ray__left ray__left--dark">
-            <h5 className="mb-1">
-              <strong>
-                Founders Fund <span className="text-shade">8%</span>
-              </strong>
-            </h5>
-            <div className={`${style.supply} mb-1`}>
-              <strong className="bolder">
-                {format(distributed.founders.total)}{" "}
-                <sup>
-                  <span className="ray__ticker">XRAY</span>
-                </sup>
-              </strong>
-            </div>
-            <div className="ray__progress ray__progress--small mb-3 me-5">
-              <div style={{ width: `${distributed.founders.total / distributed.founders.max * 100}%` }} />
-            </div>
-            <div>
-              <strong>Max Allocation</strong>
-            </div>
-            <div className="mb-5">
-              <strong>{format(distributed.founders.max)}</strong>{" "}
-              <span className="ray__ticker">XRAY</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={style.chart}>
-        <div className="text-center">
-          <h5 className="mb-2">
-            <strong>Planned Distribution Breakdown</strong>
-          </h5>
-          <div className="mb-3">
-            Looking for detailed distribution information?{" "}
-            <Link to="/xray/distribution/">Read here.</Link>
-          </div>
-        </div>
-        <div>
-          <Doughnut
-            data={distributionData}
-            options={chartOptions(total)}
-            width={300}
-            height={300}
+      <div className="ray__banner">
+        <div className="ray__banner__frame ray__banner__frame--dark">
+          <div
+            className="ray__banner__image"
+            style={{
+              backgroundImage: "url(/resources/banners/night6.jpg)",
+              opacity: 0.4,
+            }}
           />
+          <div className="ray__banner__line">
+            <div />
+            <div />
+          </div>
+          <div className="ray__banner__content text-white py-5">
+            <div className="ray__block pt-5 pb-3 mb-0">
+              <div className="row">
+                <div className="col-12">
+                  <div className="ray__title ray__title--normal font-size-32">Total Cap</div>
+                  <div className="ray__price ray__price--large mb-5 pb-3">
+                    {format(total)} <span>XRAY</span>
+                  </div>
+                </div>
+                <div className="col-12 col-md-6">
+                  <div className="ray__title ray__title--empty ray__title--normal font-size-32">
+                    <span className="ray__title__square" />
+                    Community (Stage 1) — {((stage1 / total) * 100).toFixed(2)}%
+                  </div>
+                  <div className="ray__price">
+                    {format(stage1)} <span>XRAY</span>
+                  </div>
+                </div>
+                <div className="col-12 col-md-6">
+                  <div className="ray__title ray__title--empty ray__title--normal font-size-32">
+                    <span className="ray__title__square" />
+                    Community (Stage 2) — {((stage2 / total) * 100).toFixed(2)}%
+                  </div>
+                  <div className="ray__price">
+                    {format(stage2)} <span>XRAY</span>
+                  </div>
+                </div>
+                <div className="col-12 col-md-6">
+                  <div className="ray__title ray__title--empty ray__title--normal font-size-32">
+                    <span className="ray__title__square ray__title__square--red" />
+                    Dev & Marketing Fund — {((devfund / total) * 100).toFixed(2)}%
+                  </div>
+                  <div className="ray__price">
+                    {format(devfund)} <span>XRAY</span>
+                  </div>
+                </div>
+                <div className="col-12 col-md-6">
+                  <div className="ray__title ray__title--empty ray__title--normal font-size-32">
+                    <span className="ray__title__square ray__title__square--blue" />
+                    Founders Fund — {((founders / total) * 100).toFixed(2)}%
+                  </div>
+                  <div className="ray__price">
+                    {format(founders)} <span>XRAY</span>
+                  </div>
+                </div>
+                <div className="col-12 mb-5">
+                  <div className="ray__title ray__title--normal font-size-32">Distribution Breakdown</div>
+                  <div className={style.breakdown}>
+                    <div style={{ width: "57.07%" }}>57.07%</div>
+                    <div style={{ width: "15.43%" }}>15.43%</div>
+                    <div style={{ width: "17.50%" }} className={style.breakdownRed}>
+                      17.50%
+                    </div>
+                    <div style={{ width: "10%" }} className={style.breakdownBlue}>
+                      10%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="ray__block pt-5 mb-2">
+        <div className="ray__title__descr mb-5">
+          <strong className="me-3">Stage 2 Allocation</strong>
+          <span className="ray__title__status">Live</span>
+        </div>
+        <p className="mb-5">
+          Stage 2 includes classic staking with a soft ROI of 15% to incentivize engaged users by the Ray Network
+          ecosystem. Stage 2 will deliver <strong>50,145,921 XRAY</strong> tokens in subsequent programs: RayStake &
+          RaySwap (65%) and other DEXes (35%).{" "}
+          <a href="https://raystake.io/" target="_blank" rel="noopener noreferrer">
+            Visit RayStake &rarr;
+          </a>
+        </p>
+      </div>
+      <div className="ray__banner mb-5 pb-5">
+        <div className="ray__banner__frame ray__banner__frame--border">
+          <div className="ray__banner__line">
+            <div />
+            <div />
+          </div>
+          <div className="ray__banner__content">
+            <div className="ray__block pt-5 pb-4 mb-0">
+              <div className="ray__title">To Be Distributed</div>
+              <div className="ray__price">
+                50,145,921 <span>XRAY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="ray__block pt-3 mb-2">
+        <div className="ray__title__descr mb-5">
+          <strong className="me-3">Stage 1 Allocation</strong>
+          <span className="ray__title__status ray__title__status--end">End</span>
+        </div>
+        <p className="mb-5">
+          Stage 1 includes programs such as ISPO and high ROI XRAY/LP staking. In fact, it is the initial distribution
+          of the XRAY token. A total of <strong>185,422,703 XRAY</strong> were scheduled for distribution, of which only{" "}
+          <strong>131,278,985 XRAY</strong> were distributed during ISPO (one year and a half) and RayStake (9 months).
+          The remaining <strong>54,143,718 XRAY</strong> will automatically be sent to <strong>25,906</strong> unique
+          wallets who participated in any way in XRAY ISPO or RayStake Stage 1.
+        </p>
+      </div>
+      <div className="ray__banner mb-5 pb-5">
+        <div className="ray__banner__frame ray__banner__frame--border">
+          <div className="ray__banner__line">
+            <div />
+            <div />
+          </div>
+          <div className="ray__banner__content">
+            <div className="ray__block pt-5 pb-4 mb-0">
+              <div className="row">
+                <div className="col-12 col-md-6">
+                  <div className="ray__title">Total Distributed</div>
+                  <div className="ray__price">
+                    185,422,703 <span>XRAY</span>
+                  </div>
+                </div>
+                <div className="col-12 col-md-6">
+                  <div className="ray__title">Including Undelivered Tokens Drop</div>
+                  <div className="ray__price">
+                    54,143,718 <span>XRAY</span>
+                  </div>
+                </div>
+              </div>
+
+              <h4 className={style.menu}>
+                <a className={`${section === "ispo" ? style.menuActive : ""}`} onClick={() => setSection("ispo")}>
+                  <span>ISPO</span>
+                </a>
+                <a
+                  className={`${section === "raystake" ? style.menuActive : ""}`}
+                  onClick={() => setSection("raystake")}
+                >
+                  <span>RayStake Stage1</span>
+                </a>
+              </h4>
+              <div className="pb-5">
+                {section === "ispo" && (
+                  <div>
+                    {/* <div className="row">
+                      <div className="col-12 col-md-6">
+                        <div className="ray__title">
+                          Distributed
+                        </div>
+                        <div className="ray__price">66,940,282 <span>XRAY</span></div>
+                      </div>
+                      <div className="col-12 col-md-6">
+                        <div className="ray__title">
+                          Undelivered Tokens
+                        </div>
+                        <div className="ray__price">33,059,718 <span>XRAY</span></div>
+                      </div>
+                    </div> */}
+                    <div>
+                      <ChartSchedule history={ispoHistory?.distributionHistory || []} />
+                    </div>
+                  </div>
+                )}
+                {section === "raystake" && (
+                  <div>
+                    {/* <div className="row">
+                      <div className="col-12 col-md-6">
+                        <div className="ray__title">
+                          Distributed
+                        </div>
+                        <div className="ray__price">53,916,000 <span>XRAY</span></div>
+                      </div>
+                      <div className="col-12 col-md-6">
+                        <div className="ray__title">
+                          Undelivered Tokens
+                        </div>
+                        <div className="ray__price">21,084,000 <span>XRAY</span></div>
+                      </div>
+                    </div> */}
+                    <div>
+                      <ChartStakeSchedule history={stakeHistory?.history || []} />
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

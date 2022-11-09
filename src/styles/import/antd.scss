@@ -58,9 +58,7 @@
     }
 
     &-search {
-      > .ant-input-group
-        > .ant-input-group-addon:last-child
-        .ant-input-search-button,
+      > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button,
       > .ant-input-group > .ant-input-group-addon:last-child {
         border-radius: 0 8px 8px 0;
       }

@@ -51,7 +51,7 @@ const dev = [
   },
   {
     status: "completed",
-    title: "XDIAMOND NFTs",
+    title: "XDIAMOND sNFT",
     date: "Q3 2021",
   },
   {
@@ -81,48 +81,48 @@ const dev = [
   },
   {
     status: "active",
-    title: "RayWallet V3 + DApps Hub",
-    date: "Q2 2022",
+    title: "RayStake V2",
+    date: "Q4 2022",
   },
   {
     status: "active",
-    title: "RayWallet HW Wallets",
-    date: "Q2 2022",
+    title: "RayWallet V3 + DApps Hub",
+    date: "Q4 2022",
   },
   {
     status: "active",
     title: "CardanoWeb3.js",
-    date: "Q2 2022",
+    date: "Q4 2022",
   },
   {
     status: "active",
     title: "Whitepaper",
-    date: "Q2 2022",
+    date: "Q4 2022",
   },
   {
     status: "active",
     title: "RaySwap",
-    date: "Q2 2022",
+    date: "Q1 2023",
   },
   {
-    status: "active",
+    status: "pending",
+    title: "CardanoList.io V2",
+    date: "Q1 2023",
+  },
+  {
+    status: "pending",
     title: "RayPad",
-    date: "Q3 2022",
+    date: "Q2 2023",
   },
   {
     status: "pending",
-    title: "Minterr.io Update",
-    date: "Q3 2022",
-  },
-  {
-    status: "pending",
-    title: "CardanoList.io Update",
-    date: "Q3 2022",
+    title: "Minterr.io V2",
+    date: "Q2 2023",
   },
   {
     status: "pending",
     title: "Ray Foundation",
-    date: "Q3-Q4 2022",
+    date: "Q2 2023",
   },
   {
     status: "pending",
@@ -132,11 +132,6 @@ const dev = [
   {
     status: "pending",
     title: "RayData",
-    date: "2022",
-  },
-  {
-    status: "pending",
-    title: "Ergo Support",
     date: "2022",
   },
 ]
@@ -155,12 +150,12 @@ const apps = [
   {
     status: "active",
     title: "RayWallet Chrome Extension",
-    date: "Q2 2022",
+    date: "Q1 2023",
   },
   {
     status: "active",
     title: "RayWallet DApp Connector",
-    date: "Q2 2022",
+    date: "Q1 2023",
   },
 ]
 
@@ -178,10 +173,7 @@ const Roadmap = () => {
         <div>
           {dev.map((item, index) => {
             return (
-              <Tooltip
-                key={index}
-                title={<div className="text-capitalize">{item.status}</div>}
-              >
+              <Tooltip key={index} title={<div className="text-capitalize">{item.status}</div>}>
                 <div
                   className={classnames({
                     [style.item]: true,
@@ -190,12 +182,8 @@ const Roadmap = () => {
                   })}
                 >
                   <span className={style.itemIcon}>
-                    {item.status === "completed" && (
-                      <i className="fe fe-check-circle" />
-                    )}
-                    {item.status === "active" && (
-                      <i className="fe fe-activity" />
-                    )}
+                    {item.status === "completed" && <i className="fe fe-check-circle" />}
+                    {item.status === "active" && <i className="fe fe-activity" />}
                   </span>
                   <span className={style.itemDate}>{item.date}</span>
                   <span className={style.itemTitle}>{item.title}</span>
@@ -212,10 +200,7 @@ const Roadmap = () => {
         <div>
           {apps.map((item, index) => {
             return (
-              <Tooltip
-                key={index}
-                title={<div className="text-capitalize">{item.status}</div>}
-              >
+              <Tooltip key={index} title={<div className="text-capitalize">{item.status}</div>}>
                 <div
                   className={classnames({
                     [style.item]: true,
@@ -224,9 +209,7 @@ const Roadmap = () => {
                   })}
                 >
                   <span className={style.itemIcon}>
-                    {item.status === "completed" && (
-                      <i className="fe fe-check-circle" />
-                    )}
+                    {item.status === "completed" && <i className="fe fe-check-circle" />}
                   </span>
                   <span className={style.itemDate}>{item.date}</span>
                   <span className={style.itemTitle}>{item.title}</span>

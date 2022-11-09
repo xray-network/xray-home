@@ -94,6 +94,9 @@
 }
 
 .max-width {
+  &-400 {
+    max-width: rem(400);
+  }
   &-600 {
     max-width: rem(600);
   }

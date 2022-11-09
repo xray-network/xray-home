@@ -17,13 +17,11 @@ const initialState = {
   }),
   megaMenu: false,
   networkState: {},
-  history: {},
+  ispoHistory: {},
   stakeHistory: {},
-  prices: {},
-  pools: {},
   modalInstall: "",
-  stakeDataXrayPrice: {},
-  stakeDataKeysTotal: {},
+  prices: {},
+  pricesXRAY: {},
 }
 
 export default function settingsReducer(state = initialState, action) {

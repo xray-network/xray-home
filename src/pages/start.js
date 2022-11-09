@@ -1,14 +1,17 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import MainLayout from "@/layouts/Main"
-import GettingStarted from "@/components/GettingStarted"
+import WhereToStart from "@/components/WhereToStart"
+import Performance from "@/components/Performance"
+import WhereToBuy from "@/components/WhereToBuy"
 
 const Page = () => {
   return (
-    <MainLayout>
+    <div>
       <Helmet title="Getting Started" />
-      <GettingStarted />
-    </MainLayout>
+      <WhereToStart />
+      <Performance />
+      <WhereToBuy />
+    </div>
   )
 }
 

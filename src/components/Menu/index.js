@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useLocation } from "@reach/router"
 import { Link } from "gatsby"
 import { useDispatch } from "react-redux"
@@ -9,6 +9,15 @@ import { ecosystem, xray, developers } from "@/config"
 const Menu = () => {
   const location = useLocation()
   const dispatch = useDispatch()
+  const [shadow, setShadow] = useState(false)
+
+  useEffect(() => {
+    const onScroll = (e) => {
+      setShadow(e.target.documentElement.scrollTop > 43)
+    }
+    window.addEventListener("scroll", onScroll)
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [shadow])
 
   const switchMegaMenu = () => {
     dispatch({
@@ -21,7 +30,7 @@ const Menu = () => {
   const isDevelopers = developers.map((i) => i.url).includes(location.pathname)
 
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${shadow ? style.containerShadow : ""}`}>
       <div className="ray__block mb-0">
         <div className={style.menu}>
           <div className={style.menuLogo}>
@@ -31,31 +40,16 @@ const Menu = () => {
             </Link>
           </div>
           <div className={style.menuItems}>
-            <Link
-              to="/start/"
-              activeClassName={style.linkActive}
-            >
+            <Link to="/start/" activeClassName={style.linkActive}>
               Start
             </Link>
-            <Link
-              to="/ecosystem/"
-              className={isEcosystem ? style.linkActive : ""}
-              activeClassName={style.linkActive}
-            >
+            <Link to="/ecosystem/" className={isEcosystem ? style.linkActive : ""} activeClassName={style.linkActive}>
               Ecosystem
             </Link>
-            <Link
-              to="/xray/"
-              className={isXRAY ? style.linkActive : ""}
-              activeClassName={style.linkActive}
-            >
+            <Link to="/xray/" className={isXRAY ? style.linkActive : ""} activeClassName={style.linkActive}>
               XRAY
             </Link>
-            <Link
-              to="/developers/"
-              className={isDevelopers ? style.linkActive : ""}
-              activeClassName={style.linkActive}
-            >
+            <Link to="/developers/" className={isDevelopers ? style.linkActive : ""} activeClassName={style.linkActive}>
               Developers
             </Link>
             <Link to="/community/" activeClassName={style.linkActive}>
@@ -65,7 +59,7 @@ const Menu = () => {
           <div className={style.menuButtons}>
             <a
               href="https://raywallet.io"
-              className="ant-btn ray__btn ray__btn--white ray__btn--round me-1"
+              className="ant-btn ray__btn ray__btn--round me-2 me-md-3"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -73,7 +67,7 @@ const Menu = () => {
               <span className="d-none d-sm-inline">RayWallet</span>
             </a>
             <span
-              className="ant-btn ray__btn ray__btn--icon ray__btn--round px-3"
+              className="ant-btn ray__btn ray__btn--transparent ray__btn--icon ray__btn--round px-3"
               onClick={switchMegaMenu}
               onKeyPress={switchMegaMenu}
               role="button"

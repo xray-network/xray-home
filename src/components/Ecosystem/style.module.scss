@@ -7,70 +7,70 @@
 
   &Inner {
     height: 100%;
-    display: block;
-    padding: rem(25) rem(30);
+    display: flex;
+    padding: rem(15) 0;
     color: $text !important;
     position: relative;
-    min-height: rem(160);
+    // min-height: rem(140);
     border-radius: 13px;
-    @include transition-middle();
-
     position: relative;
-    padding-left: rem(50);
-
-    @media (max-width: $md-max-width) {
-      padding-left: rem(25);
-    }
-
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: rem(9);
-      border-radius: 20px;
-      height: 100%;
-      background: $dark;
-      opacity: 1;
-      @include transition-middle();
-    }
+    font-size: rem(18);
+    @include transition-middle();
 
     @media (max-width: 820px) {
       min-height: auto;
     }
 
-    &External {
-      position: absolute;
-      top: rem(20);
-      right: rem(27);
+    &Icon {
+      margin-right: rem(20);
+      width: rem(70);
+      height: rem(70);
+      display: flex;
+      background: $dark;
+      flex-shrink: 0;
+      color: $white;
+      align-items: center;
+      justify-content: center;
+      border-radius: rem(10);
+      font-weight: 900;
       font-size: rem(27);
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        display: block;
+        content: "";
+        width: rem(35);
+        height: rem(25);
+        background: $success;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
 
     &Title {
       color: $dark !important;
       font-size: rem(24);
-      margin-bottom: rem(10);
-      font-weight: 700;
+      margin-bottom: rem(5);
+      font-weight: 900;
       @include transition-middle();
     }
 
     &Active,
     &:hover {
-      background: $dark;
-      color: $white !important;
-
-      &:before {
-        opacity: 0;
-      }
-
-      .itemInnerTitle {
+      .itemInnerIcon {
         color: $white !important;
+        background: $primary;
+
+        &::after {
+          background: $dark;
+        }
       }
     }
 
-    &:hover {
-      transform: scale(1.05);
-    }
+    // &:hover {
+    //   transform: scale(1.05);
+    // }
   }
 }

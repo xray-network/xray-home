@@ -1,11 +1,15 @@
 @import "@/styles/mixins";
 
 .container {
-  background: $dark;
-  padding: rem(20) 0;
+  background: $white;
+  padding: rem(25) 0;
   position: sticky;
-  z-index: 5;
+  z-index: 6;
   top: 0;
+
+  &Shadow {
+    box-shadow: 0px 20px 30px -30px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .menu {
@@ -21,32 +25,36 @@
     white-space: nowrap;
 
     a {
-      margin: 0 rem(12);
-      color: $white;
+      margin: 0 rem(5);
+      color: $dark;
       display: inline-block;
       position: relative;
+      padding: rem(1) rem(9);
+      border-radius: rem(100);
+      font-weight: 700;
 
-      &:after {
-        position: absolute;
-        display: none;
-        content: "";
-        width: rem(18);
-        height: 3px;
-        left: 50%;
-        bottom: rem(-7);
-        margin-left: rem(-9);
-        background: $white;
-      }
+      // &:after {
+      //   position: absolute;
+      //   display: none;
+      //   content: "";
+      //   width: rem(18);
+      //   height: 3px;
+      //   left: 50%;
+      //   bottom: rem(-7);
+      //   margin-left: rem(-9);
+      // }
 
       &.linkActive,
       &:hover,
       &:focus {
-        color: $gray-3;
+        // color: $gray-3;
+        background: $dark;
+        color: $white;
 
-        &:after {
-          display: block;
-          background: $gray-3;
-        }
+        // &:after {
+        //   display: block;
+        //   background: $gray-2;
+        // }
       }
     }
   }
@@ -75,15 +83,15 @@
   align-items: center;
 
   svg {
-    width: rem(36);
-    height: rem(36);
-    margin-right: rem(10);
+    width: rem(38);
+    height: rem(38);
+    margin-right: rem(13);
   }
 
   span {
     font-weight: 900;
     font-size: rem(18);
-    color: $white;
+    color: $dark;
   }
 }
 

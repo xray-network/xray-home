@@ -60,10 +60,10 @@ $base-font-size: 16 !default;
 
 // Shadows
 $shadow-ant: 0 10px 35px -5px rgba(0, 0, 0, 0.15);
-$shadow: rgba(0, 0, 0, 0.01) 0 0 1px, rgba(0, 0, 0, 0.04) 0 4px 8px,
-  rgba(0, 0, 0, 0.04) 0 16px 24px, rgba(0, 0, 0, 0.01) 0 24px 32px;
-$shadow-light: rgba(0, 0, 0, 0.01) 0 0 1px, rgba(0, 0, 0, 0.02) 0 4px 8px,
-  rgba(0, 0, 0, 0.02) 0 16px 24px, rgba(0, 0, 0, 0.01) 0 24px 32px;
+$shadow: rgba(0, 0, 0, 0.01) 0 0 1px, rgba(0, 0, 0, 0.04) 0 4px 8px, rgba(0, 0, 0, 0.04) 0 16px 24px,
+  rgba(0, 0, 0, 0.01) 0 24px 32px;
+$shadow-light: rgba(0, 0, 0, 0.01) 0 0 1px, rgba(0, 0, 0, 0.02) 0 4px 8px, rgba(0, 0, 0, 0.02) 0 16px 24px,
+  rgba(0, 0, 0, 0.01) 0 24px 32px;
 
 // Convert value of rem() sass mixin function
 @function rem($px, $base: $base-font-size) {
