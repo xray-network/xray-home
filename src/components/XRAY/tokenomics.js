@@ -164,13 +164,13 @@ const XrayTokenomics = () => {
             <div className="ray__block pt-5 pb-4 mb-0">
               <div className="row">
                 <div className="col-12 col-md-6">
-                  <div className="ray__title">Total Distributed</div>
+                  <div className="ray__title">Accrued To Participants</div>
                   <div className="ray__price">
-                    185,422,703 <span>XRAY</span>
+                    131,278,985 <span>XRAY</span>
                   </div>
                 </div>
                 <div className="col-12 col-md-6">
-                  <div className="ray__title">Including Undelivered Tokens Drop</div>
+                  <div className="ray__title">Undelivered Tokens Drop</div>
                   <div className="ray__price">
                     54,143,718 <span>XRAY</span>
                   </div>
