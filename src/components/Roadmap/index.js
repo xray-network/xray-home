@@ -82,22 +82,17 @@ const dev = [
   {
     status: "active",
     title: "RayStake V2",
-    date: "Q4 2022",
+    date: "Q1 2023",
   },
   {
     status: "active",
     title: "RayWallet V3 + DApps Hub",
-    date: "Q4 2022",
+    date: "Q1 2023",
   },
   {
     status: "active",
     title: "CardanoWeb3.js",
-    date: "Q4 2022",
-  },
-  {
-    status: "active",
-    title: "Whitepaper",
-    date: "Q4 2022",
+    date: "Q1 2023",
   },
   {
     status: "active",
@@ -108,6 +103,11 @@ const dev = [
     status: "pending",
     title: "CardanoList.io V2",
     date: "Q1 2023",
+  },
+  {
+    status: "pending",
+    title: "Whitepaper",
+    date: "Q2 2023",
   },
   {
     status: "pending",

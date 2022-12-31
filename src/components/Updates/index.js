@@ -50,7 +50,7 @@ const Updates = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch("https://api-distr-wallet.raynet.work/git")
+    fetch("https://api-stake.raygraph.io/git")
       .then((res) => res.json())
       .then((result) => {
         setDataSource(result?.commits || [])
