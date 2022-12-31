@@ -213,7 +213,7 @@ const Xray = () => {
 
           <div className="ray__left ray__left--dark mb-4">
             <h5 className="mb-3">
-              <strong>Swap Address</strong>
+              <strong>Swap Wallet</strong>
             </h5>
             <p className="mb-3">Used to replace the old XRAY token with the new one</p>
             <a
@@ -223,17 +223,28 @@ const Xray = () => {
               addr1qxshzse6lcxkqed7wj9gw4xtxp3wqgs5mr5ewxxrj8emgpc6924cwznwmzrhz70uxyvzpj5q74xt9fzaznga7wnjmuwstu5wze
             </a>
           </div>
-
-          <div className="ray__left ray__left--dark mb-0">
+          <div className="ray__left ray__left--dark mb-4">
             <h5 className="mb-3">
-              <strong>Drop Address</strong>
+              <strong>IUIP Rewards Wallet</strong>
             </h5>
-            <p className="mb-3">Used for Stage 1 drop event</p>
+            <p className="mb-3">Address where XRAYs are stored for the Involved User Incentive Program</p>
             <a
               className="text-break"
-              href="https://cardanoscan.io/address/addr1qy8fgfs92f3twmn8x0fxr45m94fsuuxv8n80lzqdufn6my5am59ekrrzefssysc57dzegtzyy9wczjjpsm9qhnhus84q6cud42"
+              href="https://cardanoscan.io/address/addr1qyc98ysmvxunqslu3y5t9gpt2mm8dp3puylpq7n5n908jldw8w6w5nmvw86ullauxldxdjsfauyrattxw6yevxp72nnsq3lt0u"
             >
-              addr1qy8fgfs92f3twmn8x0fxr45m94fsuuxv8n80lzqdufn6my5am59ekrrzefssysc57dzegtzyy9wczjjpsm9qhnhus84q6cud42
+              addr1qyc98ysmvxunqslu3y5t9gpt2mm8dp3puylpq7n5n908jldw8w6w5nmvw86ullauxldxdjsfauyrattxw6yevxp72nnsq3lt0u
+            </a>
+          </div>
+          <div className="ray__left ray__left--dark mb-0">
+            <h5 className="mb-3">
+              <strong>Founders Wallet</strong>
+            </h5>
+            <p className="mb-3">Two-year vested funds for founders. Will be unlocked on June 1, 2023, two years after the token generation event</p>
+            <a
+              className="text-break"
+              href="https://cardanoscan.io/address/addr1qyna4qh9gvjzytxupg77kjugfmm04hye69uv0chsdp72fxcxzxk683qqmdujykfnel975q2zywyk8jrrwkk5fs5m7w8qh6c2xj"
+            >
+              addr1qyna4qh9gvjzytxupg77kjugfmm04hye69uv0chsdp72fxcxzxk683qqmdujykfnel975q2zywyk8jrrwkk5fs5m7w8qh6c2xj
             </a>
           </div>
         </div>

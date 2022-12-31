@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import QRCode from "qrcode.react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
-import { message, Tooltip } from "antd"
+import { message, Tooltip, Alert } from "antd"
 import { getAddressesBalance } from "@/services/graphql"
 import * as style from "./style.module.scss"
 import { format } from "@/utils"
@@ -40,7 +40,7 @@ const XraySwap = () => {
         </div>
         <p>
           After the initial free community distribution of the XRAY token is successfully completed on November 1 and
-          the initial tokenomics is set, we will begin the two-month period of exchanging the old token for the new XRAY
+          the initial tokenomics is set, we will begin the seven-month period of exchanging the old token for the new XRAY
           token.
         </p>
       </div>
@@ -62,6 +62,9 @@ const XraySwap = () => {
               <h1 className="mb-5">
                 <strong className="bolder">Step 1 — The old XRAY swap</strong>
               </h1>
+              <div className="mb-5">
+                <Alert type="error" showIcon message="Please exchange only old tokens with policyID ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd. The tokens you withdraw from RayStake by November 1, 2022 must be exchanged. The tokens that were automatically sent to you from RayStake afterwards are already new!" />
+              </div>
               <div className="row">
                 <div className="col-12 col-md-6">
                   <div className="ray__title">
@@ -185,6 +188,15 @@ const XraySwap = () => {
                   <div>
                     <div className="font-size-21 mb-3">
                       <a
+                        href="https://app.wingriders.com/pools/af9a1bab395e1b177cbb94e073e25d04898275297d3183b368669e4bda97dc30?tvlTimeSpan=1_month&transactions=all"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <strong>Wingriders &rarr;</strong>
+                      </a>
+                    </div>
+                    <div className="font-size-21 mb-3">
+                      <a
                         href="https://app.minswap.org/swap?currencySymbolA=&tokenNameA=&currencySymbolB=86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c143&tokenNameB=58524159"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -194,18 +206,11 @@ const XraySwap = () => {
                     </div>
                     <div className="font-size-21 mb-3">
                       <a
-                        href="https://app.wingriders.com/pools/af9a1bab395e1b177cbb94e073e25d04898275297d3183b368669e4bda97dc30?tvlTimeSpan=1_month&transactions=all"
+                        href="https://exchange.sundaeswap.finance/#/swap?swap_from=86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c143.58524159&swap_to=cardano.ada"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <strong>Wingriders &rarr;</strong>
-                      </a>
-                    </div>
-                    <div className="font-size-21 mb-3">
-                      <a target="_blank" rel="noopener noreferrer">
-                        <strong>
-                          Sundaeswap <sup>SOON</sup> &rarr;
-                        </strong>
+                        <strong>Sundaeswap &rarr;</strong>
                       </a>
                     </div>
                   </div>

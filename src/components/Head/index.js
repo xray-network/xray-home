@@ -8,8 +8,8 @@ const Head = () => {
       <div className="ray__block text-center mb-0">
         <Link to="/xray/swap-event/">
           <strong>
-            <span className="badge rounded-pill badge-success me-1">NEW</span> From November 1 to December 31, the old
-            XRAY token will be exchanged for a new one. Read more &rarr;
+            <span className="badge rounded-pill badge-success me-1">NEW</span>{" "}
+            The Swap Event has been extended until July 1, 2023. Swap your old XRAY token for the new one. Read more &rarr;
           </strong>
         </Link>
       </div>
