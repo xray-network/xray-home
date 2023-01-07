@@ -158,39 +158,47 @@ export const todo = [
   {
     title: "RayWallet",
     descr: "Use our fast light wallet with DApps Hub and hardware key support",
-    url: "/wallet/",
+    url: "https://raywallet.io",
+    external: true,
   },
   {
     title: "RayStake",
     descr: "Earn XRAY rewards from staking ADA, XRAY, LP and other tokens",
-    url: "/stake/",
+    url: "https://raystake.io",
+    external: true,
   },
   {
     title: "Minterr.io",
     descr: "Mint your own Cardano Native token for FREE. Your Cardano NFT center",
-    url: "/minterr/",
+    url: "https://minterr.io",
+    external: true,
+  },
+  {
+    title: "Get 30-50% APR",
+    descr: "Provide liquidity to Wingrider DEX and get up to 50% APR",
+    url: "https://app.wingriders.com/farming/all-farms",
+    external: true,
   },
 ]
 
 export const marketDex = [
   {
-    id: "minswap",
-    title: "Minswap",
-    img: "/resources/dex/minswap.png",
-    url: "https://app.minswap.org/swap?currencySymbolA=&tokenNameA=&currencySymbolB=ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd&tokenNameB=58524159",
-  },
-  {
     id: "wingriders",
     title: "Wingriders",
     img: "/resources/dex/wingriders.png",
-    url: "https://app.wingriders.com/swap/ada/ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd58524159",
+    url: "https://app.wingriders.com/swap/ada/86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c14358524159",
+  },
+  {
+    id: "minswap",
+    title: "Minswap",
+    img: "/resources/dex/minswap.png",
+    url: "https://app.minswap.org/swap?currencySymbolA=&tokenNameA=&currencySymbolB=86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c143&tokenNameB=58524159",
   },
   {
     id: "sundaeswap",
     title: "SundaeSwap",
     img: "/resources/dex/sundaeswap.png",
-    url: "",
-    // url: "https://exchange.sundaeswap.finance/#/swap?swap_from=ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd.58524159&swap_to=cardano.ada",
+    url: "https://exchange.sundaeswap.finance/#/swap?swap_from=86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c143.58524159&swap_to=cardano.ada",
   },
   // {
   //   id: "muesliswap",
@@ -207,12 +215,12 @@ export const marketNft = [
     img: "/resources/dex/sundaeswap.png",
     url: "https://exchange.sundaeswap.finance/#/swap?swap_from=b6798a74fb7441ef5f7af1ff4ea6150bbb7aaeb0aca0113e558592f6.584449414d4f4e44&swap_to=cardano.ada",
   },
-  {
-    id: "cnftio",
-    title: "CNFT.IO",
-    img: "/resources/dex/cnftio.png",
-    url: "https://cnft.io/explore?search=b6798a74fb7441ef5f7af1ff4ea6150bbb7aaeb0aca0113e558592f6",
-  },
+  // {
+  //   id: "cnftio",
+  //   title: "CNFT.IO",
+  //   img: "/resources/dex/cnftio.png",
+  //   url: "https://cnft.io/explore?search=b6798a74fb7441ef5f7af1ff4ea6150bbb7aaeb0aca0113e558592f6",
+  // },
   {
     id: "jpegstore",
     title: "Jpeg.store",

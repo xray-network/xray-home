@@ -63,7 +63,7 @@ const XraySwap = () => {
                 <strong className="bolder">Step 1 — The old XRAY swap</strong>
               </h1>
               <div className="mb-5">
-                <Alert type="error" showIcon message="Please exchange only old tokens with policyID ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd. The tokens you withdraw from RayStake by November 1, 2022 must be exchanged. The tokens that were automatically sent to you from RayStake afterwards are already new!" />
+                <Alert type="info" showIcon message="Please exchange only old tokens with policyID ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd. The tokens you withdraw from RayStake by November 1, 2022 must be exchanged. The tokens that were automatically sent to you from RayStake afterwards are already new!" />
               </div>
               <div className="row">
                 <div className="col-12 col-md-6">
