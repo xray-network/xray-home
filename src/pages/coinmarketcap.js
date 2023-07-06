@@ -7,7 +7,7 @@ const Page = () => {
         <h1>
           <strong>Coinmarketcap Proofs</strong>
         </h1>
-        <p>8 FEB 2022: Total Supply Endpoint API change</p>
+        <p>17 MAR 2023: Changing total/max supply and contract address (new token))</p>
       </div>
     </div>
   )

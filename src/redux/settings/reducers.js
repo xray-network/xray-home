@@ -21,7 +21,7 @@ const initialState = {
   stakeHistory: {},
   modalInstall: "",
   prices: {},
-  pricesXRAY: {},
+  volume: 0,
 }
 
 export default function settingsReducer(state = initialState, action) {

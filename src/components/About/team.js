@@ -46,49 +46,6 @@ const Team = () => {
           become the best blockchain technology in the near future!
         </div>
       </div>
-      <div className={style.team}>
-        <div className={style.teammate}>
-          <div className={style.teammateImage}>
-            <img src="/resources/images/1519127873441.jpg" alt="" />
-          </div>
-          <div>
-            <div>
-              <strong>Nick Tabolich</strong>
-            </div>
-            <div>Founder & Core Developer</div>
-            <div>
-              <a href="https://www.linkedin.com/in/nicktabolich/" target="_blank" rel="noopener noreferrer">
-                Linkedin
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className={style.teammate}>
-          <div className={style.teammateImage}>
-            <img src="/resources/images/3441151912787.jpg" alt="" />
-          </div>
-          <div>
-            <div>
-              <strong>Alex Tarasov</strong>
-            </div>
-            <div>Core & Infrastructure Developer</div>
-            <div>
-              <a href="https://www.linkedin.com/in/alexey-tarasov-13600048/" target="_blank" rel="noopener noreferrer">
-                Linkedin
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className={style.teammate}>
-          <div className={style.teammateImage}>+5</div>
-          <div>
-            <div>
-              <strong>Full-Stack Developers</strong>
-            </div>
-            <div>Full & Part-Time Employment </div>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }

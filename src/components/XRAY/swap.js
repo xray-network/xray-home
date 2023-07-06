@@ -7,12 +7,17 @@ import * as style from "./style.module.scss"
 import { format } from "@/utils"
 
 const XraySwap = () => {
-  const [swapped, setSwapped] = useState(0)
-  const [stats, setStats] = useState({})
+  const [swapped, setSwapped] = useState(88646423)
+  const [stats, setStats] = useState({
+    "completed": 3010,
+    "processing": 0,
+    "pending": 0,
+    "total": 3054
+  })
   const toSwap = 97914504
 
   useEffect(() => {
-    loadData()
+    // loadData()
   }, [])
 
   const loadData = async () => {
@@ -28,6 +33,7 @@ const XraySwap = () => {
     }
     if (getStats) {
       setStats(getStats[0])
+      console.log(getStats[0])
     }
   }
 
@@ -63,7 +69,14 @@ const XraySwap = () => {
                 <strong className="bolder">Step 1 — The old XRAY swap</strong>
               </h1>
               <div className="mb-5">
-                <Alert type="info" showIcon message="Please exchange only old tokens with policyID ae2a0aa5a24b27d9868c4a73b7c08077ac21baade5eca0fa467a2bbd. The tokens you withdraw from RayStake by November 1, 2022 must be exchanged. The tokens that were automatically sent to you from RayStake afterwards are already new!" />
+                <Alert
+                  type="warning"
+                  showIcon
+                  message={(
+                    <strong>Swap Event completed July 1, 2023</strong>
+                  )}
+                  description="All remaining tokens will go to Stage2: be given as rewards in future RayStake and RaySwap liquidity provider incentive programs"
+                />
               </div>
               <div className="row">
                 <div className="col-12 col-md-6">
@@ -106,7 +119,7 @@ const XraySwap = () => {
                     <div className="d-flex w-100">
                       <div className={style.qr}>
                         <QRCode
-                          value="addr1qxshzse6lcxkqed7wj9gw4xtxp3wqgs5mr5ewxxrj8emgpc6924cwznwmzrhz70uxyvzpj5q74xt9fzaznga7wnjmuwstu5wze"
+                          value="addr1qxshz...u5wze"
                           size={400}
                           bgColor="#fff"
                           fgColor="#000"
@@ -121,13 +134,13 @@ const XraySwap = () => {
                       </div>
                     </div>
                     <CopyToClipboard
-                      text="addr1qxshzse6lcxkqed7wj9gw4xtxp3wqgs5mr5ewxxrj8emgpc6924cwznwmzrhz70uxyvzpj5q74xt9fzaznga7wnjmuwstu5wze"
+                      text="addr1qxshz...u5wze"
                       onCopy={() => message.success("Copied to clipboard")}
                     >
                       <Tooltip title="Copy to clipboard">
-                        <div className="font-size-21 cursor-pointer text-break text-primary">
+                        <div className="font-size-21 cursor-pointer text-break text-primary d-inline">
                           <strong>
-                            addr1qxshzse6lcxkqed7wj9gw4xtxp3wqgs5mr5ewxxrj8emgpc6924cwznwmzrhz70uxyvzpj5q74xt9fzaznga7wnjmuwstu5wze{" "}
+                            addr1qxshz...u5wze{" "}
                             <i className="ri ri-copy text-muted" />
                           </strong>
                         </div>

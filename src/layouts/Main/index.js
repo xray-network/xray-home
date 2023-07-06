@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useSelector } from "react-redux"
-import Head from "@/components/Head"
+// import Head from "@/components/Head"
 import Menu from "@/components/Menu"
 import MegaMenu from "@/components/MegaMenu"
 import Footer from "@/components/Footer"
@@ -23,7 +23,7 @@ const MainLayout = ({ children }) => {
         />
       </Helmet>
       <div>
-        <Head />
+        {/* <Head /> */}
         <Menu />
         {megaMenuVisible && <MegaMenu />}
         {children}

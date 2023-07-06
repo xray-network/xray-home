@@ -50,16 +50,16 @@
   line-height: 2;
   font-weight: bold;
 
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: rem(25);
-    bottom: -10px;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 10px solid $gray-1;
-  }
+  // &:before {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   left: rem(25);
+  //   bottom: -10px;
+  //   border-left: 15px solid transparent;
+  //   border-right: 15px solid transparent;
+  //   border-top: 10px solid $gray-1;
+  // }
 
   div:first-child {
     position: absolute;

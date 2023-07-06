@@ -9,5 +9,9 @@ export async function fetchRawUrl(url) {
 }
 
 export async function getPrices() {
-  return apiClient.get("/simple/price?ids=bitcoin,cardano&vs_currencies=USD")
+  return apiClient.get("/simple/price?ids=bitcoin,cardano,ray-network&vs_currencies=USD")
+}
+
+export async function getVolume() {
+  return apiClient.get("/coins/ray-network")
 }

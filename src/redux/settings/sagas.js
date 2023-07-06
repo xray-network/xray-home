@@ -3,8 +3,8 @@ import store from "store"
 import actions from "./actions"
 import { isSSR } from "@/utils"
 import { getNetworkInfo } from "@/services/graphql"
-import { getPrices } from "@/services/coingecko"
-import { getPricesXRAY, getStage1ISPO, getStage1Stake } from "@/services/raygraph"
+import { getPrices, getVolume } from "@/services/coingecko"
+import distrStats from "@/_data/distrStats.json"
 
 export function* CHANGE_SETTING({ payload: { setting, value } }) {
   yield store.set(`ray.wallet.settings.${setting}`, value)
@@ -43,7 +43,7 @@ export function* FETCH_NETWORK_STATE() {
 
 export function* FETCH_PRICES() {
   const prices = yield call(getPrices)
-  const pricesXRAY = yield call(getPricesXRAY)
+  const volume = yield call(getVolume)
 
   yield put({
     type: "settings/CHANGE_SETTING",
@@ -52,36 +52,44 @@ export function* FETCH_PRICES() {
       value: prices?.data || {},
     },
   })
-  yield put({
-    type: "settings/CHANGE_SETTING",
-    payload: {
-      setting: "pricesXRAY",
-      value: pricesXRAY?.data || {},
-    },
-  })
+
+  console.log(volume?.data)
+
+  if (volume?.data) {
+    const _volume = volume?.data?.tickers.reduce((a, ticker) => {
+      if (ticker?.target === "ADA") {
+        return a + ticker.converted_volume.usd
+      }
+      return a
+    }, 0)
+
+    yield put({
+      type: "settings/CHANGE_SETTING",
+      payload: {
+        setting: "volume",
+        value: _volume || 0
+      },
+    })
+  }
+
 }
 
 export function* FETCH_STAGE1_HISTORY() {
-  const ispoHistory = yield call(getStage1ISPO)
-  const stakeHistory = yield call(getStage1Stake)
+  const { ispoHistory, stakeHistory } = distrStats
 
-  if (ispoHistory?.data) {
-    yield put({
-      type: "settings/SET_STATE",
-      payload: {
-        ispoHistory: ispoHistory?.data || {},
-      },
-    })
-  }
+  yield put({
+    type: "settings/SET_STATE",
+    payload: {
+      ispoHistory: ispoHistory,
+    },
+  })
 
-  if (stakeHistory?.data) {
-    yield put({
-      type: "settings/SET_STATE",
-      payload: {
-        stakeHistory: stakeHistory?.data || {},
-      },
-    })
-  }
+  yield put({
+    type: "settings/SET_STATE",
+    payload: {
+      stakeHistory: stakeHistory,
+    },
+  })
 }
 
 export function* SETUP() {

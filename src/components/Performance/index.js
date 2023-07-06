@@ -5,7 +5,7 @@ import * as style from "./style.module.scss"
 
 const Stats = () => {
   const prices = useSelector((state) => state.settings.prices)
-  const pricesXRAY = useSelector((state) => state.settings.pricesXRAY)
+  const volume = useSelector((state) => state.settings.volume)
 
   const [section, setSection] = useState("price")
 
@@ -45,15 +45,9 @@ const Stats = () => {
               {section === "price" && (
                 <div className="row">
                   <div className="col-12 col-md-6">
-                    <div className="ray__title">XRAY Price</div>
-                    <div className="ray__price">
-                      {(pricesXRAY?.price || 0).toFixed(6)} <span>ADA</span>
-                    </div>
-                  </div>
-                  <div className="col-12 col-md-6">
                     <div className="ray__title">XRAY Market Price</div>
                     <div className="ray__price">
-                      {((pricesXRAY?.price || 0) * (prices?.cardano?.usd || 0)).toFixed(6)} <span>$</span>
+                      {(prices?.["ray-network"]?.usd || 0).toFixed(6)} <span>$</span>
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
@@ -63,8 +57,10 @@ const Stats = () => {
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <div className="ray__title">24h, DEX/CEX Volume</div>
-                    <div className="ray__price">—</div>
+                    <div className="ray__title">XRAY ADA Price</div>
+                    <div className="ray__price">
+                      {((prices?.["ray-network"]?.usd || 0) / (prices?.cardano?.usd || 0)).toFixed(6)} <span>ADA</span>
+                    </div>
                   </div>
                 </div>
               )}

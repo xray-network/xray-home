@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
-import { Input, Table, message } from "antd"
+import { Alert, Input, Table, message } from "antd"
 import ChartSchedule from "./_/ChartSchedule"
 import ChartStakeSchedule from "./_/ChartStakeSchedule"
 import { format } from "@/utils"
@@ -34,7 +34,7 @@ const XrayTokenomics = () => {
   const stakeHistory = useSelector((state) => state.settings.stakeHistory)
 
   const [section, setSection] = useState("ispo")
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [participants, setParticipants] = useState([])
   const [participantSearch, setParticipantSearch] = useState('')
   const [pagination, setPagination] = useState({})
@@ -55,46 +55,46 @@ const XrayTokenomics = () => {
   }
 
   const search = async () => {
-    setLoading(true)
-    await fetch(`https://api-stake.raygraph.io/stage1/balance/${participantSearch}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data)
-        if (data?.data) {
-          setPagination({
-            current: 1,
-            total: 0,
-          })
-          setParticipants(data.index > 0 ? [data.data] : [])
-        } else {
-          message.error("Something goes wrong. Please try again")
-        }
-      })
-      .catch(() => {
-        setLoading(false)
-      })
-    setLoading(false)
+    // setLoading(true)
+    // await fetch(`https://api-stake.raygraph.io/stage1/balance/${participantSearch}`)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data)
+    //     if (data?.data) {
+    //       setPagination({
+    //         current: 1,
+    //         total: 0,
+    //       })
+    //       setParticipants(data.index > 0 ? [data.data] : [])
+    //     } else {
+    //       message.error("Something goes wrong. Please try again")
+    //     }
+    //   })
+    //   .catch(() => {
+    //     setLoading(false)
+    //   })
+    // setLoading(false)
   }
 
   const load = async (page = 1) => {
-    setLoading(true)
-    await fetch(`https://api-stake.raygraph.io/stage1/list/${page}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data?.data) {
-          setPagination({
-            current: data.current,
-            total: data.count,
-          })
-          setParticipants(data.data)
-        } else {
-          message.error("Something goes wrong. Please try again")
-        }
-      })
-      .catch(() => {
-        setLoading(false)
-      })
-    setLoading(false)
+    // setLoading(true)
+    // await fetch(`https://api-stake.raygraph.io/stage1/list/${page}`)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     if (data?.data) {
+    //       setPagination({
+    //         current: data.current,
+    //         total: data.count,
+    //       })
+    //       setParticipants(data.data)
+    //     } else {
+    //       message.error("Something goes wrong. Please try again")
+    //     }
+    //   })
+    //   .catch(() => {
+    //     setLoading(false)
+    //   })
+    // setLoading(false)
   }
 
   return (
@@ -334,9 +334,13 @@ const XrayTokenomics = () => {
                 )}
                 {section === "participants" && (
                   <div>
+                    <div className="mb-4">
+                      <Alert type="warning" showIcon message="The list of participants will be available at the next website update as a separate section" />
+                    </div>
                     <div className="d-flex align-items-center mb-4">
                       <div className="flex-grow-1">
                         <Input.Search
+                          disabled
                           placeholder="Search by Stake Key"
                           enterButton="Search"
                           size="large"
